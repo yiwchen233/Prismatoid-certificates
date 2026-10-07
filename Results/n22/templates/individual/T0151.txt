@@ -1,0 +1,350 @@
+template: T0151
+canonical_hash: 566146dcc2b2c3596e8f0f1701077758b66254cd5ae4c17a570487cc9517e88a
+representative: 2032
+search_variant: all-variable-products-simplified
+monomial_simplification: True
+all_variable_products: True
+active_variables: 3
+coverage_count: 2
+covered_candidates: 2032 3344
+
+coefficients:
+  lambda_000004234 = 1/3
+  lambda_000033516 = 1/3
+  lambda_000037086 = 1/3
+
+representative_positive_identity:
+  1/3 * (-x_10_153^2*x_11_77*x_3_133 + x_10_133*x_10_153*x_11_77*x_3_153 - x_10_133*x_10_153*x_11_153*x_3_77 + x_10_153^2*x_11_77*x_7_133 - x_10_133*x_10_153*x_11_77*x_7_153 + x_10_133*x_10_153*x_11_153*x_7_77 + x_10_153^2*x_3_77 - x_10_153^2*x_7_77)    # LP row 4233
+      provenance: [[(12, 70), (-7, -7)], -1]
+  1/3 * (x_10_133*x_10_153*x_11_153*x_20_77*x_3_133 - x_10_133^2*x_11_153*x_20_77*x_3_153 - x_10_133*x_10_153*x_11_153*x_20_77*x_7_133 + x_10_133^2*x_11_153*x_20_77*x_7_153 + x_10_153^2*x_11_77*x_3_133 - x_10_153^2*x_20_77*x_3_133 - x_10_133*x_10_153*x_11_77*x_3_153 + x_10_133*x_10_153*x_20_77*x_3_153 - x_10_153^2*x_11_77*x_7_133 + x_10_153^2*x_20_77*x_7_133 + x_10_133*x_10_153*x_11_77*x_7_153 - x_10_133*x_10_153*x_20_77*x_7_153)    # LP row 33515
+      provenance: [[(10, 135), (12, 143)], 1]
+  1/3 * (-x_10_133*x_10_153*x_11_153*x_20_77*x_3_133 + x_10_133^2*x_11_153*x_20_77*x_3_153 + x_10_133*x_10_153*x_11_153*x_20_77*x_7_133 - x_10_133^2*x_11_153*x_20_77*x_7_153 + x_10_153^2*x_20_77*x_3_133 - x_10_133*x_10_153*x_20_77*x_3_153 + x_10_133*x_10_153*x_11_153*x_3_77 - x_10_153^2*x_20_77*x_7_133 + x_10_133*x_10_153*x_20_77*x_7_153 - x_10_133*x_10_153*x_11_153*x_7_77 - x_10_153^2*x_3_77 + x_10_153^2*x_7_77)    # LP row 37085
+      provenance: [[(10, 137), (10, 146)], -1]
+
+notes:
+{
+  "all_variable_products": true,
+  "generator_statistics": {
+    "base_generator_count_with_variables": 293,
+    "positive_polynomial_count_after_products_before_legacy_append": 43071,
+    "reconstructed_generator_coercion_collisions": 0,
+    "reconstructed_generator_count_after_coercion": 293,
+    "reconstructed_generator_count_before_coercion": 293,
+    "reduced_slack_variable_count": 63,
+    "reduced_slack_variables_added": 0,
+    "reduced_slack_variables_already_present": 63
+  },
+  "monomial_simplification": true,
+  "representative_active_rows": {
+    "lambda_000004234": {
+      "positive_polynomial": "-x_10_153^2*x_11_77*x_3_133 + x_10_133*x_10_153*x_11_77*x_3_153 - x_10_133*x_10_153*x_11_153*x_3_77 + x_10_153^2*x_11_77*x_7_133 - x_10_133*x_10_153*x_11_77*x_7_153 + x_10_133*x_10_153*x_11_153*x_7_77 + x_10_153^2*x_3_77 - x_10_153^2*x_7_77",
+      "provenance": "[[(12, 70), (-7, -7)], -1]",
+      "row_index_one_based": 4234,
+      "row_index_zero_based": 4233
+    },
+    "lambda_000033516": {
+      "positive_polynomial": "x_10_133*x_10_153*x_11_153*x_20_77*x_3_133 - x_10_133^2*x_11_153*x_20_77*x_3_153 - x_10_133*x_10_153*x_11_153*x_20_77*x_7_133 + x_10_133^2*x_11_153*x_20_77*x_7_153 + x_10_153^2*x_11_77*x_3_133 - x_10_153^2*x_20_77*x_3_133 - x_10_133*x_10_153*x_11_77*x_3_153 + x_10_133*x_10_153*x_20_77*x_3_153 - x_10_153^2*x_11_77*x_7_133 + x_10_153^2*x_20_77*x_7_133 + x_10_133*x_10_153*x_11_77*x_7_153 - x_10_133*x_10_153*x_20_77*x_7_153",
+      "provenance": "[[(10, 135), (12, 143)], 1]",
+      "row_index_one_based": 33516,
+      "row_index_zero_based": 33515
+    },
+    "lambda_000037086": {
+      "positive_polynomial": "-x_10_133*x_10_153*x_11_153*x_20_77*x_3_133 + x_10_133^2*x_11_153*x_20_77*x_3_153 + x_10_133*x_10_153*x_11_153*x_20_77*x_7_133 - x_10_133^2*x_11_153*x_20_77*x_7_153 + x_10_153^2*x_20_77*x_3_133 - x_10_133*x_10_153*x_20_77*x_3_153 + x_10_133*x_10_153*x_11_153*x_3_77 - x_10_153^2*x_20_77*x_7_133 + x_10_133*x_10_153*x_20_77*x_7_153 - x_10_133*x_10_153*x_11_153*x_7_77 - x_10_153^2*x_3_77 + x_10_153^2*x_7_77",
+      "provenance": "[[(10, 137), (10, 146)], -1]",
+      "row_index_one_based": 37086,
+      "row_index_zero_based": 37085
+    }
+  },
+  "representative_legacy_stderr": "",
+  "representative_legacy_stdout": "Batch search variant: all-variable-products-simplified\nBatch flag attempt 3: source=sampled-rank-certified-facet-flag, requested={0, 1, 77, 105, 133, 153}, force_new=False, seed=0\nBatch monomial-factor simplification: enabled\nFlag actually used: [0, 1, 77, 105, 133, 153]\nPolynomial backend: Sage QQ; matrix shape=22 x 6\ndeterminants reconstructed; 63 variables; cache 25065\noriented 188/188 columns; unresolved []\n315 unique saturated generators of degree <= 3\nDumping reconstruction metadata to file 2032_geometry.json...\nDumping original facets to file 2032_facets.txt...\nDumping validated facet bases to file 2032_Fbases.txt...\nDumping reduced matrix to file 2032_reducedSlackMatrix.txt...\nGenerator stage: term cap=4, 199 generators\nBatch extended generator variant: 199 reconstructed generators and 63 reduced-slack variables form products together (total 199 unique base generators).\n19900 distinct products / LP variables\nCreating standard form of polynomials.\n -- 0.159816 seconds elapsed\n\nIsolating constant terms.\n -- 0.022949 seconds elapsed\n\nCreating lists of monomials, coefficients, and constant terms.\n -- 0.013681 seconds elapsed\n\nCreating list of unique monomials.\n -- 0.025160 seconds elapsed\n\nGenerating row and column indices for sparse matrix.\n -- 0.113249 seconds elapsed\n\nAppending constant term entries.\n -- 0.000749 seconds elapsed\n\nDumping sparse matrix to file /home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch_v129/work/2032_zh3dw8vk/project/src/dump/2032_iter2_deg3_matrix.txt\n -- 0.056475 seconds elapsed\n\n-> Number of rows: 19,900\n-> Number of columns: 58,653\n-> Number of non-zero entries: 142,485\nBatch normalized certificate LP: 19900 variables, 58654 equality constraints (58653 nonzero monomial equations).\nBatch LP backend attempt: direct gurobipy (Sage Gurobi backend bypassed).\nSet parameter WLSAccessID\nSet parameter WLSSecret\nSet parameter LicenseID to value 2733489\nAcademic license 2733489 - for non-commercial use only - registered to yi___@student.ubc.ca\nSet parameter Method to value 0\nSet parameter Threads to value 8\nSet parameter OutputFlag to value 1\nGurobi Optimizer version 13.0.2 build v13.0.2rc1 (linux64 - \"Ubuntu 24.04.5 LTS\")\n\nCPU model: Intel(R) Xeon(R) W-2295 CPU @ 3.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]\nThread count: 18 physical cores, 36 logical processors, using up to 8 threads\n\nNon-default parameters:\nMethod  0\nThreads  8\n\nAcademic license 2733489 - for non-commercial use only - registered to yi___@student.ubc.ca\nOptimize a model with 58654 rows, 19900 columns and 162385 nonzeros (Min)\nModel fingerprint: 0x0f0ead7d\nModel has 0 linear objective coefficients\nCoefficient statistics:\n  Matrix range     [1e+00, 4e+00]\n  Objective range  [0e+00, 0e+00]\n  Bounds range     [0e+00, 0e+00]\n  RHS range        [1e+00, 1e+00]\n\nPresolve removed 58652 rows and 19899 columns\nPresolve time: 0.02s\n\nSolved in 0 iterations and 0.02 seconds (0.01 work units)\nInfeasible model\nCertificate LP backend used: gurobipy\nObjective value: 1.0\nIndices of nonzero certificate variables: []\nGenerator stage: term cap=8, 293 generators\nBatch extended generator variant: 293 reconstructed generators and 63 reduced-slack variables form products together (total 293 unique base generators).\n43071 distinct products / LP variables\nCreating standard form of polynomials.\n -- 0.989635 seconds elapsed\n\nIsolating constant terms.\n -- 0.196227 seconds elapsed\n\nCreating lists of monomials, coefficients, and constant terms.\n -- 0.059699 seconds elapsed\n\nCreating list of unique monomials.\n -- 0.151305 seconds elapsed\n\nGenerating row and column indices for sparse matrix.\n -- 0.193953 seconds elapsed\n\nAppending constant term entries.\n -- 0.001584 seconds elapsed\n\nDumping sparse matrix to file /home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch_v129/work/2032_zh3dw8vk/project/src/dump/2032_iter2_deg3_matrix.txt\n -- 0.338867 seconds elapsed\n\n-> Number of rows: 43,071\n-> Number of columns: 223,528\n-> Number of non-zero entries: 639,189\nBatch normalized certificate LP: 43071 variables, 223529 equality constraints (223528 nonzero monomial equations).\nBatch LP backend attempt: direct gurobipy (Sage Gurobi backend bypassed).\nSet parameter WLSAccessID\nSet parameter WLSSecret\nSet parameter LicenseID to value 2733489\nAcademic license 2733489 - for non-commercial use only - registered to yi___@student.ubc.ca\nSet parameter Method to value 0\nSet parameter Threads to value 8\nSet parameter OutputFlag to value 1\nGurobi Optimizer version 13.0.2 build v13.0.2rc1 (linux64 - \"Ubuntu 24.04.5 LTS\")\n\nCPU model: Intel(R) Xeon(R) W-2295 CPU @ 3.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]\nThread count: 18 physical cores, 36 logical processors, using up to 8 threads\n\nNon-default parameters:\nMethod  0\nThreads  8\n\nAcademic license 2733489 - for non-commercial use only - registered to yi___@student.ubc.ca\nOptimize a model with 223529 rows, 43071 columns and 682260 nonzeros (Min)\nModel fingerprint: 0x5ae2b3f1\nModel has 0 linear objective coefficients\nCoefficient statistics:\n  Matrix range     [1e+00, 4e+00]\n  Objective range  [0e+00, 0e+00]\n  Bounds range     [0e+00, 0e+00]\n  RHS range        [1e+00, 1e+00]\n\nPresolve removed 223529 rows and 43071 columns\nPresolve time: 0.11s\nPresolve: All rows and columns removed\nIteration    Objective       Primal Inf.    Dual Inf.      Time\n       0    0.0000000e+00   0.000000e+00   0.000000e+00      0s\n\nSolved in 0 iterations and 0.17 seconds (0.14 work units)\nOptimal objective  0.000000000e+00\nCertificate LP backend used: gurobipy\nObjective value: 0.0\nIndices of nonzero certificate variables: [4234, 33516, 37086]\nAccepted exact positive identity with 3 terms; verification=verified_exact\n",
+  "search_variant": "all-variable-products-simplified",
+  "template_semantics": "exact active-row support of the normalized positive certificate LP; equivalent supports are grouped only after each candidate receives its own rationally verified witness"
+}
+
+support_graph:
+{
+  "edges": [
+    {
+      "color": "1",
+      "u": "r0",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r0",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r1",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r1",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r2",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r2",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r3",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r3",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r4",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r4",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r5",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r5",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r6",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r6",
+      "v": "v1"
+    },
+    {
+      "color": "1",
+      "u": "r7",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r7",
+      "v": "v1"
+    },
+    {
+      "color": "1",
+      "u": "r8",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r8",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r9",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r9",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r10",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r10",
+      "v": "v1"
+    },
+    {
+      "color": "1",
+      "u": "r11",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r11",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r12",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r12",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r13",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r13",
+      "v": "v1"
+    },
+    {
+      "color": "1",
+      "u": "r14",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r14",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r15",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r15",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r16",
+      "v": "v0"
+    },
+    {
+      "color": "1",
+      "u": "r16",
+      "v": "v1"
+    },
+    {
+      "color": "1",
+      "u": "r16",
+      "v": "v2"
+    }
+  ],
+  "nodes": [
+    {
+      "color": "variable|C|lb:0|ub:inf",
+      "id": "v0",
+      "kind": "variable"
+    },
+    {
+      "color": "variable|C|lb:0|ub:inf",
+      "id": "v1",
+      "kind": "variable"
+    },
+    {
+      "color": "variable|C|lb:0|ub:inf",
+      "id": "v2",
+      "kind": "variable"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r0",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r1",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r2",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r3",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r4",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r5",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r6",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r7",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r8",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r9",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r10",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r11",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r12",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r13",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r14",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r15",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:1",
+      "id": "r16",
+      "kind": "constraint"
+    }
+  ],
+  "variable_names": {
+    "v0": "lambda_000004234",
+    "v1": "lambda_000033516",
+    "v2": "lambda_000037086"
+  }
+}

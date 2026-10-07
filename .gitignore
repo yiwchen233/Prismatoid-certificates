@@ -1,0 +1,30 @@
+# Private credentials
+*.lic
+.env
+.env.*
+!.env.example
+
+# Python environments and generated files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+
+# Local input scratch space and new solver output; retain Prismatoid data/ and Results/
+/data/
+/runs/
+/batch_output*/
+/Code/core/src/dump/
+/Code/core/src/logs/
+/Code/**/*.log
+/Code/**/*.sqlite3
+/Code/**/*.sqlite3-*
+
+# Platform/editor metadata
+.DS_Store
+Thumbs.db
+*Zone.Identifier*
+.idea/
+.vscode/

@@ -1,0 +1,95 @@
+FINAL CERTIFICATE TEMPLATE LIBRARY
+==================================
+
+A template is the exact active-row support graph of a rationally verified
+positive certificate LP witness. Candidates are grouped only after each one
+has received its own exactly verified witness. With --template-first, a match
+may also be used as a search restriction, but graph containment alone is never
+counted as a non-realizability proof.
+
+number_of_templates: 4
+number_of_covered_candidates: 4
+
+[T0001]
+canonical_hash: 3234ccc0131c29a954482440c953a10a11331f6ffdc7747643c3cad1f7026fa1
+representative: 1039
+search_variant: all-variable-products-simplified
+monomial_simplification: True
+all_variable_products: True
+active_variables: 3
+coverage_count: 1
+covered_candidates: 1039
+representative_coefficients:
+  lambda_000000251 = 1/3
+  lambda_000000339 = 1/3
+  lambda_000000810 = 1/3
+representative_positive_identity:
+  1/3 * (-x_0_73*x_0_90*x_3_65*x_4_73*x_6_65*x_9_90 + x_0_65*x_0_73*x_3_90*x_4_73*x_6_65*x_9_90 + x_0_73^2*x_3_65*x_4_90*x_6_65*x_9_90 + x_0_65*x_0_90*x_3_65*x_4_73*x_6_73*x_9_90 - x_0_65^2*x_3_90*x_4_73*x_6_73*x_9_90 - x_0_65*x_0_73*x_3_65*x_4_90*x_6_73*x_9_90 + x_0_90^2*x_3_65*x_4_73*x_6_65 - x_0_65*x_0_90*x_3_90*x_4_73*x_6_65 - x_0_73*x_0_90*x_3_65*x_4_90*x_6_65 - x_0_65*x_0_90*x_3_65*x_4_73*x_6_90 + x_0_65^2*x_3_90*x_4_73*x_6_90 + x_0_65*x_0_73*x_3_65*x_4_90*x_6_90 - x_0_73^2*x_3_90*x_6_65*x_9_90 - x_0_65*x_0_73*x_4_90*x_6_65*x_9_90 + x_0_65*x_0_73*x_3_90*x_6_73*x_9_90 + x_0_65^2*x_4_90*x_6_73*x_9_90 + x_0_73*x_0_90*x_3_90*x_6_65 + x_0_65*x_0_90*x_4_90*x_6_65 - x_0_65*x_0_73*x_3_90*x_6_90 - x_0_65^2*x_4_90*x_6_90 + x_0_73*x_0_90*x_6_65*x_9_90 - x_0_65*x_0_90*x_6_73*x_9_90 - x_0_90^2*x_6_65 + x_0_65*x_0_90*x_6_90)    # LP row 250
+      provenance: [[(3, 3), (5, 55)], 1]
+  1/3 * (x_0_73*x_0_90*x_3_65*x_4_73*x_6_65*x_9_90 - x_0_73^2*x_3_65*x_4_90*x_6_65*x_9_90 + x_0_65*x_0_73*x_3_65*x_4_90*x_6_73*x_9_90 - x_0_65*x_0_73*x_3_65*x_4_73*x_6_90*x_9_90 - x_0_90^2*x_3_65*x_4_73*x_6_65 + x_0_65*x_0_90*x_3_90*x_4_73*x_6_65 + x_0_73*x_0_90*x_3_65*x_4_90*x_6_65 - x_0_65*x_0_73*x_3_90*x_4_90*x_6_65 - x_0_65*x_0_90*x_3_65*x_4_90*x_6_73 + x_0_65^2*x_3_90*x_4_90*x_6_73 + x_0_65*x_0_90*x_3_65*x_4_73*x_6_90 - x_0_65^2*x_3_90*x_4_73*x_6_90 - x_0_65*x_0_90*x_4_73*x_6_65*x_9_90 + x_0_65*x_0_73*x_4_90*x_6_65*x_9_90 - x_0_73*x_0_90*x_3_65*x_6_73*x_9_90 - x_0_65^2*x_4_90*x_6_73*x_9_90 + x_0_73^2*x_3_65*x_6_90*x_9_90 + x_0_65^2*x_4_73*x_6_90*x_9_90 + x_0_90^2*x_3_65*x_6_73 - x_0_65*x_0_90*x_3_90*x_6_73 - x_0_73*x_0_90*x_3_65*x_6_90 + x_0_65*x_0_73*x_3_90*x_6_90 + x_0_65*x_0_90*x_6_73*x_9_90 - x_0_65*x_0_73*x_6_90*x_9_90)    # LP row 338
+      provenance: [[(6, 3), (5, 52)], -1]
+  1/3 * (-x_0_65*x_0_73*x_3_90*x_4_73*x_6_65*x_9_90 - x_0_65*x_0_90*x_3_65*x_4_73*x_6_73*x_9_90 + x_0_65^2*x_3_90*x_4_73*x_6_73*x_9_90 + x_0_65*x_0_73*x_3_65*x_4_73*x_6_90*x_9_90 + x_0_65*x_0_73*x_3_90*x_4_90*x_6_65 + x_0_65*x_0_90*x_3_65*x_4_90*x_6_73 - x_0_65^2*x_3_90*x_4_90*x_6_73 - x_0_65*x_0_73*x_3_65*x_4_90*x_6_90 + x_0_73^2*x_3_90*x_6_65*x_9_90 + x_0_65*x_0_90*x_4_73*x_6_65*x_9_90 + x_0_73*x_0_90*x_3_65*x_6_73*x_9_90 - x_0_65*x_0_73*x_3_90*x_6_73*x_9_90 - x_0_73^2*x_3_65*x_6_90*x_9_90 - x_0_65^2*x_4_73*x_6_90*x_9_90 - x_0_73*x_0_90*x_3_90*x_6_65 - x_0_65*x_0_90*x_4_90*x_6_65 - x_0_90^2*x_3_65*x_6_73 + x_0_65*x_0_90*x_3_90*x_6_73 + x_0_73*x_0_90*x_3_65*x_6_90 + x_0_65^2*x_4_90*x_6_90 - x_0_73*x_0_90*x_6_65*x_9_90 + x_0_65*x_0_73*x_6_90*x_9_90 + x_0_90^2*x_6_65 - x_0_65*x_0_90*x_6_90)    # LP row 809
+      provenance: [[(5, 9), (0, 54)], 1]
+
+[T0002]
+canonical_hash: 2505af6996d43abc67fba0bd08048f72da5bcfdf13e299a0ea5024609a1a06db
+representative: 1963
+search_variant: all-variable-products-simplified
+monomial_simplification: True
+all_variable_products: True
+active_variables: 3
+coverage_count: 1
+covered_candidates: 1963
+representative_coefficients:
+  lambda_000001409 = 1/3
+  lambda_000002755 = 1/3
+  lambda_000005856 = 1/3
+representative_positive_identity:
+  1/3 * (x_0_67*x_11_64*x_11_67*x_12_64*x_9_53 - x_0_64*x_11_67^2*x_12_64*x_9_53 + x_11_67^2*x_12_64*x_3_64*x_9_53 + x_0_53*x_11_67^2*x_12_64 - x_11_67^2*x_12_64*x_3_53 - x_0_67*x_11_64^2*x_9_53 + x_0_64*x_11_64*x_11_67*x_9_53 - x_11_64*x_11_67*x_3_64*x_9_53 - x_0_53*x_11_64*x_11_67 - x_0_67*x_11_67*x_12_64 + x_11_64*x_11_67*x_3_53 + x_0_67*x_11_64)    # LP row 1408
+      provenance: [[(13, 31), (13, 48)], -1]
+  1/3 * (-x_0_67*x_11_64*x_11_67*x_12_64*x_9_53 + x_0_64*x_11_67^2*x_12_64*x_9_53 - x_11_67^2*x_12_64*x_3_64*x_9_53 + x_0_67*x_11_64*x_11_67*x_12_53 - x_0_64*x_11_67^2*x_12_53 + x_11_67^2*x_12_53*x_3_64 + x_0_67*x_11_64^2*x_9_53 - x_0_64*x_11_64*x_11_67*x_9_53 + x_11_64*x_11_67*x_3_64*x_9_53 - x_0_67*x_11_64 + x_0_64*x_11_67 - x_11_67*x_3_64)    # LP row 2754
+      provenance: [[(13, 38), (9, 92)], -1]
+  1/3 * (-x_0_67*x_11_64*x_11_67*x_12_53 + x_0_64*x_11_67^2*x_12_53 - x_0_53*x_11_67^2*x_12_64 + x_11_67^2*x_12_64*x_3_53 - x_11_67^2*x_12_53*x_3_64 + x_0_53*x_11_64*x_11_67 + x_0_67*x_11_67*x_12_64 - x_11_64*x_11_67*x_3_53 - x_0_64*x_11_67 + x_11_67*x_3_64)    # LP row 5855
+      provenance: [[(8, 88), (-7, -7)], -1]
+
+[T0003]
+canonical_hash: 1c4a9f2f44bd07ebad949d5a7b9c74fbf81aa7de5d96a172151b64d8376d6cf2
+representative: 2669
+search_variant: all-variable-products-simplified
+monomial_simplification: True
+all_variable_products: True
+active_variables: 3
+coverage_count: 1
+covered_candidates: 2669
+representative_coefficients:
+  lambda_000001981 = 1/3
+  lambda_000003469 = 1/3
+  lambda_000003501 = 1/3
+representative_positive_identity:
+  1/3 * (x_11_0*x_6_6 - x_13_0*x_6_6)    # LP row 1980
+      provenance: [[(13, 25), (-23, -23)], 1]
+  1/3 * (x_11_6*x_13_0*x_6_6 - x_11_0*x_13_6*x_6_6)    # LP row 3468
+      provenance: [[(1, 74), (-23, -23)], -1]
+  1/3 * (-x_11_6*x_13_0*x_6_6 + x_11_0*x_13_6*x_6_6 - x_11_0*x_6_6 + x_13_0*x_6_6)    # LP row 3500
+      provenance: [[(3, 76), (-23, -23)], -1]
+
+[T0004]
+canonical_hash: d39e18396996454e03eda2eeef9196dead8a767074a9cd590c9967eade5206fe
+representative: 3513
+search_variant: all-variable-products-simplified
+monomial_simplification: True
+all_variable_products: True
+active_variables: 3
+coverage_count: 1
+covered_candidates: 3513
+representative_coefficients:
+  lambda_000000986 = 1/3
+  lambda_000001041 = 1/3
+  lambda_000001609 = 1/3
+representative_positive_identity:
+  1/3 * (-x_10_0^2*x_4_72*x_7_27 + x_10_0*x_13_0*x_4_72*x_7_27 - x_10_0*x_10_72*x_7_0 + x_10_72*x_13_0*x_7_0 + x_10_0*x_4_72*x_7_0 - x_13_0*x_4_72*x_7_0 + x_10_0^2*x_7_72 - x_10_0*x_13_0*x_7_72)    # LP row 985
+      provenance: [[(6, 22), (2, 59)], 1]
+  1/3 * (x_10_0*x_10_72*x_13_0*x_7_27 + x_10_0^2*x_4_72*x_7_27 - x_10_0*x_13_0*x_4_72*x_7_27 - x_10_72*x_13_0*x_7_0 - x_10_0*x_4_72*x_7_0 + x_13_0*x_4_72*x_7_0)    # LP row 1040
+      provenance: [[(0, 23), (6, 58)], -1]
+  1/3 * (-x_10_0*x_10_72*x_13_0*x_7_27 + x_10_0*x_10_72*x_7_0 - x_10_0^2*x_7_72 + x_10_0*x_13_0*x_7_72)    # LP row 1608
+      provenance: [[(7, 60), (-2, -2)], 1]

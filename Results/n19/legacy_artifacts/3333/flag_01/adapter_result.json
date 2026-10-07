@@ -1,0 +1,65 @@
+{
+  "actual_generator_term_limit": 0,
+  "all_variable_products": true,
+  "candidate_id": "3333",
+  "capture_only": false,
+  "completed": true,
+  "core_patch_version": "1.2.9-core-patch",
+  "flag_search": {
+    "attempt_index_zero_based": 0,
+    "force_new_flag": false,
+    "legacy_flag_attributes": {
+      "flag": [
+        0,
+        1,
+        11,
+        20,
+        23,
+        52
+      ],
+      "selected_flag": [
+        0,
+        1,
+        11,
+        20,
+        23,
+        52
+      ]
+    },
+    "random_seed": 0,
+    "requested_flag": "{}",
+    "selected_flag_indices_zero_based": [
+      0,
+      1,
+      11,
+      20,
+      23,
+      52
+    ],
+    "source": "legacy-default"
+  },
+  "generator_stages": [
+    {
+      "generators": 100,
+      "product_upper_bound": 5150,
+      "status": "no_certificate_in_stage",
+      "term_limit": 4
+    },
+    {
+      "generators": 135,
+      "product_upper_bound": 9315,
+      "status": "no_certificate_in_stage",
+      "term_limit": 8
+    },
+    {
+      "generators": 138,
+      "product_upper_bound": 9729,
+      "status": "no_certificate_in_stage",
+      "term_limit": 0
+    }
+  ],
+  "legacy_result": 1,
+  "monomial_simplification": true,
+  "prepared_input": "/home/yiwchen/Prismatoid certificate/batch_output_n19_corepatch_v129/work/3333_5bre03vj/candidate.txt",
+  "search_variant": "all-variable-products-simplified"
+}

@@ -1,0 +1,114 @@
+{
+  "constraints": [],
+  "format_version": 2,
+  "metadata": {
+    "active_tolerance": 1e-10,
+    "actual_generator_term_limit": 0,
+    "all_variable_products": true,
+    "allowed_variable_count": null,
+    "candidate_id": "0249",
+    "capture_only": false,
+    "certificate_model": "lambda >= 0, B^T lambda = 0, sum(lambda) = 1",
+    "certificate_tolerance": 1e-07,
+    "computed_legacy_objective": "1.0",
+    "core_patch_version": "1.2.9-core-patch",
+    "flag_search": {
+      "attempt_index_zero_based": 1,
+      "force_new_flag": false,
+      "legacy_flag_attributes": {
+        "flag": [
+          0,
+          1,
+          29,
+          30,
+          74,
+          138
+        ],
+        "selected_flag": [
+          0,
+          1,
+          29,
+          30,
+          74,
+          138
+        ]
+      },
+      "random_seed": 0,
+      "requested_flag": "{0, 1, 29, 30, 74, 138}",
+      "selected_flag_indices_zero_based": [
+        0,
+        1,
+        29,
+        30,
+        74,
+        138
+      ],
+      "source": "sampled-rank-certified-facet-flag"
+    },
+    "generator_stages": [
+      {
+        "generators": 117,
+        "product_upper_bound": 7020,
+        "status": "no_certificate_in_stage",
+        "term_limit": 4
+      },
+      {
+        "generators": 149,
+        "product_upper_bound": 11324,
+        "status": "no_certificate_in_stage",
+        "term_limit": 8
+      },
+      {
+        "generators": 153,
+        "product_upper_bound": 11934,
+        "term_limit": 0
+      }
+    ],
+    "generator_statistics": {
+      "base_generator_count_with_variables": 153,
+      "positive_polynomial_count_after_products_before_legacy_append": 11781,
+      "reconstructed_generator_coercion_collisions": 0,
+      "reconstructed_generator_count_after_coercion": 153,
+      "reconstructed_generator_count_before_coercion": 153,
+      "reduced_slack_variable_count": 51,
+      "reduced_slack_variables_added": 0,
+      "reduced_slack_variables_already_present": 51
+    },
+    "legacy_monomial_column_count": 47771,
+    "legacy_row_count": 11781,
+    "lp_backend_metadata": {
+      "backend_failures_before_success": [],
+      "gurobi_environment_mode": "explicit-fresh-environment",
+      "gurobi_license_file_configured": true,
+      "gurobi_license_path": "/home/yiwchen/Prismatoid certificate/Code/dev/gurobi.lic",
+      "gurobi_license_source": "project-dev",
+      "gurobi_num_constraints": 47772,
+      "gurobi_num_variables": 11781,
+      "gurobi_runtime": "0.014688968658447266",
+      "gurobi_solution_count": 0,
+      "gurobi_status": 3,
+      "gurobipy_version": "13.0.2",
+      "solver_elapsed_seconds": "0.0674481000751257"
+    },
+    "lp_backend_requested": "gurobipy",
+    "lp_backend_status": "3",
+    "lp_backend_used": "gurobipy",
+    "max_equation_residual": "0.0",
+    "monomial_simplification": true,
+    "no_certificate_at_this_search_level": true,
+    "nonzero_monomial_equation_count": 47771,
+    "normalization_residual": "1.0",
+    "restriction_attempted": false,
+    "search_variant": "all-variable-products-simplified",
+    "solver_constraint_count": 47772,
+    "solver_variable_count": 11781
+  },
+  "name": "prismatoid_certificate_0249",
+  "objective_value": null,
+  "optimize_index": 1,
+  "phase": "post",
+  "solution_count": 0,
+  "status": null,
+  "unsupported_features": [],
+  "variables": []
+}

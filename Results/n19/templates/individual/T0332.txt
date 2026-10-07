@@ -1,0 +1,1840 @@
+template: T0332
+canonical_hash: 2ab6fe8492614848f24080550b07623e8b65d7ff079f9117f549108f3d0e1d3a
+representative: 3272
+search_variant: all-variable-products-simplified
+monomial_simplification: True
+all_variable_products: True
+active_variables: 4
+coverage_count: 1
+covered_candidates: 3272
+
+coefficients:
+  lambda_000007942 = 1/4
+  lambda_000010252 = 1/4
+  lambda_000010743 = 1/4
+  lambda_000017307 = 1/4
+
+representative_positive_identity:
+  1/4 * (-x_0_59*x_10_38*x_17_47*x_3_59*x_4_47*x_7_38 + x_0_47*x_10_38*x_17_47*x_3_59*x_4_59*x_7_38 + x_0_59*x_17_47*x_3_59*x_4_47*x_7_38*x_9_38 - x_0_47*x_17_47*x_3_59*x_4_59*x_7_38*x_9_38 + x_0_59*x_10_38*x_3_59*x_4_47*x_7_38*x_9_47 - x_0_59*x_17_38*x_3_59*x_4_47*x_7_38*x_9_47 - x_0_47*x_10_38*x_3_59*x_4_59*x_7_38*x_9_47 + x_0_47*x_17_38*x_3_59*x_4_59*x_7_38*x_9_47 - x_0_59*x_10_59*x_17_38*x_4_47*x_7_38 + x_0_59*x_10_59*x_17_47*x_4_47*x_7_38 + x_0_47*x_10_59*x_17_38*x_4_59*x_7_38 - x_0_47*x_10_59*x_17_47*x_4_59*x_7_38 + x_0_59*x_10_38*x_17_47*x_3_59*x_7_47 - x_10_38*x_17_47*x_3_59*x_4_59*x_7_47 + x_0_59*x_10_59*x_4_47*x_7_38*x_9_38 - x_0_47*x_10_59*x_4_59*x_7_38*x_9_38 - x_0_59*x_17_47*x_3_59*x_7_47*x_9_38 + x_17_47*x_3_59*x_4_59*x_7_47*x_9_38 - x_0_59*x_10_59*x_4_47*x_7_38*x_9_47 + x_0_47*x_10_59*x_4_59*x_7_38*x_9_47 - x_0_59*x_10_38*x_3_59*x_7_47*x_9_47 + x_0_59*x_17_38*x_3_59*x_7_47*x_9_47 + x_10_38*x_3_59*x_4_59*x_7_47*x_9_47 - x_17_38*x_3_59*x_4_59*x_7_47*x_9_47 - x_0_59*x_10_38*x_4_47*x_7_38*x_9_59 + x_0_59*x_17_38*x_4_47*x_7_38*x_9_59 - x_0_59*x_17_47*x_4_47*x_7_38*x_9_59 + x_0_47*x_10_38*x_4_59*x_7_38*x_9_59 - x_0_47*x_17_38*x_4_59*x_7_38*x_9_59 + x_0_47*x_17_47*x_4_59*x_7_38*x_9_59 + x_0_59*x_10_38*x_4_47*x_7_38 - x_0_47*x_10_38*x_4_59*x_7_38 + x_0_59*x_10_59*x_17_38*x_7_47 - x_0_59*x_10_59*x_17_47*x_7_47 - x_10_59*x_17_38*x_4_59*x_7_47 + x_10_59*x_17_47*x_4_59*x_7_47 - x_0_59*x_4_47*x_7_38*x_9_38 + x_0_47*x_4_59*x_7_38*x_9_38 - x_0_59*x_10_59*x_7_47*x_9_38 + x_10_59*x_4_59*x_7_47*x_9_38 + x_0_59*x_4_47*x_7_38*x_9_47 - x_0_47*x_4_59*x_7_38*x_9_47 + x_0_59*x_10_59*x_7_47*x_9_47 - x_10_59*x_4_59*x_7_47*x_9_47 + x_0_59*x_10_38*x_7_47*x_9_59 - x_0_59*x_17_38*x_7_47*x_9_59 + x_0_59*x_17_47*x_7_47*x_9_59 - x_10_38*x_4_59*x_7_47*x_9_59 + x_17_38*x_4_59*x_7_47*x_9_59 - x_17_47*x_4_59*x_7_47*x_9_59 - x_0_59*x_10_38*x_7_47 + x_10_38*x_4_59*x_7_47 + x_0_59*x_7_47*x_9_38 - x_4_59*x_7_47*x_9_38 - x_0_59*x_7_47*x_9_47 + x_4_59*x_7_47*x_9_47)    # LP row 7941
+      provenance: [[(17, 11), (4, 55)], -1]
+  1/4 * (-x_0_47*x_10_59*x_17_47*x_3_59*x_7_38 - x_0_59*x_10_59*x_17_47*x_4_47*x_7_38 + x_10_59*x_17_47*x_3_59*x_4_47*x_7_38 + x_0_47*x_10_59*x_17_47*x_4_59*x_7_38 + x_0_47*x_10_59*x_17_38*x_3_59*x_7_47 + x_0_59*x_10_59*x_17_38*x_4_47*x_7_47 - x_10_59*x_17_38*x_3_59*x_4_47*x_7_47 - x_0_47*x_10_59*x_17_38*x_4_59*x_7_47 - x_0_47*x_10_59*x_3_59*x_7_47*x_9_38 - x_0_59*x_10_59*x_4_47*x_7_47*x_9_38 + x_10_59*x_3_59*x_4_47*x_7_47*x_9_38 + x_0_47*x_10_59*x_4_59*x_7_47*x_9_38 + x_0_47*x_10_59*x_3_59*x_7_38*x_9_47 + x_0_59*x_10_59*x_4_47*x_7_38*x_9_47 - x_10_59*x_3_59*x_4_47*x_7_38*x_9_47 - x_0_47*x_10_59*x_4_59*x_7_38*x_9_47 + x_0_47*x_17_47*x_3_59*x_7_38*x_9_59 + x_0_59*x_17_47*x_4_47*x_7_38*x_9_59 - x_17_47*x_3_59*x_4_47*x_7_38*x_9_59 - x_0_47*x_17_47*x_4_59*x_7_38*x_9_59 + x_0_47*x_10_38*x_3_59*x_7_47*x_9_59 - x_0_47*x_17_38*x_3_59*x_7_47*x_9_59 + x_0_59*x_10_38*x_4_47*x_7_47*x_9_59 - x_0_59*x_17_38*x_4_47*x_7_47*x_9_59 - x_10_38*x_3_59*x_4_47*x_7_47*x_9_59 + x_17_38*x_3_59*x_4_47*x_7_47*x_9_59 - x_0_47*x_10_38*x_4_59*x_7_47*x_9_59 + x_0_47*x_17_38*x_4_59*x_7_47*x_9_59 + x_0_59*x_10_59*x_17_47*x_7_38 - x_10_59*x_17_47*x_4_59*x_7_38 - x_0_59*x_10_59*x_17_38*x_7_47 - x_0_47*x_10_38*x_3_59*x_7_47 - x_0_59*x_10_38*x_4_47*x_7_47 + x_10_38*x_3_59*x_4_47*x_7_47 + x_0_47*x_10_38*x_4_59*x_7_47 + x_10_59*x_17_38*x_4_59*x_7_47 + x_0_59*x_10_59*x_7_47*x_9_38 + x_0_47*x_3_59*x_7_47*x_9_38 + x_0_59*x_4_47*x_7_47*x_9_38 - x_3_59*x_4_47*x_7_47*x_9_38 - x_0_47*x_4_59*x_7_47*x_9_38 - x_10_59*x_4_59*x_7_47*x_9_38 - x_0_59*x_10_59*x_7_38*x_9_47 - x_0_47*x_3_59*x_7_38*x_9_47 - x_0_59*x_4_47*x_7_38*x_9_47 + x_3_59*x_4_47*x_7_38*x_9_47 + x_0_47*x_4_59*x_7_38*x_9_47 + x_10_59*x_4_59*x_7_38*x_9_47 - x_0_59*x_17_47*x_7_38*x_9_59 + x_17_47*x_4_59*x_7_38*x_9_59 - x_0_59*x_10_38*x_7_47*x_9_59 + x_0_59*x_17_38*x_7_47*x_9_59 + x_10_38*x_4_59*x_7_47*x_9_59 - x_17_38*x_4_59*x_7_47*x_9_59 + x_0_59*x_10_38*x_7_47 - x_10_38*x_4_59*x_7_47 - x_0_59*x_7_47*x_9_38 + x_4_59*x_7_47*x_9_38 + x_0_59*x_7_38*x_9_47 - x_4_59*x_7_38*x_9_47)    # LP row 10251
+      provenance: [[(5, 23), (5, 89)], -1]
+  1/4 * (x_0_47*x_10_59*x_17_38*x_3_59*x_4_47*x_7_38 + x_0_59*x_10_38*x_17_47*x_3_59*x_4_47*x_7_38 - x_0_47*x_10_59*x_3_59*x_4_47*x_7_38*x_9_38 - x_0_59*x_17_47*x_3_59*x_4_47*x_7_38*x_9_38 - x_0_59*x_10_38*x_3_59*x_4_47*x_7_38*x_9_47 + x_0_59*x_17_38*x_3_59*x_4_47*x_7_38*x_9_47 + x_0_47*x_10_38*x_3_59*x_4_47*x_7_38*x_9_59 - x_0_47*x_17_38*x_3_59*x_4_47*x_7_38*x_9_59 - x_0_47*x_10_38*x_3_59*x_4_47*x_7_38 - x_10_59*x_17_47*x_3_59*x_4_47*x_7_38 - x_0_47*x_10_59*x_17_38*x_4_59*x_7_38 - x_0_59*x_10_38*x_17_47*x_4_59*x_7_38 - x_0_47*x_10_59*x_17_38*x_3_59*x_7_47 - x_0_59*x_10_38*x_17_47*x_3_59*x_7_47 + x_0_47*x_10_59*x_17_38*x_4_59*x_7_47 + x_0_59*x_10_38*x_17_47*x_4_59*x_7_47 + x_0_47*x_3_59*x_4_47*x_7_38*x_9_38 + x_0_47*x_10_59*x_4_59*x_7_38*x_9_38 + x_0_59*x_17_47*x_4_59*x_7_38*x_9_38 + x_0_47*x_10_59*x_3_59*x_7_47*x_9_38 + x_0_59*x_17_47*x_3_59*x_7_47*x_9_38 - x_0_47*x_10_59*x_4_59*x_7_47*x_9_38 - x_0_59*x_17_47*x_4_59*x_7_47*x_9_38 + x_10_59*x_3_59*x_4_47*x_7_38*x_9_47 + x_0_59*x_10_38*x_4_59*x_7_38*x_9_47 - x_0_59*x_17_38*x_4_59*x_7_38*x_9_47 + x_0_59*x_10_38*x_3_59*x_7_47*x_9_47 - x_0_59*x_17_38*x_3_59*x_7_47*x_9_47 - x_0_59*x_10_38*x_4_59*x_7_47*x_9_47 + x_0_59*x_17_38*x_4_59*x_7_47*x_9_47 + x_17_47*x_3_59*x_4_47*x_7_38*x_9_59 - x_0_47*x_10_38*x_4_59*x_7_38*x_9_59 + x_0_47*x_17_38*x_4_59*x_7_38*x_9_59 - x_0_47*x_10_38*x_3_59*x_7_47*x_9_59 + x_0_47*x_17_38*x_3_59*x_7_47*x_9_59 + x_0_47*x_10_38*x_4_59*x_7_47*x_9_59 - x_0_47*x_17_38*x_4_59*x_7_47*x_9_59 + x_0_47*x_10_38*x_4_59*x_7_38 + x_10_59*x_17_47*x_4_59*x_7_38 + x_0_47*x_10_38*x_3_59*x_7_47 + x_10_59*x_17_47*x_3_59*x_7_47 - x_0_47*x_10_38*x_4_59*x_7_47 - x_10_59*x_17_47*x_4_59*x_7_47 - x_0_47*x_4_59*x_7_38*x_9_38 - x_0_47*x_3_59*x_7_47*x_9_38 + x_0_47*x_4_59*x_7_47*x_9_38 - x_3_59*x_4_47*x_7_38*x_9_47 - x_10_59*x_4_59*x_7_38*x_9_47 - x_10_59*x_3_59*x_7_47*x_9_47 + x_10_59*x_4_59*x_7_47*x_9_47 - x_17_47*x_4_59*x_7_38*x_9_59 - x_17_47*x_3_59*x_7_47*x_9_59 + x_17_47*x_4_59*x_7_47*x_9_59 + x_4_59*x_7_38*x_9_47 + x_3_59*x_7_47*x_9_47 - x_4_59*x_7_47*x_9_47)    # LP row 10742
+      provenance: [[(7, 25), (5, 85)], -1]
+  1/4 * (-x_0_47*x_10_59*x_17_38*x_3_59*x_4_47*x_7_38 - x_0_47*x_10_38*x_17_47*x_3_59*x_4_59*x_7_38 + x_0_47*x_10_59*x_3_59*x_4_47*x_7_38*x_9_38 + x_0_47*x_17_47*x_3_59*x_4_59*x_7_38*x_9_38 + x_0_47*x_10_38*x_3_59*x_4_59*x_7_38*x_9_47 - x_0_47*x_17_38*x_3_59*x_4_59*x_7_38*x_9_47 - x_0_47*x_10_38*x_3_59*x_4_47*x_7_38*x_9_59 + x_0_47*x_17_38*x_3_59*x_4_47*x_7_38*x_9_59 + x_0_47*x_10_59*x_17_47*x_3_59*x_7_38 + x_0_59*x_10_59*x_17_38*x_4_47*x_7_38 + x_0_47*x_10_38*x_3_59*x_4_47*x_7_38 + x_0_59*x_10_38*x_17_47*x_4_59*x_7_38 - x_0_59*x_10_59*x_17_38*x_4_47*x_7_47 + x_10_59*x_17_38*x_3_59*x_4_47*x_7_47 - x_0_59*x_10_38*x_17_47*x_4_59*x_7_47 + x_10_38*x_17_47*x_3_59*x_4_59*x_7_47 - x_0_59*x_10_59*x_4_47*x_7_38*x_9_38 - x_0_47*x_3_59*x_4_47*x_7_38*x_9_38 - x_0_59*x_17_47*x_4_59*x_7_38*x_9_38 + x_0_59*x_10_59*x_4_47*x_7_47*x_9_38 - x_10_59*x_3_59*x_4_47*x_7_47*x_9_38 + x_0_59*x_17_47*x_4_59*x_7_47*x_9_38 - x_17_47*x_3_59*x_4_59*x_7_47*x_9_38 - x_0_47*x_10_59*x_3_59*x_7_38*x_9_47 - x_0_59*x_10_38*x_4_59*x_7_38*x_9_47 + x_0_59*x_17_38*x_4_59*x_7_38*x_9_47 + x_0_59*x_10_38*x_4_59*x_7_47*x_9_47 - x_0_59*x_17_38*x_4_59*x_7_47*x_9_47 - x_10_38*x_3_59*x_4_59*x_7_47*x_9_47 + x_17_38*x_3_59*x_4_59*x_7_47*x_9_47 - x_0_47*x_17_47*x_3_59*x_7_38*x_9_59 + x_0_59*x_10_38*x_4_47*x_7_38*x_9_59 - x_0_59*x_17_38*x_4_47*x_7_38*x_9_59 - x_0_59*x_10_38*x_4_47*x_7_47*x_9_59 + x_0_59*x_17_38*x_4_47*x_7_47*x_9_59 + x_10_38*x_3_59*x_4_47*x_7_47*x_9_59 - x_17_38*x_3_59*x_4_47*x_7_47*x_9_59 - x_0_59*x_10_59*x_17_47*x_7_38 - x_0_59*x_10_38*x_4_47*x_7_38 + x_0_59*x_10_59*x_17_47*x_7_47 - x_10_59*x_17_47*x_3_59*x_7_47 + x_0_59*x_10_38*x_4_47*x_7_47 - x_10_38*x_3_59*x_4_47*x_7_47 + x_0_59*x_4_47*x_7_38*x_9_38 - x_0_59*x_4_47*x_7_47*x_9_38 + x_3_59*x_4_47*x_7_47*x_9_38 + x_0_59*x_10_59*x_7_38*x_9_47 + x_0_47*x_3_59*x_7_38*x_9_47 - x_0_59*x_10_59*x_7_47*x_9_47 + x_10_59*x_3_59*x_7_47*x_9_47 + x_0_59*x_17_47*x_7_38*x_9_59 - x_0_59*x_17_47*x_7_47*x_9_59 + x_17_47*x_3_59*x_7_47*x_9_59 - x_0_59*x_7_38*x_9_47 + x_0_59*x_7_47*x_9_47 - x_3_59*x_7_47*x_9_47)    # LP row 17306
+      provenance: [[(3, 55), (1, 88)], -1]
+
+notes:
+{
+  "all_variable_products": true,
+  "generator_statistics": {
+    "base_generator_count_with_variables": 221,
+    "positive_polynomial_count_after_products_before_legacy_append": 24531,
+    "reconstructed_generator_coercion_collisions": 0,
+    "reconstructed_generator_count_after_coercion": 221,
+    "reconstructed_generator_count_before_coercion": 221,
+    "reduced_slack_variable_count": 51,
+    "reduced_slack_variables_added": 0,
+    "reduced_slack_variables_already_present": 51
+  },
+  "monomial_simplification": true,
+  "representative_active_rows": {
+    "lambda_000007942": {
+      "positive_polynomial": "-x_0_59*x_10_38*x_17_47*x_3_59*x_4_47*x_7_38 + x_0_47*x_10_38*x_17_47*x_3_59*x_4_59*x_7_38 + x_0_59*x_17_47*x_3_59*x_4_47*x_7_38*x_9_38 - x_0_47*x_17_47*x_3_59*x_4_59*x_7_38*x_9_38 + x_0_59*x_10_38*x_3_59*x_4_47*x_7_38*x_9_47 - x_0_59*x_17_38*x_3_59*x_4_47*x_7_38*x_9_47 - x_0_47*x_10_38*x_3_59*x_4_59*x_7_38*x_9_47 + x_0_47*x_17_38*x_3_59*x_4_59*x_7_38*x_9_47 - x_0_59*x_10_59*x_17_38*x_4_47*x_7_38 + x_0_59*x_10_59*x_17_47*x_4_47*x_7_38 + x_0_47*x_10_59*x_17_38*x_4_59*x_7_38 - x_0_47*x_10_59*x_17_47*x_4_59*x_7_38 + x_0_59*x_10_38*x_17_47*x_3_59*x_7_47 - x_10_38*x_17_47*x_3_59*x_4_59*x_7_47 + x_0_59*x_10_59*x_4_47*x_7_38*x_9_38 - x_0_47*x_10_59*x_4_59*x_7_38*x_9_38 - x_0_59*x_17_47*x_3_59*x_7_47*x_9_38 + x_17_47*x_3_59*x_4_59*x_7_47*x_9_38 - x_0_59*x_10_59*x_4_47*x_7_38*x_9_47 + x_0_47*x_10_59*x_4_59*x_7_38*x_9_47 - x_0_59*x_10_38*x_3_59*x_7_47*x_9_47 + x_0_59*x_17_38*x_3_59*x_7_47*x_9_47 + x_10_38*x_3_59*x_4_59*x_7_47*x_9_47 - x_17_38*x_3_59*x_4_59*x_7_47*x_9_47 - x_0_59*x_10_38*x_4_47*x_7_38*x_9_59 + x_0_59*x_17_38*x_4_47*x_7_38*x_9_59 - x_0_59*x_17_47*x_4_47*x_7_38*x_9_59 + x_0_47*x_10_38*x_4_59*x_7_38*x_9_59 - x_0_47*x_17_38*x_4_59*x_7_38*x_9_59 + x_0_47*x_17_47*x_4_59*x_7_38*x_9_59 + x_0_59*x_10_38*x_4_47*x_7_38 - x_0_47*x_10_38*x_4_59*x_7_38 + x_0_59*x_10_59*x_17_38*x_7_47 - x_0_59*x_10_59*x_17_47*x_7_47 - x_10_59*x_17_38*x_4_59*x_7_47 + x_10_59*x_17_47*x_4_59*x_7_47 - x_0_59*x_4_47*x_7_38*x_9_38 + x_0_47*x_4_59*x_7_38*x_9_38 - x_0_59*x_10_59*x_7_47*x_9_38 + x_10_59*x_4_59*x_7_47*x_9_38 + x_0_59*x_4_47*x_7_38*x_9_47 - x_0_47*x_4_59*x_7_38*x_9_47 + x_0_59*x_10_59*x_7_47*x_9_47 - x_10_59*x_4_59*x_7_47*x_9_47 + x_0_59*x_10_38*x_7_47*x_9_59 - x_0_59*x_17_38*x_7_47*x_9_59 + x_0_59*x_17_47*x_7_47*x_9_59 - x_10_38*x_4_59*x_7_47*x_9_59 + x_17_38*x_4_59*x_7_47*x_9_59 - x_17_47*x_4_59*x_7_47*x_9_59 - x_0_59*x_10_38*x_7_47 + x_10_38*x_4_59*x_7_47 + x_0_59*x_7_47*x_9_38 - x_4_59*x_7_47*x_9_38 - x_0_59*x_7_47*x_9_47 + x_4_59*x_7_47*x_9_47",
+      "provenance": "[[(17, 11), (4, 55)], -1]",
+      "row_index_one_based": 7942,
+      "row_index_zero_based": 7941
+    },
+    "lambda_000010252": {
+      "positive_polynomial": "-x_0_47*x_10_59*x_17_47*x_3_59*x_7_38 - x_0_59*x_10_59*x_17_47*x_4_47*x_7_38 + x_10_59*x_17_47*x_3_59*x_4_47*x_7_38 + x_0_47*x_10_59*x_17_47*x_4_59*x_7_38 + x_0_47*x_10_59*x_17_38*x_3_59*x_7_47 + x_0_59*x_10_59*x_17_38*x_4_47*x_7_47 - x_10_59*x_17_38*x_3_59*x_4_47*x_7_47 - x_0_47*x_10_59*x_17_38*x_4_59*x_7_47 - x_0_47*x_10_59*x_3_59*x_7_47*x_9_38 - x_0_59*x_10_59*x_4_47*x_7_47*x_9_38 + x_10_59*x_3_59*x_4_47*x_7_47*x_9_38 + x_0_47*x_10_59*x_4_59*x_7_47*x_9_38 + x_0_47*x_10_59*x_3_59*x_7_38*x_9_47 + x_0_59*x_10_59*x_4_47*x_7_38*x_9_47 - x_10_59*x_3_59*x_4_47*x_7_38*x_9_47 - x_0_47*x_10_59*x_4_59*x_7_38*x_9_47 + x_0_47*x_17_47*x_3_59*x_7_38*x_9_59 + x_0_59*x_17_47*x_4_47*x_7_38*x_9_59 - x_17_47*x_3_59*x_4_47*x_7_38*x_9_59 - x_0_47*x_17_47*x_4_59*x_7_38*x_9_59 + x_0_47*x_10_38*x_3_59*x_7_47*x_9_59 - x_0_47*x_17_38*x_3_59*x_7_47*x_9_59 + x_0_59*x_10_38*x_4_47*x_7_47*x_9_59 - x_0_59*x_17_38*x_4_47*x_7_47*x_9_59 - x_10_38*x_3_59*x_4_47*x_7_47*x_9_59 + x_17_38*x_3_59*x_4_47*x_7_47*x_9_59 - x_0_47*x_10_38*x_4_59*x_7_47*x_9_59 + x_0_47*x_17_38*x_4_59*x_7_47*x_9_59 + x_0_59*x_10_59*x_17_47*x_7_38 - x_10_59*x_17_47*x_4_59*x_7_38 - x_0_59*x_10_59*x_17_38*x_7_47 - x_0_47*x_10_38*x_3_59*x_7_47 - x_0_59*x_10_38*x_4_47*x_7_47 + x_10_38*x_3_59*x_4_47*x_7_47 + x_0_47*x_10_38*x_4_59*x_7_47 + x_10_59*x_17_38*x_4_59*x_7_47 + x_0_59*x_10_59*x_7_47*x_9_38 + x_0_47*x_3_59*x_7_47*x_9_38 + x_0_59*x_4_47*x_7_47*x_9_38 - x_3_59*x_4_47*x_7_47*x_9_38 - x_0_47*x_4_59*x_7_47*x_9_38 - x_10_59*x_4_59*x_7_47*x_9_38 - x_0_59*x_10_59*x_7_38*x_9_47 - x_0_47*x_3_59*x_7_38*x_9_47 - x_0_59*x_4_47*x_7_38*x_9_47 + x_3_59*x_4_47*x_7_38*x_9_47 + x_0_47*x_4_59*x_7_38*x_9_47 + x_10_59*x_4_59*x_7_38*x_9_47 - x_0_59*x_17_47*x_7_38*x_9_59 + x_17_47*x_4_59*x_7_38*x_9_59 - x_0_59*x_10_38*x_7_47*x_9_59 + x_0_59*x_17_38*x_7_47*x_9_59 + x_10_38*x_4_59*x_7_47*x_9_59 - x_17_38*x_4_59*x_7_47*x_9_59 + x_0_59*x_10_38*x_7_47 - x_10_38*x_4_59*x_7_47 - x_0_59*x_7_47*x_9_38 + x_4_59*x_7_47*x_9_38 + x_0_59*x_7_38*x_9_47 - x_4_59*x_7_38*x_9_47",
+      "provenance": "[[(5, 23), (5, 89)], -1]",
+      "row_index_one_based": 10252,
+      "row_index_zero_based": 10251
+    },
+    "lambda_000010743": {
+      "positive_polynomial": "x_0_47*x_10_59*x_17_38*x_3_59*x_4_47*x_7_38 + x_0_59*x_10_38*x_17_47*x_3_59*x_4_47*x_7_38 - x_0_47*x_10_59*x_3_59*x_4_47*x_7_38*x_9_38 - x_0_59*x_17_47*x_3_59*x_4_47*x_7_38*x_9_38 - x_0_59*x_10_38*x_3_59*x_4_47*x_7_38*x_9_47 + x_0_59*x_17_38*x_3_59*x_4_47*x_7_38*x_9_47 + x_0_47*x_10_38*x_3_59*x_4_47*x_7_38*x_9_59 - x_0_47*x_17_38*x_3_59*x_4_47*x_7_38*x_9_59 - x_0_47*x_10_38*x_3_59*x_4_47*x_7_38 - x_10_59*x_17_47*x_3_59*x_4_47*x_7_38 - x_0_47*x_10_59*x_17_38*x_4_59*x_7_38 - x_0_59*x_10_38*x_17_47*x_4_59*x_7_38 - x_0_47*x_10_59*x_17_38*x_3_59*x_7_47 - x_0_59*x_10_38*x_17_47*x_3_59*x_7_47 + x_0_47*x_10_59*x_17_38*x_4_59*x_7_47 + x_0_59*x_10_38*x_17_47*x_4_59*x_7_47 + x_0_47*x_3_59*x_4_47*x_7_38*x_9_38 + x_0_47*x_10_59*x_4_59*x_7_38*x_9_38 + x_0_59*x_17_47*x_4_59*x_7_38*x_9_38 + x_0_47*x_10_59*x_3_59*x_7_47*x_9_38 + x_0_59*x_17_47*x_3_59*x_7_47*x_9_38 - x_0_47*x_10_59*x_4_59*x_7_47*x_9_38 - x_0_59*x_17_47*x_4_59*x_7_47*x_9_38 + x_10_59*x_3_59*x_4_47*x_7_38*x_9_47 + x_0_59*x_10_38*x_4_59*x_7_38*x_9_47 - x_0_59*x_17_38*x_4_59*x_7_38*x_9_47 + x_0_59*x_10_38*x_3_59*x_7_47*x_9_47 - x_0_59*x_17_38*x_3_59*x_7_47*x_9_47 - x_0_59*x_10_38*x_4_59*x_7_47*x_9_47 + x_0_59*x_17_38*x_4_59*x_7_47*x_9_47 + x_17_47*x_3_59*x_4_47*x_7_38*x_9_59 - x_0_47*x_10_38*x_4_59*x_7_38*x_9_59 + x_0_47*x_17_38*x_4_59*x_7_38*x_9_59 - x_0_47*x_10_38*x_3_59*x_7_47*x_9_59 + x_0_47*x_17_38*x_3_59*x_7_47*x_9_59 + x_0_47*x_10_38*x_4_59*x_7_47*x_9_59 - x_0_47*x_17_38*x_4_59*x_7_47*x_9_59 + x_0_47*x_10_38*x_4_59*x_7_38 + x_10_59*x_17_47*x_4_59*x_7_38 + x_0_47*x_10_38*x_3_59*x_7_47 + x_10_59*x_17_47*x_3_59*x_7_47 - x_0_47*x_10_38*x_4_59*x_7_47 - x_10_59*x_17_47*x_4_59*x_7_47 - x_0_47*x_4_59*x_7_38*x_9_38 - x_0_47*x_3_59*x_7_47*x_9_38 + x_0_47*x_4_59*x_7_47*x_9_38 - x_3_59*x_4_47*x_7_38*x_9_47 - x_10_59*x_4_59*x_7_38*x_9_47 - x_10_59*x_3_59*x_7_47*x_9_47 + x_10_59*x_4_59*x_7_47*x_9_47 - x_17_47*x_4_59*x_7_38*x_9_59 - x_17_47*x_3_59*x_7_47*x_9_59 + x_17_47*x_4_59*x_7_47*x_9_59 + x_4_59*x_7_38*x_9_47 + x_3_59*x_7_47*x_9_47 - x_4_59*x_7_47*x_9_47",
+      "provenance": "[[(7, 25), (5, 85)], -1]",
+      "row_index_one_based": 10743,
+      "row_index_zero_based": 10742
+    },
+    "lambda_000017307": {
+      "positive_polynomial": "-x_0_47*x_10_59*x_17_38*x_3_59*x_4_47*x_7_38 - x_0_47*x_10_38*x_17_47*x_3_59*x_4_59*x_7_38 + x_0_47*x_10_59*x_3_59*x_4_47*x_7_38*x_9_38 + x_0_47*x_17_47*x_3_59*x_4_59*x_7_38*x_9_38 + x_0_47*x_10_38*x_3_59*x_4_59*x_7_38*x_9_47 - x_0_47*x_17_38*x_3_59*x_4_59*x_7_38*x_9_47 - x_0_47*x_10_38*x_3_59*x_4_47*x_7_38*x_9_59 + x_0_47*x_17_38*x_3_59*x_4_47*x_7_38*x_9_59 + x_0_47*x_10_59*x_17_47*x_3_59*x_7_38 + x_0_59*x_10_59*x_17_38*x_4_47*x_7_38 + x_0_47*x_10_38*x_3_59*x_4_47*x_7_38 + x_0_59*x_10_38*x_17_47*x_4_59*x_7_38 - x_0_59*x_10_59*x_17_38*x_4_47*x_7_47 + x_10_59*x_17_38*x_3_59*x_4_47*x_7_47 - x_0_59*x_10_38*x_17_47*x_4_59*x_7_47 + x_10_38*x_17_47*x_3_59*x_4_59*x_7_47 - x_0_59*x_10_59*x_4_47*x_7_38*x_9_38 - x_0_47*x_3_59*x_4_47*x_7_38*x_9_38 - x_0_59*x_17_47*x_4_59*x_7_38*x_9_38 + x_0_59*x_10_59*x_4_47*x_7_47*x_9_38 - x_10_59*x_3_59*x_4_47*x_7_47*x_9_38 + x_0_59*x_17_47*x_4_59*x_7_47*x_9_38 - x_17_47*x_3_59*x_4_59*x_7_47*x_9_38 - x_0_47*x_10_59*x_3_59*x_7_38*x_9_47 - x_0_59*x_10_38*x_4_59*x_7_38*x_9_47 + x_0_59*x_17_38*x_4_59*x_7_38*x_9_47 + x_0_59*x_10_38*x_4_59*x_7_47*x_9_47 - x_0_59*x_17_38*x_4_59*x_7_47*x_9_47 - x_10_38*x_3_59*x_4_59*x_7_47*x_9_47 + x_17_38*x_3_59*x_4_59*x_7_47*x_9_47 - x_0_47*x_17_47*x_3_59*x_7_38*x_9_59 + x_0_59*x_10_38*x_4_47*x_7_38*x_9_59 - x_0_59*x_17_38*x_4_47*x_7_38*x_9_59 - x_0_59*x_10_38*x_4_47*x_7_47*x_9_59 + x_0_59*x_17_38*x_4_47*x_7_47*x_9_59 + x_10_38*x_3_59*x_4_47*x_7_47*x_9_59 - x_17_38*x_3_59*x_4_47*x_7_47*x_9_59 - x_0_59*x_10_59*x_17_47*x_7_38 - x_0_59*x_10_38*x_4_47*x_7_38 + x_0_59*x_10_59*x_17_47*x_7_47 - x_10_59*x_17_47*x_3_59*x_7_47 + x_0_59*x_10_38*x_4_47*x_7_47 - x_10_38*x_3_59*x_4_47*x_7_47 + x_0_59*x_4_47*x_7_38*x_9_38 - x_0_59*x_4_47*x_7_47*x_9_38 + x_3_59*x_4_47*x_7_47*x_9_38 + x_0_59*x_10_59*x_7_38*x_9_47 + x_0_47*x_3_59*x_7_38*x_9_47 - x_0_59*x_10_59*x_7_47*x_9_47 + x_10_59*x_3_59*x_7_47*x_9_47 + x_0_59*x_17_47*x_7_38*x_9_59 - x_0_59*x_17_47*x_7_47*x_9_59 + x_17_47*x_3_59*x_7_47*x_9_59 - x_0_59*x_7_38*x_9_47 + x_0_59*x_7_47*x_9_47 - x_3_59*x_7_47*x_9_47",
+      "provenance": "[[(3, 55), (1, 88)], -1]",
+      "row_index_one_based": 17307,
+      "row_index_zero_based": 17306
+    }
+  },
+  "representative_legacy_stderr": "",
+  "representative_legacy_stdout": "Batch search variant: all-variable-products-simplified\nBatch flag attempt 3: source=sampled-rank-certified-facet-flag, requested={0, 1, 38, 47, 59, 123}, force_new=False, seed=0\nBatch monomial-factor simplification: enabled\nFlag actually used: [0, 1, 38, 47, 59, 123]\nPolynomial backend: Sage QQ; matrix shape=19 x 6\ndeterminants reconstructed; 51 variables; cache 13029\noriented 149/149 columns; unresolved []\n221 unique saturated generators of degree <= 3\nDumping reconstruction metadata to file 3272_geometry.json...\nDumping original facets to file 3272_facets.txt...\nDumping validated facet bases to file 3272_Fbases.txt...\nDumping reduced matrix to file 3272_reducedSlackMatrix.txt...\nGenerator stage: term cap=4, 100 generators\nBatch extended generator variant: 100 reconstructed generators and 51 reduced-slack variables form products together (total 100 unique base generators).\n5050 distinct products / LP variables\nCreating standard form of polynomials.\n -- 0.063279 seconds elapsed\n\nIsolating constant terms.\n -- 0.006306 seconds elapsed\n\nCreating lists of monomials, coefficients, and constant terms.\n -- 0.001715 seconds elapsed\n\nCreating list of unique monomials.\n -- 0.002681 seconds elapsed\n\nGenerating row and column indices for sparse matrix.\n -- 0.004233 seconds elapsed\n\nAppending constant term entries.\n -- 0.000205 seconds elapsed\n\nDumping sparse matrix to file /home/yiwchen/Prismatoid certificate/batch_output_n19_corepatch_v129/work/3272_jk8ka0cm/project/src/dump/3272_iter2_deg3_matrix.txt\n -- 0.007908 seconds elapsed\n\n-> Number of rows: 5,050\n-> Number of columns: 7,217\n-> Number of non-zero entries: 21,452\nBatch normalized certificate LP: 5050 variables, 7218 equality constraints (7217 nonzero monomial equations).\nBatch LP backend attempt: direct gurobipy (Sage Gurobi backend bypassed).\nSet parameter WLSAccessID\nSet parameter WLSSecret\nSet parameter LicenseID to value 2733489\nAcademic license 2733489 - for non-commercial use only - registered to yi___@student.ubc.ca\nSet parameter Method to value 0\nSet parameter Threads to value 8\nSet parameter OutputFlag to value 1\nGurobi Optimizer version 13.0.2 build v13.0.2rc1 (linux64 - \"Ubuntu 24.04.5 LTS\")\n\nCPU model: Intel(R) Xeon(R) W-2295 CPU @ 3.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]\nThread count: 18 physical cores, 36 logical processors, using up to 8 threads\n\nNon-default parameters:\nMethod  0\nThreads  8\n\nAcademic license 2733489 - for non-commercial use only - registered to yi___@student.ubc.ca\nOptimize a model with 7218 rows, 5050 columns and 26502 nonzeros (Min)\nModel fingerprint: 0x82564c8b\nModel has 0 linear objective coefficients\nCoefficient statistics:\n  Matrix range     [1e+00, 2e+00]\n  Objective range  [0e+00, 0e+00]\n  Bounds range     [0e+00, 0e+00]\n  RHS range        [1e+00, 1e+00]\n\nPresolve removed 7217 rows and 5050 columns\nPresolve time: 0.00s\n\nSolved in 0 iterations and 0.00 seconds (0.00 work units)\nInfeasible model\nCertificate LP backend used: gurobipy\nObjective value: 1.0\nIndices of nonzero certificate variables: []\nGenerator stage: term cap=8, 179 generators\nBatch extended generator variant: 179 reconstructed generators and 51 reduced-slack variables form products together (total 179 unique base generators).\n16110 distinct products / LP variables\nCreating standard form of polynomials.\n -- 0.385087 seconds elapsed\n\nIsolating constant terms.\n -- 0.018893 seconds elapsed\n\nCreating lists of monomials, coefficients, and constant terms.\n -- 0.023727 seconds elapsed\n\nCreating list of unique monomials.\n -- 0.044155 seconds elapsed\n\nGenerating row and column indices for sparse matrix.\n -- 0.064587 seconds elapsed\n\nAppending constant term entries.\n -- 0.000632 seconds elapsed\n\nDumping sparse matrix to file /home/yiwchen/Prismatoid certificate/batch_output_n19_corepatch_v129/work/3272_jk8ka0cm/project/src/dump/3272_iter2_deg3_matrix.txt\n -- 0.105631 seconds elapsed\n\n-> Number of rows: 16,110\n-> Number of columns: 75,508\n-> Number of non-zero entries: 266,690\nBatch normalized certificate LP: 16110 variables, 75509 equality constraints (75508 nonzero monomial equations).\nBatch LP backend attempt: direct gurobipy (Sage Gurobi backend bypassed).\nSet parameter WLSAccessID\nSet parameter WLSSecret\nSet parameter LicenseID to value 2733489\nAcademic license 2733489 - for non-commercial use only - registered to yi___@student.ubc.ca\nSet parameter Method to value 0\nSet parameter Threads to value 8\nSet parameter OutputFlag to value 1\nGurobi Optimizer version 13.0.2 build v13.0.2rc1 (linux64 - \"Ubuntu 24.04.5 LTS\")\n\nCPU model: Intel(R) Xeon(R) W-2295 CPU @ 3.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]\nThread count: 18 physical cores, 36 logical processors, using up to 8 threads\n\nNon-default parameters:\nMethod  0\nThreads  8\n\nAcademic license 2733489 - for non-commercial use only - registered to yi___@student.ubc.ca\nOptimize a model with 75509 rows, 16110 columns and 282800 nonzeros (Min)\nModel fingerprint: 0xdef1a27e\nModel has 0 linear objective coefficients\nCoefficient statistics:\n  Matrix range     [1e+00, 4e+00]\n  Objective range  [0e+00, 0e+00]\n  Bounds range     [0e+00, 0e+00]\n  RHS range        [1e+00, 1e+00]\n\nPresolve removed 75508 rows and 16110 columns\nPresolve time: 0.03s\n\nSolved in 0 iterations and 0.03 seconds (0.02 work units)\nInfeasible model\nCertificate LP backend used: gurobipy\nObjective value: 1.0\nIndices of nonzero certificate variables: []\nGenerator stage: term cap=0, 221 generators\nBatch extended generator variant: 221 reconstructed generators and 51 reduced-slack variables form products together (total 221 unique base generators).\n24531 distinct products / LP variables\nCreating standard form of polynomials.\n -- 1.272515 seconds elapsed\n\nIsolating constant terms.\n -- 0.030414 seconds elapsed\n\nCreating lists of monomials, coefficients, and constant terms.\n -- 0.065727 seconds elapsed\n\nCreating list of unique monomials.\n -- 0.135101 seconds elapsed\n\nGenerating row and column indices for sparse matrix.\n -- 0.405100 seconds elapsed\n\nAppending constant term entries.\n -- 0.000975 seconds elapsed\n\nDumping sparse matrix to file /home/yiwchen/Prismatoid certificate/batch_output_n19_corepatch_v129/work/3272_jk8ka0cm/project/src/dump/3272_iter2_deg3_matrix.txt\n -- 0.329919 seconds elapsed\n\n-> Number of rows: 24,531\n-> Number of columns: 151,963\n-> Number of non-zero entries: 744,305\nBatch normalized certificate LP: 24531 variables, 151964 equality constraints (151963 nonzero monomial equations).\nBatch LP backend attempt: direct gurobipy (Sage Gurobi backend bypassed).\nSet parameter WLSAccessID\nSet parameter WLSSecret\nSet parameter LicenseID to value 2733489\nAcademic license 2733489 - for non-commercial use only - registered to yi___@student.ubc.ca\nSet parameter Method to value 0\nSet parameter Threads to value 8\nSet parameter OutputFlag to value 1\nGurobi Optimizer version 13.0.2 build v13.0.2rc1 (linux64 - \"Ubuntu 24.04.5 LTS\")\n\nCPU model: Intel(R) Xeon(R) W-2295 CPU @ 3.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]\nThread count: 18 physical cores, 36 logical processors, using up to 8 threads\n\nNon-default parameters:\nMethod  0\nThreads  8\n\nAcademic license 2733489 - for non-commercial use only - registered to yi___@student.ubc.ca\nOptimize a model with 151964 rows, 24531 columns and 768836 nonzeros (Min)\nModel fingerprint: 0x03bc165a\nModel has 0 linear objective coefficients\nCoefficient statistics:\n  Matrix range     [1e+00, 4e+00]\n  Objective range  [0e+00, 0e+00]\n  Bounds range     [0e+00, 0e+00]\n  RHS range        [1e+00, 1e+00]\n\nPresolve removed 151964 rows and 24531 columns\nPresolve time: 0.10s\nPresolve: All rows and columns removed\nIteration    Objective       Primal Inf.    Dual Inf.      Time\n       0    0.0000000e+00   0.000000e+00   0.000000e+00      0s\n\nSolved in 0 iterations and 0.15 seconds (0.12 work units)\nOptimal objective  0.000000000e+00\nCertificate LP backend used: gurobipy\nObjective value: 0.0\nIndices of nonzero certificate variables: [7942, 10252, 10743, 17307]\nAccepted exact positive identity with 4 terms; verification=verified_exact\n",
+  "search_variant": "all-variable-products-simplified",
+  "template_semantics": "exact active-row support of the normalized positive certificate LP; equivalent supports are grouped only after each candidate receives its own rationally verified witness"
+}
+
+support_graph:
+{
+  "edges": [
+    {
+      "color": "1",
+      "u": "r0",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r0",
+      "v": "v1"
+    },
+    {
+      "color": "1",
+      "u": "r1",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r1",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r2",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r2",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r3",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r3",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r4",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r4",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r5",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r5",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r6",
+      "v": "v2"
+    },
+    {
+      "color": "-1",
+      "u": "r6",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r7",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r7",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r8",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r8",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r9",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r9",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r10",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r10",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r11",
+      "v": "v2"
+    },
+    {
+      "color": "-1",
+      "u": "r11",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r12",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r12",
+      "v": "v1"
+    },
+    {
+      "color": "1",
+      "u": "r13",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r13",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r14",
+      "v": "v2"
+    },
+    {
+      "color": "-1",
+      "u": "r14",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r15",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r15",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r16",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r16",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r17",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r17",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r18",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r18",
+      "v": "v1"
+    },
+    {
+      "color": "1",
+      "u": "r19",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r19",
+      "v": "v1"
+    },
+    {
+      "color": "1",
+      "u": "r20",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r20",
+      "v": "v1"
+    },
+    {
+      "color": "1",
+      "u": "r21",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r21",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r22",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r22",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r23",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r23",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r24",
+      "v": "v2"
+    },
+    {
+      "color": "-1",
+      "u": "r24",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r25",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r25",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r26",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r26",
+      "v": "v1"
+    },
+    {
+      "color": "1",
+      "u": "r27",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r27",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r28",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r28",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r29",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r29",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r30",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r30",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r31",
+      "v": "v2"
+    },
+    {
+      "color": "-1",
+      "u": "r31",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r32",
+      "v": "v2"
+    },
+    {
+      "color": "-1",
+      "u": "r32",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r33",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r33",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r34",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r34",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r35",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r35",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r36",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r36",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r37",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r37",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r38",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r38",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r39",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r39",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r40",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r40",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r41",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r41",
+      "v": "v1"
+    },
+    {
+      "color": "1",
+      "u": "r42",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r42",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r43",
+      "v": "v2"
+    },
+    {
+      "color": "-1",
+      "u": "r43",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r44",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r44",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r45",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r45",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r46",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r46",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r47",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r47",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r48",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r48",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r49",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r49",
+      "v": "v1"
+    },
+    {
+      "color": "1",
+      "u": "r50",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r50",
+      "v": "v1"
+    },
+    {
+      "color": "1",
+      "u": "r51",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r51",
+      "v": "v1"
+    },
+    {
+      "color": "1",
+      "u": "r52",
+      "v": "v2"
+    },
+    {
+      "color": "-1",
+      "u": "r52",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r53",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r53",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r54",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r54",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r55",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r55",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r56",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r56",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r57",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r57",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r58",
+      "v": "v2"
+    },
+    {
+      "color": "-1",
+      "u": "r58",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r59",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r59",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r60",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r60",
+      "v": "v1"
+    },
+    {
+      "color": "1",
+      "u": "r61",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r61",
+      "v": "v1"
+    },
+    {
+      "color": "1",
+      "u": "r62",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r62",
+      "v": "v1"
+    },
+    {
+      "color": "1",
+      "u": "r63",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r63",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r64",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r64",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r65",
+      "v": "v2"
+    },
+    {
+      "color": "-1",
+      "u": "r65",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r66",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r66",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r67",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r67",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r68",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r68",
+      "v": "v1"
+    },
+    {
+      "color": "1",
+      "u": "r69",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r69",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r70",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r70",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r71",
+      "v": "v2"
+    },
+    {
+      "color": "-1",
+      "u": "r71",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r72",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r72",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r73",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r73",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r74",
+      "v": "v2"
+    },
+    {
+      "color": "-1",
+      "u": "r74",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r75",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r75",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r76",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r76",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r77",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r77",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r78",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r78",
+      "v": "v1"
+    },
+    {
+      "color": "1",
+      "u": "r79",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r79",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r80",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r80",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r81",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r81",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r82",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r82",
+      "v": "v1"
+    },
+    {
+      "color": "1",
+      "u": "r83",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r83",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r84",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r84",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r85",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r85",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r86",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r86",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r87",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r87",
+      "v": "v1"
+    },
+    {
+      "color": "1",
+      "u": "r88",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r88",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r89",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r89",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r90",
+      "v": "v2"
+    },
+    {
+      "color": "-1",
+      "u": "r90",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r91",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r91",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r92",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r92",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r93",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r93",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r94",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r94",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r95",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r95",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r96",
+      "v": "v2"
+    },
+    {
+      "color": "-1",
+      "u": "r96",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r97",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r97",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r98",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r98",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r99",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r99",
+      "v": "v1"
+    },
+    {
+      "color": "1",
+      "u": "r100",
+      "v": "v2"
+    },
+    {
+      "color": "-1",
+      "u": "r100",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r101",
+      "v": "v2"
+    },
+    {
+      "color": "-1",
+      "u": "r101",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r102",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r102",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r103",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r103",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r104",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r104",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r105",
+      "v": "v2"
+    },
+    {
+      "color": "-1",
+      "u": "r105",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r106",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r106",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r107",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r107",
+      "v": "v1"
+    },
+    {
+      "color": "1",
+      "u": "r108",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r108",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r109",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r109",
+      "v": "v1"
+    },
+    {
+      "color": "1",
+      "u": "r110",
+      "v": "v2"
+    },
+    {
+      "color": "-1",
+      "u": "r110",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r111",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r111",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r112",
+      "v": "v0"
+    },
+    {
+      "color": "-1",
+      "u": "r112",
+      "v": "v3"
+    },
+    {
+      "color": "1",
+      "u": "r113",
+      "v": "v1"
+    },
+    {
+      "color": "-1",
+      "u": "r113",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r114",
+      "v": "v0"
+    },
+    {
+      "color": "1",
+      "u": "r114",
+      "v": "v1"
+    },
+    {
+      "color": "1",
+      "u": "r114",
+      "v": "v2"
+    },
+    {
+      "color": "1",
+      "u": "r114",
+      "v": "v3"
+    }
+  ],
+  "nodes": [
+    {
+      "color": "variable|C|lb:0|ub:inf",
+      "id": "v0",
+      "kind": "variable"
+    },
+    {
+      "color": "variable|C|lb:0|ub:inf",
+      "id": "v1",
+      "kind": "variable"
+    },
+    {
+      "color": "variable|C|lb:0|ub:inf",
+      "id": "v2",
+      "kind": "variable"
+    },
+    {
+      "color": "variable|C|lb:0|ub:inf",
+      "id": "v3",
+      "kind": "variable"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r0",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r1",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r2",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r3",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r4",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r5",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r6",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r7",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r8",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r9",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r10",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r11",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r12",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r13",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r14",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r15",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r16",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r17",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r18",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r19",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r20",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r21",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r22",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r23",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r24",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r25",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r26",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r27",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r28",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r29",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r30",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r31",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r32",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r33",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r34",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r35",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r36",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r37",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r38",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r39",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r40",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r41",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r42",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r43",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r44",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r45",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r46",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r47",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r48",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r49",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r50",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r51",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r52",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r53",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r54",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r55",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r56",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r57",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r58",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r59",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r60",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r61",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r62",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r63",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r64",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r65",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r66",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r67",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r68",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r69",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r70",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r71",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r72",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r73",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r74",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r75",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r76",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r77",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r78",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r79",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r80",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r81",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r82",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r83",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r84",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r85",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r86",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r87",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r88",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r89",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r90",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r91",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r92",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r93",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r94",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r95",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r96",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r97",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r98",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r99",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r100",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r101",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r102",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r103",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r104",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r105",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r106",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r107",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r108",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r109",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r110",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r111",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r112",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:0",
+      "id": "r113",
+      "kind": "constraint"
+    },
+    {
+      "color": "constraint|=|rhs:1",
+      "id": "r114",
+      "kind": "constraint"
+    }
+  ],
+  "variable_names": {
+    "v0": "lambda_000007942",
+    "v1": "lambda_000010252",
+    "v2": "lambda_000010743",
+    "v3": "lambda_000017307"
+  }
+}

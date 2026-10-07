@@ -1,0 +1,17 @@
+batch_package_version=1.2.9-core-patch
+output_root=/home/yiwchen/Prismatoid certificate/batch_output_n26_corepatch_v129
+data_root=/home/yiwchen/Prismatoid certificate/box_of_prismatoids
+project_root=/home/yiwchen/Prismatoid certificate/Code
+entrypoint=/home/yiwchen/Prismatoid certificate/Code/src/nonrealizability_certificate.py
+cwd=/home/yiwchen/Prismatoid certificate/prismatoid_core_patch_v129
+python_executable=/home/yiwchen/miniforge3/envs/sage/bin/python3
+python_version=3.13.15
+lp_solver=gurobipy
+search_variant=all-variable-products-simplified
+flag_attempts=10000
+flag_attempt_strategy=rank-certified-flags-including-nonsimplicial-facets
+timeout_scope=per solver invocation (each flag/template attempt)
+vertex_counts=26
+gurobi_license_source=project-dev
+gurobi_license_path=/home/yiwchen/Prismatoid certificate/Code/dev/gurobi.lic
+search_configuration={"configuration_version": 4, "core_patch_version": "1.2.9-core-patch", "dimension": 5, "flag_attempts": 10000, "max_degree": 3, "n_factors": 2, "prepare_mode": "external", "random_seed": 0, "search_variant": "all-variable-products-simplified", "vertex_counts": [26]}
