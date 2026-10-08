@@ -14,7 +14,7 @@ import traceback
 import platform
 import sys
 
-from . import __version__
+from . import PACKAGE_ID
 from .exact import rationalize_solution, reduce_support
 from .facet_io import (
     candidate_id as make_candidate_id,
@@ -118,7 +118,7 @@ class BatchPipeline:
 
         search_configuration = {
             "configuration_version": 4,
-            "core_patch_version": "1.2.9-core-patch",
+            "core_interface": "prismatoid-exact-core",
             "dimension": self.o.dimension,
             "n_factors": self.o.n_factors,
             "max_degree": self.o.max_deg,
@@ -159,7 +159,7 @@ class BatchPipeline:
             self.o.output_root / "templates" / "final_templates.json"
         )
         run_info = [
-            f"batch_package_version={__version__}",
+            f"batch_package={PACKAGE_ID}",
             f"output_root={self.o.output_root}",
             f"data_root={self.o.data_root}",
             f"project_root={self.o.project_root}",
@@ -186,7 +186,7 @@ class BatchPipeline:
         (self.o.output_root / "RUN_INFO.txt").write_text(
             "\n".join(run_info) + "\n", encoding="utf-8"
         )
-        print(f"Batch package version: {__version__}", flush=True)
+        print(f"Batch package: {PACKAGE_ID}", flush=True)
         print(f"Batch output directory: {self.o.output_root}", flush=True)
         print(f"Per-candidate reports: {self.results_dir}", flush=True)
         print(f"LP solver policy: {self.o.lp_solver}", flush=True)
@@ -685,7 +685,7 @@ class BatchPipeline:
         )
 
         metadata = {
-            "batch_package_version": __version__,
+            "batch_package": PACKAGE_ID,
             "candidate_vertex_count": vertex_count,
             "preparation_mode": prep.mode,
             "preparation_stdout": prep.stdout,
@@ -914,7 +914,7 @@ class BatchPipeline:
                     sha256=digest,
                     error=traceback.format_exc(),
                     metadata={
-                        "batch_package_version": __version__,
+                        "batch_package": PACKAGE_ID,
                         "candidate_vertex_count": vertex_count,
                         "vertex_count_filter": (
                             list(self.o.vertex_counts)
@@ -969,7 +969,7 @@ class BatchPipeline:
             "BATCH CERTIFICATE SUMMARY",
             "=========================",
             "",
-            f"batch_package_version: {__version__}",
+            f"batch_package: {PACKAGE_ID}",
             f"search_variant: {self.o.search_variant}",
             f"n_factors: {self.o.n_factors}",
             f"max_degree: {self.o.max_deg}",

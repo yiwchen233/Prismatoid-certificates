@@ -9,7 +9,7 @@ import platform
 import subprocess
 import traceback
 
-from . import __version__
+from . import PACKAGE_ID
 from .autodetect import write_report
 from .facet_io import enumerate_candidates, read_facets
 from .license_config import (
@@ -87,7 +87,7 @@ def build_parser() -> argparse.ArgumentParser:
         prog="prismatoid-batch",
         description="Batch non-realizability certificate search with an exactly verified template library.",
     )
-    parser.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
+    parser.add_argument("--info", "--version", action="version", version=PACKAGE_ID, help="show the batch runner identity and exit")
     sub = parser.add_subparsers(dest="command", required=True)
 
     run = sub.add_parser("run", help="scan candidates, save one TXT certificate result per candidate, and update templates")
@@ -328,7 +328,7 @@ def main(argv=None) -> int:
         selection = resolve_gurobi_license(args.gurobi_license, project_root=project_root)
         apply_gurobi_license(selection)
         lines = [
-            f"batch_package_version={__version__}",
+            f"batch_package={PACKAGE_ID}",
             f"bundle_root={_bundle_root()}",
             f"cli_file={Path(__file__).resolve()}",
             f"cwd={Path.cwd()}",

@@ -13,11 +13,11 @@
       "force_new_flag": false,
       "intersection_cardinalities": null,
       "legacy_artifacts": [
-        "/home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch_v129/legacy_artifacts/2717/flag_01/2717_iter2_deg3_certificate.txt",
-        "/home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch_v129/legacy_artifacts/2717/flag_01/2717_iter2_deg3_certificate_coefficients.txt",
-        "/home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch_v129/legacy_artifacts/2717/flag_01/2717_iter2_deg3_certificate_rows.txt",
-        "/home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch_v129/legacy_artifacts/2717/flag_01/adapter_result.json",
-        "/home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch_v129/legacy_artifacts/2717/flag_01/input_patch_notes.txt"
+        "/home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch/legacy_artifacts/2717/flag_01/2717_iter2_deg3_certificate.txt",
+        "/home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch/legacy_artifacts/2717/flag_01/2717_iter2_deg3_certificate_coefficients.txt",
+        "/home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch/legacy_artifacts/2717/flag_01/2717_iter2_deg3_certificate_rows.txt",
+        "/home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch/legacy_artifacts/2717/flag_01/adapter_result.json",
+        "/home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch/legacy_artifacts/2717/flag_01/input_patch_notes.txt"
       ],
       "legacy_flag_attributes": {
         "flag": [
@@ -37,7 +37,7 @@
           123
         ]
       },
-      "model_capture": "/home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch_v129/model_captures/2717_flag_01.json",
+      "model_capture": "/home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch/model_captures/2717_flag_01.json",
       "random_seed": 0,
       "requested_flag": "{}",
       "requested_flag_indices_zero_based": null,
@@ -58,7 +58,7 @@
     }
   ],
   "metadata": {
-    "batch_package_version": "1.2.9-core-patch",
+    "batch_package": "prismatoid-batch",
     "candidate_vertex_count": 22,
     "captured_model_metadata": {
       "active_row_descriptions": {
@@ -8549,7 +8549,7 @@
             "x_9_19",
             "x_9_68"
           ],
-          "version": "1.2.9-core-patch"
+          "core_interface": "prismatoid-exact-core"
         },
         "prepared_file_sha256": "8126fc3c1cd5ef786c76e2124df1f8abfccec2cf3656fade9634dfcd8f9d951c",
         "search_attempt": {
@@ -8617,7 +8617,7 @@
       "certificate_model": "lambda >= 0, B^T lambda = 0, sum(lambda) = 1",
       "certificate_tolerance": 1e-07,
       "computed_legacy_objective": "0.0",
-      "core_patch_version": "1.2.9-core-patch",
+      "core_interface": "prismatoid-exact-core",
       "exact_weights": {
         "10026": "1/4",
         "11469": "1/4",
@@ -8746,11 +8746,11 @@
           "force_new_flag": false,
           "intersection_cardinalities": null,
           "legacy_artifacts": [
-            "/home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch_v129/legacy_artifacts/2717/flag_01/2717_iter2_deg3_certificate.txt",
-            "/home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch_v129/legacy_artifacts/2717/flag_01/2717_iter2_deg3_certificate_coefficients.txt",
-            "/home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch_v129/legacy_artifacts/2717/flag_01/2717_iter2_deg3_certificate_rows.txt",
-            "/home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch_v129/legacy_artifacts/2717/flag_01/adapter_result.json",
-            "/home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch_v129/legacy_artifacts/2717/flag_01/input_patch_notes.txt"
+            "/home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch/legacy_artifacts/2717/flag_01/2717_iter2_deg3_certificate.txt",
+            "/home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch/legacy_artifacts/2717/flag_01/2717_iter2_deg3_certificate_coefficients.txt",
+            "/home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch/legacy_artifacts/2717/flag_01/2717_iter2_deg3_certificate_rows.txt",
+            "/home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch/legacy_artifacts/2717/flag_01/adapter_result.json",
+            "/home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch/legacy_artifacts/2717/flag_01/input_patch_notes.txt"
           ],
           "legacy_flag_attributes": {
             "flag": [
@@ -8770,7 +8770,7 @@
               123
             ]
           },
-          "model_capture": "/home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch_v129/model_captures/2717_flag_01.json",
+          "model_capture": "/home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch/model_captures/2717_flag_01.json",
           "random_seed": 0,
           "requested_flag": "{}",
           "requested_flag_indices_zero_based": null,
@@ -8802,13 +8802,13 @@
       "strategy": "legacy default first; then deterministic random sampling of distinct rank-certified facet flags including every nonsimplicial facet; fresh-flag fallback if necessary",
       "timeout_scope": "per solver invocation"
     },
-    "independent_proof_path": "/home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch_v129/exact_proofs/2717.json",
+    "independent_proof_path": "/home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch/exact_proofs/2717.json",
     "legacy_artifacts": [
-      "/home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch_v129/legacy_artifacts/2717/flag_01/2717_iter2_deg3_certificate.txt",
-      "/home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch_v129/legacy_artifacts/2717/flag_01/2717_iter2_deg3_certificate_coefficients.txt",
-      "/home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch_v129/legacy_artifacts/2717/flag_01/2717_iter2_deg3_certificate_rows.txt",
-      "/home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch_v129/legacy_artifacts/2717/flag_01/adapter_result.json",
-      "/home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch_v129/legacy_artifacts/2717/flag_01/input_patch_notes.txt"
+      "/home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch/legacy_artifacts/2717/flag_01/2717_iter2_deg3_certificate.txt",
+      "/home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch/legacy_artifacts/2717/flag_01/2717_iter2_deg3_certificate_coefficients.txt",
+      "/home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch/legacy_artifacts/2717/flag_01/2717_iter2_deg3_certificate_rows.txt",
+      "/home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch/legacy_artifacts/2717/flag_01/adapter_result.json",
+      "/home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch/legacy_artifacts/2717/flag_01/input_patch_notes.txt"
     ],
     "new_template_created": true,
     "preparation_metadata": {
@@ -9603,21 +9603,21 @@
     },
     "template_restriction_succeeded": null
   },
-  "model_capture": "/home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch_v129/model_captures/2717_flag_01.json",
-  "prepared_path": "/home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch_v129/prepared/2717.txt",
+  "model_capture": "/home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch/model_captures/2717_flag_01.json",
+  "prepared_path": "/home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch/prepared/2717.txt",
   "sha256": "d4abc21ff72fa88e264bfe47ee6ee89decce97d409d4977fd3d6ba0b4f4da15e",
   "solver_command": [
     "/home/yiwchen/miniforge3/envs/sage/bin/python3",
     "-m",
-    "prismatoid_batch_v127.legacy_wrapper",
-    "/home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch_v129/work/2717_7ocxgakx/project/src/nonrealizability_certificate.py",
-    "/home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch_v129/work/2717_7ocxgakx/candidate.txt"
+    "prismatoid_batch.legacy_wrapper",
+    "/home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch/work/2717_7ocxgakx/project/src/nonrealizability_certificate.py",
+    "/home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch/work/2717_7ocxgakx/candidate.txt"
   ],
   "solver_returncode": 0,
   "source_path": "/home/yiwchen/Prismatoid certificate/box_of_prismatoids/2717",
   "status": "certificate_exact",
   "stderr": "",
-  "stdout": "Batch search variant: all-variable-products-simplified\nBatch flag attempt 1: source=legacy-default, requested={}, force_new=False, seed=0\nBatch monomial-factor simplification: enabled\nFlag actually used: [0, 1, 19, 24, 68, 123]\nPolynomial backend: Sage QQ; matrix shape=22 x 6\ndeterminants reconstructed; 63 variables; cache 22769\noriented 176/176 columns; unresolved []\n282 unique saturated generators of degree <= 3\nDumping reconstruction metadata to file 2717_geometry.json...\nDumping original facets to file 2717_facets.txt...\nDumping validated facet bases to file 2717_Fbases.txt...\nDumping reduced matrix to file 2717_reducedSlackMatrix.txt...\nGenerator stage: term cap=4, 225 generators\nBatch extended generator variant: 225 reconstructed generators and 63 reduced-slack variables form products together (total 225 unique base generators).\n25425 distinct products / LP variables\nCreating standard form of polynomials.\n -- 0.297549 seconds elapsed\n\nIsolating constant terms.\n -- 0.032768 seconds elapsed\n\nCreating lists of monomials, coefficients, and constant terms.\n -- 0.018404 seconds elapsed\n\nCreating list of unique monomials.\n -- 0.042902 seconds elapsed\n\nGenerating row and column indices for sparse matrix.\n -- 0.056006 seconds elapsed\n\nAppending constant term entries.\n -- 0.000883 seconds elapsed\n\nDumping sparse matrix to file /home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch_v129/work/2717_7ocxgakx/project/src/dump/2717_iter2_deg3_matrix.txt\n -- 0.075570 seconds elapsed\n\n-> Number of rows: 25,425\n-> Number of columns: 90,126\n-> Number of non-zero entries: 188,289\nBatch normalized certificate LP: 25425 variables, 90127 equality constraints (90126 nonzero monomial equations).\nBatch LP backend attempt: direct gurobipy (Sage Gurobi backend bypassed).\nSet parameter WLSAccessID\nSet parameter WLSSecret\nSet parameter LicenseID to value 2733489\nAcademic license 2733489 - for non-commercial use only - registered to yi___@student.ubc.ca\nSet parameter Method to value 0\nSet parameter Threads to value 8\nSet parameter OutputFlag to value 1\nGurobi Optimizer version 13.0.2 build v13.0.2rc1 (linux64 - \"Ubuntu 24.04.5 LTS\")\n\nCPU model: Intel(R) Xeon(R) W-2295 CPU @ 3.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]\nThread count: 18 physical cores, 36 logical processors, using up to 8 threads\n\nNon-default parameters:\nMethod  0\nThreads  8\n\nAcademic license 2733489 - for non-commercial use only - registered to yi___@student.ubc.ca\nOptimize a model with 90127 rows, 25425 columns and 213714 nonzeros (Min)\nModel fingerprint: 0xbb294378\nModel has 0 linear objective coefficients\nCoefficient statistics:\n  Matrix range     [1e+00, 2e+00]\n  Objective range  [0e+00, 0e+00]\n  Bounds range     [0e+00, 0e+00]\n  RHS range        [1e+00, 1e+00]\n\nPresolve removed 90126 rows and 25425 columns\nPresolve time: 0.03s\n\nSolved in 0 iterations and 0.03 seconds (0.02 work units)\nInfeasible model\nCertificate LP backend used: gurobipy\nObjective value: 1.0\nIndices of nonzero certificate variables: []\nGenerator stage: term cap=8, 261 generators\nBatch extended generator variant: 261 reconstructed generators and 63 reduced-slack variables form products together (total 261 unique base generators).\n34191 distinct products / LP variables\nCreating standard form of polynomials.\n -- 0.548924 seconds elapsed\n\nIsolating constant terms.\n -- 0.041829 seconds elapsed\n\nCreating lists of monomials, coefficients, and constant terms.\n -- 0.162571 seconds elapsed\n\nCreating list of unique monomials.\n -- 0.082484 seconds elapsed\n\nGenerating row and column indices for sparse matrix.\n -- 0.110920 seconds elapsed\n\nAppending constant term entries.\n -- 0.001290 seconds elapsed\n\nDumping sparse matrix to file /home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch_v129/work/2717_7ocxgakx/project/src/dump/2717_iter2_deg3_matrix.txt\n -- 0.154199 seconds elapsed\n\n-> Number of rows: 34,191\n-> Number of columns: 139,086\n-> Number of non-zero entries: 350,819\nBatch normalized certificate LP: 34191 variables, 139087 equality constraints (139086 nonzero monomial equations).\nBatch LP backend attempt: direct gurobipy (Sage Gurobi backend bypassed).\nSet parameter WLSAccessID\nSet parameter WLSSecret\nSet parameter LicenseID to value 2733489\nAcademic license 2733489 - for non-commercial use only - registered to yi___@student.ubc.ca\nSet parameter Method to value 0\nSet parameter Threads to value 8\nSet parameter OutputFlag to value 1\nGurobi Optimizer version 13.0.2 build v13.0.2rc1 (linux64 - \"Ubuntu 24.04.5 LTS\")\n\nCPU model: Intel(R) Xeon(R) W-2295 CPU @ 3.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]\nThread count: 18 physical cores, 36 logical processors, using up to 8 threads\n\nNon-default parameters:\nMethod  0\nThreads  8\n\nAcademic license 2733489 - for non-commercial use only - registered to yi___@student.ubc.ca\nOptimize a model with 139087 rows, 34191 columns and 385010 nonzeros (Min)\nModel fingerprint: 0x0905c549\nModel has 0 linear objective coefficients\nCoefficient statistics:\n  Matrix range     [1e+00, 4e+00]\n  Objective range  [0e+00, 0e+00]\n  Bounds range     [0e+00, 0e+00]\n  RHS range        [1e+00, 1e+00]\n\nPresolve removed 139086 rows and 34191 columns\nPresolve time: 0.05s\n\nSolved in 0 iterations and 0.05 seconds (0.03 work units)\nInfeasible model\nCertificate LP backend used: gurobipy\nObjective value: 1.0\nIndices of nonzero certificate variables: []\nGenerator stage: term cap=0, 282 generators\nBatch extended generator variant: 282 reconstructed generators and 63 reduced-slack variables form products together (total 282 unique base generators).\n39903 distinct products / LP variables\nCreating standard form of polynomials.\n -- 1.038836 seconds elapsed\n\nIsolating constant terms.\n -- 0.054884 seconds elapsed\n\nCreating lists of monomials, coefficients, and constant terms.\n -- 0.061524 seconds elapsed\n\nCreating list of unique monomials.\n -- 0.158326 seconds elapsed\n\nGenerating row and column indices for sparse matrix.\n -- 0.409949 seconds elapsed\n\nAppending constant term entries.\n -- 0.001392 seconds elapsed\n\nDumping sparse matrix to file /home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch_v129/work/2717_7ocxgakx/project/src/dump/2717_iter2_deg3_matrix.txt\n -- 0.285242 seconds elapsed\n\n-> Number of rows: 39,903\n-> Number of columns: 199,458\n-> Number of non-zero entries: 613,459\nBatch normalized certificate LP: 39903 variables, 199459 equality constraints (199458 nonzero monomial equations).\nBatch LP backend attempt: direct gurobipy (Sage Gurobi backend bypassed).\nSet parameter WLSAccessID\nSet parameter WLSSecret\nSet parameter LicenseID to value 2733489\nAcademic license 2733489 - for non-commercial use only - registered to yi___@student.ubc.ca\nSet parameter Method to value 0\nSet parameter Threads to value 8\nSet parameter OutputFlag to value 1\nGurobi Optimizer version 13.0.2 build v13.0.2rc1 (linux64 - \"Ubuntu 24.04.5 LTS\")\n\nCPU model: Intel(R) Xeon(R) W-2295 CPU @ 3.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]\nThread count: 18 physical cores, 36 logical processors, using up to 8 threads\n\nNon-default parameters:\nMethod  0\nThreads  8\n\nAcademic license 2733489 - for non-commercial use only - registered to yi___@student.ubc.ca\nOptimize a model with 199459 rows, 39903 columns and 653362 nonzeros (Min)\nModel fingerprint: 0xfe1e3bac\nModel has 0 linear objective coefficients\nCoefficient statistics:\n  Matrix range     [1e+00, 4e+00]\n  Objective range  [0e+00, 0e+00]\n  Bounds range     [0e+00, 0e+00]\n  RHS range        [1e+00, 1e+00]\n\nPresolve removed 199404 rows and 39794 columns\nPresolve time: 0.11s\nPresolved: 55 rows, 109 columns, 597 nonzeros\n\nIteration    Objective       Primal Inf.    Dual Inf.      Time\n       0    0.0000000e+00   5.000000e-01   2.500000e+07      0s\n      20    0.0000000e+00   0.000000e+00   0.000000e+00      0s\n\nSolved in 20 iterations and 0.17 seconds (0.13 work units)\nOptimal objective  0.000000000e+00\nCertificate LP backend used: gurobipy\nObjective value: 0.0\nIndices of nonzero certificate variables: [10027, 11470, 12880, 17004]\nAccepted exact positive identity with 4 terms; verification=verified_exact\n",
+  "stdout": "Batch search variant: all-variable-products-simplified\nBatch flag attempt 1: source=legacy-default, requested={}, force_new=False, seed=0\nBatch monomial-factor simplification: enabled\nFlag actually used: [0, 1, 19, 24, 68, 123]\nPolynomial backend: Sage QQ; matrix shape=22 x 6\ndeterminants reconstructed; 63 variables; cache 22769\noriented 176/176 columns; unresolved []\n282 unique saturated generators of degree <= 3\nDumping reconstruction metadata to file 2717_geometry.json...\nDumping original facets to file 2717_facets.txt...\nDumping validated facet bases to file 2717_Fbases.txt...\nDumping reduced matrix to file 2717_reducedSlackMatrix.txt...\nGenerator stage: term cap=4, 225 generators\nBatch extended generator variant: 225 reconstructed generators and 63 reduced-slack variables form products together (total 225 unique base generators).\n25425 distinct products / LP variables\nCreating standard form of polynomials.\n -- 0.297549 seconds elapsed\n\nIsolating constant terms.\n -- 0.032768 seconds elapsed\n\nCreating lists of monomials, coefficients, and constant terms.\n -- 0.018404 seconds elapsed\n\nCreating list of unique monomials.\n -- 0.042902 seconds elapsed\n\nGenerating row and column indices for sparse matrix.\n -- 0.056006 seconds elapsed\n\nAppending constant term entries.\n -- 0.000883 seconds elapsed\n\nDumping sparse matrix to file /home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch/work/2717_7ocxgakx/project/src/dump/2717_iter2_deg3_matrix.txt\n -- 0.075570 seconds elapsed\n\n-> Number of rows: 25,425\n-> Number of columns: 90,126\n-> Number of non-zero entries: 188,289\nBatch normalized certificate LP: 25425 variables, 90127 equality constraints (90126 nonzero monomial equations).\nBatch LP backend attempt: direct gurobipy (Sage Gurobi backend bypassed).\nSet parameter WLSAccessID\nSet parameter WLSSecret\nSet parameter LicenseID to value 2733489\nAcademic license 2733489 - for non-commercial use only - registered to yi___@student.ubc.ca\nSet parameter Method to value 0\nSet parameter Threads to value 8\nSet parameter OutputFlag to value 1\nGurobi Optimizer version 13.0.2 build v13.0.2rc1 (linux64 - \"Ubuntu 24.04.5 LTS\")\n\nCPU model: Intel(R) Xeon(R) W-2295 CPU @ 3.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]\nThread count: 18 physical cores, 36 logical processors, using up to 8 threads\n\nNon-default parameters:\nMethod  0\nThreads  8\n\nAcademic license 2733489 - for non-commercial use only - registered to yi___@student.ubc.ca\nOptimize a model with 90127 rows, 25425 columns and 213714 nonzeros (Min)\nModel fingerprint: 0xbb294378\nModel has 0 linear objective coefficients\nCoefficient statistics:\n  Matrix range     [1e+00, 2e+00]\n  Objective range  [0e+00, 0e+00]\n  Bounds range     [0e+00, 0e+00]\n  RHS range        [1e+00, 1e+00]\n\nPresolve removed 90126 rows and 25425 columns\nPresolve time: 0.03s\n\nSolved in 0 iterations and 0.03 seconds (0.02 work units)\nInfeasible model\nCertificate LP backend used: gurobipy\nObjective value: 1.0\nIndices of nonzero certificate variables: []\nGenerator stage: term cap=8, 261 generators\nBatch extended generator variant: 261 reconstructed generators and 63 reduced-slack variables form products together (total 261 unique base generators).\n34191 distinct products / LP variables\nCreating standard form of polynomials.\n -- 0.548924 seconds elapsed\n\nIsolating constant terms.\n -- 0.041829 seconds elapsed\n\nCreating lists of monomials, coefficients, and constant terms.\n -- 0.162571 seconds elapsed\n\nCreating list of unique monomials.\n -- 0.082484 seconds elapsed\n\nGenerating row and column indices for sparse matrix.\n -- 0.110920 seconds elapsed\n\nAppending constant term entries.\n -- 0.001290 seconds elapsed\n\nDumping sparse matrix to file /home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch/work/2717_7ocxgakx/project/src/dump/2717_iter2_deg3_matrix.txt\n -- 0.154199 seconds elapsed\n\n-> Number of rows: 34,191\n-> Number of columns: 139,086\n-> Number of non-zero entries: 350,819\nBatch normalized certificate LP: 34191 variables, 139087 equality constraints (139086 nonzero monomial equations).\nBatch LP backend attempt: direct gurobipy (Sage Gurobi backend bypassed).\nSet parameter WLSAccessID\nSet parameter WLSSecret\nSet parameter LicenseID to value 2733489\nAcademic license 2733489 - for non-commercial use only - registered to yi___@student.ubc.ca\nSet parameter Method to value 0\nSet parameter Threads to value 8\nSet parameter OutputFlag to value 1\nGurobi Optimizer version 13.0.2 build v13.0.2rc1 (linux64 - \"Ubuntu 24.04.5 LTS\")\n\nCPU model: Intel(R) Xeon(R) W-2295 CPU @ 3.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]\nThread count: 18 physical cores, 36 logical processors, using up to 8 threads\n\nNon-default parameters:\nMethod  0\nThreads  8\n\nAcademic license 2733489 - for non-commercial use only - registered to yi___@student.ubc.ca\nOptimize a model with 139087 rows, 34191 columns and 385010 nonzeros (Min)\nModel fingerprint: 0x0905c549\nModel has 0 linear objective coefficients\nCoefficient statistics:\n  Matrix range     [1e+00, 4e+00]\n  Objective range  [0e+00, 0e+00]\n  Bounds range     [0e+00, 0e+00]\n  RHS range        [1e+00, 1e+00]\n\nPresolve removed 139086 rows and 34191 columns\nPresolve time: 0.05s\n\nSolved in 0 iterations and 0.05 seconds (0.03 work units)\nInfeasible model\nCertificate LP backend used: gurobipy\nObjective value: 1.0\nIndices of nonzero certificate variables: []\nGenerator stage: term cap=0, 282 generators\nBatch extended generator variant: 282 reconstructed generators and 63 reduced-slack variables form products together (total 282 unique base generators).\n39903 distinct products / LP variables\nCreating standard form of polynomials.\n -- 1.038836 seconds elapsed\n\nIsolating constant terms.\n -- 0.054884 seconds elapsed\n\nCreating lists of monomials, coefficients, and constant terms.\n -- 0.061524 seconds elapsed\n\nCreating list of unique monomials.\n -- 0.158326 seconds elapsed\n\nGenerating row and column indices for sparse matrix.\n -- 0.409949 seconds elapsed\n\nAppending constant term entries.\n -- 0.001392 seconds elapsed\n\nDumping sparse matrix to file /home/yiwchen/Prismatoid certificate/batch_output_n22_corepatch/work/2717_7ocxgakx/project/src/dump/2717_iter2_deg3_matrix.txt\n -- 0.285242 seconds elapsed\n\n-> Number of rows: 39,903\n-> Number of columns: 199,458\n-> Number of non-zero entries: 613,459\nBatch normalized certificate LP: 39903 variables, 199459 equality constraints (199458 nonzero monomial equations).\nBatch LP backend attempt: direct gurobipy (Sage Gurobi backend bypassed).\nSet parameter WLSAccessID\nSet parameter WLSSecret\nSet parameter LicenseID to value 2733489\nAcademic license 2733489 - for non-commercial use only - registered to yi___@student.ubc.ca\nSet parameter Method to value 0\nSet parameter Threads to value 8\nSet parameter OutputFlag to value 1\nGurobi Optimizer version 13.0.2 build v13.0.2rc1 (linux64 - \"Ubuntu 24.04.5 LTS\")\n\nCPU model: Intel(R) Xeon(R) W-2295 CPU @ 3.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]\nThread count: 18 physical cores, 36 logical processors, using up to 8 threads\n\nNon-default parameters:\nMethod  0\nThreads  8\n\nAcademic license 2733489 - for non-commercial use only - registered to yi___@student.ubc.ca\nOptimize a model with 199459 rows, 39903 columns and 653362 nonzeros (Min)\nModel fingerprint: 0xfe1e3bac\nModel has 0 linear objective coefficients\nCoefficient statistics:\n  Matrix range     [1e+00, 4e+00]\n  Objective range  [0e+00, 0e+00]\n  Bounds range     [0e+00, 0e+00]\n  RHS range        [1e+00, 1e+00]\n\nPresolve removed 199404 rows and 39794 columns\nPresolve time: 0.11s\nPresolved: 55 rows, 109 columns, 597 nonzeros\n\nIteration    Objective       Primal Inf.    Dual Inf.      Time\n       0    0.0000000e+00   5.000000e-01   2.500000e+07      0s\n      20    0.0000000e+00   0.000000e+00   0.000000e+00      0s\n\nSolved in 20 iterations and 0.17 seconds (0.13 work units)\nOptimal objective  0.000000000e+00\nCertificate LP backend used: gurobipy\nObjective value: 0.0\nIndices of nonzero certificate variables: [10027, 11470, 12880, 17004]\nAccepted exact positive identity with 4 terms; verification=verified_exact\n",
   "template_attempts": [],
   "template_id": "T0199",
   "witness": {

@@ -13,8 +13,8 @@
       "force_new_flag": false,
       "intersection_cardinalities": null,
       "legacy_artifacts": [
-        "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch_v129/legacy_artifacts/0917/flag_01/adapter_result.json",
-        "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch_v129/legacy_artifacts/0917/flag_01/input_patch_notes.txt"
+        "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch/legacy_artifacts/0917/flag_01/adapter_result.json",
+        "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch/legacy_artifacts/0917/flag_01/input_patch_notes.txt"
       ],
       "legacy_flag_attributes": {
         "flag": [
@@ -34,7 +34,7 @@
           95
         ]
       },
-      "model_capture": "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch_v129/model_captures/0917_flag_01.json",
+      "model_capture": "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch/model_captures/0917_flag_01.json",
       "random_seed": 0,
       "requested_flag": "{}",
       "requested_flag_indices_zero_based": null,
@@ -69,8 +69,8 @@
         0
       ],
       "legacy_artifacts": [
-        "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch_v129/legacy_artifacts/0917/flag_02/adapter_result.json",
-        "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch_v129/legacy_artifacts/0917/flag_02/input_patch_notes.txt"
+        "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch/legacy_artifacts/0917/flag_02/adapter_result.json",
+        "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch/legacy_artifacts/0917/flag_02/input_patch_notes.txt"
       ],
       "legacy_flag_attributes": {
         "flag": [
@@ -90,7 +90,7 @@
           45
         ]
       },
-      "model_capture": "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch_v129/model_captures/0917_flag_02.json",
+      "model_capture": "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch/model_captures/0917_flag_02.json",
       "random_seed": 0,
       "requested_flag": "{0, 1, 18, 22, 37, 45}",
       "requested_flag_indices_zero_based": [
@@ -132,11 +132,11 @@
         0
       ],
       "legacy_artifacts": [
-        "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch_v129/legacy_artifacts/0917/flag_03/0917_iter2_deg3_certificate.txt",
-        "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch_v129/legacy_artifacts/0917/flag_03/0917_iter2_deg3_certificate_coefficients.txt",
-        "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch_v129/legacy_artifacts/0917/flag_03/0917_iter2_deg3_certificate_rows.txt",
-        "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch_v129/legacy_artifacts/0917/flag_03/adapter_result.json",
-        "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch_v129/legacy_artifacts/0917/flag_03/input_patch_notes.txt"
+        "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch/legacy_artifacts/0917/flag_03/0917_iter2_deg3_certificate.txt",
+        "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch/legacy_artifacts/0917/flag_03/0917_iter2_deg3_certificate_coefficients.txt",
+        "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch/legacy_artifacts/0917/flag_03/0917_iter2_deg3_certificate_rows.txt",
+        "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch/legacy_artifacts/0917/flag_03/adapter_result.json",
+        "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch/legacy_artifacts/0917/flag_03/input_patch_notes.txt"
       ],
       "legacy_flag_attributes": {
         "flag": [
@@ -156,7 +156,7 @@
           38
         ]
       },
-      "model_capture": "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch_v129/model_captures/0917_flag_03.json",
+      "model_capture": "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch/model_captures/0917_flag_03.json",
       "random_seed": 0,
       "requested_flag": "{0, 1, 5, 14, 34, 38}",
       "requested_flag_indices_zero_based": [
@@ -184,7 +184,7 @@
     }
   ],
   "metadata": {
-    "batch_package_version": "1.2.9-core-patch",
+    "batch_package": "prismatoid-batch",
     "candidate_vertex_count": 16,
     "captured_model_metadata": {
       "active_row_descriptions": {
@@ -5791,7 +5791,7 @@
             "x_8_5",
             "x_9_0"
           ],
-          "version": "1.2.9-core-patch"
+          "core_interface": "prismatoid-exact-core"
         },
         "prepared_file_sha256": "ebe44ba8645c73ed810098805afb95ce00ba1fc626e2d422ff0c48c571aae95d",
         "search_attempt": {
@@ -5851,7 +5851,7 @@
       "certificate_model": "lambda >= 0, B^T lambda = 0, sum(lambda) = 1",
       "certificate_tolerance": 1e-07,
       "computed_legacy_objective": "0.0",
-      "core_patch_version": "1.2.9-core-patch",
+      "core_interface": "prismatoid-exact-core",
       "exact_weights": {
         "70": "1/3",
         "7874": "1/3",
@@ -5973,8 +5973,8 @@
           "force_new_flag": false,
           "intersection_cardinalities": null,
           "legacy_artifacts": [
-            "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch_v129/legacy_artifacts/0917/flag_01/adapter_result.json",
-            "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch_v129/legacy_artifacts/0917/flag_01/input_patch_notes.txt"
+            "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch/legacy_artifacts/0917/flag_01/adapter_result.json",
+            "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch/legacy_artifacts/0917/flag_01/input_patch_notes.txt"
           ],
           "legacy_flag_attributes": {
             "flag": [
@@ -5994,7 +5994,7 @@
               95
             ]
           },
-          "model_capture": "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch_v129/model_captures/0917_flag_01.json",
+          "model_capture": "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch/model_captures/0917_flag_01.json",
           "random_seed": 0,
           "requested_flag": "{}",
           "requested_flag_indices_zero_based": null,
@@ -6029,8 +6029,8 @@
             0
           ],
           "legacy_artifacts": [
-            "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch_v129/legacy_artifacts/0917/flag_02/adapter_result.json",
-            "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch_v129/legacy_artifacts/0917/flag_02/input_patch_notes.txt"
+            "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch/legacy_artifacts/0917/flag_02/adapter_result.json",
+            "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch/legacy_artifacts/0917/flag_02/input_patch_notes.txt"
           ],
           "legacy_flag_attributes": {
             "flag": [
@@ -6050,7 +6050,7 @@
               45
             ]
           },
-          "model_capture": "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch_v129/model_captures/0917_flag_02.json",
+          "model_capture": "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch/model_captures/0917_flag_02.json",
           "random_seed": 0,
           "requested_flag": "{0, 1, 18, 22, 37, 45}",
           "requested_flag_indices_zero_based": [
@@ -6092,11 +6092,11 @@
             0
           ],
           "legacy_artifacts": [
-            "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch_v129/legacy_artifacts/0917/flag_03/0917_iter2_deg3_certificate.txt",
-            "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch_v129/legacy_artifacts/0917/flag_03/0917_iter2_deg3_certificate_coefficients.txt",
-            "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch_v129/legacy_artifacts/0917/flag_03/0917_iter2_deg3_certificate_rows.txt",
-            "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch_v129/legacy_artifacts/0917/flag_03/adapter_result.json",
-            "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch_v129/legacy_artifacts/0917/flag_03/input_patch_notes.txt"
+            "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch/legacy_artifacts/0917/flag_03/0917_iter2_deg3_certificate.txt",
+            "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch/legacy_artifacts/0917/flag_03/0917_iter2_deg3_certificate_coefficients.txt",
+            "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch/legacy_artifacts/0917/flag_03/0917_iter2_deg3_certificate_rows.txt",
+            "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch/legacy_artifacts/0917/flag_03/adapter_result.json",
+            "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch/legacy_artifacts/0917/flag_03/input_patch_notes.txt"
           ],
           "legacy_flag_attributes": {
             "flag": [
@@ -6116,7 +6116,7 @@
               38
             ]
           },
-          "model_capture": "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch_v129/model_captures/0917_flag_03.json",
+          "model_capture": "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch/model_captures/0917_flag_03.json",
           "random_seed": 0,
           "requested_flag": "{0, 1, 5, 14, 34, 38}",
           "requested_flag_indices_zero_based": [
@@ -6155,17 +6155,17 @@
       "strategy": "legacy default first; then deterministic random sampling of distinct rank-certified facet flags including every nonsimplicial facet; fresh-flag fallback if necessary",
       "timeout_scope": "per solver invocation"
     },
-    "independent_proof_path": "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch_v129/exact_proofs/0917.json",
+    "independent_proof_path": "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch/exact_proofs/0917.json",
     "legacy_artifacts": [
-      "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch_v129/legacy_artifacts/0917/flag_01/adapter_result.json",
-      "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch_v129/legacy_artifacts/0917/flag_01/input_patch_notes.txt",
-      "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch_v129/legacy_artifacts/0917/flag_02/adapter_result.json",
-      "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch_v129/legacy_artifacts/0917/flag_02/input_patch_notes.txt",
-      "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch_v129/legacy_artifacts/0917/flag_03/0917_iter2_deg3_certificate.txt",
-      "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch_v129/legacy_artifacts/0917/flag_03/0917_iter2_deg3_certificate_coefficients.txt",
-      "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch_v129/legacy_artifacts/0917/flag_03/0917_iter2_deg3_certificate_rows.txt",
-      "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch_v129/legacy_artifacts/0917/flag_03/adapter_result.json",
-      "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch_v129/legacy_artifacts/0917/flag_03/input_patch_notes.txt"
+      "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch/legacy_artifacts/0917/flag_01/adapter_result.json",
+      "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch/legacy_artifacts/0917/flag_01/input_patch_notes.txt",
+      "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch/legacy_artifacts/0917/flag_02/adapter_result.json",
+      "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch/legacy_artifacts/0917/flag_02/input_patch_notes.txt",
+      "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch/legacy_artifacts/0917/flag_03/0917_iter2_deg3_certificate.txt",
+      "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch/legacy_artifacts/0917/flag_03/0917_iter2_deg3_certificate_coefficients.txt",
+      "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch/legacy_artifacts/0917/flag_03/0917_iter2_deg3_certificate_rows.txt",
+      "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch/legacy_artifacts/0917/flag_03/adapter_result.json",
+      "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch/legacy_artifacts/0917/flag_03/input_patch_notes.txt"
     ],
     "new_template_created": false,
     "preparation_metadata": {
@@ -6708,21 +6708,21 @@
     },
     "template_restriction_succeeded": null
   },
-  "model_capture": "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch_v129/model_captures/0917_flag_03.json",
-  "prepared_path": "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch_v129/prepared/0917.txt",
+  "model_capture": "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch/model_captures/0917_flag_03.json",
+  "prepared_path": "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch/prepared/0917.txt",
   "sha256": "7abce06dfc1fb9b24f4747339df5492d3511254ef611cc9ddcec99b167a96da5",
   "solver_command": [
     "/home/yiwchen/miniforge3/envs/sage/bin/python3",
     "-m",
-    "prismatoid_batch_v127.legacy_wrapper",
-    "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch_v129/work/0917_s_v_iimj/project/src/nonrealizability_certificate.py",
-    "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch_v129/work/0917_s_v_iimj/candidate.txt"
+    "prismatoid_batch.legacy_wrapper",
+    "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch/work/0917_s_v_iimj/project/src/nonrealizability_certificate.py",
+    "/home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch/work/0917_s_v_iimj/candidate.txt"
   ],
   "solver_returncode": 0,
   "source_path": "/home/yiwchen/Prismatoid certificate/box_of_prismatoids/0917",
   "status": "certificate_exact",
   "stderr": "",
-  "stdout": "Batch search variant: all-variable-products-simplified\nBatch flag attempt 3: source=sampled-rank-certified-facet-flag, requested={0, 1, 5, 14, 34, 38}, force_new=False, seed=0\nBatch monomial-factor simplification: enabled\nFlag actually used: [0, 1, 5, 14, 34, 38]\nPolynomial backend: Sage QQ; matrix shape=16 x 6\ndeterminants reconstructed; 39 variables; cache 7511\noriented 116/116 columns; unresolved []\n148 unique saturated generators of degree <= 3\nDumping reconstruction metadata to file 0917_geometry.json...\nDumping original facets to file 0917_facets.txt...\nDumping validated facet bases to file 0917_Fbases.txt...\nDumping reduced matrix to file 0917_reducedSlackMatrix.txt...\nGenerator stage: term cap=4, 114 generators\nBatch extended generator variant: 114 reconstructed generators and 39 reduced-slack variables form products together (total 114 unique base generators).\n6555 distinct products / LP variables\nCreating standard form of polynomials.\n -- 0.086446 seconds elapsed\n\nIsolating constant terms.\n -- 0.007277 seconds elapsed\n\nCreating lists of monomials, coefficients, and constant terms.\n -- 0.002712 seconds elapsed\n\nCreating list of unique monomials.\n -- 0.006032 seconds elapsed\n\nGenerating row and column indices for sparse matrix.\n -- 0.009432 seconds elapsed\n\nAppending constant term entries.\n -- 0.000307 seconds elapsed\n\nDumping sparse matrix to file /home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch_v129/work/0917_s_v_iimj/project/src/dump/0917_iter2_deg3_matrix.txt\n -- 0.016505 seconds elapsed\n\n-> Number of rows: 6,555\n-> Number of columns: 13,747\n-> Number of non-zero entries: 43,314\nBatch normalized certificate LP: 6555 variables, 13748 equality constraints (13747 nonzero monomial equations).\nBatch LP backend attempt: direct gurobipy (Sage Gurobi backend bypassed).\nSet parameter WLSAccessID\nSet parameter WLSSecret\nSet parameter LicenseID to value 2733489\nAcademic license 2733489 - for non-commercial use only - registered to yi___@student.ubc.ca\nSet parameter Method to value 0\nSet parameter Threads to value 8\nSet parameter OutputFlag to value 1\nGurobi Optimizer version 13.0.2 build v13.0.2rc1 (linux64 - \"Ubuntu 24.04.5 LTS\")\n\nCPU model: Intel(R) Xeon(R) W-2295 CPU @ 3.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]\nThread count: 18 physical cores, 36 logical processors, using up to 8 threads\n\nNon-default parameters:\nMethod  0\nThreads  8\n\nAcademic license 2733489 - for non-commercial use only - registered to yi___@student.ubc.ca\nOptimize a model with 13748 rows, 6555 columns and 49869 nonzeros (Min)\nModel fingerprint: 0x953d9ad3\nModel has 0 linear objective coefficients\nCoefficient statistics:\n  Matrix range     [1e+00, 4e+00]\n  Objective range  [0e+00, 0e+00]\n  Bounds range     [0e+00, 0e+00]\n  RHS range        [1e+00, 1e+00]\n\nPresolve removed 13747 rows and 6555 columns\nPresolve time: 0.01s\n\nSolved in 0 iterations and 0.01 seconds (0.00 work units)\nInfeasible model\nCertificate LP backend used: gurobipy\nObjective value: 1.0\nIndices of nonzero certificate variables: []\nGenerator stage: term cap=8, 144 generators\nBatch extended generator variant: 144 reconstructed generators and 39 reduced-slack variables form products together (total 144 unique base generators).\n10440 distinct products / LP variables\nCreating standard form of polynomials.\n -- 0.137793 seconds elapsed\n\nIsolating constant terms.\n -- 0.009941 seconds elapsed\n\nCreating lists of monomials, coefficients, and constant terms.\n -- 0.008478 seconds elapsed\n\nCreating list of unique monomials.\n -- 0.017938 seconds elapsed\n\nGenerating row and column indices for sparse matrix.\n -- 0.032197 seconds elapsed\n\nAppending constant term entries.\n -- 0.000488 seconds elapsed\n\nDumping sparse matrix to file /home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch_v129/work/0917_s_v_iimj/project/src/dump/0917_iter2_deg3_matrix.txt\n -- 0.048005 seconds elapsed\n\n-> Number of rows: 10,440\n-> Number of columns: 33,373\n-> Number of non-zero entries: 120,826\nBatch normalized certificate LP: 10440 variables, 33374 equality constraints (33373 nonzero monomial equations).\nBatch LP backend attempt: direct gurobipy (Sage Gurobi backend bypassed).\nSet parameter WLSAccessID\nSet parameter WLSSecret\nSet parameter LicenseID to value 2733489\nAcademic license 2733489 - for non-commercial use only - registered to yi___@student.ubc.ca\nSet parameter Method to value 0\nSet parameter Threads to value 8\nSet parameter OutputFlag to value 1\nGurobi Optimizer version 13.0.2 build v13.0.2rc1 (linux64 - \"Ubuntu 24.04.5 LTS\")\n\nCPU model: Intel(R) Xeon(R) W-2295 CPU @ 3.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]\nThread count: 18 physical cores, 36 logical processors, using up to 8 threads\n\nNon-default parameters:\nMethod  0\nThreads  8\n\nAcademic license 2733489 - for non-commercial use only - registered to yi___@student.ubc.ca\nOptimize a model with 33374 rows, 10440 columns and 131266 nonzeros (Min)\nModel fingerprint: 0xb98bc0e5\nModel has 0 linear objective coefficients\nCoefficient statistics:\n  Matrix range     [1e+00, 4e+00]\n  Objective range  [0e+00, 0e+00]\n  Bounds range     [0e+00, 0e+00]\n  RHS range        [1e+00, 1e+00]\n\nPresolve removed 33374 rows and 10440 columns\nPresolve time: 0.02s\nPresolve: All rows and columns removed\nIteration    Objective       Primal Inf.    Dual Inf.      Time\n       0    0.0000000e+00   0.000000e+00   0.000000e+00      0s\n\nSolved in 0 iterations and 0.02 seconds (0.02 work units)\nOptimal objective  0.000000000e+00\nCertificate LP backend used: gurobipy\nObjective value: 0.0\nIndices of nonzero certificate variables: [71, 7875, 8173]\nAccepted exact positive identity with 3 terms; verification=verified_exact\n",
+  "stdout": "Batch search variant: all-variable-products-simplified\nBatch flag attempt 3: source=sampled-rank-certified-facet-flag, requested={0, 1, 5, 14, 34, 38}, force_new=False, seed=0\nBatch monomial-factor simplification: enabled\nFlag actually used: [0, 1, 5, 14, 34, 38]\nPolynomial backend: Sage QQ; matrix shape=16 x 6\ndeterminants reconstructed; 39 variables; cache 7511\noriented 116/116 columns; unresolved []\n148 unique saturated generators of degree <= 3\nDumping reconstruction metadata to file 0917_geometry.json...\nDumping original facets to file 0917_facets.txt...\nDumping validated facet bases to file 0917_Fbases.txt...\nDumping reduced matrix to file 0917_reducedSlackMatrix.txt...\nGenerator stage: term cap=4, 114 generators\nBatch extended generator variant: 114 reconstructed generators and 39 reduced-slack variables form products together (total 114 unique base generators).\n6555 distinct products / LP variables\nCreating standard form of polynomials.\n -- 0.086446 seconds elapsed\n\nIsolating constant terms.\n -- 0.007277 seconds elapsed\n\nCreating lists of monomials, coefficients, and constant terms.\n -- 0.002712 seconds elapsed\n\nCreating list of unique monomials.\n -- 0.006032 seconds elapsed\n\nGenerating row and column indices for sparse matrix.\n -- 0.009432 seconds elapsed\n\nAppending constant term entries.\n -- 0.000307 seconds elapsed\n\nDumping sparse matrix to file /home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch/work/0917_s_v_iimj/project/src/dump/0917_iter2_deg3_matrix.txt\n -- 0.016505 seconds elapsed\n\n-> Number of rows: 6,555\n-> Number of columns: 13,747\n-> Number of non-zero entries: 43,314\nBatch normalized certificate LP: 6555 variables, 13748 equality constraints (13747 nonzero monomial equations).\nBatch LP backend attempt: direct gurobipy (Sage Gurobi backend bypassed).\nSet parameter WLSAccessID\nSet parameter WLSSecret\nSet parameter LicenseID to value 2733489\nAcademic license 2733489 - for non-commercial use only - registered to yi___@student.ubc.ca\nSet parameter Method to value 0\nSet parameter Threads to value 8\nSet parameter OutputFlag to value 1\nGurobi Optimizer version 13.0.2 build v13.0.2rc1 (linux64 - \"Ubuntu 24.04.5 LTS\")\n\nCPU model: Intel(R) Xeon(R) W-2295 CPU @ 3.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]\nThread count: 18 physical cores, 36 logical processors, using up to 8 threads\n\nNon-default parameters:\nMethod  0\nThreads  8\n\nAcademic license 2733489 - for non-commercial use only - registered to yi___@student.ubc.ca\nOptimize a model with 13748 rows, 6555 columns and 49869 nonzeros (Min)\nModel fingerprint: 0x953d9ad3\nModel has 0 linear objective coefficients\nCoefficient statistics:\n  Matrix range     [1e+00, 4e+00]\n  Objective range  [0e+00, 0e+00]\n  Bounds range     [0e+00, 0e+00]\n  RHS range        [1e+00, 1e+00]\n\nPresolve removed 13747 rows and 6555 columns\nPresolve time: 0.01s\n\nSolved in 0 iterations and 0.01 seconds (0.00 work units)\nInfeasible model\nCertificate LP backend used: gurobipy\nObjective value: 1.0\nIndices of nonzero certificate variables: []\nGenerator stage: term cap=8, 144 generators\nBatch extended generator variant: 144 reconstructed generators and 39 reduced-slack variables form products together (total 144 unique base generators).\n10440 distinct products / LP variables\nCreating standard form of polynomials.\n -- 0.137793 seconds elapsed\n\nIsolating constant terms.\n -- 0.009941 seconds elapsed\n\nCreating lists of monomials, coefficients, and constant terms.\n -- 0.008478 seconds elapsed\n\nCreating list of unique monomials.\n -- 0.017938 seconds elapsed\n\nGenerating row and column indices for sparse matrix.\n -- 0.032197 seconds elapsed\n\nAppending constant term entries.\n -- 0.000488 seconds elapsed\n\nDumping sparse matrix to file /home/yiwchen/Prismatoid certificate/batch_output_n16_corepatch/work/0917_s_v_iimj/project/src/dump/0917_iter2_deg3_matrix.txt\n -- 0.048005 seconds elapsed\n\n-> Number of rows: 10,440\n-> Number of columns: 33,373\n-> Number of non-zero entries: 120,826\nBatch normalized certificate LP: 10440 variables, 33374 equality constraints (33373 nonzero monomial equations).\nBatch LP backend attempt: direct gurobipy (Sage Gurobi backend bypassed).\nSet parameter WLSAccessID\nSet parameter WLSSecret\nSet parameter LicenseID to value 2733489\nAcademic license 2733489 - for non-commercial use only - registered to yi___@student.ubc.ca\nSet parameter Method to value 0\nSet parameter Threads to value 8\nSet parameter OutputFlag to value 1\nGurobi Optimizer version 13.0.2 build v13.0.2rc1 (linux64 - \"Ubuntu 24.04.5 LTS\")\n\nCPU model: Intel(R) Xeon(R) W-2295 CPU @ 3.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]\nThread count: 18 physical cores, 36 logical processors, using up to 8 threads\n\nNon-default parameters:\nMethod  0\nThreads  8\n\nAcademic license 2733489 - for non-commercial use only - registered to yi___@student.ubc.ca\nOptimize a model with 33374 rows, 10440 columns and 131266 nonzeros (Min)\nModel fingerprint: 0xb98bc0e5\nModel has 0 linear objective coefficients\nCoefficient statistics:\n  Matrix range     [1e+00, 4e+00]\n  Objective range  [0e+00, 0e+00]\n  Bounds range     [0e+00, 0e+00]\n  RHS range        [1e+00, 1e+00]\n\nPresolve removed 33374 rows and 10440 columns\nPresolve time: 0.02s\nPresolve: All rows and columns removed\nIteration    Objective       Primal Inf.    Dual Inf.      Time\n       0    0.0000000e+00   0.000000e+00   0.000000e+00      0s\n\nSolved in 0 iterations and 0.02 seconds (0.02 work units)\nOptimal objective  0.000000000e+00\nCertificate LP backend used: gurobipy\nObjective value: 0.0\nIndices of nonzero certificate variables: [71, 7875, 8173]\nAccepted exact positive identity with 3 terms; verification=verified_exact\n",
   "template_attempts": [],
   "template_id": "T0005",
   "witness": {

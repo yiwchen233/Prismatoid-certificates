@@ -69,3 +69,16 @@ Runtime files, examples, tests, and these technical documents were relocated
 together under `Code/`; their internal relative paths are unchanged. See the
 root [README](../../README.md) for current commands. Archived results were not
 rewritten or regenerated during this move.
+
+## Release-label cleanup validation
+
+On 2026-10-08, the repository test suite passed with **29 passed, 5 skipped,
+and 4 subtests passed** in a fresh native Windows virtual environment. The
+Sage/POSIX skips remain as described above. This run used Python 3.11, NumPy
+2.4.6, SciPy 1.17.1, SymPy 1.14.0, NetworkX 3.6.1, and pytest 9.1.1.
+
+The four archived proof bundles in `Results/n14/exact_proofs/` all passed
+independent exact verification after the metadata cleanup. All fifteen edited
+resume databases passed SQLite integrity checks. The Bash launcher passed its
+syntax check, and the Python and Bash identity commands printed the descriptive
+project name without a project release number.

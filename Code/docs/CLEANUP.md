@@ -10,8 +10,8 @@ paths and records their original SHA-256 hashes.
 | Original location (inside Code.zip) | Publication location / decision |
 | --- | --- |
 | `Code/Code/src/nonrealizability_certificate.py`, `src/modules/` | `core/src/`; keep all eight modules because the core imports them, including conditional Sage imports and the independent checker. |
-| `Code/prismatoid_batch_v1_2_7/prismatoid_batch_v127/` | `prismatoid_batch/`; update imports, subprocess module names, and package-copy paths. |
-| Versioned batch launchers | Stable root-level `run_prismatoid_batch.py` and `.sh`. |
+| `Code/prismatoid_batch_bundle/prismatoid_batch/` | `prismatoid_batch/`; update imports, subprocess module names, and package-copy paths. |
+| Original batch launchers | Stable root-level `run_prismatoid_batch.py` and `.sh`. |
 | New batch `legacy_tools/` | `preprocessing/`; update lookup paths and replace private absolute paths with the input/output environment variables already supplied by the runner. |
 | New batch tests and core-patch tests | `tests/`; adjust imports and fixture paths. |
 | Older `Code/Code/tests_batch/*.py` | Keep and run against the consolidated batch package; these cover exact LP checks, templates, and Sage invocation conventions. |
@@ -20,8 +20,8 @@ paths and records their original SHA-256 hashes.
 ## Exclusions
 
 - `Code/Code/prismatoid_batch/` and its root launchers: superseded by the
-  installed 1.2.9-patched batch package used by the user's command.
-- `prismatoid_core_patch_v129/payload/`: all **13 files** are byte-for-byte
+  integrated batch package used by the user's command.
+- `prismatoid_core_patch/payload/`: all **13 files** are byte-for-byte
   identical to the installed files. The patch installer, diff, and manifest are
   historical deployment machinery, unnecessary in an integrated distribution.
 - `fake_solver.py`: no source or test references it; retained tests contain
@@ -75,8 +75,8 @@ than deleted merely because Sage is absent from the validation machine.
 - Update an old adapter error message to the integrated core location.
 
 Search mathematics, degree/factor defaults, solver selection, and certificate
-acceptance rules were otherwise retained. The internal core version marker
-remains `1.2.9-core-patch` so the adapter compatibility check still works.
+acceptance rules were otherwise retained. The adapter checks the descriptive
+`CORE_INTERFACE = "prismatoid-exact-core"` marker to identify the supported core.
 
 ## Remaining publication decisions
 
@@ -95,3 +95,14 @@ raw data, and archived results remain at the repository root. Relative layout
 inside `Code/` is unchanged, so imports and test fixture discovery remain valid.
 The root README uses repository-root commands and writes new output to `runs/`.
 The source map's publication destinations now include the `Code/` prefix.
+
+## Release-label cleanup
+
+Project release labels have been replaced with descriptive names throughout the
+source, tests, documentation, archived text outputs, and resume databases.
+Historical archive and output path strings are normalized labels, not verbatim
+original paths. Source hashes still identify the original archive bytes;
+publication hashes describe the current retained files. Dependency versions and
+file-format versions are retained. Certificate coefficients, facets, witnesses,
+search settings, and recorded outcomes are unchanged. The `--info` option reports
+the runner identity; `--version` remains an alias for existing commands.

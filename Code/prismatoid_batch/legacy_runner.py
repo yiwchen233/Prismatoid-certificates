@@ -166,7 +166,7 @@ def run_legacy_solver(
 
     shutil.copytree(project_root, sandbox_project, ignore=copy_ignore)
     # The user's project may contain an older batch package.  Install this exact
-    # versioned adapter alongside it in the sandbox and invoke only this namespace.
+    # bundled adapter alongside it in the sandbox and invoke only this namespace.
     current_package = Path(__file__).resolve().parent
     sandbox_package = sandbox_project / "prismatoid_batch"
     shutil.copytree(current_package, sandbox_package, dirs_exist_ok=True)

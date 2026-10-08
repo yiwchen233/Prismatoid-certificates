@@ -10,10 +10,10 @@ SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 CALLER_CWD="$(pwd -P)"
 SAGE_BIN="${SAGE_BIN:-sage}"
 
-# This versioned launcher is intentionally distinct from every earlier overlay.
+# Identify the integrated launcher and its source paths.
 # Report its identity without starting Sage so stale-installation checks are reliable.
-if [[ "${1:-}" == "--version" || "${1:-}" == "version" ]]; then
-    printf 'prismatoid-batch 1.2.9-core-patch\nlauncher=%s\nparser=%s\n' \
+if [[ "${1:-}" == "--info" || "${1:-}" == "--version" || "${1:-}" == "version" ]]; then
+    printf 'prismatoid-batch\nlauncher=%s\nparser=%s\n' \
         "$SCRIPT_DIR/run_prismatoid_batch.sh" \
         "$SCRIPT_DIR/prismatoid_batch/cli.py"
     exit 0
@@ -67,15 +67,15 @@ export PRISMATOID_BATCH_SAGE_PATH="$SAGE_PATH"
 if [[ -n "$output_abs" ]]; then
     export PRISMATOID_BATCH_OUTPUT_ABS="$output_abs"
     {
-        echo "launcher_version=1.2.9-core-patch"
+        echo "launcher_identity=prismatoid-batch"
         echo "caller_cwd=$CALLER_CWD"
         echo "script_dir=$SCRIPT_DIR"
         echo "sage=$SAGE_PATH"
         printf 'argv='; printf '%q ' "${args[@]}"; echo
     } > "$output_abs/LAUNCHER_INFO.txt"
-    printf 'prismatoid-batch 1.2.9-core-patch\nOutput directory: %s\n' "$output_abs"
+    printf 'prismatoid-batch\nOutput directory: %s\n' "$output_abs"
 else
-    printf 'prismatoid-batch 1.2.9-core-patch\n'
+    printf 'prismatoid-batch\n'
 fi
 
 PACKAGE_DIR="$SCRIPT_DIR/prismatoid_batch"
@@ -87,7 +87,7 @@ if [[ ! -f "$CLI_FILE" ]]; then
 fi
 
 # Sage installations differ in how they construct sys.path for scripts.  Put
-# the bundle root on PYTHONPATH before Sage starts so the versioned package is
+# the bundle root on PYTHONPATH before Sage starts so the bundled package is
 # importable even when Sage does not add the script directory to sys.path.
 if [[ -n "${PYTHONPATH:-}" ]]; then
     export PYTHONPATH="$SCRIPT_DIR:$PYTHONPATH"

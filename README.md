@@ -6,11 +6,15 @@ batch runner that prepares inputs, tries different reductions (flags), solves
 linear programs, checks rational witnesses, and saves reports and reusable
 certificate templates.
 
-The included solver is the **1.2.9 core patch**, already integrated with the
-batch runner. No patch installation is needed. The supported example and
-independent geometric verifier concern **five-dimensional prismatoids with two
-disjoint nonsimplicial bases listed first**. The broader geometric code is not a
-general realizability decision procedure.
+The included solver is integrated with the batch runner; no separate patch
+installation is needed. The supported example and independent geometric verifier
+concern **five-dimensional prismatoids with two disjoint nonsimplicial bases
+listed first**. The code searches for certificates that prove non-realizability.
+If no certificate is found, the input may still be non-realizable: the search
+only covers the chosen flags and degree/factor bounds. It does not determine
+realizability for every input. For other input classes, an exact polynomial
+identity alone is insufficient unless its geometric positivity assumptions
+are also verified.
 
 ## Requirements
 
@@ -41,7 +45,7 @@ this README and the `Code/` directory). On Linux/macOS/WSL:
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r Code/requirements.txt
-python Code/run_prismatoid_batch.py --version
+python Code/run_prismatoid_batch.py --info
 ```
 
 On native Windows PowerShell, create the environment with `python -m venv .venv`
@@ -227,7 +231,9 @@ Do not run concurrent jobs against the same output directory.
   reports and `exact_proofs/` for saved proof bundles. `SEARCH_CONFIG.json` and
   `RUN_INFO.txt` record that run's settings. These are archived runs, not outputs
   regenerated during the repository reorganization; recorded absolute paths may
-  refer to the original machine. A result file is not automatically a successful
+  refer to the original machine; project release labels in archived metadata
+  and path strings have been normalized to descriptive names. A result file is
+  not automatically a successful
   certificate: use the status meanings below.
 
 For example, check the archived 14-vertex proof bundles without rerunning the LPs:

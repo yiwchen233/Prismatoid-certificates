@@ -198,7 +198,7 @@ def _batch_search_metadata(test: Any) -> dict[str, Any]:
         "flag_search": _flag_search_metadata(test),
         "generator_stages": getattr(test, 'generator_stages', []),
         "actual_generator_term_limit": getattr(test, '_generator_term_limit', None),
-        "core_patch_version": '1.2.9-core-patch',
+        "core_interface": 'prismatoid-exact-core',
     }
 
 
@@ -813,7 +813,7 @@ def _solve_lp_and_capture(test: Any, module: Any, matrix_fname: str | None = Non
     if has_certificate and active:
         if hasattr(test, 'accept_exact_solution'):
             test.accept_exact_solution(lambdas)
-            metadata['core_patch_version'] = getattr(module, 'CORE_PATCH_VERSION', None)
+            metadata['core_interface'] = getattr(module, 'CORE_INTERFACE', None)
             metadata['geometric_certificate_verification'] = test.certificate_bundle['verification']
             # Preserve the complete independent witness in the captured model.
             metadata['certificate_bundle'] = test.certificate_bundle
@@ -889,8 +889,8 @@ def execute_nonrealizability(entrypoint: Path) -> int:
     try:
         with _working_directory(entrypoint.parent):
             module = _load_legacy_module(entrypoint)
-            if getattr(module, 'CORE_PATCH_VERSION', None) != '1.2.9-core-patch':
-                raise RuntimeError('The batch adapter requires the matching core/src/nonrealizability_certificate.py with CORE_PATCH_VERSION=1.2.9-core-patch')
+            if getattr(module, 'CORE_INTERFACE', None) != 'prismatoid-exact-core':
+                raise RuntimeError('The batch adapter requires the matching core/src/nonrealizability_certificate.py with CORE_INTERFACE=prismatoid-exact-core')
             if not hasattr(module, "NonRealizabilityTest"):
                 raise RuntimeError(f"{entrypoint} does not define NonRealizabilityTest")
 
@@ -1022,7 +1022,7 @@ def execute_nonrealizability(entrypoint: Path) -> int:
                     "flag_search": _flag_search_metadata(test),
         "generator_stages": getattr(test, 'generator_stages', []),
         "actual_generator_term_limit": getattr(test, '_generator_term_limit', None),
-        "core_patch_version": '1.2.9-core-patch',
+        "core_interface": 'prismatoid-exact-core',
                 }
             except CaptureOnlyComplete as exc:
                 adapter_state = {
@@ -1038,7 +1038,7 @@ def execute_nonrealizability(entrypoint: Path) -> int:
                     "flag_search": _flag_search_metadata(test),
         "generator_stages": getattr(test, 'generator_stages', []),
         "actual_generator_term_limit": getattr(test, '_generator_term_limit', None),
-        "core_patch_version": '1.2.9-core-patch',
+        "core_interface": 'prismatoid-exact-core',
                 }
             capture_dir = Path(os.environ.get("PRISMATOID_CAPTURE_DIR", ".prismatoid_capture"))
             capture_dir.mkdir(parents=True, exist_ok=True)

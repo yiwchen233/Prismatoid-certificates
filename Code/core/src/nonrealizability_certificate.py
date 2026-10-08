@@ -59,7 +59,7 @@ if HAVE_SAGE:
 else:
     ETuple = tuple
 
-CORE_PATCH_VERSION = "1.2.9-core-patch"
+CORE_INTERFACE = "prismatoid-exact-core"
 
 def _parse_indices(value):
     if value is None: return []

@@ -17,7 +17,7 @@ from fractions import Fraction
 from functools import lru_cache
 from pathlib import Path
 
-VERSION = "1.2.9-core-patch"
+CORE_INTERFACE = "prismatoid-exact-core"
 BITS = 8
 MASK = (1 << BITS) - 1
 
@@ -300,7 +300,7 @@ def build_generators(facets, flag, tokens, max_degree=3, log=print, simplify=Tru
             "facet_bases":bases,"basis_witnesses":bw,"flag_witness":fw,
             "column_signs":signs,"orientation_proofs":proofs,"unoriented_columns":sorted(remaining),
             "normalization":("divide_all_common_positive_monomials_and_positive_integer_content" if simplify else "raw_signed_determinants"),
-            "dimension":len(flag)-1,"max_generator_degree":max_degree,"version":VERSION,"facet_sha256":facet_hash(facets)}
+            "dimension":len(flag)-1,"max_generator_degree":max_degree,"core_interface":CORE_INTERFACE,"facet_sha256":facet_hash(facets)}
     return generators,meta
 
 

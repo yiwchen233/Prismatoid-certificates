@@ -1,19 +1,19 @@
 candidate: 2258
 source: /home/yiwchen/Prismatoid certificate/box_of_prismatoids/2258
-prepared_input: /home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch_v129/prepared/2258.txt
+prepared_input: /home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch/prepared/2258.txt
 sha256: 3b353968e5f65f3fd3b11a8734ff63bcd99532c4f42c780512b2f3fdf77ff4b2
 status: certificate_exact
 exact_certificate: yes
 template: T0222
 elapsed_seconds: 27.607350
 solver_returncode: 0
-solver_command: /home/yiwchen/miniforge3/envs/sage/bin/python3 -m prismatoid_batch_v127.legacy_wrapper /home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch_v129/work/2258_1eij4vzk/project/src/nonrealizability_certificate.py /home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch_v129/work/2258_1eij4vzk/candidate.txt
+solver_command: /home/yiwchen/miniforge3/envs/sage/bin/python3 -m prismatoid_batch.legacy_wrapper /home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch/work/2258_1eij4vzk/project/src/nonrealizability_certificate.py /home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch/work/2258_1eij4vzk/candidate.txt
 
 [flag attempts]
-{"attempt_index_zero_based": 0, "attempt_number": 1, "combinatorially_checked": false, "elapsed_seconds": 6.168019510805607, "exact": false, "force_new_flag": false, "intersection_cardinalities": null, "legacy_artifacts": ["/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch_v129/legacy_artifacts/2258/flag_01/adapter_result.json", "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch_v129/legacy_artifacts/2258/flag_01/input_patch_notes.txt"], "legacy_flag_attributes": {"flag": [0, 1, 18, 42, 68, 116], "selected_flag": [0, 1, 18, 42, 68, 116]}, "model_capture": "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch_v129/model_captures/2258_flag_01.json", "random_seed": 0, "requested_flag": "{}", "requested_flag_indices_zero_based": null, "returncode": 0, "selected_flag_indices_zero_based": [0, 1, 18, 42, 68, 116], "selected_flag_reported_by_legacy": true, "selected_for_final_result": false, "solution_count": 0, "source": "legacy-default", "status": "no_certificate"}
-{"attempt_index_zero_based": 1, "attempt_number": 2, "combinatorially_checked": true, "elapsed_seconds": 5.6537428218871355, "exact": false, "force_new_flag": false, "intersection_cardinalities": [9, 0, 0, 0, 0, 0], "legacy_artifacts": ["/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch_v129/legacy_artifacts/2258/flag_02/adapter_result.json", "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch_v129/legacy_artifacts/2258/flag_02/input_patch_notes.txt"], "legacy_flag_attributes": {"flag": [0, 1, 16, 139, 140, 154], "selected_flag": [0, 1, 16, 139, 140, 154]}, "model_capture": "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch_v129/model_captures/2258_flag_02.json", "random_seed": 0, "requested_flag": "{0, 1, 16, 139, 140, 154}", "requested_flag_indices_zero_based": [0, 1, 16, 139, 140, 154], "returncode": 0, "selected_flag_indices_zero_based": [0, 1, 16, 139, 140, 154], "selected_flag_reported_by_legacy": true, "selected_for_final_result": false, "solution_count": 0, "source": "sampled-rank-certified-facet-flag", "status": "no_certificate"}
-{"attempt_index_zero_based": 2, "attempt_number": 3, "combinatorially_checked": true, "elapsed_seconds": 10.347471406683326, "exact": false, "force_new_flag": false, "intersection_cardinalities": [9, 0, 0, 0, 0, 0], "legacy_artifacts": ["/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch_v129/legacy_artifacts/2258/flag_03/adapter_result.json", "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch_v129/legacy_artifacts/2258/flag_03/input_patch_notes.txt"], "legacy_flag_attributes": {"flag": [0, 1, 68, 138, 140, 153], "selected_flag": [0, 1, 68, 138, 140, 153]}, "model_capture": "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch_v129/model_captures/2258_flag_03.json", "random_seed": 0, "requested_flag": "{0, 1, 68, 138, 140, 153}", "requested_flag_indices_zero_based": [0, 1, 68, 138, 140, 153], "returncode": 0, "selected_flag_indices_zero_based": [0, 1, 68, 138, 140, 153], "selected_flag_reported_by_legacy": true, "selected_for_final_result": false, "solution_count": 0, "source": "sampled-rank-certified-facet-flag", "status": "no_certificate"}
-{"attempt_index_zero_based": 3, "attempt_number": 4, "combinatorially_checked": true, "elapsed_seconds": 4.2096928935498, "exact": true, "force_new_flag": false, "intersection_cardinalities": [9, 0, 0, 0, 0, 0], "legacy_artifacts": ["/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch_v129/legacy_artifacts/2258/flag_04/2258_iter2_deg3_certificate.txt", "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch_v129/legacy_artifacts/2258/flag_04/2258_iter2_deg3_certificate_coefficients.txt", "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch_v129/legacy_artifacts/2258/flag_04/2258_iter2_deg3_certificate_rows.txt", "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch_v129/legacy_artifacts/2258/flag_04/adapter_result.json", "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch_v129/legacy_artifacts/2258/flag_04/input_patch_notes.txt"], "legacy_flag_attributes": {"flag": [0, 1, 14, 36, 82, 83], "selected_flag": [0, 1, 14, 36, 82, 83]}, "model_capture": "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch_v129/model_captures/2258_flag_04.json", "random_seed": 0, "requested_flag": "{0, 1, 14, 36, 82, 83}", "requested_flag_indices_zero_based": [0, 1, 14, 36, 82, 83], "returncode": 0, "selected_flag_indices_zero_based": [0, 1, 14, 36, 82, 83], "selected_flag_reported_by_legacy": true, "selected_for_final_result": true, "solution_count": 1, "source": "sampled-rank-certified-facet-flag", "status": "certificate_exact"}
+{"attempt_index_zero_based": 0, "attempt_number": 1, "combinatorially_checked": false, "elapsed_seconds": 6.168019510805607, "exact": false, "force_new_flag": false, "intersection_cardinalities": null, "legacy_artifacts": ["/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch/legacy_artifacts/2258/flag_01/adapter_result.json", "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch/legacy_artifacts/2258/flag_01/input_patch_notes.txt"], "legacy_flag_attributes": {"flag": [0, 1, 18, 42, 68, 116], "selected_flag": [0, 1, 18, 42, 68, 116]}, "model_capture": "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch/model_captures/2258_flag_01.json", "random_seed": 0, "requested_flag": "{}", "requested_flag_indices_zero_based": null, "returncode": 0, "selected_flag_indices_zero_based": [0, 1, 18, 42, 68, 116], "selected_flag_reported_by_legacy": true, "selected_for_final_result": false, "solution_count": 0, "source": "legacy-default", "status": "no_certificate"}
+{"attempt_index_zero_based": 1, "attempt_number": 2, "combinatorially_checked": true, "elapsed_seconds": 5.6537428218871355, "exact": false, "force_new_flag": false, "intersection_cardinalities": [9, 0, 0, 0, 0, 0], "legacy_artifacts": ["/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch/legacy_artifacts/2258/flag_02/adapter_result.json", "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch/legacy_artifacts/2258/flag_02/input_patch_notes.txt"], "legacy_flag_attributes": {"flag": [0, 1, 16, 139, 140, 154], "selected_flag": [0, 1, 16, 139, 140, 154]}, "model_capture": "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch/model_captures/2258_flag_02.json", "random_seed": 0, "requested_flag": "{0, 1, 16, 139, 140, 154}", "requested_flag_indices_zero_based": [0, 1, 16, 139, 140, 154], "returncode": 0, "selected_flag_indices_zero_based": [0, 1, 16, 139, 140, 154], "selected_flag_reported_by_legacy": true, "selected_for_final_result": false, "solution_count": 0, "source": "sampled-rank-certified-facet-flag", "status": "no_certificate"}
+{"attempt_index_zero_based": 2, "attempt_number": 3, "combinatorially_checked": true, "elapsed_seconds": 10.347471406683326, "exact": false, "force_new_flag": false, "intersection_cardinalities": [9, 0, 0, 0, 0, 0], "legacy_artifacts": ["/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch/legacy_artifacts/2258/flag_03/adapter_result.json", "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch/legacy_artifacts/2258/flag_03/input_patch_notes.txt"], "legacy_flag_attributes": {"flag": [0, 1, 68, 138, 140, 153], "selected_flag": [0, 1, 68, 138, 140, 153]}, "model_capture": "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch/model_captures/2258_flag_03.json", "random_seed": 0, "requested_flag": "{0, 1, 68, 138, 140, 153}", "requested_flag_indices_zero_based": [0, 1, 68, 138, 140, 153], "returncode": 0, "selected_flag_indices_zero_based": [0, 1, 68, 138, 140, 153], "selected_flag_reported_by_legacy": true, "selected_for_final_result": false, "solution_count": 0, "source": "sampled-rank-certified-facet-flag", "status": "no_certificate"}
+{"attempt_index_zero_based": 3, "attempt_number": 4, "combinatorially_checked": true, "elapsed_seconds": 4.2096928935498, "exact": true, "force_new_flag": false, "intersection_cardinalities": [9, 0, 0, 0, 0, 0], "legacy_artifacts": ["/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch/legacy_artifacts/2258/flag_04/2258_iter2_deg3_certificate.txt", "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch/legacy_artifacts/2258/flag_04/2258_iter2_deg3_certificate_coefficients.txt", "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch/legacy_artifacts/2258/flag_04/2258_iter2_deg3_certificate_rows.txt", "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch/legacy_artifacts/2258/flag_04/adapter_result.json", "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch/legacy_artifacts/2258/flag_04/input_patch_notes.txt"], "legacy_flag_attributes": {"flag": [0, 1, 14, 36, 82, 83], "selected_flag": [0, 1, 14, 36, 82, 83]}, "model_capture": "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch/model_captures/2258_flag_04.json", "random_seed": 0, "requested_flag": "{0, 1, 14, 36, 82, 83}", "requested_flag_indices_zero_based": [0, 1, 14, 36, 82, 83], "returncode": 0, "selected_flag_indices_zero_based": [0, 1, 14, 36, 82, 83], "selected_flag_reported_by_legacy": true, "selected_for_final_result": true, "solution_count": 1, "source": "sampled-rank-certified-facet-flag", "status": "certificate_exact"}
 
 [exact witness]
 verified: True
@@ -38,7 +38,7 @@ The following exactly weighted positive rows sum coefficientwise to zero:
 
 [metadata]
 {
-  "batch_package_version": "1.2.9-core-patch",
+  "batch_package": "prismatoid-batch",
   "candidate_vertex_count": 21,
   "captured_model_metadata": {
     "active_row_descriptions": {
@@ -8230,7 +8230,7 @@ The following exactly weighted positive rows sum coefficientwise to zero:
           "x_9_82",
           "x_9_83"
         ],
-        "version": "1.2.9-core-patch"
+        "core_interface": "prismatoid-exact-core"
       },
       "prepared_file_sha256": "9cbe5c672e63c4d4e8a17193e76ec370ee2e7b34795dcf2f2f98eccd0523f1b8",
       "search_attempt": {
@@ -8290,7 +8290,7 @@ The following exactly weighted positive rows sum coefficientwise to zero:
     "certificate_model": "lambda >= 0, B^T lambda = 0, sum(lambda) = 1",
     "certificate_tolerance": 1e-07,
     "computed_legacy_objective": "0.0",
-    "core_patch_version": "1.2.9-core-patch",
+    "core_interface": "prismatoid-exact-core",
     "exact_weights": {
       "1": "1/3",
       "1342": "1/3",
@@ -8412,8 +8412,8 @@ The following exactly weighted positive rows sum coefficientwise to zero:
         "force_new_flag": false,
         "intersection_cardinalities": null,
         "legacy_artifacts": [
-          "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch_v129/legacy_artifacts/2258/flag_01/adapter_result.json",
-          "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch_v129/legacy_artifacts/2258/flag_01/input_patch_notes.txt"
+          "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch/legacy_artifacts/2258/flag_01/adapter_result.json",
+          "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch/legacy_artifacts/2258/flag_01/input_patch_notes.txt"
         ],
         "legacy_flag_attributes": {
           "flag": [
@@ -8433,7 +8433,7 @@ The following exactly weighted positive rows sum coefficientwise to zero:
             116
           ]
         },
-        "model_capture": "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch_v129/model_captures/2258_flag_01.json",
+        "model_capture": "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch/model_captures/2258_flag_01.json",
         "random_seed": 0,
         "requested_flag": "{}",
         "requested_flag_indices_zero_based": null,
@@ -8468,8 +8468,8 @@ The following exactly weighted positive rows sum coefficientwise to zero:
           0
         ],
         "legacy_artifacts": [
-          "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch_v129/legacy_artifacts/2258/flag_02/adapter_result.json",
-          "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch_v129/legacy_artifacts/2258/flag_02/input_patch_notes.txt"
+          "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch/legacy_artifacts/2258/flag_02/adapter_result.json",
+          "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch/legacy_artifacts/2258/flag_02/input_patch_notes.txt"
         ],
         "legacy_flag_attributes": {
           "flag": [
@@ -8489,7 +8489,7 @@ The following exactly weighted positive rows sum coefficientwise to zero:
             154
           ]
         },
-        "model_capture": "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch_v129/model_captures/2258_flag_02.json",
+        "model_capture": "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch/model_captures/2258_flag_02.json",
         "random_seed": 0,
         "requested_flag": "{0, 1, 16, 139, 140, 154}",
         "requested_flag_indices_zero_based": [
@@ -8531,8 +8531,8 @@ The following exactly weighted positive rows sum coefficientwise to zero:
           0
         ],
         "legacy_artifacts": [
-          "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch_v129/legacy_artifacts/2258/flag_03/adapter_result.json",
-          "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch_v129/legacy_artifacts/2258/flag_03/input_patch_notes.txt"
+          "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch/legacy_artifacts/2258/flag_03/adapter_result.json",
+          "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch/legacy_artifacts/2258/flag_03/input_patch_notes.txt"
         ],
         "legacy_flag_attributes": {
           "flag": [
@@ -8552,7 +8552,7 @@ The following exactly weighted positive rows sum coefficientwise to zero:
             153
           ]
         },
-        "model_capture": "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch_v129/model_captures/2258_flag_03.json",
+        "model_capture": "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch/model_captures/2258_flag_03.json",
         "random_seed": 0,
         "requested_flag": "{0, 1, 68, 138, 140, 153}",
         "requested_flag_indices_zero_based": [
@@ -8594,11 +8594,11 @@ The following exactly weighted positive rows sum coefficientwise to zero:
           0
         ],
         "legacy_artifacts": [
-          "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch_v129/legacy_artifacts/2258/flag_04/2258_iter2_deg3_certificate.txt",
-          "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch_v129/legacy_artifacts/2258/flag_04/2258_iter2_deg3_certificate_coefficients.txt",
-          "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch_v129/legacy_artifacts/2258/flag_04/2258_iter2_deg3_certificate_rows.txt",
-          "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch_v129/legacy_artifacts/2258/flag_04/adapter_result.json",
-          "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch_v129/legacy_artifacts/2258/flag_04/input_patch_notes.txt"
+          "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch/legacy_artifacts/2258/flag_04/2258_iter2_deg3_certificate.txt",
+          "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch/legacy_artifacts/2258/flag_04/2258_iter2_deg3_certificate_coefficients.txt",
+          "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch/legacy_artifacts/2258/flag_04/2258_iter2_deg3_certificate_rows.txt",
+          "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch/legacy_artifacts/2258/flag_04/adapter_result.json",
+          "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch/legacy_artifacts/2258/flag_04/input_patch_notes.txt"
         ],
         "legacy_flag_attributes": {
           "flag": [
@@ -8618,7 +8618,7 @@ The following exactly weighted positive rows sum coefficientwise to zero:
             83
           ]
         },
-        "model_capture": "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch_v129/model_captures/2258_flag_04.json",
+        "model_capture": "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch/model_captures/2258_flag_04.json",
         "random_seed": 0,
         "requested_flag": "{0, 1, 14, 36, 82, 83}",
         "requested_flag_indices_zero_based": [
@@ -8657,19 +8657,19 @@ The following exactly weighted positive rows sum coefficientwise to zero:
     "strategy": "legacy default first; then deterministic random sampling of distinct rank-certified facet flags including every nonsimplicial facet; fresh-flag fallback if necessary",
     "timeout_scope": "per solver invocation"
   },
-  "independent_proof_path": "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch_v129/exact_proofs/2258.json",
+  "independent_proof_path": "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch/exact_proofs/2258.json",
   "legacy_artifacts": [
-    "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch_v129/legacy_artifacts/2258/flag_01/adapter_result.json",
-    "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch_v129/legacy_artifacts/2258/flag_01/input_patch_notes.txt",
-    "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch_v129/legacy_artifacts/2258/flag_02/adapter_result.json",
-    "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch_v129/legacy_artifacts/2258/flag_02/input_patch_notes.txt",
-    "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch_v129/legacy_artifacts/2258/flag_03/adapter_result.json",
-    "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch_v129/legacy_artifacts/2258/flag_03/input_patch_notes.txt",
-    "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch_v129/legacy_artifacts/2258/flag_04/2258_iter2_deg3_certificate.txt",
-    "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch_v129/legacy_artifacts/2258/flag_04/2258_iter2_deg3_certificate_coefficients.txt",
-    "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch_v129/legacy_artifacts/2258/flag_04/2258_iter2_deg3_certificate_rows.txt",
-    "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch_v129/legacy_artifacts/2258/flag_04/adapter_result.json",
-    "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch_v129/legacy_artifacts/2258/flag_04/input_patch_notes.txt"
+    "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch/legacy_artifacts/2258/flag_01/adapter_result.json",
+    "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch/legacy_artifacts/2258/flag_01/input_patch_notes.txt",
+    "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch/legacy_artifacts/2258/flag_02/adapter_result.json",
+    "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch/legacy_artifacts/2258/flag_02/input_patch_notes.txt",
+    "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch/legacy_artifacts/2258/flag_03/adapter_result.json",
+    "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch/legacy_artifacts/2258/flag_03/input_patch_notes.txt",
+    "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch/legacy_artifacts/2258/flag_04/2258_iter2_deg3_certificate.txt",
+    "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch/legacy_artifacts/2258/flag_04/2258_iter2_deg3_certificate_coefficients.txt",
+    "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch/legacy_artifacts/2258/flag_04/2258_iter2_deg3_certificate_rows.txt",
+    "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch/legacy_artifacts/2258/flag_04/adapter_result.json",
+    "/home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch/legacy_artifacts/2258/flag_04/input_patch_notes.txt"
   ],
   "new_template_created": true,
   "preparation_metadata": {
@@ -9481,7 +9481,7 @@ Generating row and column indices for sparse matrix.
 Appending constant term entries.
  -- 0.000246 seconds elapsed
 
-Dumping sparse matrix to file /home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch_v129/work/2258_1eij4vzk/project/src/dump/2258_iter2_deg3_matrix.txt
+Dumping sparse matrix to file /home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch/work/2258_1eij4vzk/project/src/dump/2258_iter2_deg3_matrix.txt
  -- 0.008611 seconds elapsed
 
 -> Number of rows: 6,216
@@ -9544,7 +9544,7 @@ Generating row and column indices for sparse matrix.
 Appending constant term entries.
  -- 0.000356 seconds elapsed
 
-Dumping sparse matrix to file /home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch_v129/work/2258_1eij4vzk/project/src/dump/2258_iter2_deg3_matrix.txt
+Dumping sparse matrix to file /home/yiwchen/Prismatoid certificate/batch_output_n21_corepatch/work/2258_1eij4vzk/project/src/dump/2258_iter2_deg3_matrix.txt
  -- 0.030229 seconds elapsed
 
 -> Number of rows: 10,011

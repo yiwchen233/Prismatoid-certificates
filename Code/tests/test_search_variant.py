@@ -13,7 +13,7 @@ from prismatoid_batch.sage_solver_adapter import execute_nonrealizability
 
 
 _FAKE_LEGACY = r'''
-CORE_PATCH_VERSION = '1.2.9-core-patch'
+CORE_INTERFACE = 'prismatoid-exact-core'
 import json
 import os
 from pathlib import Path
