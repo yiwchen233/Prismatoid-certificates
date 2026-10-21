@@ -1,0 +1,42 @@
+POSITIVE GENERATORS
+D(i,j) = det R[B_j followed by i, all six columns in the displayed order].
+For slack sources, g = sign * D(i,j) / (content * monomial).
+The divisor is positive. In geometry.txt, see [Reduced slack matrix R]
+and [Ordered facet bases B_j]; Bj denotes B_j (e.g. B3 means B_3).
+Signs are justified in orientations.txt. Each expanded g appears above its source.
+
+g1 = - x_14_13*x_7_11 + x_14_44*x_7_11 + x_14_11*x_7_13 - x_10_11*x_14_44*x_7_13 - x_14_11*x_7_44 + x_10_11*x_14_13*x_7_44
+g1 source: D(13,23); sign -1; content 1; monomial 1
+
+g2 = x_14_44*x_15_13*x_6_11 - x_14_44*x_15_11*x_6_13 + x_14_13*x_15_11*x_6_44 - x_14_11*x_15_13*x_6_44 - x_14_44*x_15_13*x_7_11 + x_14_44*x_15_11*x_7_13 - x_14_13*x_15_11*x_7_44 + x_14_11*x_15_13*x_7_44
+g2 source: D(15,34); sign 1; content 1; monomial 1
+
+g3 = x_14_44*x_16_13*x_6_11 - x_14_13*x_16_44*x_6_11 - x_14_44*x_16_11*x_6_13 + x_14_11*x_16_44*x_6_13 + x_14_13*x_16_11*x_6_44 - x_14_11*x_16_13*x_6_44 - x_14_44*x_16_13*x_7_11 + x_14_13*x_16_44*x_7_11 + x_14_44*x_16_11*x_7_13 - x_14_11*x_16_44*x_7_13 - x_14_13*x_16_11*x_7_44 + x_14_11*x_16_13*x_7_44
+g3 source: D(16,34); sign 1; content 1; monomial 1
+
+g4 = - x_14_13*x_15_11 + x_11_13*x_14_44*x_15_11 + x_14_11*x_15_13 - x_11_11*x_14_44*x_15_13
+g4 source: D(15,35); sign 1; content 1; monomial 1
+
+g5 = - x_14_13*x_16_11 + x_11_13*x_14_44*x_16_11 + x_14_11*x_16_13 - x_11_11*x_14_44*x_16_13 - x_11_13*x_14_11*x_16_44 + x_11_11*x_14_13*x_16_44
+g5 source: D(16,35); sign 1; content 1; monomial 1
+
+g6 = x_14_13*x_15_11 - x_11_13*x_14_44*x_15_11 - x_14_11*x_15_13 + x_11_11*x_14_44*x_15_13 - x_14_44*x_15_13*x_6_11 + x_14_44*x_15_11*x_6_13 - x_14_13*x_15_11*x_6_44 + x_14_11*x_15_13*x_6_44
+g6 source: D(15,36); sign -1; content 1; monomial 1
+
+g7 = x_14_13*x_16_11 - x_11_13*x_14_44*x_16_11 - x_14_11*x_16_13 + x_11_11*x_14_44*x_16_13 + x_11_13*x_14_11*x_16_44 - x_11_11*x_14_13*x_16_44 - x_14_44*x_16_13*x_6_11 + x_14_13*x_16_44*x_6_11 + x_14_44*x_16_11*x_6_13 - x_14_11*x_16_44*x_6_13 - x_14_13*x_16_11*x_6_44 + x_14_11*x_16_13*x_6_44
+g7 source: D(16,36); sign -1; content 1; monomial 1
+
+g8 = x_15_13*x_16_44*x_6_11 - x_15_11*x_16_44*x_6_13 - x_15_13*x_16_11*x_6_44 + x_15_11*x_16_13*x_6_44 - x_15_13*x_16_44*x_7_11 + x_15_11*x_16_44*x_7_13 + x_15_13*x_16_11*x_7_44 - x_15_11*x_16_13*x_7_44
+g8 source: D(16,45); sign -1; content 1; monomial 1
+
+g9 = - x_15_13*x_7_11 + x_15_11*x_7_13 - x_15_11*x_7_44 + x_10_11*x_15_13*x_7_44
+g9 source: D(4,48); sign -1; content 1; monomial 1
+
+g10 = x_15_13*x_16_11 - x_15_11*x_16_13 + x_11_13*x_15_11*x_16_44 - x_11_11*x_15_13*x_16_44
+g10 source: D(16,49); sign -1; content 1; monomial 1
+
+g11 = - x_15_13*x_16_11 + x_15_11*x_16_13 - x_11_13*x_15_11*x_16_44 + x_11_11*x_15_13*x_16_44 - x_15_13*x_16_44*x_6_11 + x_15_11*x_16_44*x_6_13 + x_15_13*x_16_11*x_6_44 - x_15_11*x_16_13*x_6_44
+g11 source: D(16,50); sign 1; content 1; monomial 1
+
+g12 = x_16_13*x_7_11 - x_16_44*x_7_11 - x_16_11*x_7_13 + x_10_11*x_16_44*x_7_13 + x_16_11*x_7_44 - x_10_11*x_16_13*x_7_44
+g12 source: D(13,56); sign 1; content 1; monomial 1

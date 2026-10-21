@@ -1,0 +1,24 @@
+POSITIVE GENERATORS
+D(i,j) = det R[B_j followed by i, all six columns in the displayed order].
+For slack sources, g = sign * D(i,j) / (content * monomial).
+The divisor is positive. In geometry.txt, see [Reduced slack matrix R]
+and [Ordered facet bases B_j]; Bj denotes B_j (e.g. B3 means B_3).
+Signs are justified in orientations.txt. Each expanded g appears above its source.
+
+g1 = - x_18_193*x_5_101 + x_18_193*x_23_81*x_5_101 + x_18_101*x_5_193 - x_23_101*x_5_193 + x_18_81*x_23_101*x_5_193 - x_18_101*x_23_81*x_5_193 - x_18_81*x_2_101*x_5_193 + x_23_81*x_2_101*x_5_193
+g1 source: D(21,186); sign -1; content 1; monomial 1
+
+g2 = x_16_193*x_18_101 - x_16_193*x_23_101 + x_18_193*x_23_101 + x_16_193*x_18_81*x_23_101 - x_16_193*x_18_101*x_23_81 - x_16_193*x_18_81*x_2_101 + x_16_193*x_23_81*x_2_101 - x_18_193*x_23_81*x_2_101
+g2 source: D(18,197); sign -1; content 1; monomial 1
+
+g3 = x_16_193*x_18_81*x_5_101 - x_16_193*x_23_81*x_5_101 + x_18_193*x_23_81*x_5_101 + x_18_81*x_23_101*x_5_193 - x_18_101*x_23_81*x_5_193
+g3 source: D(18,198); sign 1; content 1; monomial 1
+
+g4 = x_18_81*x_22_193*x_5_101 - x_18_193*x_22_81*x_5_101 + x_18_193*x_23_81*x_5_101 - x_22_193*x_23_81*x_5_101 - x_18_81*x_22_101*x_5_193 + x_18_101*x_22_81*x_5_193 + x_18_81*x_23_101*x_5_193 - x_22_81*x_23_101*x_5_193 - x_18_101*x_23_81*x_5_193 + x_22_101*x_23_81*x_5_193
+g4 source: D(22,200); sign -1; content 1; monomial 1
+
+g5 = x_18_193*x_22_101 - x_18_101*x_22_193 - x_18_193*x_23_101 + x_22_193*x_23_101 - x_18_81*x_22_193*x_23_101 + x_18_193*x_22_81*x_23_101 - x_18_193*x_22_101*x_23_81 + x_18_101*x_22_193*x_23_81 + x_18_81*x_22_193*x_2_101 - x_18_193*x_22_81*x_2_101 + x_18_193*x_23_81*x_2_101 - x_22_193*x_23_81*x_2_101
+g5 source: D(21,216); sign 1; content 1; monomial 1
+
+g6 = x_16_193*x_18_81*x_22_101 - x_16_193*x_18_101*x_22_81 - x_16_193*x_18_81*x_23_101 + x_18_81*x_22_193*x_23_101 + x_16_193*x_22_81*x_23_101 - x_18_193*x_22_81*x_23_101 + x_16_193*x_18_101*x_23_81 - x_16_193*x_22_101*x_23_81 + x_18_193*x_22_101*x_23_81 - x_18_101*x_22_193*x_23_81
+g6 source: D(16,223); sign 1; content 1; monomial 1

@@ -1,0 +1,24 @@
+POSITIVE GENERATORS
+D(i,j) = det R[B_j followed by i, all six columns in the displayed order].
+For slack sources, g = sign * D(i,j) / (content * monomial).
+The divisor is positive. In geometry.txt, see [Reduced slack matrix R]
+and [Ordered facet bases B_j]; Bj denotes B_j (e.g. B3 means B_3).
+Signs are justified in orientations.txt. Each expanded g appears above its source.
+
+g1 = x_11_86*x_18_42 - x_11_86*x_18_49*x_8_42 + x_11_42*x_18_49*x_8_86
+g1 source: D(18,51); sign 1; content 1; monomial x_17_160
+
+g2 = x_10_86*x_18_42 - x_10_86*x_18_49*x_8_42 - x_10_49*x_18_42*x_8_86 + x_10_42*x_18_49*x_8_86
+g2 source: D(14,83); sign 1; content 1; monomial x_17_160
+
+g3 = - x_10_49*x_11_86*x_18_42 - x_10_86*x_11_42*x_18_49 + x_10_42*x_11_86*x_18_49
+g3 source: D(11,87); sign 1; content 1; monomial x_17_160
+
+g4 = - x_10_86*x_18_49*x_19_42 + x_10_86*x_18_42*x_19_49 - x_10_49*x_18_42*x_19_86 + x_10_42*x_18_49*x_19_86
+g4 source: D(19,87); sign 1; content 1; monomial x_17_160
+
+g5 = x_11_86*x_18_49*x_19_42 - x_11_86*x_18_42*x_19_49 - x_11_42*x_18_49*x_19_86
+g5 source: D(19,88); sign -1; content 1; monomial x_17_160
+
+g6 = - x_18_42*x_19_86 + x_18_49*x_19_86*x_8_42 - x_18_49*x_19_42*x_8_86 + x_18_42*x_19_49*x_8_86
+g6 source: D(14,132); sign -1; content 1; monomial x_17_160

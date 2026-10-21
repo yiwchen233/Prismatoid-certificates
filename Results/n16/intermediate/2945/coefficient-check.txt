@@ -1,0 +1,13 @@
+COEFFICIENT CHECK
+Columns are coefficients in the products P1, P2, ... (before weighting).
+Multiply each column by its coefficient c_k from the certificate.
+The last column is the exact weighted sum; every entry must be zero.
+
+Monomial | P1 | P2 | P3 | weighted sum
+x_2_79*x_3_70*x_7_105*x_7_70 | 0 | 1 | -1 | 0
+x_3_79*x_7_105*x_7_70 | 1 | -1 | 0 | 0
+x_2_79*x_7_70^2 | 0 | -1 | 1 | 0
+x_2_105*x_3_79*x_7_70^2 | -1 | 1 | 0 | 0
+x_3_70*x_7_105*x_7_79 | -1 | 0 | 1 | 0
+x_7_70*x_7_79 | 0 | 1 | -1 | 0
+x_2_105*x_3_70*x_7_70*x_7_79 | 1 | -1 | 0 | 0

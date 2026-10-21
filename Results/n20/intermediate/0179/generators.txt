@@ -1,0 +1,30 @@
+POSITIVE GENERATORS
+D(i,j) = det R[B_j followed by i, all six columns in the displayed order].
+For slack sources, g = sign * D(i,j) / (content * monomial).
+The divisor is positive. In geometry.txt, see [Reduced slack matrix R]
+and [Ordered facet bases B_j]; Bj denotes B_j (e.g. B3 means B_3).
+Signs are justified in orientations.txt. Each expanded g appears above its source.
+
+g1 = x_10_165*x_3_162*x_5_146 - x_10_162*x_3_165*x_5_146 - x_10_165*x_3_162*x_6_146 + x_10_162*x_3_165*x_6_146 - x_10_146*x_3_165*x_6_162 - x_10_165*x_5_146*x_6_162 + x_10_146*x_3_162*x_6_165 + x_10_162*x_5_146*x_6_165
+g1 source: D(19,25); sign 1; content 1; monomial x_19_98
+
+g2 = - x_13_165*x_3_162*x_5_146 + x_13_162*x_3_165*x_5_146 + x_13_165*x_3_162*x_6_146 - x_13_162*x_3_165*x_6_146 + x_13_146*x_3_165*x_6_162 + x_13_165*x_5_146*x_6_162 - x_13_146*x_3_162*x_6_165 - x_13_162*x_5_146*x_6_165
+g2 source: D(19,43); sign -1; content 1; monomial x_19_98
+
+g3 = - x_3_162*x_5_146 + x_11_162*x_3_165*x_5_146 + x_3_162*x_6_146 - x_11_162*x_3_165*x_6_146 + x_3_165*x_6_162 + x_5_146*x_6_162 - x_3_162*x_6_165 - x_11_162*x_5_146*x_6_165
+g3 source: D(5,144); sign -1; content 1; monomial x_19_98
+
+g4 = x_10_162 - x_10_146*x_11_162 + x_10_146*x_12_162 - x_10_165*x_12_162
+g4 source: D(12,145); sign 1; content 1; monomial x_19_98*x_1_1
+
+g5 = - x_10_162*x_13_146 + x_10_165*x_11_162*x_13_146 + x_10_146*x_13_162 - x_10_165*x_13_162 + x_10_162*x_13_165 - x_10_146*x_11_162*x_13_165
+g5 source: D(13,145); sign 1; content 1; monomial x_19_98*x_1_1
+
+g6 = x_3_162*x_5_146 - x_12_162*x_3_165*x_5_146 - x_3_162*x_6_146 + x_12_162*x_3_165*x_6_146 - x_5_146*x_6_162 + x_12_162*x_5_146*x_6_165
+g6 source: D(5,148); sign 1; content 1; monomial x_19_98
+
+g7 = - x_11_162*x_13_146 + x_12_162*x_13_146 + x_13_162 - x_12_162*x_13_165
+g7 source: D(13,149); sign 1; content 1; monomial x_19_98
+
+g8 = - x_10_162*x_13_146 + x_10_165*x_12_162*x_13_146 + x_10_146*x_13_162 - x_10_146*x_12_162*x_13_165
+g8 source: D(12,150); sign -1; content 1; monomial x_19_98*x_8_1

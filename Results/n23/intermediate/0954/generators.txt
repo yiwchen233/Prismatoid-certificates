@@ -1,0 +1,30 @@
+POSITIVE GENERATORS
+D(i,j) = det R[B_j followed by i, all six columns in the displayed order].
+For slack sources, g = sign * D(i,j) / (content * monomial).
+The divisor is positive. In geometry.txt, see [Reduced slack matrix R]
+and [Ordered facet bases B_j]; Bj denotes B_j (e.g. B3 means B_3).
+Signs are justified in orientations.txt. Each expanded g appears above its source.
+
+g1 = - x_10_25*x_4_24 + x_10_4*x_4_24 + x_4_25 - x_10_4*x_2_24*x_4_25
+g1 source: D(4,9); sign 1; content 1; monomial 1
+
+g2 = x_10_4*x_4_24*x_5_25 - x_10_25*x_4_24*x_5_4 + x_4_25*x_5_4
+g2 source: D(5,10); sign -1; content 1; monomial 1
+
+g3 = - x_10_4*x_12_25*x_4_24 + x_10_4*x_19_25*x_4_24 - x_10_25*x_19_4*x_4_24 + x_10_4*x_12_24*x_4_25 - x_10_4*x_19_24*x_4_25 + x_19_4*x_4_25
+g3 source: D(19,10); sign -1; content 1; monomial 1
+
+g4 = x_12_24*x_5_25 - x_13_24*x_5_25 + x_13_4*x_2_24*x_5_25 - x_12_24*x_5_4 + x_13_24*x_5_4 + x_12_25*x_2_24*x_5_4 - x_13_25*x_2_24*x_5_4
+g4 source: D(8,17); sign -1; content 1; monomial 1
+
+g5 = x_12_25*x_13_24 - x_12_24*x_13_25 + x_12_24*x_13_4 - x_12_25*x_19_24 + x_13_25*x_19_24 - x_13_4*x_19_24 + x_12_24*x_19_25 - x_13_24*x_19_25 - x_12_24*x_19_4 + x_13_24*x_19_4 - x_12_25*x_13_4*x_2_24 + x_13_4*x_19_25*x_2_24 + x_12_25*x_19_4*x_2_24 - x_13_25*x_19_4*x_2_24
+g5 source: D(19,18); sign 1; content 1; monomial 1
+
+g6 = - x_12_24*x_13_4*x_5_25 + x_13_4*x_19_24*x_5_25 + x_12_24*x_19_4*x_5_25 - x_13_24*x_19_4*x_5_25 - x_12_25*x_13_24*x_5_4 + x_12_24*x_13_25*x_5_4 + x_12_25*x_19_24*x_5_4 - x_13_25*x_19_24*x_5_4 - x_12_24*x_19_25*x_5_4 + x_13_24*x_19_25*x_5_4
+g6 source: D(19,19); sign -1; content 1; monomial 1
+
+g7 = x_13_24*x_5_25 - x_19_24*x_5_25 - x_13_4*x_2_24*x_5_25 + x_19_4*x_2_24*x_5_25 - x_13_24*x_5_4 + x_19_24*x_5_4 + x_13_25*x_2_24*x_5_4 - x_19_25*x_2_24*x_5_4
+g7 source: D(2,36); sign -1; content 1; monomial 1
+
+g8 = x_10_4*x_13_25*x_4_24 - x_10_25*x_13_4*x_4_24 - x_10_4*x_19_25*x_4_24 + x_10_25*x_19_4*x_4_24 - x_10_4*x_13_24*x_4_25 + x_13_4*x_4_25 + x_10_4*x_19_24*x_4_25 - x_19_4*x_4_25
+g8 source: D(0,40); sign -1; content 1; monomial 1

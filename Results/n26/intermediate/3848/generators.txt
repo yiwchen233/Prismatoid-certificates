@@ -1,0 +1,33 @@
+POSITIVE GENERATORS
+D(i,j) = det R[B_j followed by i, all six columns in the displayed order].
+For slack sources, g = sign * D(i,j) / (content * monomial).
+The divisor is positive. In geometry.txt, see [Reduced slack matrix R]
+and [Ordered facet bases B_j]; Bj denotes B_j (e.g. B3 means B_3).
+Signs are justified in orientations.txt. Each expanded g appears above its source.
+
+g1 = x_14_134*x_7_114 - x_0_134*x_14_136*x_7_114 + x_0_134*x_14_114*x_7_136 - x_0_114*x_14_134*x_7_136
+g1 source: D(23,12); sign -1; content 1; monomial 1
+
+g2 = - x_0_134*x_14_114 + x_10_134*x_14_114 + x_0_114*x_14_134 - x_10_114*x_14_134 + x_0_134*x_10_114*x_14_136 - x_0_114*x_10_134*x_14_136
+g2 source: D(23,14); sign 1; content 1; monomial 1
+
+g3 = - x_10_134*x_14_114 + x_12_134*x_14_114 + x_10_114*x_14_134 - x_12_114*x_14_134 + x_10_134*x_12_114*x_14_136 - x_10_114*x_12_134*x_14_136 - x_14_134*x_7_114 + x_12_134*x_14_136*x_7_114 - x_12_134*x_14_114*x_7_136 + x_12_114*x_14_134*x_7_136
+g3 source: D(12,124); sign 1; content 1; monomial 1
+
+g4 = x_14_114 - x_10_114*x_14_136 - x_14_134*x_20_114 + x_10_134*x_14_136*x_20_114 - x_10_134*x_14_114*x_20_136 + x_10_114*x_14_134*x_20_136 + x_14_136*x_7_114 - x_14_134*x_20_136*x_7_114 - x_14_114*x_7_136 + x_14_134*x_20_114*x_7_136
+g4 source: D(20,124); sign 1; content 1; monomial 1
+
+g5 = x_14_114 - x_10_134*x_14_114 + x_10_114*x_14_134 - x_10_114*x_14_136 - x_14_134*x_24_114 + x_10_134*x_14_136*x_24_114 - x_14_134*x_7_114 + x_14_136*x_7_114 - x_14_114*x_7_136 + x_14_134*x_24_114*x_7_136
+g5 source: D(24,124); sign 1; content 1; monomial 1
+
+g6 = x_0_114 - x_12_114 - x_0_134*x_20_114 + x_12_134*x_20_114 + x_0_134*x_12_114*x_20_136 - x_0_114*x_12_134*x_20_136
+g6 source: D(13,147); sign 1; content 1; monomial 1
+
+g7 = - x_0_114 + x_12_114 - x_0_134*x_12_114 + x_0_114*x_12_134 + x_0_134*x_24_114 - x_12_134*x_24_114
+g7 source: D(13,205); sign 1; content 1; monomial 1
+
+g8 = - x_0_114 - x_20_114 + x_0_134*x_20_114 + x_0_114*x_20_136 + x_24_114 - x_0_134*x_20_136*x_24_114
+g8 source: D(13,210); sign -1; content 1; monomial 1
+
+g9 = - x_12_114 - x_20_114 + x_12_134*x_20_114 + x_12_114*x_20_136 + x_24_114 - x_12_134*x_20_136*x_24_114
+g9 source: D(13,211); sign 1; content 1; monomial x_0_1

@@ -11,7 +11,6 @@ from modules.exact_polynomial import ExactRing,to_ring,from_ring
 from modules.verify_certificate import verify_bundle
 from prismatoid_batch.flag_search import sample_rank_certified_facet_flags
 from prismatoid_batch.cli import build_parser
-from prismatoid_batch.sage_solver_adapter import _sparse_coordinates
 INPUT=ROOT/'examples/prepared/0213.txt'
 F=[list(map(int,l.split())) for l in INPUT.read_text().splitlines() if l.strip()]
 class PatchTests(unittest.TestCase):

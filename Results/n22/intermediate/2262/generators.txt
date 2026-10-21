@@ -1,0 +1,54 @@
+POSITIVE GENERATORS
+D(i,j) = det R[B_j followed by i, all six columns in the displayed order].
+For slack sources, g = sign * D(i,j) / (content * monomial).
+The divisor is positive. In geometry.txt, see [Reduced slack matrix R]
+and [Ordered facet bases B_j]; Bj denotes B_j (e.g. B3 means B_3).
+Signs are justified in orientations.txt. Each expanded g appears above its source.
+
+g1 = x_0_135*x_15_0 - x_0_135*x_20_0 + x_15_135*x_20_0 - x_15_0*x_20_135
+g1 source: D(20,6); sign 1; content 1; monomial x_3_81
+
+g2 = - x_17_0 + x_21_0
+g2 source: D(21,24); sign -1; content 1; monomial x_0_135*x_1_81
+
+g3 = x_12_135*x_15_0 - x_15_135 - x_12_135*x_19_0 + x_15_135*x_19_0 + x_19_135 - x_15_0*x_19_135
+g3 source: D(6,62); sign 1; content 1; monomial x_1_81
+
+g4 = - x_15_0 + x_20_0
+g4 source: D(1,84); sign -1; content 1; monomial x_1_81
+
+g5 = - x_12_135*x_15_0 + x_15_135 + x_12_135*x_20_0 - x_15_135*x_20_0 - x_20_135 + x_15_0*x_20_135
+g5 source: D(6,87); sign -1; content 1; monomial x_1_81
+
+g6 = x_14_135*x_15_0 - x_15_135 - x_14_135*x_20_0 + x_14_19*x_15_135*x_20_0 + x_20_135 - x_14_19*x_15_0*x_20_135
+g6 source: D(6,91); sign 1; content 1; monomial x_1_81
+
+g7 = x_0_135 + x_14_135*x_21_0 - x_0_135*x_14_19*x_21_0
+g7 source: D(0,113); sign -1; content 1; monomial x_1_81
+
+g8 = 1 - x_14_19*x_21_0
+g8 source: D(7,113); sign -1; content 1; monomial x_1_81
+
+g9 = x_12_135*x_19_0 - x_19_135 - x_12_135*x_21_0 + x_19_135*x_21_0
+g9 source: D(6,167); sign 1; content 1; monomial x_1_81
+
+g10 = - x_15_135*x_19_0 + x_15_0*x_19_135 + x_15_135*x_21_0 - x_19_135*x_21_0
+g10 source: D(6,172); sign -1; content 1; monomial x_1_81
+
+g11 = x_20_0 - x_21_0
+g11 source: D(6,178); sign 1; content 1; monomial x_1_81
+
+g12 = - x_12_135*x_20_0 + x_20_135 + x_12_135*x_21_0 - x_20_135*x_21_0
+g12 source: D(6,181); sign -1; content 1; monomial x_1_81
+
+g13 = x_15_0
+g13 source: variable x_15_0
+
+g14 = x_17_0
+g14 source: variable x_17_0
+
+g15 = x_20_0
+g15 source: variable x_20_0
+
+g16 = x_21_0
+g16 source: variable x_21_0

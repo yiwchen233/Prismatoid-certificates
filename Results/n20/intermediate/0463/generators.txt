@@ -1,0 +1,24 @@
+POSITIVE GENERATORS
+D(i,j) = det R[B_j followed by i, all six columns in the displayed order].
+For slack sources, g = sign * D(i,j) / (content * monomial).
+The divisor is positive. In geometry.txt, see [Reduced slack matrix R]
+and [Ordered facet bases B_j]; Bj denotes B_j (e.g. B3 means B_3).
+Signs are justified in orientations.txt. Each expanded g appears above its source.
+
+g1 = - x_4_42 + x_4_117*x_7_42 - x_4_117*x_7_78 + x_4_42*x_7_115*x_9_117 - x_7_42*x_9_117 + x_7_78*x_9_117 + x_9_42 - x_4_117*x_7_115*x_9_42 - x_9_78 + x_4_117*x_7_115*x_9_78
+g1 source: D(4,25); sign -1; content 1; monomial 1
+
+g2 = - x_6_42 + x_6_78 + x_7_42 - x_7_78 + x_6_42*x_7_115*x_9_117 - x_6_78*x_7_115*x_9_117 - x_6_115*x_7_42*x_9_117 + x_6_115*x_7_78*x_9_117 + x_6_115*x_9_42 - x_7_115*x_9_42 - x_6_115*x_9_78 + x_7_115*x_9_78
+g2 source: D(6,25); sign -1; content 1; monomial 1
+
+g3 = 1 - x_11_42 + x_13_42 - x_13_117*x_7_42 + x_13_117*x_7_78 - x_7_115*x_9_117 + x_11_42*x_7_115*x_9_117 - x_13_42*x_7_115*x_9_117 + x_7_42*x_9_117 - x_11_115*x_7_42*x_9_117 - x_7_78*x_9_117 + x_11_115*x_7_78*x_9_117 - x_9_42 + x_11_115*x_9_42 + x_13_117*x_7_115*x_9_42 + x_9_78 - x_11_115*x_9_78 - x_13_117*x_7_115*x_9_78
+g3 source: D(11,25); sign -1; content 1; monomial 1
+
+g4 = - 1 + x_11_42 - x_13_42 + x_4_42 - x_11_115*x_4_42 + x_4_117*x_7_115 - x_11_42*x_4_117*x_7_115 + x_13_42*x_4_117*x_7_115 - x_13_117*x_4_42*x_7_115 + x_13_117*x_7_42 - x_4_117*x_7_42 + x_11_115*x_4_117*x_7_42 - x_13_117*x_7_78 + x_4_117*x_7_78 - x_11_115*x_4_117*x_7_78
+g4 source: D(3,30); sign 1; content 1; monomial 1
+
+g5 = x_6_115 - x_11_42*x_6_115 + x_13_42*x_6_115 - x_6_42 + x_11_115*x_6_42 + x_6_78 - x_11_115*x_6_78 - x_7_115 + x_11_42*x_7_115 - x_13_42*x_7_115 + x_13_117*x_6_42*x_7_115 - x_13_117*x_6_78*x_7_115 + x_7_42 - x_11_115*x_7_42 - x_13_117*x_6_115*x_7_42 - x_7_78 + x_11_115*x_7_78 + x_13_117*x_6_115*x_7_78
+g5 source: D(1,32); sign 1; content 1; monomial 1
+
+g6 = x_4_42*x_6_115 - x_6_42 + x_6_78 - x_4_42*x_7_115 + x_4_117*x_6_42*x_7_115 - x_4_117*x_6_78*x_7_115 + x_7_42 - x_4_117*x_6_115*x_7_42 - x_7_78 + x_4_117*x_6_115*x_7_78
+g6 source: D(4,57); sign -1; content 1; monomial x_16_0

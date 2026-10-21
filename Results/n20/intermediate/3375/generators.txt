@@ -1,0 +1,30 @@
+POSITIVE GENERATORS
+D(i,j) = det R[B_j followed by i, all six columns in the displayed order].
+For slack sources, g = sign * D(i,j) / (content * monomial).
+The divisor is positive. In geometry.txt, see [Reduced slack matrix R]
+and [Ordered facet bases B_j]; Bj denotes B_j (e.g. B3 means B_3).
+Signs are justified in orientations.txt. Each expanded g appears above its source.
+
+g1 = x_14_159*x_2_115 - x_10_159*x_14_160*x_2_115 - x_10_159*x_14_115*x_3_160 + x_14_159*x_3_160
+g1 source: D(19,20); sign -1; content 1; monomial 1
+
+g2 = - x_14_159*x_2_115 + x_10_159*x_14_160*x_2_115 + x_14_159*x_8_115 - x_10_159*x_14_160*x_8_115 - x_14_115*x_8_159 + x_14_160*x_8_159
+g2 source: D(19,22); sign 1; content 1; monomial 1
+
+g3 = - x_11_159*x_14_115 + x_14_159 + x_11_159*x_14_115*x_3_160 - x_14_159*x_3_160 - x_11_160*x_14_159*x_4_115 + x_11_159*x_14_160*x_4_115 + x_11_160*x_14_115*x_4_159 - x_14_160*x_4_159
+g3 source: D(13,119); sign -1; content 1; monomial 1
+
+g4 = x_11_159*x_14_115 - x_14_159 + x_11_160*x_14_159*x_4_115 - x_11_159*x_14_160*x_4_115 - x_11_160*x_14_115*x_4_159 + x_14_160*x_4_159 - x_11_160*x_14_159*x_8_115 + x_11_159*x_14_160*x_8_115 + x_11_160*x_14_115*x_8_159 - x_14_160*x_8_159
+g4 source: D(13,121); sign -1; content 1; monomial 1
+
+g5 = - x_11_159*x_14_115 + x_10_159*x_11_160*x_14_115 + x_14_159 - x_11_160*x_14_159 - x_10_159*x_14_160 + x_11_159*x_14_160
+g5 source: D(11,130); sign 1; content 1; monomial x_7_1
+
+g6 = - x_14_115 + x_10_159*x_12_160*x_14_115 + x_12_115*x_14_159 - x_12_160*x_14_159 + x_14_160 - x_10_159*x_12_115*x_14_160
+g6 source: D(12,130); sign 1; content 1; monomial x_7_1
+
+g7 = - x_14_115*x_3_160 + x_12_115*x_14_159*x_3_160 + x_12_160*x_14_159*x_8_115 - x_14_160*x_8_115 - x_12_160*x_14_115*x_8_159 + x_12_115*x_14_160*x_8_159
+g7 source: D(3,131); sign -1; content 1; monomial 1
+
+g8 = - x_11_160*x_14_115 + x_11_159*x_12_160*x_14_115 + x_11_160*x_12_115*x_14_159 - x_12_160*x_14_159 + x_14_160 - x_11_159*x_12_115*x_14_160
+g8 source: D(11,131); sign -1; content 1; monomial 1

@@ -1,0 +1,51 @@
+POSITIVE GENERATORS
+D(i,j) = det R[B_j followed by i, all six columns in the displayed order].
+For slack sources, g = sign * D(i,j) / (content * monomial).
+The divisor is positive. In geometry.txt, see [Reduced slack matrix R]
+and [Ordered facet bases B_j]; Bj denotes B_j (e.g. B3 means B_3).
+Signs are justified in orientations.txt. Each expanded g appears above its source.
+
+g1 = x_0_2 - x_0_5
+g1 source: D(8,4); sign 1; content 1; monomial x_3_104*x_7_25
+
+g2 = - x_0_2*x_13_104 + x_13_2 - x_0_5*x_13_2*x_4_104 + x_0_2*x_13_5*x_4_104 - x_0_2*x_4_104*x_9_5
+g2 source: D(0,20); sign -1; content 1; monomial x_1_25
+
+g3 = - x_13_2*x_4_104 + x_13_2*x_5_104 - x_13_104*x_5_2 + x_13_5*x_4_104*x_5_2 - x_4_104*x_5_2*x_9_5
+g3 source: D(5,20); sign -1; content 1; monomial x_1_25
+
+g4 = - x_13_2 - x_13_25 + x_13_5 + x_9_25 - x_9_5
+g4 source: D(8,21); sign -1; content 1; monomial x_3_104
+
+g5 = 1 - x_5_2 - x_5_25
+g5 source: D(8,24); sign 1; content 1; monomial x_3_104
+
+g6 = 1 + x_0_2*x_14_104 - x_0_5*x_14_104 - x_14_2 - x_0_2*x_8_104 + x_0_5*x_14_2*x_8_104 + x_9_25 + x_0_2*x_4_104*x_9_25 - x_0_5*x_4_104*x_9_25 - x_0_2*x_8_104*x_9_25 - x_9_5 + x_0_2*x_8_104*x_9_5
+g6 source: D(4,30); sign -1; content 1; monomial 1
+
+g7 = x_14_104 - x_5_104 + x_14_2*x_5_104 - x_14_104*x_5_2 - x_14_104*x_5_25 + x_4_104*x_5_25 - x_14_2*x_4_104*x_5_25 - x_14_2*x_8_104 + x_5_2*x_8_104 + x_14_2*x_5_25*x_8_104 + x_4_104*x_9_25 - x_5_104*x_9_25 - x_4_104*x_5_2*x_9_25 + x_5_2*x_8_104*x_9_25 + x_5_104*x_9_5 - x_4_104*x_5_25*x_9_5 - x_5_2*x_8_104*x_9_5
+g7 source: D(4,32); sign -1; content 1; monomial 1
+
+g8 = x_0_2*x_13_104 - x_13_2 - x_0_2*x_14_104 + x_14_2 + x_0_2*x_4_104 + x_0_5*x_13_2*x_4_104 - x_0_2*x_13_5*x_4_104 - x_0_5*x_14_2*x_4_104
+g8 source: D(0,39); sign -1; content 1; monomial x_1_25
+
+g9 = x_13_2*x_4_104 - x_14_2*x_4_104 - x_13_2*x_5_104 + x_14_2*x_5_104 + x_13_104*x_5_2 - x_14_104*x_5_2 + x_4_104*x_5_2 - x_13_5*x_4_104*x_5_2
+g9 source: D(5,39); sign -1; content 1; monomial x_1_25
+
+g10 = 1 + x_13_2 + x_13_25 - x_13_5 - x_14_2
+g10 source: D(8,40); sign -1; content 1; monomial x_3_104
+
+g11 = - x_0_2*x_4_104 + x_0_2*x_5_104 - x_5_2 + x_0_5*x_4_104*x_5_2
+g11 source: D(1,57); sign 1; content 1; monomial x_1_25
+
+g12 = - 1 - x_0_2*x_5_104 + x_0_5*x_5_104 + x_5_2 + x_5_25 + x_0_2*x_4_104*x_5_25 - x_0_5*x_4_104*x_5_25 + x_0_2*x_8_104 - x_0_5*x_5_2*x_8_104 - x_0_2*x_5_25*x_8_104
+g12 source: D(8,57); sign 1; content 1; monomial 1
+
+g13 = x_0_2
+g13 source: variable x_0_2
+
+g14 = x_14_2
+g14 source: variable x_14_2
+
+g15 = x_5_2
+g15 source: variable x_5_2

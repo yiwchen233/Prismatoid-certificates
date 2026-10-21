@@ -1,0 +1,22 @@
+COEFFICIENT CHECK
+Columns are coefficients in the products P1, P2, ... (before weighting).
+Multiply each column by its coefficient c_k from the certificate.
+The last column is the exact weighted sum; every entry must be zero.
+
+Monomial | P1 | P2 | P3 | P4 | weighted sum
+x_11_29*x_8_123 | 1 | -1 | 1 | -1 | 0
+x_11_29*x_7_29*x_8_123 | 0 | 0 | -1 | 1 | 0
+x_11_123*x_8_20 | 1 | 0 | 0 | -1 | 0
+x_11_29*x_3_123*x_8_20 | -1 | 0 | 0 | 1 | 0
+x_11_29*x_7_123*x_8_20 | 0 | 1 | -1 | 0 | 0
+x_11_123*x_7_29*x_8_20 | 0 | -1 | 0 | 1 | 0
+x_11_29*x_3_123*x_7_29*x_8_20 | 0 | 0 | 1 | -1 | 0
+x_8_20*x_9_123 | -1 | 0 | 0 | 1 | 0
+x_7_29*x_8_20*x_9_123 | 0 | 1 | 0 | -1 | 0
+x_8_123*x_9_20 | 1 | 0 | 0 | -1 | 0
+x_7_29*x_8_123*x_9_20 | 0 | -1 | 0 | 1 | 0
+x_8_123*x_9_29 | -1 | 1 | -1 | 1 | 0
+x_7_29*x_8_123*x_9_29 | 0 | 0 | 1 | -1 | 0
+x_3_123*x_8_20*x_9_29 | 1 | 0 | 0 | -1 | 0
+x_7_123*x_8_20*x_9_29 | 0 | -1 | 1 | 0 | 0
+x_3_123*x_7_29*x_8_20*x_9_29 | 0 | 0 | -1 | 1 | 0

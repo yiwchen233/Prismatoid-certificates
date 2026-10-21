@@ -1,0 +1,18 @@
+COEFFICIENT CHECK
+Columns are coefficients in the products P1, P2, ... (before weighting).
+Multiply each column by its coefficient c_k from the certificate.
+The last column is the exact weighted sum; every entry must be zero.
+
+Monomial | P1 | P2 | P3 | weighted sum
+x_18_93*x_20_0*x_4_93*x_6_5*x_7_5 | 1 | 0 | -1 | 0
+x_18_0*x_20_93*x_4_93*x_6_5*x_7_5 | -1 | 0 | 1 | 0
+x_18_93*x_20_0*x_4_5*x_6_93*x_7_5 | 0 | -1 | 1 | 0
+x_18_0*x_20_93*x_4_5*x_6_93*x_7_5 | 0 | 1 | -1 | 0
+x_20_0*x_4_93*x_6_93*x_7_5 | -1 | 1 | 0 | 0
+x_18_0*x_20_5*x_4_93*x_6_93*x_7_5 | 1 | -1 | 0 | 0
+x_18_93*x_20_0*x_4_5*x_6_5*x_7_93 | -1 | 1 | 0 | 0
+x_18_0*x_20_93*x_4_5*x_6_5*x_7_93 | 1 | -1 | 0 | 0
+x_20_0*x_4_93*x_6_5*x_7_93 | 0 | -1 | 1 | 0
+x_18_0*x_20_5*x_4_93*x_6_5*x_7_93 | 0 | 1 | -1 | 0
+x_20_0*x_4_5*x_6_93*x_7_93 | 1 | 0 | -1 | 0
+x_18_0*x_20_5*x_4_5*x_6_93*x_7_93 | -1 | 0 | 1 | 0

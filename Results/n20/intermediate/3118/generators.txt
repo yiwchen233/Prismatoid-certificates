@@ -1,0 +1,42 @@
+POSITIVE GENERATORS
+D(i,j) = det R[B_j followed by i, all six columns in the displayed order].
+For slack sources, g = sign * D(i,j) / (content * monomial).
+The divisor is positive. In geometry.txt, see [Reduced slack matrix R]
+and [Ordered facet bases B_j]; Bj denotes B_j (e.g. B3 means B_3).
+Signs are justified in orientations.txt. Each expanded g appears above its source.
+
+g1 = x_1_26 - x_2_26 + x_7_26 - x_1_13*x_7_26
+g1 source: D(2,14); sign -1; content 1; monomial 1
+
+g2 = x_14_26 - x_14_13*x_7_26 + x_7_26*x_9_13 - x_9_26
+g2 source: D(8,19); sign 1; content 1; monomial 1
+
+g3 = x_14_26*x_1_13 - x_14_13*x_1_26 + x_1_26*x_9_13 - x_1_13*x_9_26
+g3 source: D(1,22); sign -1; content 1; monomial 1
+
+g4 = x_14_26 - x_14_13*x_2_26 + x_2_26*x_9_13 - x_9_26
+g4 source: D(2,22); sign -1; content 1; monomial 1
+
+g5 = x_13_0*x_14_13 - x_13_26*x_14_13*x_17_0 + x_13_26*x_17_13 - x_13_0*x_14_26*x_17_13
+g5 source: D(17,25); sign 1; content 1; monomial 1
+
+g6 = x_13_0 - x_13_26*x_17_0 - x_13_0*x_1_13 + x_13_26*x_17_0*x_1_13 - x_13_0*x_1_26 + x_17_0*x_1_26 + x_13_0*x_17_13*x_1_26 - x_13_0*x_17_13*x_2_26 + x_13_0*x_1_13*x_2_26 - x_17_0*x_1_13*x_2_26
+g6 source: D(3,51); sign -1; content 1; monomial 1
+
+g7 = - x_13_0 + x_13_26*x_17_0 + x_13_0*x_1_26 - x_17_0*x_1_26 + x_13_0*x_17_13*x_7_26 - x_13_0*x_1_13*x_7_26 + x_17_0*x_1_13*x_7_26
+g7 source: D(3,53); sign 1; content 1; monomial 1
+
+g8 = x_13_0 - x_13_26*x_17_0 - x_13_0*x_2_26 + x_17_0*x_2_26 + x_13_0*x_7_26 - x_17_0*x_7_26 - x_13_0*x_17_13*x_7_26
+g8 source: D(3,54); sign -1; content 1; monomial 1
+
+g9 = - x_19_26*x_1_13 + x_19_13*x_1_26 - x_1_26*x_9_13 + x_1_13*x_9_26
+g9 source: D(1,117); sign 1; content 1; monomial 1
+
+g10 = - x_19_26 + x_19_13*x_2_26 - x_2_26*x_9_13 + x_9_26
+g10 source: D(2,117); sign 1; content 1; monomial 1
+
+g11 = - x_19_26 + x_19_13*x_7_26 - x_7_26*x_9_13 + x_9_26
+g11 source: D(7,117); sign 1; content 1; monomial 1
+
+g12 = - x_13_26*x_17_13 - x_13_0*x_19_13 + x_13_26*x_17_0*x_19_13 + x_13_0*x_17_13*x_19_26
+g12 source: D(0,143); sign -1; content 1; monomial 1

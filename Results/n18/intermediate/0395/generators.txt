@@ -1,0 +1,27 @@
+POSITIVE GENERATORS
+D(i,j) = det R[B_j followed by i, all six columns in the displayed order].
+For slack sources, g = sign * D(i,j) / (content * monomial).
+The divisor is positive. In geometry.txt, see [Reduced slack matrix R]
+and [Ordered facet bases B_j]; Bj denotes B_j (e.g. B3 means B_3).
+Signs are justified in orientations.txt. Each expanded g appears above its source.
+
+g1 = x_0_74*x_11_64*x_4_126 - x_0_64*x_11_74*x_4_126 + x_0_64*x_12_74*x_4_126 - x_0_74*x_11_126*x_4_64 + x_11_74*x_4_64 + x_0_74*x_12_126*x_4_64 - x_12_74*x_4_64 + x_0_64*x_11_126*x_4_74 - x_11_64*x_4_74 - x_0_64*x_12_126*x_4_74
+g1 source: D(4,12); sign -1; content 1; monomial 1
+
+g2 = - x_0_74*x_4_126 - x_0_64*x_12_74*x_4_126 + x_0_64*x_14_74*x_4_126 - x_0_74*x_12_126*x_4_64 + x_12_74*x_4_64 + x_0_74*x_14_126*x_4_64 - x_14_74*x_4_64 + x_4_74 + x_0_64*x_12_126*x_4_74 - x_0_64*x_14_126*x_4_74
+g2 source: D(4,27); sign -1; content 1; monomial 1
+
+g3 = - x_12_74*x_4_126 + x_12_74*x_14_126*x_4_64 - x_12_126*x_14_74*x_4_64 + x_12_126*x_4_74 - x_12_74*x_4_64*x_9_126 + x_14_74*x_4_64*x_9_126 - x_4_74*x_9_126 + x_12_74*x_4_126*x_9_64 - x_14_74*x_4_126*x_9_64 - x_12_126*x_4_74*x_9_64 + x_14_126*x_4_74*x_9_64 + x_4_126*x_9_74 + x_12_126*x_4_64*x_9_74 - x_14_126*x_4_64*x_9_74
+g3 source: D(8,28); sign -1; content 1; monomial 1
+
+g4 = x_0_74*x_16_126*x_4_64 - x_0_64*x_16_126*x_4_74 - x_0_74*x_4_64*x_9_126 + x_0_64*x_4_74*x_9_126 + x_0_74*x_4_126*x_9_64 - x_4_74*x_9_64 - x_0_64*x_4_126*x_9_74 + x_4_64*x_9_74
+g4 source: D(4,43); sign -1; content 1; monomial 1
+
+g5 = - x_0_74*x_11_64*x_4_126 + x_0_64*x_11_74*x_4_126 + x_0_74*x_11_126*x_4_64 - x_11_74*x_4_64 - x_0_74*x_16_126*x_4_64 - x_0_64*x_11_126*x_4_74 + x_11_64*x_4_74 + x_0_64*x_16_126*x_4_74
+g5 source: D(4,52); sign 1; content 1; monomial 1
+
+g6 = - x_12_74*x_16_126*x_4_64 + x_12_74*x_4_64*x_9_126 - x_12_74*x_4_126*x_9_64 + x_12_126*x_4_74*x_9_64 - x_16_126*x_4_74*x_9_64 - x_12_126*x_4_64*x_9_74 + x_16_126*x_4_64*x_9_74
+g6 source: D(8,59); sign 1; content 1; monomial 1
+
+g7 = x_14_74*x_16_126*x_4_64 - x_16_126*x_4_74 - x_14_74*x_4_64*x_9_126 + x_4_74*x_9_126 + x_14_74*x_4_126*x_9_64 - x_14_126*x_4_74*x_9_64 + x_16_126*x_4_74*x_9_64 - x_4_126*x_9_74 + x_14_126*x_4_64*x_9_74 - x_16_126*x_4_64*x_9_74
+g7 source: D(8,84); sign -1; content 1; monomial 1

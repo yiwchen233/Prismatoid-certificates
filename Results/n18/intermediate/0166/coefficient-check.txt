@@ -1,0 +1,17 @@
+COEFFICIENT CHECK
+Columns are coefficients in the products P1, P2, ... (before weighting).
+Multiply each column by its coefficient c_k from the certificate.
+The last column is the exact weighted sum; every entry must be zero.
+
+Monomial | P1 | P2 | P3 | P4 | P5 | P6 | weighted sum
+x_12_20*x_16_0 | 1 | 0 | 0 | -1 | 0 | 0 | 0
+x_12_58*x_14_20*x_16_0 | -1 | 0 | 0 | 1 | 0 | 0 | 0
+x_15_20*x_16_0 | 0 | -1 | 0 | 1 | 0 | 0 | 0
+x_12_58*x_14_0*x_15_20*x_16_0 | 0 | 0 | 0 | -1 | 0 | 1 | 0
+x_16_20 | -1 | 1 | 0 | 0 | 0 | 0 | 0
+x_12_58*x_14_0*x_16_20 | 1 | 0 | 0 | 0 | 0 | -1 | 0
+x_12_20*x_14_0*x_16_58 | -1 | 0 | 0 | 0 | 0 | 1 | 0
+x_14_20*x_16_58 | 1 | 0 | 0 | 0 | -1 | 0 | 0
+x_14_0*x_15_20*x_16_58 | 0 | 0 | 0 | 0 | 1 | -1 | 0
+x_16_58*x_1_20 | 0 | -1 | 1 | 0 | 0 | 0 | 0
+x_16_58*x_3_20 | 0 | 0 | -1 | 0 | 1 | 0 | 0

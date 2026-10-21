@@ -1,0 +1,30 @@
+POSITIVE GENERATORS
+D(i,j) = det R[B_j followed by i, all six columns in the displayed order].
+For slack sources, g = sign * D(i,j) / (content * monomial).
+The divisor is positive. In geometry.txt, see [Reduced slack matrix R]
+and [Ordered facet bases B_j]; Bj denotes B_j (e.g. B3 means B_3).
+Signs are justified in orientations.txt. Each expanded g appears above its source.
+
+g1 = - x_13_98*x_2_128 + x_16_98*x_2_128 - x_13_128*x_16_98*x_2_96 + x_13_128*x_2_98 + x_13_98*x_4_128 - x_16_98*x_4_128 + x_13_128*x_16_98*x_4_96 - x_13_128*x_4_98
+g1 source: D(17,73); sign -1; content 1; monomial 1
+
+g2 = x_13_98*x_2_128 - x_16_98*x_2_128 + x_13_128*x_16_98*x_2_96 - x_13_128*x_2_98 - x_13_98*x_6_128 + x_16_98*x_6_128 - x_13_128*x_16_98*x_6_96 + x_13_128*x_6_98
+g2 source: D(17,74); sign 1; content 1; monomial 1
+
+g3 = - x_13_98*x_3_128 + x_16_98*x_3_128 + x_13_128*x_3_98 + x_13_98*x_6_128 - x_16_98*x_6_128 + x_13_128*x_16_98*x_6_96 - x_13_128*x_6_98
+g3 source: D(17,75); sign -1; content 1; monomial 1
+
+g4 = x_11_98*x_13_128 - x_11_128*x_13_98 + x_11_128*x_16_98
+g4 source: D(17,77); sign 1; content 1; monomial 1
+
+g5 = - x_11_98*x_4_128 - x_11_128*x_16_98*x_4_96 + x_11_128*x_4_98 + x_11_98*x_6_128 + x_11_128*x_16_98*x_6_96 - x_11_128*x_6_98
+g5 source: D(14,119); sign -1; content 1; monomial 1
+
+g6 = x_16_98*x_2_96*x_4_128 - x_2_98*x_4_128 - x_16_98*x_2_128*x_4_96 + x_2_128*x_4_98 - x_16_98*x_2_96*x_6_128 + x_2_98*x_6_128 + x_16_98*x_4_96*x_6_128 - x_4_98*x_6_128 + x_16_98*x_2_128*x_6_96 - x_16_98*x_4_128*x_6_96 - x_2_128*x_6_98 + x_4_128*x_6_98
+g6 source: D(4,125); sign -1; content 1; monomial 1
+
+g7 = x_3_98*x_4_128 + x_16_98*x_3_128*x_4_96 - x_3_128*x_4_98 - x_3_98*x_6_128 - x_16_98*x_4_96*x_6_128 + x_4_98*x_6_128 - x_16_98*x_3_128*x_6_96 + x_16_98*x_4_128*x_6_96 + x_3_128*x_6_98 - x_4_128*x_6_98
+g7 source: D(4,126); sign 1; content 1; monomial 1
+
+g8 = x_11_98*x_2_128 + x_11_128*x_16_98*x_2_96 - x_11_128*x_2_98 - x_11_98*x_3_128 + x_11_128*x_3_98
+g8 source: D(2,127); sign -1; content 1; monomial 1

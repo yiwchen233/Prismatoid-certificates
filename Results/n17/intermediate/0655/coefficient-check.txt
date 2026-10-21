@@ -1,0 +1,22 @@
+COEFFICIENT CHECK
+Columns are coefficients in the products P1, P2, ... (before weighting).
+Multiply each column by its coefficient c_k from the certificate.
+The last column is the exact weighted sum; every entry must be zero.
+
+Monomial | P1 | P2 | P3 | weighted sum
+x_12_122*x_4_122 | -1 | 0 | 1 | 0
+x_1_122*x_4_122 | 0 | 1 | -1 | 0
+x_12_122*x_1_62*x_3_114*x_4_122 | 1 | 0 | -1 | 0
+x_1_62*x_3_122*x_4_122 | 0 | -1 | 1 | 0
+x_12_122*x_1_122*x_3_114*x_4_62 | -1 | 1 | 0 | 0
+x_12_122*x_3_122*x_4_62 | 1 | 0 | -1 | 0
+x_1_122*x_3_122*x_4_62 | 0 | -1 | 1 | 0
+x_12_122*x_1_62*x_3_114*x_3_122*x_4_62 | 0 | -1 | 1 | 0
+x_1_62*x_3_122^2*x_4_62 | 0 | 1 | -1 | 0
+x_4_122*x_8_122 | 1 | -1 | 0 | 0
+x_1_62*x_3_114*x_4_122*x_8_122 | -1 | 1 | 0 | 0
+x_12_122*x_3_114*x_4_62*x_8_122 | 0 | -1 | 1 | 0
+x_1_122*x_3_114*x_4_62*x_8_122 | 1 | 0 | -1 | 0
+x_12_122*x_1_62*x_3_114^2*x_4_62*x_8_122 | 0 | 1 | -1 | 0
+x_3_122*x_4_62*x_8_122 | -1 | 1 | 0 | 0
+x_1_62*x_3_114*x_3_122*x_4_62*x_8_122 | 0 | -1 | 1 | 0

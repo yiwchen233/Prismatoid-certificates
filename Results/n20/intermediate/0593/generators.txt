@@ -1,0 +1,30 @@
+POSITIVE GENERATORS
+D(i,j) = det R[B_j followed by i, all six columns in the displayed order].
+For slack sources, g = sign * D(i,j) / (content * monomial).
+The divisor is positive. In geometry.txt, see [Reduced slack matrix R]
+and [Ordered facet bases B_j]; Bj denotes B_j (e.g. B3 means B_3).
+Signs are justified in orientations.txt. Each expanded g appears above its source.
+
+g1 = x_2_45*x_4_37*x_7_131 - x_2_37*x_4_45*x_7_131 - x_2_45*x_4_131*x_7_37 + x_4_45*x_7_37 + x_2_37*x_4_131*x_7_45 - x_4_37*x_7_45
+g1 source: D(4,7); sign 1; content 1; monomial x_1_12
+
+g2 = x_2_37*x_7_131 - x_17_45*x_2_37*x_7_131 + x_2_45*x_7_131 - x_11_37*x_2_45*x_7_131 - x_7_37 + x_17_45*x_7_37 + x_11_131*x_2_45*x_7_37 - x_17_131*x_2_45*x_7_37 - x_7_45 + x_11_37*x_7_45 - x_11_131*x_2_37*x_7_45 + x_17_131*x_2_37*x_7_45
+g2 source: D(17,7); sign 1; content 1; monomial x_1_12
+
+g3 = - x_13_45*x_2_37*x_7_131 + x_13_45*x_7_37 - x_13_131*x_2_45*x_7_37 + x_16_131*x_2_45*x_7_37 + x_13_131*x_2_37*x_7_45 - x_16_131*x_2_37*x_7_45
+g3 source: D(1,40); sign -1; content 1; monomial x_1_12
+
+g4 = x_11_37*x_13_45*x_4_131 + x_13_131*x_4_37 - x_11_131*x_13_45*x_4_37 - x_16_131*x_4_37 + x_13_45*x_16_131*x_4_37 - x_11_37*x_13_131*x_4_45 + x_11_37*x_16_131*x_4_45
+g4 source: D(4,42); sign 1; content 1; monomial x_1_12
+
+g5 = x_13_131 - x_11_131*x_13_45 - x_16_131 + x_13_45*x_16_131 - x_11_37*x_13_45*x_16_131 + x_11_37*x_13_45*x_17_131 - x_11_37*x_13_131*x_17_45 + x_11_37*x_16_131*x_17_45
+g5 source: D(17,42); sign 1; content 1; monomial x_1_12
+
+g6 = - x_4_131 + x_13_45*x_4_131 - x_11_37*x_13_45*x_4_131 + x_11_37*x_17_45*x_4_131 - x_13_131*x_4_37 + x_11_131*x_13_45*x_4_37 + x_17_131*x_4_37 - x_13_45*x_17_131*x_4_37 - x_11_131*x_17_45*x_4_37 + x_13_131*x_17_45*x_4_37 + x_11_131*x_4_45 - x_13_131*x_4_45 + x_11_37*x_13_131*x_4_45 - x_11_37*x_17_131*x_4_45
+g6 source: D(0,59); sign -1; content 1; monomial x_1_12
+
+g7 = x_17_45*x_2_37*x_7_131 - x_2_45*x_7_131 - x_17_45*x_7_37 - x_16_131*x_2_45*x_7_37 + x_17_131*x_2_45*x_7_37 + x_7_45 + x_16_131*x_2_37*x_7_45 - x_17_131*x_2_37*x_7_45
+g7 source: D(0,69); sign 1; content 1; monomial x_1_12
+
+g8 = - x_13_45*x_4_131 - x_13_45*x_16_131*x_4_37 + x_13_45*x_17_131*x_4_37 - x_13_131*x_17_45*x_4_37 + x_16_131*x_17_45*x_4_37 + x_13_131*x_4_45 - x_16_131*x_4_45
+g8 source: D(0,74); sign -1; content 1; monomial x_1_12

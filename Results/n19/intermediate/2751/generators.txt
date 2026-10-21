@@ -1,0 +1,60 @@
+POSITIVE GENERATORS
+D(i,j) = det R[B_j followed by i, all six columns in the displayed order].
+For slack sources, g = sign * D(i,j) / (content * monomial).
+The divisor is positive. In geometry.txt, see [Reduced slack matrix R]
+and [Ordered facet bases B_j]; Bj denotes B_j (e.g. B3 means B_3).
+Signs are justified in orientations.txt. Each expanded g appears above its source.
+
+g1 = 1 - x_0_105
+g1 source: D(6,7); sign 1; content 1; monomial x_1_108*x_6_110*x_9_0
+
+g2 = x_0_105 - x_3_105
+g2 source: D(6,9); sign -1; content 1; monomial x_11_0*x_1_108*x_6_110
+
+g3 = - x_11_105 + x_3_105
+g3 source: D(9,10); sign -1; content 1; monomial x_1_108*x_6_110*x_9_0
+
+g4 = - x_0_105 + x_8_105
+g4 source: D(6,15); sign -1; content 1; monomial x_12_0*x_1_108*x_6_110
+
+g5 = x_13_5 - x_13_0*x_16_5
+g5 source: D(6,54); sign 1; content 1; monomial x_1_108*x_5_105*x_6_110
+
+g6 = - x_13_105 + x_13_0*x_16_105 + x_13_5*x_3_105 - x_13_0*x_16_5*x_3_105
+g6 source: D(4,56); sign 1; content 1; monomial x_1_108*x_6_110
+
+g7 = - x_13_5 + x_13_105*x_14_5 + x_13_5*x_14_0*x_16_105 - x_13_0*x_14_5*x_16_105 + x_13_0*x_16_5 - x_13_105*x_14_0*x_16_5
+g7 source: D(6,58); sign 1; content 1; monomial x_1_108*x_6_110
+
+g8 = - x_15_5 + x_16_5
+g8 source: D(6,61); sign -1; content 1; monomial x_1_108*x_5_105*x_6_110
+
+g9 = x_13_105*x_17_0 - x_13_0*x_17_105 + x_13_0*x_8_105 - x_13_5*x_17_0*x_8_105
+g9 source: D(6,75); sign -1; content 1; monomial x_1_108*x_6_110
+
+g10 = - x_13_0 + x_13_105*x_14_0 + x_13_5*x_17_0 - x_13_105*x_14_5*x_17_0 - x_13_5*x_14_0*x_17_105 + x_13_0*x_14_5*x_17_105
+g10 source: D(6,79); sign -1; content 1; monomial x_1_108*x_6_110
+
+g11 = - x_16_105*x_17_0 + x_17_105 - x_8_105 + x_16_5*x_17_0*x_8_105
+g11 source: D(6,95); sign 1; content 1; monomial x_1_108*x_6_110
+
+g12 = 1 - x_14_0*x_16_105 + x_14_5*x_16_105*x_17_0 - x_16_5*x_17_0 - x_14_5*x_17_105 + x_14_0*x_16_5*x_17_105
+g12 source: D(6,99); sign -1; content 1; monomial x_1_108*x_6_110
+
+g13 = x_11_105
+g13 source: variable x_11_105
+
+g14 = x_13_105
+g14 source: variable x_13_105
+
+g15 = x_13_5
+g15 source: variable x_13_5
+
+g16 = x_15_5
+g16 source: variable x_15_5
+
+g17 = x_16_105
+g17 source: variable x_16_105
+
+g18 = x_17_105
+g18 source: variable x_17_105

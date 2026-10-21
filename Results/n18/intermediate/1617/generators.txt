@@ -1,0 +1,30 @@
+POSITIVE GENERATORS
+D(i,j) = det R[B_j followed by i, all six columns in the displayed order].
+For slack sources, g = sign * D(i,j) / (content * monomial).
+The divisor is positive. In geometry.txt, see [Reduced slack matrix R]
+and [Ordered facet bases B_j]; Bj denotes B_j (e.g. B3 means B_3).
+Signs are justified in orientations.txt. Each expanded g appears above its source.
+
+g1 = - x_0_122*x_3_31 + x_3_31*x_6_122 - x_6_31 + x_0_122*x_6_31 + x_0_39*x_3_31*x_8_122 - x_0_39*x_6_31*x_8_122 + x_3_39*x_6_31*x_8_122 - x_3_31*x_6_39*x_8_122 - x_0_39*x_8_31 + x_0_122*x_3_39*x_8_31 + x_0_39*x_6_122*x_8_31 - x_3_39*x_6_122*x_8_31 + x_6_39*x_8_31 - x_0_122*x_6_39*x_8_31
+g1 source: D(0,2); sign -1; content 1; monomial 1
+
+g2 = x_3_31*x_6_122 - x_6_31 + x_3_39*x_6_31*x_8_122 - x_3_31*x_6_39*x_8_122 - x_3_39*x_6_122*x_8_31 + x_6_39*x_8_31
+g2 source: D(2,2); sign -1; content 1; monomial 1
+
+g3 = x_0_122*x_4_31 - x_4_31*x_6_122 - x_0_122*x_6_31 + x_4_122*x_6_31 - x_0_39*x_4_31*x_8_122 + x_0_39*x_6_31*x_8_122 + x_4_31*x_6_39*x_8_122 + x_0_39*x_4_122*x_8_31 - x_0_39*x_6_122*x_8_31 + x_0_122*x_6_39*x_8_31 - x_4_122*x_6_39*x_8_31
+g3 source: D(0,51); sign 1; content 1; monomial x_15_0
+
+g4 = - x_4_31*x_6_122 + x_4_122*x_6_31 + x_4_31*x_6_39*x_8_122 - x_4_122*x_6_39*x_8_31
+g4 source: D(2,51); sign 1; content 1; monomial x_15_0
+
+g5 = - x_3_31*x_4_122 + x_4_31 - x_3_39*x_4_31*x_8_122 + x_3_39*x_4_122*x_8_31
+g5 source: D(8,87); sign -1; content 1; monomial 1
+
+g6 = x_12_31 - x_17_31 - x_12_31*x_4_122 + x_17_31*x_4_122 + x_12_39*x_3_31*x_8_122 - x_17_39*x_3_31*x_8_122 - x_12_31*x_3_39*x_8_122 + x_17_31*x_3_39*x_8_122 - x_12_39*x_4_31*x_8_122 + x_17_39*x_4_31*x_8_122 - x_12_39*x_8_31 + x_17_39*x_8_31 + x_12_39*x_4_122*x_8_31 - x_17_39*x_4_122*x_8_31
+g6 source: D(8,119); sign 1; content 1; monomial 1
+
+g7 = - x_0_122*x_12_31 + x_0_122*x_17_31 + x_12_31*x_6_122 - x_17_31*x_6_122 + x_0_39*x_12_31*x_8_122 - x_0_39*x_17_31*x_8_122 + x_12_39*x_6_31*x_8_122 - x_17_39*x_6_31*x_8_122 - x_12_31*x_6_39*x_8_122 + x_17_31*x_6_39*x_8_122 + x_0_122*x_12_39*x_8_31 - x_0_122*x_17_39*x_8_31 - x_12_39*x_6_122*x_8_31 + x_17_39*x_6_122*x_8_31
+g7 source: D(8,123); sign 1; content 1; monomial 1
+
+g8 = x_12_31*x_4_122 - x_17_31*x_4_122 - x_12_31*x_6_122 + x_17_31*x_6_122 + x_12_39*x_4_31*x_8_122 - x_17_39*x_4_31*x_8_122 - x_12_39*x_6_31*x_8_122 + x_17_39*x_6_31*x_8_122 + x_12_31*x_6_39*x_8_122 - x_17_31*x_6_39*x_8_122 - x_12_39*x_4_122*x_8_31 + x_17_39*x_4_122*x_8_31 + x_12_39*x_6_122*x_8_31 - x_17_39*x_6_122*x_8_31
+g8 source: D(8,125); sign 1; content 1; monomial 1

@@ -1,0 +1,30 @@
+POSITIVE GENERATORS
+D(i,j) = det R[B_j followed by i, all six columns in the displayed order].
+For slack sources, g = sign * D(i,j) / (content * monomial).
+The divisor is positive. In geometry.txt, see [Reduced slack matrix R]
+and [Ordered facet bases B_j]; Bj denotes B_j (e.g. B3 means B_3).
+Signs are justified in orientations.txt. Each expanded g appears above its source.
+
+g1 = - x_12_63*x_2_49 + x_12_49*x_2_63 + x_12_63*x_6_49 - x_12_73*x_2_63*x_6_49 - x_12_49*x_6_63 + x_12_73*x_2_49*x_6_63 - x_2_63*x_8_49 + x_6_63*x_8_49 + x_2_49*x_8_63 - x_6_49*x_8_63 + x_2_63*x_6_49*x_8_73 - x_2_49*x_6_63*x_8_73
+g1 source: D(6,6); sign 1; content 1; monomial 1
+
+g2 = - x_11_63*x_2_49 + x_12_63*x_2_49 + x_11_49*x_2_63 - x_12_49*x_2_63 + x_11_63*x_6_49 - x_12_63*x_6_49 - x_11_73*x_2_63*x_6_49 + x_12_73*x_2_63*x_6_49 - x_11_49*x_6_63 + x_12_49*x_6_63 + x_11_73*x_2_49*x_6_63 - x_12_73*x_2_49*x_6_63
+g2 source: D(6,11); sign -1; content 1; monomial 1
+
+g3 = - x_11_73*x_12_63*x_4_49 + x_11_63*x_12_73*x_4_49 + x_11_73*x_12_49*x_4_63 - x_11_49*x_12_73*x_4_63 - x_11_73*x_4_63*x_8_49 + x_12_73*x_4_63*x_8_49 + x_11_73*x_4_49*x_8_63 - x_12_73*x_4_49*x_8_63 - x_11_63*x_4_49*x_8_73 + x_12_63*x_4_49*x_8_73 + x_11_49*x_4_63*x_8_73 - x_12_49*x_4_63*x_8_73
+g3 source: D(4,16); sign -1; content 1; monomial 1
+
+g4 = x_11_73*x_12_63*x_8_49 - x_11_63*x_12_73*x_8_49 - x_11_73*x_12_49*x_8_63 + x_11_49*x_12_73*x_8_63 + x_11_63*x_12_49*x_8_73 - x_11_49*x_12_63*x_8_73
+g4 source: D(14,16); sign -1; content 1; monomial 1
+
+g5 = x_11_73*x_4_63*x_8_49 - x_11_73*x_4_49*x_8_63 + x_11_63*x_4_49*x_8_73 - x_11_49*x_4_63*x_8_73
+g5 source: D(1,30); sign -1; content 1; monomial 1
+
+g6 = - x_12_63*x_2_49 + x_12_49*x_2_63 + x_12_63*x_6_49 - x_12_73*x_2_63*x_6_49 - x_12_49*x_6_63 + x_12_73*x_2_49*x_6_63
+g6 source: D(5,33); sign 1; content 1; monomial 1
+
+g7 = x_11_73*x_12_63*x_4_49 - x_11_63*x_12_73*x_4_49 - x_11_73*x_12_49*x_4_63 + x_11_49*x_12_73*x_4_63
+g7 source: D(1,44); sign -1; content 1; monomial 1
+
+g8 = x_2_63*x_4_49 - x_2_49*x_4_63 + x_4_63*x_6_49 - x_4_49*x_6_63
+g8 source: D(4,59); sign 1; content 1; monomial 1

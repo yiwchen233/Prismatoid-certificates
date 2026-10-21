@@ -1,0 +1,30 @@
+POSITIVE GENERATORS
+D(i,j) = det R[B_j followed by i, all six columns in the displayed order].
+For slack sources, g = sign * D(i,j) / (content * monomial).
+The divisor is positive. In geometry.txt, see [Reduced slack matrix R]
+and [Ordered facet bases B_j]; Bj denotes B_j (e.g. B3 means B_3).
+Signs are justified in orientations.txt. Each expanded g appears above its source.
+
+g1 = x_12_141*x_2_119 - x_12_142*x_13_141*x_2_119 - x_12_141*x_6_119 + x_12_142*x_13_141*x_6_119 + x_12_119*x_6_141 - x_12_142*x_6_141
+g1 source: D(17,59); sign 1; content 1; monomial 1
+
+g2 = x_12_119 - x_12_142 - x_12_141*x_14_119 + x_12_142*x_13_141*x_14_119 + x_12_141*x_14_142 - x_12_119*x_13_141*x_14_142
+g2 source: D(17,70); sign 1; content 1; monomial 1
+
+g3 = - x_2_119 + x_14_142*x_2_119*x_4_141 + x_6_119 - x_14_142*x_4_141*x_6_119 - x_14_119*x_6_141 - x_14_142*x_2_119*x_6_141 + x_14_142*x_4_119*x_6_141
+g3 source: D(15,104); sign 1; content 1; monomial 1
+
+g4 = - x_12_141 + x_12_119*x_13_141 + x_12_141*x_4_119 - x_12_142*x_13_141*x_4_119 - x_12_119*x_4_141 + x_12_142*x_4_141 - x_12_141*x_6_119 + x_12_142*x_13_141*x_6_119 + x_12_119*x_6_141 - x_12_142*x_6_141
+g4 source: D(6,120); sign 1; content 1; monomial 1
+
+g5 = - x_12_141*x_19_119 + x_12_142*x_13_141*x_19_119 + x_12_119*x_19_141 - x_12_142*x_19_141 + x_12_141*x_19_142 - x_12_119*x_13_141*x_19_142
+g5 source: D(19,120); sign 1; content 1; monomial 1
+
+g6 = x_14_142*x_19_141*x_2_119 - x_19_142*x_2_119 - x_14_142*x_19_141*x_6_119 + x_19_142*x_6_119 + x_14_142*x_19_119*x_6_141 - x_14_119*x_19_142*x_6_141
+g6 source: D(19,121); sign -1; content 1; monomial 1
+
+g7 = - x_19_119 + x_14_119*x_19_141 - x_14_142*x_19_141*x_4_119 + x_19_142*x_4_119 + x_14_142*x_19_119*x_4_141 - x_14_119*x_19_142*x_4_141 + x_14_142*x_19_141*x_6_119 - x_19_142*x_6_119 - x_14_142*x_19_119*x_6_141 + x_14_119*x_19_142*x_6_141
+g7 source: D(19,122); sign 1; content 1; monomial 1
+
+g8 = x_19_141*x_2_119 - x_19_142*x_2_119*x_4_141 - x_19_141*x_6_119 + x_19_142*x_4_141*x_6_119 + x_19_119*x_6_141 + x_19_142*x_2_119*x_6_141 - x_19_142*x_4_119*x_6_141
+g8 source: D(2,149); sign -1; content 1; monomial 1

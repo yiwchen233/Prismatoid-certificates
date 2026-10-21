@@ -1,0 +1,30 @@
+POSITIVE GENERATORS
+D(i,j) = det R[B_j followed by i, all six columns in the displayed order].
+For slack sources, g = sign * D(i,j) / (content * monomial).
+The divisor is positive. In geometry.txt, see [Reduced slack matrix R]
+and [Ordered facet bases B_j]; Bj denotes B_j (e.g. B3 means B_3).
+Signs are justified in orientations.txt. Each expanded g appears above its source.
+
+g1 = x_10_38 - x_10_59*x_17_38 + x_10_59*x_17_47 - x_10_38*x_17_47*x_3_59 - x_9_38 + x_10_59*x_9_38 + x_17_47*x_3_59*x_9_38 + x_9_47 - x_10_59*x_9_47 + x_10_38*x_3_59*x_9_47 - x_17_38*x_3_59*x_9_47 - x_10_38*x_9_59 + x_17_38*x_9_59 - x_17_47*x_9_59
+g1 source: D(17,11); sign -1; content 1; monomial 1
+
+g2 = - x_0_59 + x_0_47*x_3_59 + x_0_59*x_4_47 - x_3_59*x_4_47 + x_4_59 - x_0_47*x_4_59
+g2 source: D(5,23); sign 1; content 1; monomial 1
+
+g3 = - x_3_59*x_4_47*x_7_38 + x_4_59*x_7_38 + x_3_59*x_7_47 - x_4_59*x_7_47
+g3 source: D(7,25); sign 1; content 1; monomial 1
+
+g4 = x_0_59*x_7_38 - x_0_47*x_3_59*x_7_38 - x_0_59*x_7_47 + x_3_59*x_7_47
+g4 source: D(3,55); sign 1; content 1; monomial 1
+
+g5 = x_0_59*x_4_47*x_7_38 - x_0_47*x_4_59*x_7_38 - x_0_59*x_7_47 + x_4_59*x_7_47
+g5 source: D(4,55); sign 1; content 1; monomial 1
+
+g6 = x_0_47*x_10_38 - x_0_47*x_10_59*x_17_38 - x_0_59*x_10_38*x_17_47 + x_10_59*x_17_47 - x_0_47*x_9_38 + x_0_47*x_10_59*x_9_38 + x_0_59*x_17_47*x_9_38 + x_9_47 + x_0_59*x_10_38*x_9_47 - x_10_59*x_9_47 - x_0_59*x_17_38*x_9_47 - x_0_47*x_10_38*x_9_59 + x_0_47*x_17_38*x_9_59 - x_17_47*x_9_59
+g6 source: D(5,85); sign -1; content 1; monomial 1
+
+g7 = - x_10_59*x_17_47 - x_10_38*x_4_47 + x_10_59*x_17_38*x_4_47 + x_10_38*x_17_47*x_4_59 + x_4_47*x_9_38 - x_10_59*x_4_47*x_9_38 - x_17_47*x_4_59*x_9_38 - x_9_47 + x_10_59*x_9_47 - x_10_38*x_4_59*x_9_47 + x_17_38*x_4_59*x_9_47 + x_17_47*x_9_59 + x_10_38*x_4_47*x_9_59 - x_17_38*x_4_47*x_9_59
+g7 source: D(1,88); sign -1; content 1; monomial 1
+
+g8 = - x_10_59*x_17_47*x_7_38 - x_10_38*x_7_47 + x_10_59*x_17_38*x_7_47 + x_7_47*x_9_38 - x_10_59*x_7_47*x_9_38 - x_7_38*x_9_47 + x_10_59*x_7_38*x_9_47 + x_17_47*x_7_38*x_9_59 + x_10_38*x_7_47*x_9_59 - x_17_38*x_7_47*x_9_59
+g8 source: D(5,89); sign -1; content 1; monomial 1
