@@ -56,9 +56,9 @@ six displayed columns.
 The certificate uses local labels `g1, g2, ...` for its generators and
 `P1, P2, ...` for their products. It displays
 
-\[
+$$
 \sum_k c_k P_k(x)=0,\qquad c_k>0,\qquad\sum_k c_k=1.
-\]
+$$
 
 These `c_k` correspond to the supported coefficients `c_β` in equation (3) of
 the paper. To check the identity, multiply each column of the coefficient table
