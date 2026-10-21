@@ -28,9 +28,7 @@ symbol is an independent positive variable. Entries fixed to 1 were removed
 by row/column scaling; zeros are vertex-facet incidences.
 
 The variable-order list is only an ordering for the implementation. It does
-not replace the named variables in any of the printed formulas. The former
-large integers were base-256 packed exponent vectors (8 bits per variable),
-not coefficients or mysterious large parameters. They have all been decoded.
+not replace the named variables in any of the printed formulas. 
 
 ## Generator sources and provenance
 
