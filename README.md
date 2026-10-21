@@ -14,14 +14,11 @@ João Gouveia, Antonio Macchia, and Amy Wiebe, **General non-realizability
 certificates for spheres with linear programming**, *Journal of Symbolic
 Computation* **114** (2023), 172–192.
 [DOI: 10.1016/j.jsc.2022.04.013](https://doi.org/10.1016/j.jsc.2022.04.013).
-In particular, see the coefficient equations in (3) and the determinant
-reconstruction in Section 4, p. 177.
 
 ## Where to start
 
 - **[Prismatoid data](Prismatoid%20data/)**: the 4,091 raw inputs named `0001`
-  through `4091`. `frightful_four/` contains auxiliary copies; the batch runner
-  selects the numbered root inputs without counting those copies again.
+  through `4091`. 
 - **[Results](Results/)**: archived certificates grouped by vertex count,
   `n14/` through `n28/`. See [the overall summary](Results/SUMMARY.txt) and each
   group's `SUMMARY.txt`. All 4,091 saved witnesses passed independent exact
