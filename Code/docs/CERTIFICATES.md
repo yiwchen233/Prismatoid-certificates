@@ -4,8 +4,6 @@ This guide describes the file conventions used with Gouveia–Macchia–Wiebe,
 *General non-realizability certificates for spheres with linear programming*,
 J. Symbolic Computation 114 (2023), 172–192,
 [doi:10.1016/j.jsc.2022.04.013](https://doi.org/10.1016/j.jsc.2022.04.013).
-It assumes familiarity with equation (3) and the reduced slack construction in
-Section 4; it describes the stored data, not the background of the method.
 
 ## Labels and order
 
