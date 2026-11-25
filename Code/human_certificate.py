@@ -199,19 +199,19 @@ def write_certificate(bundle, group, source_labels=None):
     lines+=['','[Ordered facet bases B_j]', 'Bj denotes B_j: the five vertex indices for facet Fj, in determinant row order.']
     lines += [f'B{j} = '+' '.join(map(str,b)) for j,b in enumerate(meta['facet_bases'])]
     lines+=['','[Why R has rank 6]',
-            'Select the six listed rows and columns of R, ordering both by the pairs below.',
-            'Each pair identifies a diagonal entry of this selected 6-by-6 submatrix.',
-            'Check that its diagonal entries are nonzero and all entries above the diagonal are zero.',
+            'The six pairs below identify rows and columns of R, both ordered by the pairs.',
+            'Each pair identifies a diagonal entry of the resulting 6-by-6 submatrix.',
+            'Its diagonal entries are nonzero, and all entries above the diagonal are zero.',
             'This lower-triangular submatrix has nonzero determinant, so R has rank 6.']
     lines += [f'v{i}, F{flag[j]}' for i,j in meta['flag_witness']]
     lines+=['','[Why the chosen facet vertices are affinely independent]',
-            'For Fj, each listed pair (Fk, vi) selects facet row Fk and vertex column vi from Bj.',
-            'Order the five selected rows and columns by these pairs to form a 5-by-5 submatrix.',
-            'Mark 0 when the vertex belongs to the facet, and * otherwise.',
-            'A * stands for an unknown positive slack entry in a hypothetical realization.',
-            'Check that every diagonal entry is * and all entries above the diagonal are zero.',
-            'This lower-triangular submatrix has nonzero determinant, proving that the five',
-            'chosen vertices are affinely independent under a hypothetical realization.']
+            'For Fj, the five pairs (Fk, vi) identify facet rows Fk and vertex columns vi from Bj.',
+            'In listed pair order, they form a 5-by-5 submatrix.',
+            'An entry is 0 when the vertex belongs to the facet, and * otherwise.',
+            'A * denotes an unknown positive slack entry in a hypothetical realization.',
+            'Every diagonal entry is *, and all entries above the diagonal are zero.',
+            'This lower-triangular submatrix has nonzero determinant, establishing affine',
+            'independence of the five chosen vertices under a hypothetical realization.']
     for j,pivots in enumerate(meta['basis_witnesses']):
         lines.append(f'F{j}: '+'; '.join(f'F{r}, v{meta["facet_bases"][j][c]}' for r,c in pivots))
     lines+=['','[Original vertex labels]', 'Each prepared vertex corresponds to the following original input label.']

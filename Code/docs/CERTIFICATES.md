@@ -97,26 +97,27 @@ the entire facet column's sign. Positive divisors preserve that sign.
 
 ## Geometry checks (geometry.txt)
 
-Compare R's zeros with `[Facets]`. Also check D(i,j)=0 whenever i belongs to
-F_j, including vertices outside the chosen five-element basis of a nonsimplicial
-base. Use the matrix and ordered bases in `geometry.txt` for these determinants.
+In `geometry.txt`, `[Facets]` supplies the vertex–facet incidences that determine
+R's zero pattern. The matrix and ordered bases determine D(i,j). The incidence
+condition D(i,j)=0 applies whenever i belongs to F_j, including vertices outside
+the chosen five-element basis of a nonsimplicial base.
 
-For scaling, form the bipartite graph with R's rows and columns as nodes and
-an edge at each entry set to 1. It must have no cycles; then positive row/column
-scalings can set these entries to 1 without additional constraints.
+The entries set to 1 specify the scaling normalization. Their positions define
+an acyclic bipartite graph, with R's rows and columns as nodes and one edge per
+unit entry. This permits positive row/column scalings to set these entries to 1
+without additional constraints.
 
-`[Why R has rank 6]` lists six `(v_i, F_j)` pairs. Select these rows and
-columns of R, ordering both by the listed pairs. Each pair identifies a
-diagonal entry. Check that the diagonal entries are nonzero and all entries
-above the diagonal are zero. This lower-triangular 6-by-6 submatrix has
-nonzero determinant, proving rank 6.
+`[Why R has rank 6]` lists six `(v_i, F_j)` pairs identifying selected rows and
+columns of R. In listed pair order, each pair identifies a diagonal entry of
+a lower-triangular 6-by-6 submatrix: its diagonal entries are nonzero and all
+entries above the diagonal are zero. Its nonzero determinant establishes rank 6.
 
 `[Why the chosen facet vertices are affinely independent]` lists five
-`(F_k, v_i)` pairs for each B_j. Select those facet rows and vertex columns,
-ordering both by the pairs. Mark 0 for an incidence and `*` for an unknown
-positive slack entry. Check for `*` on the diagonal and zeros above it. The
-selected lower-triangular 5-by-5 submatrix has nonzero determinant, proving
-affine independence under a hypothetical realization.
+`(F_k, v_i)` pairs for each B_j. These identify selected facet rows and vertex
+columns, both ordered by the pairs. Here 0 denotes an incidence and `*` an
+unknown positive slack entry. The selected 5-by-5 submatrix has `*` on the
+diagonal and zeros above it. Its nonzero determinant establishes affine
+independence under a hypothetical realization.
 
 ## Products, weights, and the coefficient matrix
 
@@ -170,8 +171,9 @@ sign of column F3 using `orientations.txt`. Repeat for the other five generators
 6. Expand the products; check each monomial block, including zeros for omitted products.
 7. Check that every c_k is positive, their sum is 1, and every block sums to zero.
 
-These files preserve all geometric information checked by the independent
-verifier. For larger candidates hand expansion can be lengthy, but it involves
-only the explicitly supplied matrices and rational arithmetic. The command
+The certificate and its four supporting text files contain all data needed
+for the exact checks performed by `Code/human_certificate.py`. For larger
+candidates, hand expansion can be lengthy, but it involves only the explicitly
+supplied matrices and rational arithmetic. The command
 `python Code/human_certificate.py Results/n14/certificates/1039.txt` performs
 these checks automatically using permutation determinants and exact fractions.
