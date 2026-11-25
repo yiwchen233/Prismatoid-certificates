@@ -39,7 +39,7 @@ Each candidate has one short certificate and four supporting text files:
 | `certificates/ID.txt` | Successful ordered facet selection, seed, search bounds, products `P_k`, and exact positive weights `c_k`. |
 | `intermediate/ID/geometry.txt` | All prepared facets; the reduced slack matrix `R`; variable labels; ordered facet bases; checks of rank and affine independence; original vertex-label mapping. |
 | `intermediate/ID/generators.txt` | Ordinary expanded polynomials `g_k`, together with the determinant, sign, and positive divisor producing each one. |
-| `intermediate/ID/orientations.txt` | A sign and test vertex for each listed facet column, with direct positivity checks first and each equality after the column it uses. |
+| `intermediate/ID/orientations.txt` | A sign (+1 or -1) for each listed facet column, with direct positivity checks first and each equality after the column it uses. |
 | `intermediate/ID/coefficient-check.txt` | Product definitions and weights, followed by one cancellation block per monomial showing its nonzero coefficients, weights, contributions, and zero sum. |
 
 All vertex and facet indices start at **zero**. The symbol `x_i_j` means the

@@ -119,14 +119,16 @@ def test_orientation_dependencies_precede_uses(example):
     output, _ = example
     bundle = read_certificate(output / 'certificates/0213.txt')
     text = (output / 'intermediate/0213/orientations.txt').read_text()
+    assert 'test vertex' not in text
     done = set()
     propagated = False
     for line in text.splitlines():
-        match = re.match(r'F(\d+): sign (-?1); test vertex v(\d+); T\((\d+),(\d+)\)(.+)', line)
+        match = re.match(r'F(\d+): sign (-?1); T\((\d+),(\d+)\)(.+)', line)
         if not match:
             continue
-        j, _, i, left_i, left_j, why = match.groups()
-        assert (i, j) == (left_i, left_j)
+        j, _, i, left_j, why = match.groups()
+        assert j == left_j
+        assert int(i) == bundle['metadata']['orientation_proofs'][j]['row']
         if why == ' is a positive monomial':
             assert not propagated
         else:
@@ -138,15 +140,18 @@ def test_orientation_dependencies_precede_uses(example):
     assert done == {int(j) for j in bundle['metadata']['orientation_proofs']}
 
 
-@pytest.mark.parametrize('field', ['coefficient', 'weight', 'contribution', 'product_weight', 'test_vertex'])
+@pytest.mark.parametrize('field', ['coefficient', 'weight', 'contribution', 'product_weight', 'determinant_row', 'determinant_facet'])
 def test_displayed_arithmetic_and_vertex_corruption_rejected(example, tmp_path, field):
     output, _ = example
     copy = tmp_path / 'changed'
     shutil.copytree(output, copy)
     folder = copy / 'intermediate/0213'
-    if field == 'test_vertex':
+    if field in ('determinant_row', 'determinant_facet'):
         path = folder / 'orientations.txt'
-        text = re.sub(r'test vertex v\d+;', 'test vertex v999;', path.read_text(), count=1)
+        if field == 'determinant_row':
+            text = re.sub(r'T\(\d+,', 'T(999,', path.read_text(), count=1)
+        else:
+            text = re.sub(r'(T\(\d+,)\d+', r'\g<1>999', path.read_text(), count=1)
     else:
         path = folder / 'coefficient-check.txt'
         text = path.read_text()
@@ -187,3 +192,19 @@ def test_saved_table_and_orientation_format_remain_readable(example, tmp_path):
         lines.append(f'F{j}: sign {meta["column_signs"][j]}; row {proof["row"]}; {why}')
     (folder / 'orientations.txt').write_text('\n'.join(lines) + '\n')
     assert read_certificate(copy / 'certificates/0213.txt') == bundle
+
+
+def test_redundant_vertex_field_remains_readable(example, tmp_path):
+    output, _ = example
+    bundle = read_certificate(output / 'certificates/0213.txt')
+    copy = tmp_path / 'redundant-vertex'
+    shutil.copytree(output, copy)
+    path = copy / 'intermediate/0213/orientations.txt'
+    text = re.sub(r'^(F\d+: sign -?1; )(T\((\d+),)',
+                  lambda m: f'{m[1]}test vertex v{m[3]}; {m[2]}',
+                  path.read_text(), flags=re.M)
+    path.write_text(text)
+    assert read_certificate(copy / 'certificates/0213.txt') == bundle
+    path.write_text(re.sub(r'test vertex v\d+;', 'test vertex v999;', text, count=1))
+    with pytest.raises(ValueError, match='row mismatch'):
+        read_certificate(copy / 'certificates/0213.txt')

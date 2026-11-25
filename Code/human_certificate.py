@@ -130,10 +130,10 @@ def orientation_text(meta):
     if set(proofs) != set(signs):
         raise ValueError('Missing orientation proof')
     lines = ['COLUMN SIGNS',
-             'T(i,j) = sign_j * D(i,j) / (positive gcd content * common monomial).',
+             'T(i,j) = sign * D(i,j) / (positive gcd content * common monomial).',
+             'Here sign is +1 or -1 recorded for facet Fj; i identifies row i of R.',
              'D(i,j) is defined in generators.txt using the matrix and bases in geometry.txt.',
-             'The test vertex vi means row i of R; indices start at zero.',
-             'It can differ from the vertex used by a generator for the same facet.',
+             'Both indices in T(i,j) start at zero.',
              'Under a hypothetical realization, one nonzero entry fixes the whole facet column sign.',
              'Direct positive-monomial checks come first. Each equality then uses a column',
              'whose sign has already been established; its referenced vertex may be different.', '']
@@ -157,7 +157,7 @@ def orientation_text(meta):
             i = proof['row']
             why = (f'T({i},{j}) is a positive monomial' if proof['kind'] == 'monomial'
                    else f'T({i},{j}) = T({proof["parent"][0]},{proof["parent"][1]})')
-            lines.append(f'F{j}: sign {signs[j]}; test vertex v{i}; {why}')
+            lines.append(f'F{j}: sign {signs[j]}; {why}')
         remaining.difference_update(ready)
         done.update(ready)
     return '\n'.join(lines) + '\n'
@@ -271,10 +271,11 @@ def read_certificate(path):
     signs={};proofs={}
     for line in (folder/'orientations.txt').read_text(encoding='utf-8').splitlines():
         if not re.match(r'^F\d+:',line): continue
-        current=re.fullmatch(r'F(\d+): sign (-?1); test vertex v(\d+); T\((\d+),(\d+)\)(.+)',line)
+        current=re.fullmatch(r'F(\d+): sign (-?1); (?:test vertex v(\d+); )?T\((\d+),(\d+)\)(.+)',line)
         if current:
-            j,s,i,left_i,left_j,why=current.groups()
-            if (i,j)!=(left_i,left_j): raise ValueError('Orientation test vertex/facet mismatch')
+            j,s,stated_i,i,left_j,why=current.groups()
+            if j!=left_j: raise ValueError('Orientation determinant facet mismatch')
+            if stated_i is not None and stated_i!=i: raise ValueError('Orientation determinant row mismatch')
             if why==' is a positive monomial':
                 p={'row':int(i),'kind':'monomial'}
             else:

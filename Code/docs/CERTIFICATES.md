@@ -75,22 +75,22 @@ choice. Orientation checks still use normalized determinants in either case.
 
 ## Orientation checks (orientations.txt)
 
-In `orientations.txt`, put
+In `orientations.txt`, the normalized determinant is
 
 $$
-T(i,j)=s_jD(i,j)/(a_{ij}m_{ij}),
+T(i,j)=\mathrm{sign}\cdot D(i,j)/(a_{ij}m_{ij}),
 $$
 
-where `a_ij` is the gcd of the absolute nonzero determinant coefficients and
-`m_ij` is their common monomial factor. Both are positive. For each listed
-facet, the file supplies `s_j` and a **test vertex vi**: row i of R
-used to establish the column's sign. It can differ from a generator's row.
+where `sign` is the +1 or -1 recorded for facet F_j. The positive divisors
+`a_ij` and `m_ij` are the gcd of the absolute nonzero determinant coefficients
+and their common monomial factor. In T(i,j), i identifies row i of R and j
+identifies facet F_j.
 
 - `T(i,j) is a positive monomial` means it has one monomial with positive
   coefficient, establishing the column sign directly.
 - `T(i,j) = T(r,k)` establishes the sign by exact equality with an entry in
-  column F_k, whose sign appears earlier in the file. Vertex v_r need not be
-  F_k's own test vertex.
+  column F_k, whose sign appears earlier in the file. Row r need not be the
+  row used in F_k's own sign check.
 
 Under a hypothetical realization, the sign at one nonincident vertex fixes
 the entire facet column's sign. Positive divisors preserve that sign.
