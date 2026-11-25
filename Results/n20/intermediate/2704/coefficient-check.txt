@@ -1,16 +1,95 @@
 COEFFICIENT CHECK
-Columns are coefficients in the products P1, P2, ... (before weighting).
-Multiply each column by its coefficient c_k from the certificate.
-The last column is the exact weighted sum; every entry must be zero.
+Each block checks the coefficient of one monomial in the identity.
+Contribution = coefficient in Pk * weight ck.
+Only nonzero coefficients are listed; every omitted product has coefficient zero.
+All arithmetic is exact. Every displayed sum must be zero.
 
-Monomial | P1 | P2 | P3 | P4 | P5 | P6 | weighted sum
-x_12_81*x_2_14 | 0 | 1 | -1 | 0 | 0 | 0 | 0
-x_16_81*x_2_14 | 1 | -1 | 0 | 0 | 0 | 0 | 0
-x_12_81*x_16_14*x_2_79 | 0 | -1 | 0 | 0 | 0 | 1 | 0
-x_12_14*x_16_81*x_2_79 | 0 | 1 | 0 | 0 | 0 | -1 | 0
-x_12_14*x_2_81 | 0 | -1 | 0 | 0 | 1 | 0 | 0
-x_16_14*x_2_81 | -1 | 1 | 0 | 0 | 0 | 0 | 0
-x_2_81*x_4_14 | 0 | 0 | 0 | 1 | -1 | 0 | 0
-x_12_81*x_2_79*x_8_14 | 0 | 0 | 1 | 0 | 0 | -1 | 0
-x_16_81*x_2_79*x_8_14 | -1 | 0 | 0 | 0 | 0 | 1 | 0
-x_2_81*x_8_14 | 1 | 0 | 0 | -1 | 0 | 0 | 0
+PRODUCTS AND WEIGHTS
+P1 = g4; c1 = 1/6
+P2 = g5; c2 = 1/6
+P3 = g1*g7; c3 = 1/6
+P4 = g2*g9; c4 = 1/6
+P5 = g3*g9; c5 = 1/6
+P6 = g6*g8; c6 = 1/6
+
+Monomials checked: 10
+
+Monomial: x_12_81 * x_2_14
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/6            1/6
+P3                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_16_81 * x_2_14
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/6            1/6
+P2                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_12_81 * x_16_14 * x_2_79
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P6                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_12_14 * x_16_81 * x_2_79
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/6            1/6
+P6                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_12_14 * x_2_81
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P5                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_16_14 * x_2_81
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/6           -1/6
+P2                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_2_81 * x_4_14
+
+Product   Coefficient   Weight   Contribution
+P4                  1      1/6            1/6
+P5                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_12_81 * x_2_79 * x_8_14
+
+Product   Coefficient   Weight   Contribution
+P3                  1      1/6            1/6
+P6                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_16_81 * x_2_79 * x_8_14
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/6           -1/6
+P6                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_2_81 * x_8_14
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/6            1/6
+P4                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0

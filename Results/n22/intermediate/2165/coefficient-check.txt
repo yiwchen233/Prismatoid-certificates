@@ -1,23 +1,160 @@
 COEFFICIENT CHECK
-Columns are coefficients in the products P1, P2, ... (before weighting).
-Multiply each column by its coefficient c_k from the certificate.
-The last column is the exact weighted sum; every entry must be zero.
+Each block checks the coefficient of one monomial in the identity.
+Contribution = coefficient in Pk * weight ck.
+Only nonzero coefficients are listed; every omitted product has coefficient zero.
+All arithmetic is exact. Every displayed sum must be zero.
 
-Monomial | P1 | P2 | P3 | P4 | P5 | P6 | P7 | P8 | P9 | P10 | P11 | weighted sum
-1 | 1 | -1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0
-x_11_99*x_12_101 | -1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0
-x_15_101 | 0 | 1 | -1 | 1 | 0 | 0 | 0 | 0 | 0 | -1 | 0 | 0
-x_11_99*x_12_101*x_15_101 | 0 | 0 | 1 | 0 | -1 | 0 | 0 | 0 | 0 | 0 | 0 | 0
-x_15_101^2 | 0 | 0 | 1 | 0 | 0 | -1 | 0 | 0 | 0 | 0 | 0 | 0
-x_12_101*x_15_99 | 0 | -1 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0
-x_12_101*x_15_101*x_15_99 | 0 | 0 | -1 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0
-x_15_101*x_19_65 | 0 | 1 | 0 | -1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0
-x_11_99*x_12_101*x_15_101*x_19_65 | 0 | -1 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0
-x_15_101^2*x_19_65 | 0 | -1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0
-x_12_101*x_15_101*x_15_99*x_19_65 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | -1 | 0 | 0
-x_12_101*x_15_101*x_19_99 | 0 | 0 | 0 | -1 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0
-x_5_101 | -1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0
-x_12_101*x_16_99*x_5_101 | 0 | 0 | 0 | 0 | 0 | 0 | -1 | 1 | 0 | 0 | 0 | 0
-x_16_99*x_21_101*x_5_101 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | -1 | 0 | 0 | 0
-x_12_101*x_5_99 | 1 | 0 | 0 | 0 | 0 | 0 | 1 | -1 | 0 | 0 | -1 | 0
-x_21_101*x_5_99 | 0 | 0 | 0 | 0 | 0 | 0 | -1 | 0 | 0 | 0 | 1 | 0
+PRODUCTS AND WEIGHTS
+P1 = g1; c1 = 1/11
+P2 = g2*g8; c2 = 1/11
+P3 = g2*g12; c3 = 1/11
+P4 = g3*g12; c4 = 1/11
+P5 = g4*g11; c5 = 1/11
+P6 = g5*g12; c6 = 1/11
+P7 = g6*g10; c7 = 1/11
+P8 = g6*g11; c8 = 1/11
+P9 = g7*g13; c9 = 1/11
+P10 = g9*g12; c10 = 1/11
+P11 = g10*g14; c11 = 1/11
+
+Monomials checked: 17
+
+Monomial: 1
+
+Product   Coefficient   Weight   Contribution
+P1                  1     1/11           1/11
+P2                 -1     1/11          -1/11
+
+Sum: 1/11 - 1/11 = 0
+
+Monomial: x_11_99 * x_12_101
+
+Product   Coefficient   Weight   Contribution
+P1                 -1     1/11          -1/11
+P2                  1     1/11           1/11
+
+Sum: -1/11 + 1/11 = 0
+
+Monomial: x_15_101
+
+Product   Coefficient   Weight   Contribution
+P2                  1     1/11           1/11
+P3                 -1     1/11          -1/11
+P4                  1     1/11           1/11
+P10                -1     1/11          -1/11
+
+Sum: 1/11 - 1/11 + 1/11 - 1/11 = 0
+
+Monomial: x_11_99 * x_12_101 * x_15_101
+
+Product   Coefficient   Weight   Contribution
+P3                  1     1/11           1/11
+P5                 -1     1/11          -1/11
+
+Sum: 1/11 - 1/11 = 0
+
+Monomial: x_15_101^2
+
+Product   Coefficient   Weight   Contribution
+P3                  1     1/11           1/11
+P6                 -1     1/11          -1/11
+
+Sum: 1/11 - 1/11 = 0
+
+Monomial: x_12_101 * x_15_99
+
+Product   Coefficient   Weight   Contribution
+P2                 -1     1/11          -1/11
+P5                  1     1/11           1/11
+
+Sum: -1/11 + 1/11 = 0
+
+Monomial: x_12_101 * x_15_101 * x_15_99
+
+Product   Coefficient   Weight   Contribution
+P3                 -1     1/11          -1/11
+P6                  1     1/11           1/11
+
+Sum: -1/11 + 1/11 = 0
+
+Monomial: x_15_101 * x_19_65
+
+Product   Coefficient   Weight   Contribution
+P2                  1     1/11           1/11
+P4                 -1     1/11          -1/11
+
+Sum: 1/11 - 1/11 = 0
+
+Monomial: x_11_99 * x_12_101 * x_15_101 * x_19_65
+
+Product   Coefficient   Weight   Contribution
+P2                 -1     1/11          -1/11
+P4                  1     1/11           1/11
+
+Sum: -1/11 + 1/11 = 0
+
+Monomial: x_15_101^2 * x_19_65
+
+Product   Coefficient   Weight   Contribution
+P2                 -1     1/11          -1/11
+P10                 1     1/11           1/11
+
+Sum: -1/11 + 1/11 = 0
+
+Monomial: x_12_101 * x_15_101 * x_15_99 * x_19_65
+
+Product   Coefficient   Weight   Contribution
+P2                  1     1/11           1/11
+P10                -1     1/11          -1/11
+
+Sum: 1/11 - 1/11 = 0
+
+Monomial: x_12_101 * x_15_101 * x_19_99
+
+Product   Coefficient   Weight   Contribution
+P4                 -1     1/11          -1/11
+P10                 1     1/11           1/11
+
+Sum: -1/11 + 1/11 = 0
+
+Monomial: x_5_101
+
+Product   Coefficient   Weight   Contribution
+P1                 -1     1/11          -1/11
+P9                  1     1/11           1/11
+
+Sum: -1/11 + 1/11 = 0
+
+Monomial: x_12_101 * x_16_99 * x_5_101
+
+Product   Coefficient   Weight   Contribution
+P7                 -1     1/11          -1/11
+P8                  1     1/11           1/11
+
+Sum: -1/11 + 1/11 = 0
+
+Monomial: x_16_99 * x_21_101 * x_5_101
+
+Product   Coefficient   Weight   Contribution
+P7                  1     1/11           1/11
+P9                 -1     1/11          -1/11
+
+Sum: 1/11 - 1/11 = 0
+
+Monomial: x_12_101 * x_5_99
+
+Product   Coefficient   Weight   Contribution
+P1                  1     1/11           1/11
+P7                  1     1/11           1/11
+P8                 -1     1/11          -1/11
+P11                -1     1/11          -1/11
+
+Sum: 1/11 + 1/11 - 1/11 - 1/11 = 0
+
+Monomial: x_21_101 * x_5_99
+
+Product   Coefficient   Weight   Contribution
+P7                 -1     1/11          -1/11
+P11                 1     1/11           1/11
+
+Sum: -1/11 + 1/11 = 0

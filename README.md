@@ -37,10 +37,10 @@ Each candidate has one short certificate and four supporting text files:
 | File within `Results/nN/` | What it contains |
 | --- | --- |
 | `certificates/ID.txt` | Successful ordered facet selection, seed, search bounds, products `P_k`, and exact positive weights `c_k`. |
-| `intermediate/ID/geometry.txt` | All prepared facets; the reduced slack matrix `R`; variable labels; ordered facet bases; rank pivots; original vertex-label mapping. |
+| `intermediate/ID/geometry.txt` | All prepared facets; the reduced slack matrix `R`; variable labels; ordered facet bases; checks of rank and affine independence; original vertex-label mapping. |
 | `intermediate/ID/generators.txt` | Ordinary expanded polynomials `g_k`, together with the determinant, sign, and positive divisor producing each one. |
-| `intermediate/ID/orientations.txt` | Sign anchors and propagation identities for the reconstructed columns. |
-| `intermediate/ID/coefficient-check.txt` | The coefficient of every occurring monomial in every displayed product, followed by its weighted sum (zero). |
+| `intermediate/ID/orientations.txt` | A sign and test vertex for each listed facet column, with direct positivity checks first and each equality after the column it uses. |
+| `intermediate/ID/coefficient-check.txt` | Product definitions and weights, followed by one cancellation block per monomial showing its nonzero coefficients, weights, contributions, and zero sum. |
 
 All vertex and facet indices start at **zero**. The symbol `x_i_j` means the
 positive variable in row `i`, full prepared facet column `j`, of the reduced
@@ -61,8 +61,10 @@ $$
 $$
 
 These `c_k` correspond to the supported coefficients `c_β` in equation (3) of
-the paper. To check the identity, multiply each column of the coefficient table
-by its displayed rational weight and add. To check why its factors are positive,
+the paper. To check the identity, read each monomial block in
+`coefficient-check.txt`: multiply each coefficient by its weight and add the
+contributions to obtain zero. Omitted products have coefficient zero for that
+monomial. To check why the identity's factors are positive,
 use the matrix, determinant sources, divisors, and orientation checks in the
 supporting files.
 
@@ -80,10 +82,10 @@ python Code/human_certificate.py Results --data "Prismatoid data"
 ```
 
 Success is reported as `VERIFIED EXACT`. A malformed or altered proof produces
-a nonzero exit code. The checker also confirms that the printed coefficient
-table agrees with the generator polynomials; it does not merely trust the
-printed zero column. It is specialized to the five-dimensional prismatoids with
-two nonsimplicial bases first. See [validation details](Code/docs/VALIDATION.md).
+a nonzero exit code. The checker recomputes the coefficients, weights,
+contributions, and sums in every cancellation block from the generator
+polynomials and certificate weights. It is specialized to five-dimensional prismatoids with
+two nonsimplicial bases first.
 The optional `--data` argument also checks the facets and original vertex-label
 mapping against the numbered raw input files.
 

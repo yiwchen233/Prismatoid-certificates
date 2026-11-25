@@ -6,6 +6,7 @@ import re
 import json
 import hashlib
 import sys
+import textwrap
 
 CORE = Path(__file__).resolve().parent / 'core/src'
 sys.path.insert(0, str(CORE))
@@ -65,7 +66,7 @@ def products(bundle):
     return out
 
 
-def cancellation_text(bundle):
+def _coefficient_table_text(bundle):
     ps=products(bundle); names=bundle['metadata']['variable_names']
     lines=['COEFFICIENT CHECK', 'Columns are coefficients in the products P1, P2, ... (before weighting).',
            'Multiply each column by its coefficient c_k from the certificate.',
@@ -77,6 +78,89 @@ def cancellation_text(bundle):
         if residual: raise ValueError('Nonzero coefficient residual')
         lines.append(monomial(m,names)+' | '+' | '.join(map(str,coeff))+' | 0')
     return '\n'.join(lines)+'\n'
+
+
+def cancellation_text(bundle):
+    """Display exact cancellation one monomial at a time, omitting zero entries."""
+    ps = products(bundle)
+    names = bundle['metadata']['variable_names']
+    weights = [Fraction(t['weight']) for t in bundle['terms']]
+    monomials = sorted(set().union(*(p.keys() for p in ps)))
+    lines = ['COEFFICIENT CHECK',
+             'Each block checks the coefficient of one monomial in the identity.',
+             'Contribution = coefficient in Pk * weight ck.',
+             'Only nonzero coefficients are listed; every omitted product has coefficient zero.',
+             'All arithmetic is exact. Every displayed sum must be zero.', '',
+             'PRODUCTS AND WEIGHTS']
+    for k, term in enumerate(bundle['terms'], 1):
+        factors = '*'.join(f'g{i+1}' for i in term['factors'])
+        lines.append(f'P{k} = {factors}; c{k} = {weights[k-1]}')
+    lines += ['', f'Monomials checked: {len(monomials)}', '']
+    for m in monomials:
+        rows = []
+        contributions = []
+        for k, (p, weight) in enumerate(zip(ps, weights), 1):
+            coefficient = p.get(m, 0)
+            if coefficient:
+                contribution = coefficient * weight
+                rows.append([f'P{k}', str(coefficient), str(weight), str(contribution)])
+                contributions.append(contribution)
+        if sum(contributions):
+            raise ValueError('Nonzero coefficient residual')
+        lines += textwrap.wrap('Monomial: ' + monomial(m, names).replace('*', ' * '),
+                               width=88, subsequent_indent='          ',
+                               break_long_words=False, break_on_hyphens=False)
+        lines.append('')
+        headings = ['Product', 'Coefficient', 'Weight', 'Contribution']
+        widths = [max(len(row[i]) for row in [headings] + rows) for i in range(4)]
+        for row in [headings] + rows:
+            lines.append('   '.join(value.ljust(widths[i]) if i == 0 else value.rjust(widths[i])
+                                    for i, value in enumerate(row)))
+        total = str(contributions[0])
+        for contribution in contributions[1:]:
+            total += (' - ' if contribution < 0 else ' + ') + str(abs(contribution))
+        lines += ['', 'Sum: ' + total + ' = 0', '']
+    return '\n'.join(lines)
+
+
+def orientation_text(meta):
+    """Put direct sign checks first and each dependent column after its source."""
+    proofs = {int(j): p for j, p in meta['orientation_proofs'].items()}
+    signs = {int(j): s for j, s in meta['column_signs'].items()}
+    if set(proofs) != set(signs):
+        raise ValueError('Missing orientation proof')
+    lines = ['COLUMN SIGNS',
+             'T(i,j) = sign_j * D(i,j) / (positive gcd content * common monomial).',
+             'D(i,j) is defined in generators.txt using the matrix and bases in geometry.txt.',
+             'The test vertex vi means row i of R; indices start at zero.',
+             'It can differ from the vertex used by a generator for the same facet.',
+             'Under a hypothetical realization, one nonzero entry fixes the whole facet column sign.',
+             'Direct positive-monomial checks come first. Each equality then uses a column',
+             'whose sign has already been established; its referenced vertex may be different.', '']
+    remaining = set(proofs)
+    done = set()
+    while remaining:
+        ready = []
+        for j in sorted(remaining):
+            proof = proofs[j]
+            if proof['kind'] == 'monomial':
+                ready.append(j)
+            elif proof['kind'] == 'propagation':
+                if int(proof['parent'][1]) in done:
+                    ready.append(j)
+            else:
+                raise ValueError('Unknown orientation proof type')
+        if not ready:
+            raise ValueError('Missing/cyclic orientation proof')
+        for j in ready:
+            proof = proofs[j]
+            i = proof['row']
+            why = (f'T({i},{j}) is a positive monomial' if proof['kind'] == 'monomial'
+                   else f'T({i},{j}) = T({proof["parent"][0]},{proof["parent"][1]})')
+            lines.append(f'F{j}: sign {signs[j]}; test vertex v{i}; {why}')
+        remaining.difference_update(ready)
+        done.update(ready)
+    return '\n'.join(lines) + '\n'
 
 
 def write_certificate(bundle, group, source_labels=None):
@@ -114,10 +198,20 @@ def write_certificate(bundle, group, source_labels=None):
     lines+=['','[Variable order]']+names
     lines+=['','[Ordered facet bases B_j]', 'Bj denotes B_j: the five vertex indices for facet Fj, in determinant row order.']
     lines += [f'B{j} = '+' '.join(map(str,b)) for j,b in enumerate(meta['facet_bases'])]
-    lines+=['','[Reduced rank pivots]', 'In order, remove each pivot row/column; its remaining row has one nonzero.']
+    lines+=['','[Why R has rank 6]',
+            'Select the six listed rows and columns of R, ordering both by the pairs below.',
+            'Each pair identifies a diagonal entry of this selected 6-by-6 submatrix.',
+            'Check that its diagonal entries are nonzero and all entries above the diagonal are zero.',
+            'This lower-triangular submatrix has nonzero determinant, so R has rank 6.']
     lines += [f'v{i}, F{flag[j]}' for i,j in meta['flag_witness']]
-    lines+=['','[Facet basis rank pivots]', 'For each basis, rows are facets and columns are its vertices. Use the',
-            'nonincidence pattern (entry 1 iff vertex is not in facet), removing pivots in order.']
+    lines+=['','[Why the chosen facet vertices are affinely independent]',
+            'For Fj, each listed pair (Fk, vi) selects facet row Fk and vertex column vi from Bj.',
+            'Order the five selected rows and columns by these pairs to form a 5-by-5 submatrix.',
+            'Mark 0 when the vertex belongs to the facet, and * otherwise.',
+            'A * stands for an unknown positive slack entry in a hypothetical realization.',
+            'Check that every diagonal entry is * and all entries above the diagonal are zero.',
+            'This lower-triangular submatrix has nonzero determinant, proving that the five',
+            'chosen vertices are affinely independent under a hypothetical realization.']
     for j,pivots in enumerate(meta['basis_witnesses']):
         lines.append(f'F{j}: '+'; '.join(f'F{r}, v{meta["facet_bases"][j][c]}' for r,c in pivots))
     lines+=['','[Original vertex labels]', 'Each prepared vertex corresponds to the following original input label.']
@@ -139,17 +233,7 @@ def write_certificate(bundle, group, source_labels=None):
         else:lines.append(f'g{k} source: constant 1')
         lines.append('')
     (folder/'generators.txt').write_text('\n'.join(lines),encoding='utf-8')
-    lines=['COLUMN ORIENTATIONS',
-           'Let T(i,j) be sign_j*D(i,j) divided by its positive gcd content and',
-           'common monomial (even if the certificate uses raw determinants).',
-           'An anchor is a positive single monomial T(i,j). A propagation step is',
-           'the exact identity T(i,j) = T(parent row,parent column). Follow parent',
-           'links to anchors. The displayed row belongs to the prepared vertex set.', '']
-    for j,p in sorted(meta['orientation_proofs'].items(),key=lambda x:int(x[0])):
-        sign=meta['column_signs'].get(str(j),meta['column_signs'].get(int(j)))
-        why='positive monomial' if p['kind']=='monomial' else f'equal T({p["parent"][0]},{p["parent"][1]})'
-        lines.append(f'F{j}: sign {sign}; row {p["row"]}; {why}')
-    (folder/'orientations.txt').write_text('\n'.join(lines)+'\n',encoding='utf-8')
+    (folder/'orientations.txt').write_text(orientation_text(meta),encoding='utf-8')
     (folder/'coefficient-check.txt').write_text(cancellation_text(bundle),encoding='utf-8')
 
 
@@ -176,16 +260,38 @@ def read_certificate(path):
     if 'Columns: '+' '.join('F'+str(j) for j in flag) not in sections[matrix_section]:raise ValueError('Reduced column labels')
     matrix=[[int(x) if x.isdigit() else x for x in line.split(' = ')[1].split(' | ')] for line in matrix_lines]
     names=[line for line in sections['[Variable order]'] if re.fullmatch(r'\w+',line)]
-    pivots=[[int(i),flag.index(int(j))] for line in sections['[Reduced rank pivots]'] for i,j in re.findall(r'^v(\d+), F(\d+)$',line)]
+    rank_section='[Why R has rank 6]' if '[Why R has rank 6]' in sections else '[Reduced rank pivots]'
+    independence_section='[Why the chosen facet vertices are affinely independent]'
+    if independence_section not in sections: independence_section='[Facet basis rank pivots]'
+    pivots=[[int(i),flag.index(int(j))] for line in sections[rank_section] for i,j in re.findall(r'^v(\d+), F(\d+)$',line)]
     bw=[]
-    for line in sections['[Facet basis rank pivots]']:
+    for line in sections[independence_section]:
         m=re.match(r'F(\d+): (.+)',line)
         if m: bw.append([[int(r),bases[int(m[1])].index(int(v))] for r,v in re.findall(r'F(\d+), v(\d+)',m[2])])
     signs={};proofs={}
-    for j,s,i,why in re.findall(r'^F(\d+): sign (-?1); row (\d+); (.+)$',(folder/'orientations.txt').read_text(),re.M):
-        signs[j]=int(s);p={'row':int(i),'kind':'monomial' if why=='positive monomial' else 'propagation'}
-        if p['kind']=='propagation':p['parent']=list(map(int,re.fullmatch(r'equal T\((\d+),(\d+)\)',why).groups()))
-        proofs[j]=p
+    for line in (folder/'orientations.txt').read_text(encoding='utf-8').splitlines():
+        if not re.match(r'^F\d+:',line): continue
+        current=re.fullmatch(r'F(\d+): sign (-?1); test vertex v(\d+); T\((\d+),(\d+)\)(.+)',line)
+        if current:
+            j,s,i,left_i,left_j,why=current.groups()
+            if (i,j)!=(left_i,left_j): raise ValueError('Orientation test vertex/facet mismatch')
+            if why==' is a positive monomial':
+                p={'row':int(i),'kind':'monomial'}
+            else:
+                parent=re.fullmatch(r' = T\((\d+),(\d+)\)',why)
+                if not parent: raise ValueError('Invalid orientation equality')
+                p={'row':int(i),'kind':'propagation','parent':list(map(int,parent.groups()))}
+        else:
+            previous=re.fullmatch(r'F(\d+): sign (-?1); row (\d+); (.+)',line)
+            if not previous: raise ValueError('Invalid orientation entry')
+            j,s,i,why=previous.groups()
+            p={'row':int(i),'kind':'monomial' if why=='positive monomial' else 'propagation'}
+            if p['kind']=='propagation':
+                parent=re.fullmatch(r'equal T\((\d+),(\d+)\)',why)
+                if not parent: raise ValueError('Invalid orientation equality')
+                p['parent']=list(map(int,parent.groups()))
+        if j in signs: raise ValueError('Duplicate orientation entry')
+        signs[j]=int(s);proofs[j]=p
     gs=[]
     for line in (folder/'generators.txt').read_text().splitlines():
         m=re.fullmatch(r'g(\d+) = (.+)',line)
@@ -214,8 +320,11 @@ def read_certificate(path):
               facet_sha256=hashlib.sha256(json.dumps(F,separators=(',',':')).encode()).hexdigest())
     bundle=dict(candidate_id=cid,metadata=meta,generators=gs,terms=terms,
                 search_attempt=dict(flag=flag,random_seed=int(field('Random seed')),term_limit=int(field('Generator term cap'))))
-    if (folder/'coefficient-check.txt').read_text(encoding='utf-8')!=cancellation_text(bundle):
-        raise ValueError('Coefficient table differs from the displayed generators/weights')
+    check=(folder/'coefficient-check.txt').read_text(encoding='utf-8')
+    expected=(_coefficient_table_text(bundle) if check.startswith('COEFFICIENT CHECK\nColumns are coefficients')
+              else cancellation_text(bundle))
+    if check!=expected:
+        raise ValueError('Coefficient check differs from the displayed generators/weights')
     return bundle
 
 

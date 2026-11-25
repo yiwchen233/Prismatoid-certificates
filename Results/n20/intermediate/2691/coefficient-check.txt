@@ -1,29 +1,200 @@
 COEFFICIENT CHECK
-Columns are coefficients in the products P1, P2, ... (before weighting).
-Multiply each column by its coefficient c_k from the certificate.
-The last column is the exact weighted sum; every entry must be zero.
+Each block checks the coefficient of one monomial in the identity.
+Contribution = coefficient in Pk * weight ck.
+Only nonzero coefficients are listed; every omitted product has coefficient zero.
+All arithmetic is exact. Every displayed sum must be zero.
 
-Monomial | P1 | P2 | P3 | P4 | P5 | P6 | P7 | weighted sum
-x_1_161*x_2_150*x_6_1 | 0 | -1 | 0 | 1 | 0 | 0 | 0 | 0
-x_1_161^2*x_2_150*x_6_1 | 0 | 0 | 1 | -1 | 0 | 0 | 0 | 0
-x_1_161*x_2_1*x_3_150*x_6_1 | 0 | 1 | 0 | 0 | 0 | 0 | -1 | 0
-x_2_161*x_3_150*x_6_1 | 0 | -1 | 0 | 0 | 0 | 0 | 1 | 0
-x_11_150*x_1_161*x_2_1*x_3_161*x_6_1 | 0 | 0 | 0 | 0 | -1 | 0 | 1 | 0
-x_2_150*x_3_161*x_6_1 | 0 | 1 | 0 | 0 | -1 | 0 | 0 | 0
-x_11_150*x_2_161*x_3_161*x_6_1 | 0 | 0 | 0 | 0 | 1 | 0 | -1 | 0
-x_1_161*x_3_150*x_6_1^2 | 1 | -1 | 0 | 0 | 0 | 0 | 0 | 0
-x_1_161*x_2_1*x_6_150 | 0 | 0 | 0 | 0 | 0 | -1 | 1 | 0
-x_1_161^2*x_2_1*x_6_150 | 0 | 0 | -1 | 0 | 0 | 1 | 0 | 0
-x_2_161*x_6_150 | 0 | 0 | 0 | 0 | 0 | 1 | -1 | 0
-x_1_161*x_2_161*x_6_150 | 0 | 0 | 1 | 0 | 0 | -1 | 0 | 0
-x_1_161*x_6_1*x_6_150 | -1 | 1 | 0 | 0 | 0 | 0 | 0 | 0
-x_3_161*x_6_1*x_6_150 | 1 | -1 | 0 | 0 | 0 | 0 | 0 | 0
-x_11_150*x_1_161*x_2_1*x_6_161 | 0 | 0 | 0 | 0 | 1 | 0 | -1 | 0
-x_2_150*x_6_161 | 0 | 0 | 0 | -1 | 1 | 0 | 0 | 0
-x_1_161*x_2_150*x_6_161 | 0 | 0 | -1 | 1 | 0 | 0 | 0 | 0
-x_11_150*x_2_161*x_6_161 | 0 | 0 | 0 | 0 | -1 | 0 | 1 | 0
-x_3_150*x_6_1*x_6_161 | -1 | 1 | 0 | 0 | 0 | 0 | 0 | 0
-x_1_161^2*x_2_1*x_6_1*x_9_150 | 0 | 0 | 0 | 1 | 0 | -1 | 0 | 0
-x_1_161*x_2_161*x_6_1*x_9_150 | 0 | 0 | 0 | -1 | 0 | 1 | 0 | 0
-x_1_161*x_2_1*x_6_161*x_9_150 | 0 | 0 | 0 | -1 | 0 | 1 | 0 | 0
-x_2_161*x_6_161*x_9_150 | 0 | 0 | 0 | 1 | 0 | -1 | 0 | 0
+PRODUCTS AND WEIGHTS
+P1 = g1*g12; c1 = 1/7
+P2 = g2*g12; c2 = 1/7
+P3 = g3*g11; c3 = 1/7
+P4 = g4*g7; c4 = 1/7
+P5 = g5*g9; c5 = 1/7
+P6 = g6*g10; c6 = 1/7
+P7 = g8*g10; c7 = 1/7
+
+Monomials checked: 23
+
+Monomial: x_1_161 * x_2_150 * x_6_1
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/7           -1/7
+P4                  1      1/7            1/7
+
+Sum: -1/7 + 1/7 = 0
+
+Monomial: x_1_161^2 * x_2_150 * x_6_1
+
+Product   Coefficient   Weight   Contribution
+P3                  1      1/7            1/7
+P4                 -1      1/7           -1/7
+
+Sum: 1/7 - 1/7 = 0
+
+Monomial: x_1_161 * x_2_1 * x_3_150 * x_6_1
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/7            1/7
+P7                 -1      1/7           -1/7
+
+Sum: 1/7 - 1/7 = 0
+
+Monomial: x_2_161 * x_3_150 * x_6_1
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/7           -1/7
+P7                  1      1/7            1/7
+
+Sum: -1/7 + 1/7 = 0
+
+Monomial: x_11_150 * x_1_161 * x_2_1 * x_3_161 * x_6_1
+
+Product   Coefficient   Weight   Contribution
+P5                 -1      1/7           -1/7
+P7                  1      1/7            1/7
+
+Sum: -1/7 + 1/7 = 0
+
+Monomial: x_2_150 * x_3_161 * x_6_1
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/7            1/7
+P5                 -1      1/7           -1/7
+
+Sum: 1/7 - 1/7 = 0
+
+Monomial: x_11_150 * x_2_161 * x_3_161 * x_6_1
+
+Product   Coefficient   Weight   Contribution
+P5                  1      1/7            1/7
+P7                 -1      1/7           -1/7
+
+Sum: 1/7 - 1/7 = 0
+
+Monomial: x_1_161 * x_3_150 * x_6_1^2
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/7            1/7
+P2                 -1      1/7           -1/7
+
+Sum: 1/7 - 1/7 = 0
+
+Monomial: x_1_161 * x_2_1 * x_6_150
+
+Product   Coefficient   Weight   Contribution
+P6                 -1      1/7           -1/7
+P7                  1      1/7            1/7
+
+Sum: -1/7 + 1/7 = 0
+
+Monomial: x_1_161^2 * x_2_1 * x_6_150
+
+Product   Coefficient   Weight   Contribution
+P3                 -1      1/7           -1/7
+P6                  1      1/7            1/7
+
+Sum: -1/7 + 1/7 = 0
+
+Monomial: x_2_161 * x_6_150
+
+Product   Coefficient   Weight   Contribution
+P6                  1      1/7            1/7
+P7                 -1      1/7           -1/7
+
+Sum: 1/7 - 1/7 = 0
+
+Monomial: x_1_161 * x_2_161 * x_6_150
+
+Product   Coefficient   Weight   Contribution
+P3                  1      1/7            1/7
+P6                 -1      1/7           -1/7
+
+Sum: 1/7 - 1/7 = 0
+
+Monomial: x_1_161 * x_6_1 * x_6_150
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/7           -1/7
+P2                  1      1/7            1/7
+
+Sum: -1/7 + 1/7 = 0
+
+Monomial: x_3_161 * x_6_1 * x_6_150
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/7            1/7
+P2                 -1      1/7           -1/7
+
+Sum: 1/7 - 1/7 = 0
+
+Monomial: x_11_150 * x_1_161 * x_2_1 * x_6_161
+
+Product   Coefficient   Weight   Contribution
+P5                  1      1/7            1/7
+P7                 -1      1/7           -1/7
+
+Sum: 1/7 - 1/7 = 0
+
+Monomial: x_2_150 * x_6_161
+
+Product   Coefficient   Weight   Contribution
+P4                 -1      1/7           -1/7
+P5                  1      1/7            1/7
+
+Sum: -1/7 + 1/7 = 0
+
+Monomial: x_1_161 * x_2_150 * x_6_161
+
+Product   Coefficient   Weight   Contribution
+P3                 -1      1/7           -1/7
+P4                  1      1/7            1/7
+
+Sum: -1/7 + 1/7 = 0
+
+Monomial: x_11_150 * x_2_161 * x_6_161
+
+Product   Coefficient   Weight   Contribution
+P5                 -1      1/7           -1/7
+P7                  1      1/7            1/7
+
+Sum: -1/7 + 1/7 = 0
+
+Monomial: x_3_150 * x_6_1 * x_6_161
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/7           -1/7
+P2                  1      1/7            1/7
+
+Sum: -1/7 + 1/7 = 0
+
+Monomial: x_1_161^2 * x_2_1 * x_6_1 * x_9_150
+
+Product   Coefficient   Weight   Contribution
+P4                  1      1/7            1/7
+P6                 -1      1/7           -1/7
+
+Sum: 1/7 - 1/7 = 0
+
+Monomial: x_1_161 * x_2_161 * x_6_1 * x_9_150
+
+Product   Coefficient   Weight   Contribution
+P4                 -1      1/7           -1/7
+P6                  1      1/7            1/7
+
+Sum: -1/7 + 1/7 = 0
+
+Monomial: x_1_161 * x_2_1 * x_6_161 * x_9_150
+
+Product   Coefficient   Weight   Contribution
+P4                 -1      1/7           -1/7
+P6                  1      1/7            1/7
+
+Sum: -1/7 + 1/7 = 0
+
+Monomial: x_2_161 * x_6_161 * x_9_150
+
+Product   Coefficient   Weight   Contribution
+P4                  1      1/7            1/7
+P6                 -1      1/7           -1/7
+
+Sum: 1/7 - 1/7 = 0

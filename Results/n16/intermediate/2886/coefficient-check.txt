@@ -1,21 +1,133 @@
 COEFFICIENT CHECK
-Columns are coefficients in the products P1, P2, ... (before weighting).
-Multiply each column by its coefficient c_k from the certificate.
-The last column is the exact weighted sum; every entry must be zero.
+Each block checks the coefficient of one monomial in the identity.
+Contribution = coefficient in Pk * weight ck.
+Only nonzero coefficients are listed; every omitted product has coefficient zero.
+All arithmetic is exact. Every displayed sum must be zero.
 
-Monomial | P1 | P2 | P3 | weighted sum
-x_7_1 | 1 | 0 | -1 | 0
-x_1_78*x_7_1 | -1 | -1 | 2 | 0
-x_1_78^2*x_7_1 | 0 | 1 | -1 | 0
-x_1_1*x_6_51*x_7_1 | -1 | 0 | 1 | 0
-x_1_1*x_1_78*x_6_51*x_7_1 | 1 | 0 | -1 | 0
-x_1_1*x_6_78*x_7_1 | 0 | 1 | -1 | 0
-x_1_1*x_1_78*x_6_78*x_7_1 | 0 | -1 | 1 | 0
-x_1_1*x_7_51 | -1 | 0 | 1 | 0
-x_1_1*x_1_78*x_7_51 | 0 | 1 | -1 | 0
-x_1_1^2*x_6_51*x_7_51 | 1 | 0 | -1 | 0
-x_1_1^2*x_6_78*x_7_51 | 0 | -1 | 1 | 0
-x_1_1*x_7_78 | 1 | 0 | -1 | 0
-x_1_1*x_1_78*x_7_78 | 0 | -1 | 1 | 0
-x_1_1^2*x_6_51*x_7_78 | -1 | 0 | 1 | 0
-x_1_1^2*x_6_78*x_7_78 | 0 | 1 | -1 | 0
+PRODUCTS AND WEIGHTS
+P1 = g1*g4; c1 = 1/3
+P2 = g2*g4; c2 = 1/3
+P3 = g3*g4; c3 = 1/3
+
+Monomials checked: 15
+
+Monomial: x_7_1
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/3            1/3
+P3                 -1      1/3           -1/3
+
+Sum: 1/3 - 1/3 = 0
+
+Monomial: x_1_78 * x_7_1
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/3           -1/3
+P2                 -1      1/3           -1/3
+P3                  2      1/3            2/3
+
+Sum: -1/3 - 1/3 + 2/3 = 0
+
+Monomial: x_1_78^2 * x_7_1
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/3            1/3
+P3                 -1      1/3           -1/3
+
+Sum: 1/3 - 1/3 = 0
+
+Monomial: x_1_1 * x_6_51 * x_7_1
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/3           -1/3
+P3                  1      1/3            1/3
+
+Sum: -1/3 + 1/3 = 0
+
+Monomial: x_1_1 * x_1_78 * x_6_51 * x_7_1
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/3            1/3
+P3                 -1      1/3           -1/3
+
+Sum: 1/3 - 1/3 = 0
+
+Monomial: x_1_1 * x_6_78 * x_7_1
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/3            1/3
+P3                 -1      1/3           -1/3
+
+Sum: 1/3 - 1/3 = 0
+
+Monomial: x_1_1 * x_1_78 * x_6_78 * x_7_1
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/3           -1/3
+P3                  1      1/3            1/3
+
+Sum: -1/3 + 1/3 = 0
+
+Monomial: x_1_1 * x_7_51
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/3           -1/3
+P3                  1      1/3            1/3
+
+Sum: -1/3 + 1/3 = 0
+
+Monomial: x_1_1 * x_1_78 * x_7_51
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/3            1/3
+P3                 -1      1/3           -1/3
+
+Sum: 1/3 - 1/3 = 0
+
+Monomial: x_1_1^2 * x_6_51 * x_7_51
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/3            1/3
+P3                 -1      1/3           -1/3
+
+Sum: 1/3 - 1/3 = 0
+
+Monomial: x_1_1^2 * x_6_78 * x_7_51
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/3           -1/3
+P3                  1      1/3            1/3
+
+Sum: -1/3 + 1/3 = 0
+
+Monomial: x_1_1 * x_7_78
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/3            1/3
+P3                 -1      1/3           -1/3
+
+Sum: 1/3 - 1/3 = 0
+
+Monomial: x_1_1 * x_1_78 * x_7_78
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/3           -1/3
+P3                  1      1/3            1/3
+
+Sum: -1/3 + 1/3 = 0
+
+Monomial: x_1_1^2 * x_6_51 * x_7_78
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/3           -1/3
+P3                  1      1/3            1/3
+
+Sum: -1/3 + 1/3 = 0
+
+Monomial: x_1_1^2 * x_6_78 * x_7_78
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/3            1/3
+P3                 -1      1/3           -1/3
+
+Sum: 1/3 - 1/3 = 0

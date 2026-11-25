@@ -1,39 +1,278 @@
 COEFFICIENT CHECK
-Columns are coefficients in the products P1, P2, ... (before weighting).
-Multiply each column by its coefficient c_k from the certificate.
-The last column is the exact weighted sum; every entry must be zero.
+Each block checks the coefficient of one monomial in the identity.
+Contribution = coefficient in Pk * weight ck.
+Only nonzero coefficients are listed; every omitted product has coefficient zero.
+All arithmetic is exact. Every displayed sum must be zero.
 
-Monomial | P1 | P2 | P3 | P4 | P5 | weighted sum
-x_15_14*x_3_14 | 1 | 0 | 0 | -1 | 0 | 0
-x_13_2*x_15_14*x_3_14 | 0 | -1 | 0 | 1 | 0 | 0
-x_3_14*x_4_14 | 0 | -1 | 1 | 0 | 0 | 0
-x_12_166*x_3_14*x_4_14 | 0 | 0 | -1 | 0 | 1 | 0
-x_15_15*x_3_14*x_4_14 | 0 | 1 | 0 | -1 | 0 | 0
-x_13_2*x_15_15*x_3_14*x_4_14 | 0 | -1 | 0 | 1 | 0 | 0
-x_15_166*x_3_14*x_4_14 | 0 | 0 | 0 | 1 | -1 | 0
-x_13_2*x_15_166*x_3_14*x_4_14 | 0 | 1 | 0 | -1 | 0 | 0
-x_15_14*x_3_14*x_4_15 | 0 | -1 | 0 | 1 | 0 | 0
-x_13_2*x_15_14*x_3_14*x_4_15 | 0 | 1 | 0 | -1 | 0 | 0
-x_15_14*x_3_14*x_4_2 | -1 | 1 | 0 | 0 | 0 | 0
-x_15_14*x_5_14 | -1 | 0 | 0 | 1 | 0 | 0
-x_13_2*x_15_14*x_5_14 | 0 | 1 | 0 | -1 | 0 | 0
-x_4_14*x_5_14 | 0 | 1 | -1 | 0 | 0 | 0
-x_12_166*x_4_14*x_5_14 | 0 | 0 | 1 | 0 | -1 | 0
-x_15_15*x_4_14*x_5_14 | 0 | -1 | 0 | 1 | 0 | 0
-x_13_2*x_15_15*x_4_14*x_5_14 | 0 | 1 | 0 | -1 | 0 | 0
-x_15_166*x_4_14*x_5_14 | 0 | 0 | 0 | -1 | 1 | 0
-x_13_2*x_15_166*x_4_14*x_5_14 | 0 | -1 | 0 | 1 | 0 | 0
-x_15_14*x_4_15*x_5_14 | 0 | 1 | 0 | -1 | 0 | 0
-x_13_2*x_15_14*x_4_15*x_5_14 | 0 | -1 | 0 | 1 | 0 | 0
-x_15_14*x_4_2*x_5_14 | 1 | -1 | 0 | 0 | 0 | 0
-x_13_2*x_15_14*x_3_14*x_5_166 | 0 | 1 | 0 | -1 | 0 | 0
-x_12_14*x_4_14*x_5_166 | 0 | 0 | -1 | 0 | 1 | 0
-x_15_14*x_4_14*x_5_166 | 1 | 0 | 0 | 0 | -1 | 0
-x_3_14*x_4_14*x_5_166 | 0 | 1 | -1 | 0 | 0 | 0
-x_12_15*x_3_14*x_4_14*x_5_166 | 0 | 0 | 1 | 0 | -1 | 0
-x_15_15*x_3_14*x_4_14*x_5_166 | 0 | -1 | 0 | 0 | 1 | 0
-x_13_2*x_15_15*x_3_14*x_4_14*x_5_166 | 0 | 1 | 0 | -1 | 0 | 0
-x_13_2*x_15_166*x_3_14*x_4_14*x_5_166 | 0 | -1 | 0 | 1 | 0 | 0
-x_15_14*x_3_14*x_4_15*x_5_166 | -1 | 1 | 0 | 0 | 0 | 0
-x_13_2*x_15_14*x_3_14*x_4_15*x_5_166 | 0 | -1 | 0 | 1 | 0 | 0
-x_15_14*x_3_14*x_4_2*x_5_166 | 1 | -1 | 0 | 0 | 0 | 0
+PRODUCTS AND WEIGHTS
+P1 = g1*g8; c1 = 1/5
+P2 = g2*g4; c2 = 1/5
+P3 = g3*g9; c3 = 1/5
+P4 = g5*g6; c4 = 1/5
+P5 = g7*g9; c5 = 1/5
+
+Monomials checked: 33
+
+Monomial: x_15_14 * x_3_14
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/5            1/5
+P4                 -1      1/5           -1/5
+
+Sum: 1/5 - 1/5 = 0
+
+Monomial: x_13_2 * x_15_14 * x_3_14
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/5           -1/5
+P4                  1      1/5            1/5
+
+Sum: -1/5 + 1/5 = 0
+
+Monomial: x_3_14 * x_4_14
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/5           -1/5
+P3                  1      1/5            1/5
+
+Sum: -1/5 + 1/5 = 0
+
+Monomial: x_12_166 * x_3_14 * x_4_14
+
+Product   Coefficient   Weight   Contribution
+P3                 -1      1/5           -1/5
+P5                  1      1/5            1/5
+
+Sum: -1/5 + 1/5 = 0
+
+Monomial: x_15_15 * x_3_14 * x_4_14
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/5            1/5
+P4                 -1      1/5           -1/5
+
+Sum: 1/5 - 1/5 = 0
+
+Monomial: x_13_2 * x_15_15 * x_3_14 * x_4_14
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/5           -1/5
+P4                  1      1/5            1/5
+
+Sum: -1/5 + 1/5 = 0
+
+Monomial: x_15_166 * x_3_14 * x_4_14
+
+Product   Coefficient   Weight   Contribution
+P4                  1      1/5            1/5
+P5                 -1      1/5           -1/5
+
+Sum: 1/5 - 1/5 = 0
+
+Monomial: x_13_2 * x_15_166 * x_3_14 * x_4_14
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/5            1/5
+P4                 -1      1/5           -1/5
+
+Sum: 1/5 - 1/5 = 0
+
+Monomial: x_15_14 * x_3_14 * x_4_15
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/5           -1/5
+P4                  1      1/5            1/5
+
+Sum: -1/5 + 1/5 = 0
+
+Monomial: x_13_2 * x_15_14 * x_3_14 * x_4_15
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/5            1/5
+P4                 -1      1/5           -1/5
+
+Sum: 1/5 - 1/5 = 0
+
+Monomial: x_15_14 * x_3_14 * x_4_2
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/5           -1/5
+P2                  1      1/5            1/5
+
+Sum: -1/5 + 1/5 = 0
+
+Monomial: x_15_14 * x_5_14
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/5           -1/5
+P4                  1      1/5            1/5
+
+Sum: -1/5 + 1/5 = 0
+
+Monomial: x_13_2 * x_15_14 * x_5_14
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/5            1/5
+P4                 -1      1/5           -1/5
+
+Sum: 1/5 - 1/5 = 0
+
+Monomial: x_4_14 * x_5_14
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/5            1/5
+P3                 -1      1/5           -1/5
+
+Sum: 1/5 - 1/5 = 0
+
+Monomial: x_12_166 * x_4_14 * x_5_14
+
+Product   Coefficient   Weight   Contribution
+P3                  1      1/5            1/5
+P5                 -1      1/5           -1/5
+
+Sum: 1/5 - 1/5 = 0
+
+Monomial: x_15_15 * x_4_14 * x_5_14
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/5           -1/5
+P4                  1      1/5            1/5
+
+Sum: -1/5 + 1/5 = 0
+
+Monomial: x_13_2 * x_15_15 * x_4_14 * x_5_14
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/5            1/5
+P4                 -1      1/5           -1/5
+
+Sum: 1/5 - 1/5 = 0
+
+Monomial: x_15_166 * x_4_14 * x_5_14
+
+Product   Coefficient   Weight   Contribution
+P4                 -1      1/5           -1/5
+P5                  1      1/5            1/5
+
+Sum: -1/5 + 1/5 = 0
+
+Monomial: x_13_2 * x_15_166 * x_4_14 * x_5_14
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/5           -1/5
+P4                  1      1/5            1/5
+
+Sum: -1/5 + 1/5 = 0
+
+Monomial: x_15_14 * x_4_15 * x_5_14
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/5            1/5
+P4                 -1      1/5           -1/5
+
+Sum: 1/5 - 1/5 = 0
+
+Monomial: x_13_2 * x_15_14 * x_4_15 * x_5_14
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/5           -1/5
+P4                  1      1/5            1/5
+
+Sum: -1/5 + 1/5 = 0
+
+Monomial: x_15_14 * x_4_2 * x_5_14
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/5            1/5
+P2                 -1      1/5           -1/5
+
+Sum: 1/5 - 1/5 = 0
+
+Monomial: x_13_2 * x_15_14 * x_3_14 * x_5_166
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/5            1/5
+P4                 -1      1/5           -1/5
+
+Sum: 1/5 - 1/5 = 0
+
+Monomial: x_12_14 * x_4_14 * x_5_166
+
+Product   Coefficient   Weight   Contribution
+P3                 -1      1/5           -1/5
+P5                  1      1/5            1/5
+
+Sum: -1/5 + 1/5 = 0
+
+Monomial: x_15_14 * x_4_14 * x_5_166
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/5            1/5
+P5                 -1      1/5           -1/5
+
+Sum: 1/5 - 1/5 = 0
+
+Monomial: x_3_14 * x_4_14 * x_5_166
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/5            1/5
+P3                 -1      1/5           -1/5
+
+Sum: 1/5 - 1/5 = 0
+
+Monomial: x_12_15 * x_3_14 * x_4_14 * x_5_166
+
+Product   Coefficient   Weight   Contribution
+P3                  1      1/5            1/5
+P5                 -1      1/5           -1/5
+
+Sum: 1/5 - 1/5 = 0
+
+Monomial: x_15_15 * x_3_14 * x_4_14 * x_5_166
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/5           -1/5
+P5                  1      1/5            1/5
+
+Sum: -1/5 + 1/5 = 0
+
+Monomial: x_13_2 * x_15_15 * x_3_14 * x_4_14 * x_5_166
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/5            1/5
+P4                 -1      1/5           -1/5
+
+Sum: 1/5 - 1/5 = 0
+
+Monomial: x_13_2 * x_15_166 * x_3_14 * x_4_14 * x_5_166
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/5           -1/5
+P4                  1      1/5            1/5
+
+Sum: -1/5 + 1/5 = 0
+
+Monomial: x_15_14 * x_3_14 * x_4_15 * x_5_166
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/5           -1/5
+P2                  1      1/5            1/5
+
+Sum: -1/5 + 1/5 = 0
+
+Monomial: x_13_2 * x_15_14 * x_3_14 * x_4_15 * x_5_166
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/5           -1/5
+P4                  1      1/5            1/5
+
+Sum: -1/5 + 1/5 = 0
+
+Monomial: x_15_14 * x_3_14 * x_4_2 * x_5_166
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/5            1/5
+P2                 -1      1/5           -1/5
+
+Sum: 1/5 - 1/5 = 0

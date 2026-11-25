@@ -1,20 +1,127 @@
 COEFFICIENT CHECK
-Columns are coefficients in the products P1, P2, ... (before weighting).
-Multiply each column by its coefficient c_k from the certificate.
-The last column is the exact weighted sum; every entry must be zero.
+Each block checks the coefficient of one monomial in the identity.
+Contribution = coefficient in Pk * weight ck.
+Only nonzero coefficients are listed; every omitted product has coefficient zero.
+All arithmetic is exact. Every displayed sum must be zero.
 
-Monomial | P1 | P2 | P3 | P4 | P5 | P6 | weighted sum
-x_12_180*x_18_0*x_19_0 | 0 | 1 | 0 | 0 | 0 | -1 | 0
-x_0_180*x_18_13*x_19_0 | 0 | 0 | 1 | -1 | 0 | 0 | 0
-x_0_180^2*x_18_13*x_19_0 | 0 | 0 | 0 | 1 | -1 | 0 | 0
-x_18_180*x_19_0 | 0 | -1 | 0 | 1 | 0 | 0 | 0
-x_0_180*x_18_180*x_19_0 | 0 | 0 | 0 | -1 | 1 | 0 | 0
-x_0_180*x_18_0*x_19_13 | 0 | 0 | -1 | 1 | 0 | 0 | 0
-x_0_180^2*x_18_0*x_19_13 | 0 | 0 | 0 | -1 | 1 | 0 | 0
-x_18_0*x_19_180 | 0 | 0 | 0 | -1 | 0 | 1 | 0
-x_0_180*x_18_0*x_19_180 | 0 | 0 | 0 | 1 | -1 | 0 | 0
-x_18_13*x_19_0*x_1_180 | 1 | 0 | -1 | 0 | 0 | 0 | 0
-x_18_0*x_19_13*x_1_180 | -1 | 0 | 1 | 0 | 0 | 0 | 0
-x_12_13*x_18_0*x_19_0*x_2_180 | 0 | -1 | 0 | 0 | 0 | 1 | 0
-x_18_13*x_19_0*x_2_180 | -1 | 1 | 0 | 0 | 0 | 0 | 0
-x_18_0*x_19_13*x_2_180 | 1 | 0 | 0 | 0 | 0 | -1 | 0
+PRODUCTS AND WEIGHTS
+P1 = g1*g7; c1 = 1/6
+P2 = g2*g10; c2 = 1/6
+P3 = g3*g7; c3 = 1/6
+P4 = g4*g5; c4 = 1/6
+P5 = g5*g8; c5 = 1/6
+P6 = g6*g9; c6 = 1/6
+
+Monomials checked: 14
+
+Monomial: x_12_180 * x_18_0 * x_19_0
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/6            1/6
+P6                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_0_180 * x_18_13 * x_19_0
+
+Product   Coefficient   Weight   Contribution
+P3                  1      1/6            1/6
+P4                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_0_180^2 * x_18_13 * x_19_0
+
+Product   Coefficient   Weight   Contribution
+P4                  1      1/6            1/6
+P5                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_18_180 * x_19_0
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P4                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_0_180 * x_18_180 * x_19_0
+
+Product   Coefficient   Weight   Contribution
+P4                 -1      1/6           -1/6
+P5                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_0_180 * x_18_0 * x_19_13
+
+Product   Coefficient   Weight   Contribution
+P3                 -1      1/6           -1/6
+P4                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_0_180^2 * x_18_0 * x_19_13
+
+Product   Coefficient   Weight   Contribution
+P4                 -1      1/6           -1/6
+P5                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_18_0 * x_19_180
+
+Product   Coefficient   Weight   Contribution
+P4                 -1      1/6           -1/6
+P6                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_0_180 * x_18_0 * x_19_180
+
+Product   Coefficient   Weight   Contribution
+P4                  1      1/6            1/6
+P5                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_18_13 * x_19_0 * x_1_180
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/6            1/6
+P3                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_18_0 * x_19_13 * x_1_180
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/6           -1/6
+P3                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_12_13 * x_18_0 * x_19_0 * x_2_180
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P6                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_18_13 * x_19_0 * x_2_180
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/6           -1/6
+P2                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_18_0 * x_19_13 * x_2_180
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/6            1/6
+P6                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0

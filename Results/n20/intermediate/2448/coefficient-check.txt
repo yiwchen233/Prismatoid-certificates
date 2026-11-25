@@ -1,14 +1,77 @@
 COEFFICIENT CHECK
-Columns are coefficients in the products P1, P2, ... (before weighting).
-Multiply each column by its coefficient c_k from the certificate.
-The last column is the exact weighted sum; every entry must be zero.
+Each block checks the coefficient of one monomial in the identity.
+Contribution = coefficient in Pk * weight ck.
+Only nonzero coefficients are listed; every omitted product has coefficient zero.
+All arithmetic is exact. Every displayed sum must be zero.
 
-Monomial | P1 | P2 | P3 | P4 | weighted sum
-x_15_129*x_7_128 | 0 | 0 | -1 | 1 | 0
-x_14_9*x_19_0*x_7_128 | -1 | 1 | 0 | 0 | 0
-x_15_9*x_19_0*x_7_128 | 1 | -1 | 0 | 0 | 0
-x_15_129*x_16_9*x_19_0*x_7_128 | 0 | 0 | 1 | -1 | 0
-x_15_128*x_19_0*x_7_9 | -1 | 1 | 0 | 0 | 0
-x_15_129*x_16_128*x_19_0*x_7_9 | 0 | 0 | -1 | 1 | 0
-x_15_129*x_19_0*x_7_9*x_9_128 | 0 | -1 | 1 | 0 | 0
-x_15_129*x_19_0*x_7_128*x_9_9 | 0 | 1 | -1 | 0 | 0
+PRODUCTS AND WEIGHTS
+P1 = g1*g6; c1 = 1/4
+P2 = g2*g6; c2 = 1/4
+P3 = g3*g5; c3 = 1/4
+P4 = g4*g5; c4 = 1/4
+
+Monomials checked: 8
+
+Monomial: x_15_129 * x_7_128
+
+Product   Coefficient   Weight   Contribution
+P3                 -1      1/4           -1/4
+P4                  1      1/4            1/4
+
+Sum: -1/4 + 1/4 = 0
+
+Monomial: x_14_9 * x_19_0 * x_7_128
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/4           -1/4
+P2                  1      1/4            1/4
+
+Sum: -1/4 + 1/4 = 0
+
+Monomial: x_15_9 * x_19_0 * x_7_128
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/4            1/4
+P2                 -1      1/4           -1/4
+
+Sum: 1/4 - 1/4 = 0
+
+Monomial: x_15_129 * x_16_9 * x_19_0 * x_7_128
+
+Product   Coefficient   Weight   Contribution
+P3                  1      1/4            1/4
+P4                 -1      1/4           -1/4
+
+Sum: 1/4 - 1/4 = 0
+
+Monomial: x_15_128 * x_19_0 * x_7_9
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/4           -1/4
+P2                  1      1/4            1/4
+
+Sum: -1/4 + 1/4 = 0
+
+Monomial: x_15_129 * x_16_128 * x_19_0 * x_7_9
+
+Product   Coefficient   Weight   Contribution
+P3                 -1      1/4           -1/4
+P4                  1      1/4            1/4
+
+Sum: -1/4 + 1/4 = 0
+
+Monomial: x_15_129 * x_19_0 * x_7_9 * x_9_128
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/4           -1/4
+P3                  1      1/4            1/4
+
+Sum: -1/4 + 1/4 = 0
+
+Monomial: x_15_129 * x_19_0 * x_7_128 * x_9_9
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/4            1/4
+P3                 -1      1/4           -1/4
+
+Sum: 1/4 - 1/4 = 0

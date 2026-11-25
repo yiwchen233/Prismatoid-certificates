@@ -1,11 +1,53 @@
 COEFFICIENT CHECK
-Columns are coefficients in the products P1, P2, ... (before weighting).
-Multiply each column by its coefficient c_k from the certificate.
-The last column is the exact weighted sum; every entry must be zero.
+Each block checks the coefficient of one monomial in the identity.
+Contribution = coefficient in Pk * weight ck.
+Only nonzero coefficients are listed; every omitted product has coefficient zero.
+All arithmetic is exact. Every displayed sum must be zero.
 
-Monomial | P1 | P2 | P3 | P4 | weighted sum
-x_10_165*x_19_138 | 0 | 1 | -1 | 0 | 0
-x_11_165*x_19_138 | -1 | 0 | 1 | 0 | 0
-x_2_138 | -1 | 0 | 0 | 1 | 0
-x_11_165*x_19_144*x_2_138 | 1 | 0 | 0 | -1 | 0
-x_19_138*x_2_165 | 1 | -1 | 0 | 0 | 0
+PRODUCTS AND WEIGHTS
+P1 = g3; c1 = 1/4
+P2 = g1*g5; c2 = 1/4
+P3 = g2*g5; c3 = 1/4
+P4 = g4*g6; c4 = 1/4
+
+Monomials checked: 5
+
+Monomial: x_10_165 * x_19_138
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/4            1/4
+P3                 -1      1/4           -1/4
+
+Sum: 1/4 - 1/4 = 0
+
+Monomial: x_11_165 * x_19_138
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/4           -1/4
+P3                  1      1/4            1/4
+
+Sum: -1/4 + 1/4 = 0
+
+Monomial: x_2_138
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/4           -1/4
+P4                  1      1/4            1/4
+
+Sum: -1/4 + 1/4 = 0
+
+Monomial: x_11_165 * x_19_144 * x_2_138
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/4            1/4
+P4                 -1      1/4           -1/4
+
+Sum: 1/4 - 1/4 = 0
+
+Monomial: x_19_138 * x_2_165
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/4            1/4
+P2                 -1      1/4           -1/4
+
+Sum: 1/4 - 1/4 = 0

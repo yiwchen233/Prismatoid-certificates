@@ -1,26 +1,180 @@
 COEFFICIENT CHECK
-Columns are coefficients in the products P1, P2, ... (before weighting).
-Multiply each column by its coefficient c_k from the certificate.
-The last column is the exact weighted sum; every entry must be zero.
+Each block checks the coefficient of one monomial in the identity.
+Contribution = coefficient in Pk * weight ck.
+Only nonzero coefficients are listed; every omitted product has coefficient zero.
+All arithmetic is exact. Every displayed sum must be zero.
 
-Monomial | P1 | P2 | P3 | P4 | P5 | P6 | P7 | weighted sum
-x_13_92*x_4_1 | 0 | 0 | 0 | 0 | 1 | -1 | 0 | 0
-x_0_92*x_13_92*x_4_1 | 0 | 0 | 1 | -1 | 0 | 0 | 0 | 0
-x_0_128*x_12_92*x_13_92*x_4_1 | 0 | 0 | -1 | 1 | 0 | 0 | 0 | 0
-x_12_92*x_13_92*x_2_128*x_4_1 | 0 | 0 | 0 | -1 | 1 | 0 | 0 | 0
-x_13_92*x_2_92*x_4_1 | 0 | 0 | 0 | 1 | -1 | 0 | 0 | 0
-x_0_1*x_12_92*x_13_92*x_4_128 | 0 | 0 | 1 | -1 | 0 | 0 | 0 | 0
-x_12_92*x_13_92*x_2_1*x_4_128 | 0 | 0 | 0 | 1 | -1 | 0 | 0 | 0
-x_0_1*x_13_92*x_4_92 | 0 | 0 | -1 | 1 | 0 | 0 | 0 | 0
-x_13_92*x_2_1*x_4_92 | 0 | 0 | 0 | -1 | 1 | 0 | 0 | 0
-x_12_92*x_13_92*x_4_128*x_5_1 | -1 | 0 | 0 | 0 | 0 | 1 | 0 | 0
-x_13_92^2*x_4_128*x_5_1 | 1 | 0 | 0 | 0 | 0 | 0 | -1 | 0
-x_12_92*x_4_92*x_5_1 | 1 | -1 | 0 | 0 | 0 | 0 | 0 | 0
-x_13_92*x_4_92*x_5_1 | -1 | 1 | 0 | 0 | 0 | -1 | 1 | 0
-x_12_92*x_13_92*x_4_1*x_5_128 | 1 | 0 | 0 | 0 | 0 | -1 | 0 | 0
-x_13_92^2*x_4_1*x_5_128 | -1 | 0 | 0 | 0 | 0 | 0 | 1 | 0
-x_12_92*x_4_1*x_5_92 | -1 | 1 | 0 | 0 | 0 | 0 | 0 | 0
-x_13_92*x_4_1*x_5_92 | 1 | -1 | 0 | 0 | 0 | 1 | -1 | 0
-x_12_92*x_13_92*x_4_128*x_9_1 | 0 | 0 | 0 | 0 | 1 | -1 | 0 | 0
-x_13_92*x_4_92*x_9_1 | 0 | 0 | 0 | 0 | -1 | 1 | 0 | 0
-x_12_92*x_13_92*x_4_1*x_9_128 | 0 | 0 | 0 | 0 | -1 | 1 | 0 | 0
+PRODUCTS AND WEIGHTS
+P1 = g1*g6; c1 = 1/7
+P2 = g1*g7; c2 = 1/7
+P3 = g2*g8; c3 = 1/7
+P4 = g3*g8; c4 = 1/7
+P5 = g4*g8; c5 = 1/7
+P6 = g5*g8; c6 = 1/7
+P7 = g6*g8; c7 = 1/7
+
+Monomials checked: 20
+
+Monomial: x_13_92 * x_4_1
+
+Product   Coefficient   Weight   Contribution
+P5                  1      1/7            1/7
+P6                 -1      1/7           -1/7
+
+Sum: 1/7 - 1/7 = 0
+
+Monomial: x_0_92 * x_13_92 * x_4_1
+
+Product   Coefficient   Weight   Contribution
+P3                  1      1/7            1/7
+P4                 -1      1/7           -1/7
+
+Sum: 1/7 - 1/7 = 0
+
+Monomial: x_0_128 * x_12_92 * x_13_92 * x_4_1
+
+Product   Coefficient   Weight   Contribution
+P3                 -1      1/7           -1/7
+P4                  1      1/7            1/7
+
+Sum: -1/7 + 1/7 = 0
+
+Monomial: x_12_92 * x_13_92 * x_2_128 * x_4_1
+
+Product   Coefficient   Weight   Contribution
+P4                 -1      1/7           -1/7
+P5                  1      1/7            1/7
+
+Sum: -1/7 + 1/7 = 0
+
+Monomial: x_13_92 * x_2_92 * x_4_1
+
+Product   Coefficient   Weight   Contribution
+P4                  1      1/7            1/7
+P5                 -1      1/7           -1/7
+
+Sum: 1/7 - 1/7 = 0
+
+Monomial: x_0_1 * x_12_92 * x_13_92 * x_4_128
+
+Product   Coefficient   Weight   Contribution
+P3                  1      1/7            1/7
+P4                 -1      1/7           -1/7
+
+Sum: 1/7 - 1/7 = 0
+
+Monomial: x_12_92 * x_13_92 * x_2_1 * x_4_128
+
+Product   Coefficient   Weight   Contribution
+P4                  1      1/7            1/7
+P5                 -1      1/7           -1/7
+
+Sum: 1/7 - 1/7 = 0
+
+Monomial: x_0_1 * x_13_92 * x_4_92
+
+Product   Coefficient   Weight   Contribution
+P3                 -1      1/7           -1/7
+P4                  1      1/7            1/7
+
+Sum: -1/7 + 1/7 = 0
+
+Monomial: x_13_92 * x_2_1 * x_4_92
+
+Product   Coefficient   Weight   Contribution
+P4                 -1      1/7           -1/7
+P5                  1      1/7            1/7
+
+Sum: -1/7 + 1/7 = 0
+
+Monomial: x_12_92 * x_13_92 * x_4_128 * x_5_1
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/7           -1/7
+P6                  1      1/7            1/7
+
+Sum: -1/7 + 1/7 = 0
+
+Monomial: x_13_92^2 * x_4_128 * x_5_1
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/7            1/7
+P7                 -1      1/7           -1/7
+
+Sum: 1/7 - 1/7 = 0
+
+Monomial: x_12_92 * x_4_92 * x_5_1
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/7            1/7
+P2                 -1      1/7           -1/7
+
+Sum: 1/7 - 1/7 = 0
+
+Monomial: x_13_92 * x_4_92 * x_5_1
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/7           -1/7
+P2                  1      1/7            1/7
+P6                 -1      1/7           -1/7
+P7                  1      1/7            1/7
+
+Sum: -1/7 + 1/7 - 1/7 + 1/7 = 0
+
+Monomial: x_12_92 * x_13_92 * x_4_1 * x_5_128
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/7            1/7
+P6                 -1      1/7           -1/7
+
+Sum: 1/7 - 1/7 = 0
+
+Monomial: x_13_92^2 * x_4_1 * x_5_128
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/7           -1/7
+P7                  1      1/7            1/7
+
+Sum: -1/7 + 1/7 = 0
+
+Monomial: x_12_92 * x_4_1 * x_5_92
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/7           -1/7
+P2                  1      1/7            1/7
+
+Sum: -1/7 + 1/7 = 0
+
+Monomial: x_13_92 * x_4_1 * x_5_92
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/7            1/7
+P2                 -1      1/7           -1/7
+P6                  1      1/7            1/7
+P7                 -1      1/7           -1/7
+
+Sum: 1/7 - 1/7 + 1/7 - 1/7 = 0
+
+Monomial: x_12_92 * x_13_92 * x_4_128 * x_9_1
+
+Product   Coefficient   Weight   Contribution
+P5                  1      1/7            1/7
+P6                 -1      1/7           -1/7
+
+Sum: 1/7 - 1/7 = 0
+
+Monomial: x_13_92 * x_4_92 * x_9_1
+
+Product   Coefficient   Weight   Contribution
+P5                 -1      1/7           -1/7
+P6                  1      1/7            1/7
+
+Sum: -1/7 + 1/7 = 0
+
+Monomial: x_12_92 * x_13_92 * x_4_1 * x_9_128
+
+Product   Coefficient   Weight   Contribution
+P5                 -1      1/7           -1/7
+P6                  1      1/7            1/7
+
+Sum: -1/7 + 1/7 = 0

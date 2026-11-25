@@ -1,22 +1,141 @@
 COEFFICIENT CHECK
-Columns are coefficients in the products P1, P2, ... (before weighting).
-Multiply each column by its coefficient c_k from the certificate.
-The last column is the exact weighted sum; every entry must be zero.
+Each block checks the coefficient of one monomial in the identity.
+Contribution = coefficient in Pk * weight ck.
+Only nonzero coefficients are listed; every omitted product has coefficient zero.
+All arithmetic is exact. Every displayed sum must be zero.
 
-Monomial | P1 | P2 | P3 | P4 | weighted sum
-x_13_44*x_9_0 | 0 | 0 | -1 | 1 | 0
-x_13_68*x_9_0 | -1 | 0 | 1 | 0 | 0
-x_13_68*x_6_44*x_9_0 | 1 | -1 | 0 | 0 | 0
-x_13_44*x_7_68*x_9_0 | 1 | 0 | 0 | -1 | 0
-x_13_44*x_6_44*x_7_68*x_9_0 | -1 | 1 | 0 | 0 | 0
-x_13_68*x_8_44*x_9_0 | 0 | 1 | 0 | -1 | 0
-x_13_44*x_7_68*x_8_44*x_9_0 | 0 | -1 | 1 | 0 | 0
-x_13_68*x_7_68*x_8_44*x_9_0 | 0 | 0 | -1 | 1 | 0
-x_13_0*x_9_44 | 0 | 0 | 1 | -1 | 0
-x_13_0*x_7_68*x_9_44 | -1 | 0 | 0 | 1 | 0
-x_13_0*x_6_44*x_7_68*x_9_44 | 1 | -1 | 0 | 0 | 0
-x_13_0*x_7_68*x_8_44*x_9_44 | 0 | 1 | -1 | 0 | 0
-x_13_0*x_9_68 | 1 | 0 | -1 | 0 | 0
-x_13_0*x_6_44*x_9_68 | -1 | 1 | 0 | 0 | 0
-x_13_0*x_8_44*x_9_68 | 0 | -1 | 0 | 1 | 0
-x_13_0*x_7_68*x_8_44*x_9_68 | 0 | 0 | 1 | -1 | 0
+PRODUCTS AND WEIGHTS
+P1 = g1*g4; c1 = 1/4
+P2 = g2*g4; c2 = 1/4
+P3 = g3*g7; c3 = 1/4
+P4 = g5*g6; c4 = 1/4
+
+Monomials checked: 16
+
+Monomial: x_13_44 * x_9_0
+
+Product   Coefficient   Weight   Contribution
+P3                 -1      1/4           -1/4
+P4                  1      1/4            1/4
+
+Sum: -1/4 + 1/4 = 0
+
+Monomial: x_13_68 * x_9_0
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/4           -1/4
+P3                  1      1/4            1/4
+
+Sum: -1/4 + 1/4 = 0
+
+Monomial: x_13_68 * x_6_44 * x_9_0
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/4            1/4
+P2                 -1      1/4           -1/4
+
+Sum: 1/4 - 1/4 = 0
+
+Monomial: x_13_44 * x_7_68 * x_9_0
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/4            1/4
+P4                 -1      1/4           -1/4
+
+Sum: 1/4 - 1/4 = 0
+
+Monomial: x_13_44 * x_6_44 * x_7_68 * x_9_0
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/4           -1/4
+P2                  1      1/4            1/4
+
+Sum: -1/4 + 1/4 = 0
+
+Monomial: x_13_68 * x_8_44 * x_9_0
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/4            1/4
+P4                 -1      1/4           -1/4
+
+Sum: 1/4 - 1/4 = 0
+
+Monomial: x_13_44 * x_7_68 * x_8_44 * x_9_0
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/4           -1/4
+P3                  1      1/4            1/4
+
+Sum: -1/4 + 1/4 = 0
+
+Monomial: x_13_68 * x_7_68 * x_8_44 * x_9_0
+
+Product   Coefficient   Weight   Contribution
+P3                 -1      1/4           -1/4
+P4                  1      1/4            1/4
+
+Sum: -1/4 + 1/4 = 0
+
+Monomial: x_13_0 * x_9_44
+
+Product   Coefficient   Weight   Contribution
+P3                  1      1/4            1/4
+P4                 -1      1/4           -1/4
+
+Sum: 1/4 - 1/4 = 0
+
+Monomial: x_13_0 * x_7_68 * x_9_44
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/4           -1/4
+P4                  1      1/4            1/4
+
+Sum: -1/4 + 1/4 = 0
+
+Monomial: x_13_0 * x_6_44 * x_7_68 * x_9_44
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/4            1/4
+P2                 -1      1/4           -1/4
+
+Sum: 1/4 - 1/4 = 0
+
+Monomial: x_13_0 * x_7_68 * x_8_44 * x_9_44
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/4            1/4
+P3                 -1      1/4           -1/4
+
+Sum: 1/4 - 1/4 = 0
+
+Monomial: x_13_0 * x_9_68
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/4            1/4
+P3                 -1      1/4           -1/4
+
+Sum: 1/4 - 1/4 = 0
+
+Monomial: x_13_0 * x_6_44 * x_9_68
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/4           -1/4
+P2                  1      1/4            1/4
+
+Sum: -1/4 + 1/4 = 0
+
+Monomial: x_13_0 * x_8_44 * x_9_68
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/4           -1/4
+P4                  1      1/4            1/4
+
+Sum: -1/4 + 1/4 = 0
+
+Monomial: x_13_0 * x_7_68 * x_8_44 * x_9_68
+
+Product   Coefficient   Weight   Contribution
+P3                  1      1/4            1/4
+P4                 -1      1/4           -1/4
+
+Sum: 1/4 - 1/4 = 0

@@ -1,27 +1,190 @@
 COEFFICIENT CHECK
-Columns are coefficients in the products P1, P2, ... (before weighting).
-Multiply each column by its coefficient c_k from the certificate.
-The last column is the exact weighted sum; every entry must be zero.
+Each block checks the coefficient of one monomial in the identity.
+Contribution = coefficient in Pk * weight ck.
+Only nonzero coefficients are listed; every omitted product has coefficient zero.
+All arithmetic is exact. Every displayed sum must be zero.
 
-Monomial | P1 | P2 | P3 | P4 | P5 | P6 | P7 | P8 | P9 | weighted sum
-x_0_72 | 0 | 1 | 0 | -1 | 0 | 0 | 0 | 0 | 0 | 0
-x_0_76 | 1 | 0 | -1 | 0 | 0 | 0 | 0 | 0 | 0 | 0
-x_18_76 | 0 | 0 | 0 | 0 | -1 | 1 | 0 | 0 | 0 | 0
-x_0_72*x_18_76 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | -1 | 0
-x_3_76 | -1 | 0 | 1 | 0 | 1 | 0 | -1 | 0 | 0 | 0
-x_0_72*x_3_76 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | -1 | 1 | 0
-x_0_72*x_3_76*x_5_12 | 0 | 0 | 0 | -1 | 0 | 0 | 0 | 1 | 0 | 0
-x_0_72*x_5_76 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | -1 | 0 | 0
-x_0_72*x_18_76*x_7_12 | 0 | 0 | 0 | 0 | -1 | 1 | 0 | 0 | 0 | 0
-x_0_76*x_18_76*x_7_12 | 0 | 0 | 0 | 0 | 1 | -1 | 0 | 0 | 0 | 0
-x_0_72*x_3_76*x_7_12 | 0 | -1 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0
-x_0_76*x_3_76*x_7_12 | 0 | 0 | 1 | 0 | -1 | 0 | 0 | 0 | 0 | 0
-x_3_76^2*x_7_12 | 0 | 0 | -1 | 0 | 0 | 0 | 1 | 0 | 0 | 0
-x_0_76*x_7_72 | 0 | -1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0
-x_18_76*x_7_72 | 0 | 0 | 0 | 0 | 1 | -1 | 0 | 0 | 0 | 0
-x_3_76*x_7_72 | 0 | 1 | -1 | 0 | -1 | 0 | 1 | 0 | 0 | 0
-x_0_72*x_18_76*x_8_12 | 0 | 0 | 0 | 0 | 1 | -1 | 0 | 0 | 0 | 0
-x_0_72*x_3_76*x_8_12 | 0 | 0 | 0 | 1 | -1 | 0 | 0 | 0 | 0 | 0
-x_0_76*x_18_76*x_7_72*x_8_12 | 0 | 0 | 0 | 0 | -1 | 1 | 0 | 0 | 0 | 0
-x_0_76*x_3_76*x_7_72*x_8_12 | 0 | 0 | -1 | 0 | 1 | 0 | 0 | 0 | 0 | 0
-x_3_76^2*x_7_72*x_8_12 | 0 | 0 | 1 | 0 | 0 | 0 | -1 | 0 | 0 | 0
+PRODUCTS AND WEIGHTS
+P1 = g1; c1 = 1/9
+P2 = g2; c2 = 1/9
+P3 = g1*g5; c3 = 1/9
+P4 = g3*g8; c4 = 1/9
+P5 = g4*g7; c5 = 1/9
+P6 = g4*g9; c6 = 1/9
+P7 = g5*g10; c7 = 1/9
+P8 = g6*g8; c8 = 1/9
+P9 = g7*g8; c9 = 1/9
+
+Monomials checked: 21
+
+Monomial: x_0_72
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/9            1/9
+P4                 -1      1/9           -1/9
+
+Sum: 1/9 - 1/9 = 0
+
+Monomial: x_0_76
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/9            1/9
+P3                 -1      1/9           -1/9
+
+Sum: 1/9 - 1/9 = 0
+
+Monomial: x_18_76
+
+Product   Coefficient   Weight   Contribution
+P5                 -1      1/9           -1/9
+P6                  1      1/9            1/9
+
+Sum: -1/9 + 1/9 = 0
+
+Monomial: x_0_72 * x_18_76
+
+Product   Coefficient   Weight   Contribution
+P8                  1      1/9            1/9
+P9                 -1      1/9           -1/9
+
+Sum: 1/9 - 1/9 = 0
+
+Monomial: x_3_76
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/9           -1/9
+P3                  1      1/9            1/9
+P5                  1      1/9            1/9
+P7                 -1      1/9           -1/9
+
+Sum: -1/9 + 1/9 + 1/9 - 1/9 = 0
+
+Monomial: x_0_72 * x_3_76
+
+Product   Coefficient   Weight   Contribution
+P8                 -1      1/9           -1/9
+P9                  1      1/9            1/9
+
+Sum: -1/9 + 1/9 = 0
+
+Monomial: x_0_72 * x_3_76 * x_5_12
+
+Product   Coefficient   Weight   Contribution
+P4                 -1      1/9           -1/9
+P8                  1      1/9            1/9
+
+Sum: -1/9 + 1/9 = 0
+
+Monomial: x_0_72 * x_5_76
+
+Product   Coefficient   Weight   Contribution
+P4                  1      1/9            1/9
+P8                 -1      1/9           -1/9
+
+Sum: 1/9 - 1/9 = 0
+
+Monomial: x_0_72 * x_18_76 * x_7_12
+
+Product   Coefficient   Weight   Contribution
+P5                 -1      1/9           -1/9
+P6                  1      1/9            1/9
+
+Sum: -1/9 + 1/9 = 0
+
+Monomial: x_0_76 * x_18_76 * x_7_12
+
+Product   Coefficient   Weight   Contribution
+P5                  1      1/9            1/9
+P6                 -1      1/9           -1/9
+
+Sum: 1/9 - 1/9 = 0
+
+Monomial: x_0_72 * x_3_76 * x_7_12
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/9           -1/9
+P5                  1      1/9            1/9
+
+Sum: -1/9 + 1/9 = 0
+
+Monomial: x_0_76 * x_3_76 * x_7_12
+
+Product   Coefficient   Weight   Contribution
+P3                  1      1/9            1/9
+P5                 -1      1/9           -1/9
+
+Sum: 1/9 - 1/9 = 0
+
+Monomial: x_3_76^2 * x_7_12
+
+Product   Coefficient   Weight   Contribution
+P3                 -1      1/9           -1/9
+P7                  1      1/9            1/9
+
+Sum: -1/9 + 1/9 = 0
+
+Monomial: x_0_76 * x_7_72
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/9           -1/9
+P3                  1      1/9            1/9
+
+Sum: -1/9 + 1/9 = 0
+
+Monomial: x_18_76 * x_7_72
+
+Product   Coefficient   Weight   Contribution
+P5                  1      1/9            1/9
+P6                 -1      1/9           -1/9
+
+Sum: 1/9 - 1/9 = 0
+
+Monomial: x_3_76 * x_7_72
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/9            1/9
+P3                 -1      1/9           -1/9
+P5                 -1      1/9           -1/9
+P7                  1      1/9            1/9
+
+Sum: 1/9 - 1/9 - 1/9 + 1/9 = 0
+
+Monomial: x_0_72 * x_18_76 * x_8_12
+
+Product   Coefficient   Weight   Contribution
+P5                  1      1/9            1/9
+P6                 -1      1/9           -1/9
+
+Sum: 1/9 - 1/9 = 0
+
+Monomial: x_0_72 * x_3_76 * x_8_12
+
+Product   Coefficient   Weight   Contribution
+P4                  1      1/9            1/9
+P5                 -1      1/9           -1/9
+
+Sum: 1/9 - 1/9 = 0
+
+Monomial: x_0_76 * x_18_76 * x_7_72 * x_8_12
+
+Product   Coefficient   Weight   Contribution
+P5                 -1      1/9           -1/9
+P6                  1      1/9            1/9
+
+Sum: -1/9 + 1/9 = 0
+
+Monomial: x_0_76 * x_3_76 * x_7_72 * x_8_12
+
+Product   Coefficient   Weight   Contribution
+P3                 -1      1/9           -1/9
+P5                  1      1/9            1/9
+
+Sum: -1/9 + 1/9 = 0
+
+Monomial: x_3_76^2 * x_7_72 * x_8_12
+
+Product   Coefficient   Weight   Contribution
+P3                  1      1/9            1/9
+P7                 -1      1/9           -1/9
+
+Sum: 1/9 - 1/9 = 0

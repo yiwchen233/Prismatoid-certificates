@@ -1,18 +1,109 @@
 COEFFICIENT CHECK
-Columns are coefficients in the products P1, P2, ... (before weighting).
-Multiply each column by its coefficient c_k from the certificate.
-The last column is the exact weighted sum; every entry must be zero.
+Each block checks the coefficient of one monomial in the identity.
+Contribution = coefficient in Pk * weight ck.
+Only nonzero coefficients are listed; every omitted product has coefficient zero.
+All arithmetic is exact. Every displayed sum must be zero.
 
-Monomial | P1 | P2 | P3 | P4 | weighted sum
-x_12_112*x_14_83 | 1 | 0 | -1 | 0 | 0
-x_10_112*x_12_112*x_14_83 | 1 | 0 | 0 | -1 | 0
-x_11_112*x_12_112*x_14_89 | 0 | -1 | 1 | 0 | 0
-x_11_83*x_12_112*x_14_89 | -1 | 0 | 1 | 0 | 0
-x_10_112*x_11_83*x_12_112*x_14_89 | -1 | 0 | 0 | 1 | 0
-x_11_112*x_12_83*x_14_89 | 1 | -1 | 0 | 0 | 0
-x_10_112*x_11_112*x_12_83*x_14_89 | 1 | 0 | 0 | -1 | 0
-x_11_112*x_12_112*x_14_83*x_1_89 | 0 | -1 | 1 | 0 | 0
-x_12_112*x_14_83*x_7_112 | -1 | 0 | 1 | 0 | 0
-x_11_83*x_12_112*x_14_89*x_7_112 | 1 | 0 | -1 | 0 | 0
-x_11_112*x_12_83*x_14_89*x_7_112 | -1 | 1 | 0 | 0 | 0
-x_11_112*x_12_112*x_14_83*x_7_89 | 0 | 1 | -1 | 0 | 0
+PRODUCTS AND WEIGHTS
+P1 = g1*g4; c1 = 1/4
+P2 = g2*g6; c2 = 1/4
+P3 = g3*g7; c3 = 1/4
+P4 = g4*g5; c4 = 1/4
+
+Monomials checked: 12
+
+Monomial: x_12_112 * x_14_83
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/4            1/4
+P3                 -1      1/4           -1/4
+
+Sum: 1/4 - 1/4 = 0
+
+Monomial: x_10_112 * x_12_112 * x_14_83
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/4            1/4
+P4                 -1      1/4           -1/4
+
+Sum: 1/4 - 1/4 = 0
+
+Monomial: x_11_112 * x_12_112 * x_14_89
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/4           -1/4
+P3                  1      1/4            1/4
+
+Sum: -1/4 + 1/4 = 0
+
+Monomial: x_11_83 * x_12_112 * x_14_89
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/4           -1/4
+P3                  1      1/4            1/4
+
+Sum: -1/4 + 1/4 = 0
+
+Monomial: x_10_112 * x_11_83 * x_12_112 * x_14_89
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/4           -1/4
+P4                  1      1/4            1/4
+
+Sum: -1/4 + 1/4 = 0
+
+Monomial: x_11_112 * x_12_83 * x_14_89
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/4            1/4
+P2                 -1      1/4           -1/4
+
+Sum: 1/4 - 1/4 = 0
+
+Monomial: x_10_112 * x_11_112 * x_12_83 * x_14_89
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/4            1/4
+P4                 -1      1/4           -1/4
+
+Sum: 1/4 - 1/4 = 0
+
+Monomial: x_11_112 * x_12_112 * x_14_83 * x_1_89
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/4           -1/4
+P3                  1      1/4            1/4
+
+Sum: -1/4 + 1/4 = 0
+
+Monomial: x_12_112 * x_14_83 * x_7_112
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/4           -1/4
+P3                  1      1/4            1/4
+
+Sum: -1/4 + 1/4 = 0
+
+Monomial: x_11_83 * x_12_112 * x_14_89 * x_7_112
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/4            1/4
+P3                 -1      1/4           -1/4
+
+Sum: 1/4 - 1/4 = 0
+
+Monomial: x_11_112 * x_12_83 * x_14_89 * x_7_112
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/4           -1/4
+P2                  1      1/4            1/4
+
+Sum: -1/4 + 1/4 = 0
+
+Monomial: x_11_112 * x_12_112 * x_14_83 * x_7_89
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/4            1/4
+P3                 -1      1/4           -1/4
+
+Sum: 1/4 - 1/4 = 0

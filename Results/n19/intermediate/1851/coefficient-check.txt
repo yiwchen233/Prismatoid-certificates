@@ -1,32 +1,221 @@
 COEFFICIENT CHECK
-Columns are coefficients in the products P1, P2, ... (before weighting).
-Multiply each column by its coefficient c_k from the certificate.
-The last column is the exact weighted sum; every entry must be zero.
+Each block checks the coefficient of one monomial in the identity.
+Contribution = coefficient in Pk * weight ck.
+Only nonzero coefficients are listed; every omitted product has coefficient zero.
+All arithmetic is exact. Every displayed sum must be zero.
 
-Monomial | P1 | P2 | P3 | P4 | weighted sum
-x_0_127*x_17_0*x_9_108 | 0 | 0 | -1 | 1 | 0
-x_0_108*x_10_127*x_17_0*x_9_108 | 0 | 0 | 1 | -1 | 0
-x_12_127*x_17_0*x_9_108 | 1 | 0 | -1 | 0 | 0
-x_0_108*x_12_127*x_17_0*x_9_108 | 0 | 1 | -1 | 0 | 0
-x_0_108*x_10_13*x_12_127*x_17_0*x_9_108 | 0 | -1 | 1 | 0 | 0
-x_0_127*x_17_108*x_9_108 | 0 | 1 | 0 | -1 | 0
-x_10_127*x_17_108*x_9_108 | 1 | 0 | 0 | -1 | 0
-x_0_127*x_10_13*x_17_108*x_9_108 | 0 | -1 | 0 | 1 | 0
-x_12_127*x_17_108*x_9_108 | -1 | 1 | 0 | 0 | 0
-x_10_13*x_12_127*x_17_108*x_9_108 | 1 | -1 | 0 | 0 | 0
-x_17_127*x_9_108 | -1 | 0 | 0 | 1 | 0
-x_0_108*x_17_127*x_9_108 | 0 | -1 | 0 | 1 | 0
-x_0_108*x_10_13*x_17_127*x_9_108 | 0 | 1 | 0 | -1 | 0
-x_0_127*x_17_13*x_9_108 | 0 | 0 | 1 | -1 | 0
-x_0_108*x_10_127*x_17_13*x_9_108 | 0 | 0 | -1 | 1 | 0
-x_12_127*x_17_13*x_9_108 | -1 | 0 | 1 | 0 | 0
-x_0_108*x_12_127*x_17_13*x_9_108 | 0 | -1 | 1 | 0 | 0
-x_0_108*x_10_13*x_12_127*x_17_13*x_9_108 | 0 | 1 | -1 | 0 | 0
-x_0_108*x_12_127*x_17_0*x_9_13 | -1 | 1 | 0 | 0 | 0
-x_0_127*x_17_108*x_9_13 | 0 | 1 | -1 | 0 | 0
-x_0_108*x_10_127*x_17_108*x_9_13 | -1 | 0 | 1 | 0 | 0
-x_12_127*x_17_108*x_9_13 | 0 | 1 | -1 | 0 | 0
-x_0_108*x_12_127*x_17_108*x_9_13 | 1 | 0 | -1 | 0 | 0
-x_0_108*x_10_13*x_12_127*x_17_108*x_9_13 | -1 | 0 | 1 | 0 | 0
-x_0_108*x_17_127*x_9_13 | 1 | -1 | 0 | 0 | 0
-x_0_108*x_12_127*x_17_13*x_9_13 | 1 | -1 | 0 | 0 | 0
+PRODUCTS AND WEIGHTS
+P1 = g1*g7; c1 = 1/4
+P2 = g2*g4; c2 = 1/4
+P3 = g3*g5; c3 = 1/4
+P4 = g6*g8; c4 = 1/4
+
+Monomials checked: 26
+
+Monomial: x_0_127 * x_17_0 * x_9_108
+
+Product   Coefficient   Weight   Contribution
+P3                 -1      1/4           -1/4
+P4                  1      1/4            1/4
+
+Sum: -1/4 + 1/4 = 0
+
+Monomial: x_0_108 * x_10_127 * x_17_0 * x_9_108
+
+Product   Coefficient   Weight   Contribution
+P3                  1      1/4            1/4
+P4                 -1      1/4           -1/4
+
+Sum: 1/4 - 1/4 = 0
+
+Monomial: x_12_127 * x_17_0 * x_9_108
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/4            1/4
+P3                 -1      1/4           -1/4
+
+Sum: 1/4 - 1/4 = 0
+
+Monomial: x_0_108 * x_12_127 * x_17_0 * x_9_108
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/4            1/4
+P3                 -1      1/4           -1/4
+
+Sum: 1/4 - 1/4 = 0
+
+Monomial: x_0_108 * x_10_13 * x_12_127 * x_17_0 * x_9_108
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/4           -1/4
+P3                  1      1/4            1/4
+
+Sum: -1/4 + 1/4 = 0
+
+Monomial: x_0_127 * x_17_108 * x_9_108
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/4            1/4
+P4                 -1      1/4           -1/4
+
+Sum: 1/4 - 1/4 = 0
+
+Monomial: x_10_127 * x_17_108 * x_9_108
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/4            1/4
+P4                 -1      1/4           -1/4
+
+Sum: 1/4 - 1/4 = 0
+
+Monomial: x_0_127 * x_10_13 * x_17_108 * x_9_108
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/4           -1/4
+P4                  1      1/4            1/4
+
+Sum: -1/4 + 1/4 = 0
+
+Monomial: x_12_127 * x_17_108 * x_9_108
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/4           -1/4
+P2                  1      1/4            1/4
+
+Sum: -1/4 + 1/4 = 0
+
+Monomial: x_10_13 * x_12_127 * x_17_108 * x_9_108
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/4            1/4
+P2                 -1      1/4           -1/4
+
+Sum: 1/4 - 1/4 = 0
+
+Monomial: x_17_127 * x_9_108
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/4           -1/4
+P4                  1      1/4            1/4
+
+Sum: -1/4 + 1/4 = 0
+
+Monomial: x_0_108 * x_17_127 * x_9_108
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/4           -1/4
+P4                  1      1/4            1/4
+
+Sum: -1/4 + 1/4 = 0
+
+Monomial: x_0_108 * x_10_13 * x_17_127 * x_9_108
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/4            1/4
+P4                 -1      1/4           -1/4
+
+Sum: 1/4 - 1/4 = 0
+
+Monomial: x_0_127 * x_17_13 * x_9_108
+
+Product   Coefficient   Weight   Contribution
+P3                  1      1/4            1/4
+P4                 -1      1/4           -1/4
+
+Sum: 1/4 - 1/4 = 0
+
+Monomial: x_0_108 * x_10_127 * x_17_13 * x_9_108
+
+Product   Coefficient   Weight   Contribution
+P3                 -1      1/4           -1/4
+P4                  1      1/4            1/4
+
+Sum: -1/4 + 1/4 = 0
+
+Monomial: x_12_127 * x_17_13 * x_9_108
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/4           -1/4
+P3                  1      1/4            1/4
+
+Sum: -1/4 + 1/4 = 0
+
+Monomial: x_0_108 * x_12_127 * x_17_13 * x_9_108
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/4           -1/4
+P3                  1      1/4            1/4
+
+Sum: -1/4 + 1/4 = 0
+
+Monomial: x_0_108 * x_10_13 * x_12_127 * x_17_13 * x_9_108
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/4            1/4
+P3                 -1      1/4           -1/4
+
+Sum: 1/4 - 1/4 = 0
+
+Monomial: x_0_108 * x_12_127 * x_17_0 * x_9_13
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/4           -1/4
+P2                  1      1/4            1/4
+
+Sum: -1/4 + 1/4 = 0
+
+Monomial: x_0_127 * x_17_108 * x_9_13
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/4            1/4
+P3                 -1      1/4           -1/4
+
+Sum: 1/4 - 1/4 = 0
+
+Monomial: x_0_108 * x_10_127 * x_17_108 * x_9_13
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/4           -1/4
+P3                  1      1/4            1/4
+
+Sum: -1/4 + 1/4 = 0
+
+Monomial: x_12_127 * x_17_108 * x_9_13
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/4            1/4
+P3                 -1      1/4           -1/4
+
+Sum: 1/4 - 1/4 = 0
+
+Monomial: x_0_108 * x_12_127 * x_17_108 * x_9_13
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/4            1/4
+P3                 -1      1/4           -1/4
+
+Sum: 1/4 - 1/4 = 0
+
+Monomial: x_0_108 * x_10_13 * x_12_127 * x_17_108 * x_9_13
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/4           -1/4
+P3                  1      1/4            1/4
+
+Sum: -1/4 + 1/4 = 0
+
+Monomial: x_0_108 * x_17_127 * x_9_13
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/4            1/4
+P2                 -1      1/4           -1/4
+
+Sum: 1/4 - 1/4 = 0
+
+Monomial: x_0_108 * x_12_127 * x_17_13 * x_9_13
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/4            1/4
+P2                 -1      1/4           -1/4
+
+Sum: 1/4 - 1/4 = 0

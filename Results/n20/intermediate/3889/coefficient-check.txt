@@ -1,114 +1,883 @@
 COEFFICIENT CHECK
-Columns are coefficients in the products P1, P2, ... (before weighting).
-Multiply each column by its coefficient c_k from the certificate.
-The last column is the exact weighted sum; every entry must be zero.
+Each block checks the coefficient of one monomial in the identity.
+Contribution = coefficient in Pk * weight ck.
+Only nonzero coefficients are listed; every omitted product has coefficient zero.
+All arithmetic is exact. Every displayed sum must be zero.
 
-Monomial | P1 | P2 | P3 | P4 | P5 | P6 | P7 | P8 | P9 | P10 | weighted sum
-x_16_0^2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | -1 | 0
-x_10_0*x_16_0*x_16_21 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | -1 | 1 | 0
-x_10_6*x_16_0*x_16_21 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | -1 | 0
-x_16_0*x_16_6 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | -2 | 2 | 0
-x_10_0*x_16_21*x_16_6 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | -1 | 0
-x_10_6*x_16_21*x_16_6 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | -1 | 1 | 0
-x_16_6^2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | -1 | 0
-x_16_0*x_16_21*x_3_6 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | -1 | 0
-x_10_0*x_16_21^2*x_3_6 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | -1 | 1 | 0
-x_10_6*x_16_21^2*x_3_6 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | -1 | 0
-x_16_21*x_16_6*x_3_6 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | -1 | 1 | 0
-x_10_0*x_16_0*x_6_21 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | -1 | 0
-x_10_6*x_16_0*x_6_21 | -1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0
-x_10_6*x_16_0^2*x_6_21 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | -1 | 0
-x_10_0*x_16_6*x_6_21 | -1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0
-x_10_6*x_16_6*x_6_21 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | -1 | 0
-x_10_0*x_16_0*x_16_6*x_6_21 | 0 | 0 | 0 | 0 | 0 | 0 | -1 | 0 | 0 | 1 | 0
-x_10_6*x_16_0*x_16_6*x_6_21 | 0 | 0 | 0 | 0 | 0 | 0 | -1 | 0 | 0 | 1 | 0
-x_10_0*x_16_6^2*x_6_21 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | -1 | 0
-x_16_0*x_3_6*x_6_21 | 1 | 0 | 0 | 0 | 0 | -1 | 0 | 0 | 0 | 0 | 0
-x_10_0*x_16_21*x_3_6*x_6_21 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | -1 | 0
-x_10_6*x_16_21*x_3_6*x_6_21 | 0 | 0 | 0 | 0 | 0 | -1 | 0 | 0 | 0 | 1 | 0
-x_10_6*x_16_0*x_16_21*x_3_6*x_6_21 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | -1 | 0
-x_16_6*x_3_6*x_6_21 | -1 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0
-x_10_0*x_16_21*x_16_6*x_3_6*x_6_21 | 0 | 0 | 0 | 0 | 0 | 0 | -1 | 0 | 0 | 1 | 0
-x_16_0*x_6_6 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | -1 | 0
-x_16_0^2*x_6_6 | 0 | 0 | 0 | 0 | 0 | 0 | -1 | 0 | 0 | 1 | 0
-x_10_0*x_16_21*x_6_6 | 1 | 0 | 0 | 0 | 0 | -1 | 0 | 0 | 0 | 0 | 0
-x_10_6*x_16_21*x_6_6 | -1 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0
-x_10_0*x_16_0*x_16_21*x_6_6 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | -1 | 0
-x_16_6*x_6_6 | 0 | 0 | 0 | 0 | 0 | -1 | 0 | 0 | 0 | 1 | 0
-x_16_0*x_16_6*x_6_6 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | -1 | 0
-x_10_0*x_16_21*x_16_6*x_6_6 | 0 | 0 | 0 | 0 | 0 | 0 | -1 | 0 | 0 | 1 | 0
-x_16_21*x_3_6*x_6_6 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | -1 | 0
-x_16_0*x_16_21*x_3_6*x_6_6 | 0 | 0 | 0 | 0 | 0 | 0 | -1 | 0 | 0 | 1 | 0
-x_10_0*x_16_21^2*x_3_6*x_6_6 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | -1 | 0
-x_16_0*x_9_0 | 0 | 0 | 1 | -1 | 0 | 0 | 0 | 0 | 0 | 0 | 0
-x_10_6*x_16_0*x_16_21*x_9_0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | -1 | 0 | 0 | 0
-x_16_6*x_9_0 | 0 | 0 | -1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0
-x_16_0*x_16_6*x_9_0 | 0 | 0 | 0 | 0 | 0 | 0 | -1 | 1 | 0 | 0 | 0
-x_10_6*x_16_21*x_16_6*x_9_0 | 0 | 0 | 0 | 0 | 0 | 0 | -1 | 1 | 0 | 0 | 0
-x_16_6^2*x_9_0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | -1 | 0 | 0 | 0
-x_16_21*x_3_6*x_9_0 | 0 | 0 | 1 | -1 | 0 | 0 | 0 | 0 | 0 | 0 | 0
-x_10_6*x_16_21^2*x_3_6*x_9_0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | -1 | 0 | 0 | 0
-x_16_21*x_16_6*x_3_6*x_9_0 | 0 | 0 | 0 | 0 | 0 | 0 | -1 | 1 | 0 | 0 | 0
-x_10_6*x_16_0*x_6_21*x_9_0 | 1 | 0 | 0 | 0 | 0 | 0 | -1 | 0 | 0 | 0 | 0
-x_10_6*x_16_6*x_6_21*x_9_0 | -1 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0
-x_16_0*x_3_160*x_6_21*x_9_0 | 1 | 0 | -1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0
-x_16_6*x_3_160*x_6_21*x_9_0 | -1 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0
-x_3_6*x_6_21*x_9_0 | 0 | 1 | -1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0
-x_16_0*x_3_6*x_6_21*x_9_0 | -1 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0
-x_10_6*x_16_21*x_3_6*x_6_21*x_9_0 | 0 | 0 | 0 | 0 | 1 | 0 | -1 | 0 | 0 | 0 | 0
-x_16_6*x_3_6*x_6_21*x_9_0 | 1 | 0 | 0 | 0 | -1 | 0 | 0 | 0 | 0 | 0 | 0
-x_6_6*x_9_0 | 0 | -1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0
-x_16_0*x_6_6*x_9_0 | 0 | 0 | -1 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0
-x_10_6*x_16_21*x_6_6*x_9_0 | 1 | 0 | 0 | 0 | -1 | 0 | 0 | 0 | 0 | 0 | 0
-x_16_6*x_6_6*x_9_0 | 0 | 0 | 0 | 0 | 1 | 0 | -1 | 0 | 0 | 0 | 0
-x_16_21*x_3_160*x_6_6*x_9_0 | 1 | 0 | -1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0
-x_16_21*x_3_6*x_6_6*x_9_0 | -1 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0
-x_10_0*x_16_0*x_9_21 | 0 | 0 | -1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0
-x_10_6*x_16_0*x_9_21 | 0 | 0 | 1 | -1 | 0 | 0 | 0 | 0 | 0 | 0 | 0
-x_10_6*x_16_0^2*x_9_21 | 0 | 0 | 0 | 0 | 0 | 0 | -1 | 1 | 0 | 0 | 0
-x_10_0*x_16_6*x_9_21 | 0 | 0 | 1 | -1 | 0 | 0 | 0 | 0 | 0 | 0 | 0
-x_10_6*x_16_6*x_9_21 | 0 | 0 | -1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0
-x_10_0*x_16_0*x_16_6*x_9_21 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | -1 | 0 | 0 | 0
-x_10_6*x_16_0*x_16_6*x_9_21 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | -1 | 0 | 0 | 0
-x_10_0*x_16_6^2*x_9_21 | 0 | 0 | 0 | 0 | 0 | 0 | -1 | 1 | 0 | 0 | 0
-x_10_0*x_16_21*x_3_6*x_9_21 | 0 | 0 | -1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0
-x_10_6*x_16_21*x_3_6*x_9_21 | 0 | 0 | 1 | -1 | 0 | 0 | 0 | 0 | 0 | 0 | 0
-x_10_6*x_16_0*x_16_21*x_3_6*x_9_21 | 0 | 0 | 0 | 0 | 0 | 0 | -1 | 1 | 0 | 0 | 0
-x_10_0*x_16_21*x_16_6*x_3_6*x_9_21 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | -1 | 0 | 0 | 0
-x_10_0*x_16_0*x_3_160*x_6_21*x_9_21 | -1 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0
-x_10_6*x_16_0*x_3_160*x_6_21*x_9_21 | 1 | 0 | -1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0
-x_10_0*x_16_6*x_3_160*x_6_21*x_9_21 | 1 | 0 | -1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0
-x_10_6*x_16_6*x_3_160*x_6_21*x_9_21 | -1 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0
-x_10_0*x_3_6*x_6_21*x_9_21 | 0 | -1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0
-x_10_6*x_3_6*x_6_21*x_9_21 | 0 | 1 | -1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0
-x_10_0*x_16_0*x_3_6*x_6_21*x_9_21 | 1 | 0 | -1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0
-x_10_6*x_16_0*x_3_6*x_6_21*x_9_21 | 0 | 0 | 1 | 0 | -1 | 0 | 0 | 0 | 0 | 0 | 0
-x_10_0*x_16_6*x_3_6*x_6_21*x_9_21 | -1 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0
-x_10_0*x_6_6*x_9_21 | 0 | 1 | -1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0
-x_10_6*x_6_6*x_9_21 | 0 | -1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0
-x_10_0*x_16_0*x_6_6*x_9_21 | 0 | 0 | 1 | 0 | 0 | 0 | -1 | 0 | 0 | 0 | 0
-x_10_6*x_16_0*x_6_6*x_9_21 | 0 | 0 | -1 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0
-x_10_0*x_16_6*x_6_6*x_9_21 | 0 | 0 | 0 | 0 | -1 | 0 | 1 | 0 | 0 | 0 | 0
-x_10_0*x_16_21*x_3_160*x_6_6*x_9_21 | -1 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0
-x_10_6*x_16_21*x_3_160*x_6_6*x_9_21 | 1 | 0 | -1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0
-x_10_0*x_16_21*x_3_6*x_6_6*x_9_21 | 1 | 0 | 0 | 0 | 0 | 0 | -1 | 0 | 0 | 0 | 0
-x_16_0*x_9_6 | 0 | 0 | -1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0
-x_16_0^2*x_9_6 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | -1 | 0 | 0 | 0
-x_10_0*x_16_0*x_16_21*x_9_6 | 0 | 0 | 0 | 0 | 0 | 0 | -1 | 1 | 0 | 0 | 0
-x_16_6*x_9_6 | 0 | 0 | 1 | -1 | 0 | 0 | 0 | 0 | 0 | 0 | 0
-x_16_0*x_16_6*x_9_6 | 0 | 0 | 0 | 0 | 0 | 0 | -1 | 1 | 0 | 0 | 0
-x_10_0*x_16_21*x_16_6*x_9_6 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | -1 | 0 | 0 | 0
-x_16_21*x_3_6*x_9_6 | 0 | 0 | -1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0
-x_16_0*x_16_21*x_3_6*x_9_6 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | -1 | 0 | 0 | 0
-x_10_0*x_16_21^2*x_3_6*x_9_6 | 0 | 0 | 0 | 0 | 0 | 0 | -1 | 1 | 0 | 0 | 0
-x_10_0*x_16_0*x_6_21*x_9_6 | -1 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0
-x_10_0*x_16_6*x_6_21*x_9_6 | 1 | 0 | 0 | 0 | 0 | 0 | -1 | 0 | 0 | 0 | 0
-x_16_0*x_3_160*x_6_21*x_9_6 | -1 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0
-x_16_6*x_3_160*x_6_21*x_9_6 | 1 | 0 | -1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0
-x_3_6*x_6_21*x_9_6 | 0 | -1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0
-x_16_0*x_3_6*x_6_21*x_9_6 | 0 | 0 | -1 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0
-x_10_0*x_16_21*x_3_6*x_6_21*x_9_6 | 0 | 0 | 0 | 0 | -1 | 0 | 1 | 0 | 0 | 0 | 0
-x_6_6*x_9_6 | 0 | 1 | -1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0
-x_16_0*x_6_6*x_9_6 | 0 | 0 | 1 | 0 | -1 | 0 | 0 | 0 | 0 | 0 | 0
-x_10_0*x_16_21*x_6_6*x_9_6 | -1 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0
-x_16_21*x_3_160*x_6_6*x_9_6 | -1 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0
+PRODUCTS AND WEIGHTS
+P1 = g1*g8; c1 = 1/10
+P2 = g2*g3; c2 = 1/10
+P3 = g2*g4; c3 = 1/10
+P4 = g2*g7; c4 = 1/10
+P5 = g3*g6; c5 = 1/10
+P6 = g3*g9; c6 = 1/10
+P7 = g5*g7; c7 = 1/10
+P8 = g6*g7; c8 = 1/10
+P9 = g7*g9; c9 = 1/10
+P10 = g7*g10; c10 = 1/10
+
+Monomials checked: 108
+
+Monomial: x_16_0^2
+
+Product   Coefficient   Weight   Contribution
+P9                  1     1/10           1/10
+P10                -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_10_0 * x_16_0 * x_16_21
+
+Product   Coefficient   Weight   Contribution
+P9                 -1     1/10          -1/10
+P10                 1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_10_6 * x_16_0 * x_16_21
+
+Product   Coefficient   Weight   Contribution
+P9                  1     1/10           1/10
+P10                -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_16_0 * x_16_6
+
+Product   Coefficient   Weight   Contribution
+P9                 -2     1/10           -1/5
+P10                 2     1/10            1/5
+
+Sum: -1/5 + 1/5 = 0
+
+Monomial: x_10_0 * x_16_21 * x_16_6
+
+Product   Coefficient   Weight   Contribution
+P9                  1     1/10           1/10
+P10                -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_10_6 * x_16_21 * x_16_6
+
+Product   Coefficient   Weight   Contribution
+P9                 -1     1/10          -1/10
+P10                 1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_16_6^2
+
+Product   Coefficient   Weight   Contribution
+P9                  1     1/10           1/10
+P10                -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_16_0 * x_16_21 * x_3_6
+
+Product   Coefficient   Weight   Contribution
+P9                  1     1/10           1/10
+P10                -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_10_0 * x_16_21^2 * x_3_6
+
+Product   Coefficient   Weight   Contribution
+P9                 -1     1/10          -1/10
+P10                 1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_10_6 * x_16_21^2 * x_3_6
+
+Product   Coefficient   Weight   Contribution
+P9                  1     1/10           1/10
+P10                -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_16_21 * x_16_6 * x_3_6
+
+Product   Coefficient   Weight   Contribution
+P9                 -1     1/10          -1/10
+P10                 1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_10_0 * x_16_0 * x_6_21
+
+Product   Coefficient   Weight   Contribution
+P1                  1     1/10           1/10
+P10                -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_10_6 * x_16_0 * x_6_21
+
+Product   Coefficient   Weight   Contribution
+P1                 -1     1/10          -1/10
+P10                 1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_10_6 * x_16_0^2 * x_6_21
+
+Product   Coefficient   Weight   Contribution
+P7                  1     1/10           1/10
+P10                -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_10_0 * x_16_6 * x_6_21
+
+Product   Coefficient   Weight   Contribution
+P1                 -1     1/10          -1/10
+P10                 1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_10_6 * x_16_6 * x_6_21
+
+Product   Coefficient   Weight   Contribution
+P1                  1     1/10           1/10
+P10                -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_10_0 * x_16_0 * x_16_6 * x_6_21
+
+Product   Coefficient   Weight   Contribution
+P7                 -1     1/10          -1/10
+P10                 1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_10_6 * x_16_0 * x_16_6 * x_6_21
+
+Product   Coefficient   Weight   Contribution
+P7                 -1     1/10          -1/10
+P10                 1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_10_0 * x_16_6^2 * x_6_21
+
+Product   Coefficient   Weight   Contribution
+P7                  1     1/10           1/10
+P10                -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_16_0 * x_3_6 * x_6_21
+
+Product   Coefficient   Weight   Contribution
+P1                  1     1/10           1/10
+P6                 -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_10_0 * x_16_21 * x_3_6 * x_6_21
+
+Product   Coefficient   Weight   Contribution
+P6                  1     1/10           1/10
+P10                -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_10_6 * x_16_21 * x_3_6 * x_6_21
+
+Product   Coefficient   Weight   Contribution
+P6                 -1     1/10          -1/10
+P10                 1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_10_6 * x_16_0 * x_16_21 * x_3_6 * x_6_21
+
+Product   Coefficient   Weight   Contribution
+P7                  1     1/10           1/10
+P10                -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_16_6 * x_3_6 * x_6_21
+
+Product   Coefficient   Weight   Contribution
+P1                 -1     1/10          -1/10
+P6                  1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_10_0 * x_16_21 * x_16_6 * x_3_6 * x_6_21
+
+Product   Coefficient   Weight   Contribution
+P7                 -1     1/10          -1/10
+P10                 1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_16_0 * x_6_6
+
+Product   Coefficient   Weight   Contribution
+P6                  1     1/10           1/10
+P10                -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_16_0^2 * x_6_6
+
+Product   Coefficient   Weight   Contribution
+P7                 -1     1/10          -1/10
+P10                 1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_10_0 * x_16_21 * x_6_6
+
+Product   Coefficient   Weight   Contribution
+P1                  1     1/10           1/10
+P6                 -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_10_6 * x_16_21 * x_6_6
+
+Product   Coefficient   Weight   Contribution
+P1                 -1     1/10          -1/10
+P6                  1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_10_0 * x_16_0 * x_16_21 * x_6_6
+
+Product   Coefficient   Weight   Contribution
+P7                  1     1/10           1/10
+P10                -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_16_6 * x_6_6
+
+Product   Coefficient   Weight   Contribution
+P6                 -1     1/10          -1/10
+P10                 1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_16_0 * x_16_6 * x_6_6
+
+Product   Coefficient   Weight   Contribution
+P7                  1     1/10           1/10
+P10                -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_10_0 * x_16_21 * x_16_6 * x_6_6
+
+Product   Coefficient   Weight   Contribution
+P7                 -1     1/10          -1/10
+P10                 1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_16_21 * x_3_6 * x_6_6
+
+Product   Coefficient   Weight   Contribution
+P1                  1     1/10           1/10
+P10                -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_16_0 * x_16_21 * x_3_6 * x_6_6
+
+Product   Coefficient   Weight   Contribution
+P7                 -1     1/10          -1/10
+P10                 1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_10_0 * x_16_21^2 * x_3_6 * x_6_6
+
+Product   Coefficient   Weight   Contribution
+P7                  1     1/10           1/10
+P10                -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_16_0 * x_9_0
+
+Product   Coefficient   Weight   Contribution
+P3                  1     1/10           1/10
+P4                 -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_10_6 * x_16_0 * x_16_21 * x_9_0
+
+Product   Coefficient   Weight   Contribution
+P7                  1     1/10           1/10
+P8                 -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_16_6 * x_9_0
+
+Product   Coefficient   Weight   Contribution
+P3                 -1     1/10          -1/10
+P4                  1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_16_0 * x_16_6 * x_9_0
+
+Product   Coefficient   Weight   Contribution
+P7                 -1     1/10          -1/10
+P8                  1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_10_6 * x_16_21 * x_16_6 * x_9_0
+
+Product   Coefficient   Weight   Contribution
+P7                 -1     1/10          -1/10
+P8                  1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_16_6^2 * x_9_0
+
+Product   Coefficient   Weight   Contribution
+P7                  1     1/10           1/10
+P8                 -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_16_21 * x_3_6 * x_9_0
+
+Product   Coefficient   Weight   Contribution
+P3                  1     1/10           1/10
+P4                 -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_10_6 * x_16_21^2 * x_3_6 * x_9_0
+
+Product   Coefficient   Weight   Contribution
+P7                  1     1/10           1/10
+P8                 -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_16_21 * x_16_6 * x_3_6 * x_9_0
+
+Product   Coefficient   Weight   Contribution
+P7                 -1     1/10          -1/10
+P8                  1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_10_6 * x_16_0 * x_6_21 * x_9_0
+
+Product   Coefficient   Weight   Contribution
+P1                  1     1/10           1/10
+P7                 -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_10_6 * x_16_6 * x_6_21 * x_9_0
+
+Product   Coefficient   Weight   Contribution
+P1                 -1     1/10          -1/10
+P7                  1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_16_0 * x_3_160 * x_6_21 * x_9_0
+
+Product   Coefficient   Weight   Contribution
+P1                  1     1/10           1/10
+P3                 -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_16_6 * x_3_160 * x_6_21 * x_9_0
+
+Product   Coefficient   Weight   Contribution
+P1                 -1     1/10          -1/10
+P3                  1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_3_6 * x_6_21 * x_9_0
+
+Product   Coefficient   Weight   Contribution
+P2                  1     1/10           1/10
+P3                 -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_16_0 * x_3_6 * x_6_21 * x_9_0
+
+Product   Coefficient   Weight   Contribution
+P1                 -1     1/10          -1/10
+P3                  1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_10_6 * x_16_21 * x_3_6 * x_6_21 * x_9_0
+
+Product   Coefficient   Weight   Contribution
+P5                  1     1/10           1/10
+P7                 -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_16_6 * x_3_6 * x_6_21 * x_9_0
+
+Product   Coefficient   Weight   Contribution
+P1                  1     1/10           1/10
+P5                 -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_6_6 * x_9_0
+
+Product   Coefficient   Weight   Contribution
+P2                 -1     1/10          -1/10
+P3                  1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_16_0 * x_6_6 * x_9_0
+
+Product   Coefficient   Weight   Contribution
+P3                 -1     1/10          -1/10
+P7                  1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_10_6 * x_16_21 * x_6_6 * x_9_0
+
+Product   Coefficient   Weight   Contribution
+P1                  1     1/10           1/10
+P5                 -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_16_6 * x_6_6 * x_9_0
+
+Product   Coefficient   Weight   Contribution
+P5                  1     1/10           1/10
+P7                 -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_16_21 * x_3_160 * x_6_6 * x_9_0
+
+Product   Coefficient   Weight   Contribution
+P1                  1     1/10           1/10
+P3                 -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_16_21 * x_3_6 * x_6_6 * x_9_0
+
+Product   Coefficient   Weight   Contribution
+P1                 -1     1/10          -1/10
+P7                  1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_10_0 * x_16_0 * x_9_21
+
+Product   Coefficient   Weight   Contribution
+P3                 -1     1/10          -1/10
+P4                  1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_10_6 * x_16_0 * x_9_21
+
+Product   Coefficient   Weight   Contribution
+P3                  1     1/10           1/10
+P4                 -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_10_6 * x_16_0^2 * x_9_21
+
+Product   Coefficient   Weight   Contribution
+P7                 -1     1/10          -1/10
+P8                  1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_10_0 * x_16_6 * x_9_21
+
+Product   Coefficient   Weight   Contribution
+P3                  1     1/10           1/10
+P4                 -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_10_6 * x_16_6 * x_9_21
+
+Product   Coefficient   Weight   Contribution
+P3                 -1     1/10          -1/10
+P4                  1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_10_0 * x_16_0 * x_16_6 * x_9_21
+
+Product   Coefficient   Weight   Contribution
+P7                  1     1/10           1/10
+P8                 -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_10_6 * x_16_0 * x_16_6 * x_9_21
+
+Product   Coefficient   Weight   Contribution
+P7                  1     1/10           1/10
+P8                 -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_10_0 * x_16_6^2 * x_9_21
+
+Product   Coefficient   Weight   Contribution
+P7                 -1     1/10          -1/10
+P8                  1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_10_0 * x_16_21 * x_3_6 * x_9_21
+
+Product   Coefficient   Weight   Contribution
+P3                 -1     1/10          -1/10
+P4                  1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_10_6 * x_16_21 * x_3_6 * x_9_21
+
+Product   Coefficient   Weight   Contribution
+P3                  1     1/10           1/10
+P4                 -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_10_6 * x_16_0 * x_16_21 * x_3_6 * x_9_21
+
+Product   Coefficient   Weight   Contribution
+P7                 -1     1/10          -1/10
+P8                  1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_10_0 * x_16_21 * x_16_6 * x_3_6 * x_9_21
+
+Product   Coefficient   Weight   Contribution
+P7                  1     1/10           1/10
+P8                 -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_10_0 * x_16_0 * x_3_160 * x_6_21 * x_9_21
+
+Product   Coefficient   Weight   Contribution
+P1                 -1     1/10          -1/10
+P3                  1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_10_6 * x_16_0 * x_3_160 * x_6_21 * x_9_21
+
+Product   Coefficient   Weight   Contribution
+P1                  1     1/10           1/10
+P3                 -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_10_0 * x_16_6 * x_3_160 * x_6_21 * x_9_21
+
+Product   Coefficient   Weight   Contribution
+P1                  1     1/10           1/10
+P3                 -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_10_6 * x_16_6 * x_3_160 * x_6_21 * x_9_21
+
+Product   Coefficient   Weight   Contribution
+P1                 -1     1/10          -1/10
+P3                  1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_10_0 * x_3_6 * x_6_21 * x_9_21
+
+Product   Coefficient   Weight   Contribution
+P2                 -1     1/10          -1/10
+P3                  1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_10_6 * x_3_6 * x_6_21 * x_9_21
+
+Product   Coefficient   Weight   Contribution
+P2                  1     1/10           1/10
+P3                 -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_10_0 * x_16_0 * x_3_6 * x_6_21 * x_9_21
+
+Product   Coefficient   Weight   Contribution
+P1                  1     1/10           1/10
+P3                 -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_10_6 * x_16_0 * x_3_6 * x_6_21 * x_9_21
+
+Product   Coefficient   Weight   Contribution
+P3                  1     1/10           1/10
+P5                 -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_10_0 * x_16_6 * x_3_6 * x_6_21 * x_9_21
+
+Product   Coefficient   Weight   Contribution
+P1                 -1     1/10          -1/10
+P5                  1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_10_0 * x_6_6 * x_9_21
+
+Product   Coefficient   Weight   Contribution
+P2                  1     1/10           1/10
+P3                 -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_10_6 * x_6_6 * x_9_21
+
+Product   Coefficient   Weight   Contribution
+P2                 -1     1/10          -1/10
+P3                  1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_10_0 * x_16_0 * x_6_6 * x_9_21
+
+Product   Coefficient   Weight   Contribution
+P3                  1     1/10           1/10
+P7                 -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_10_6 * x_16_0 * x_6_6 * x_9_21
+
+Product   Coefficient   Weight   Contribution
+P3                 -1     1/10          -1/10
+P5                  1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_10_0 * x_16_6 * x_6_6 * x_9_21
+
+Product   Coefficient   Weight   Contribution
+P5                 -1     1/10          -1/10
+P7                  1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_10_0 * x_16_21 * x_3_160 * x_6_6 * x_9_21
+
+Product   Coefficient   Weight   Contribution
+P1                 -1     1/10          -1/10
+P3                  1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_10_6 * x_16_21 * x_3_160 * x_6_6 * x_9_21
+
+Product   Coefficient   Weight   Contribution
+P1                  1     1/10           1/10
+P3                 -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_10_0 * x_16_21 * x_3_6 * x_6_6 * x_9_21
+
+Product   Coefficient   Weight   Contribution
+P1                  1     1/10           1/10
+P7                 -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_16_0 * x_9_6
+
+Product   Coefficient   Weight   Contribution
+P3                 -1     1/10          -1/10
+P4                  1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_16_0^2 * x_9_6
+
+Product   Coefficient   Weight   Contribution
+P7                  1     1/10           1/10
+P8                 -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_10_0 * x_16_0 * x_16_21 * x_9_6
+
+Product   Coefficient   Weight   Contribution
+P7                 -1     1/10          -1/10
+P8                  1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_16_6 * x_9_6
+
+Product   Coefficient   Weight   Contribution
+P3                  1     1/10           1/10
+P4                 -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_16_0 * x_16_6 * x_9_6
+
+Product   Coefficient   Weight   Contribution
+P7                 -1     1/10          -1/10
+P8                  1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_10_0 * x_16_21 * x_16_6 * x_9_6
+
+Product   Coefficient   Weight   Contribution
+P7                  1     1/10           1/10
+P8                 -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_16_21 * x_3_6 * x_9_6
+
+Product   Coefficient   Weight   Contribution
+P3                 -1     1/10          -1/10
+P4                  1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_16_0 * x_16_21 * x_3_6 * x_9_6
+
+Product   Coefficient   Weight   Contribution
+P7                  1     1/10           1/10
+P8                 -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_10_0 * x_16_21^2 * x_3_6 * x_9_6
+
+Product   Coefficient   Weight   Contribution
+P7                 -1     1/10          -1/10
+P8                  1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_10_0 * x_16_0 * x_6_21 * x_9_6
+
+Product   Coefficient   Weight   Contribution
+P1                 -1     1/10          -1/10
+P7                  1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_10_0 * x_16_6 * x_6_21 * x_9_6
+
+Product   Coefficient   Weight   Contribution
+P1                  1     1/10           1/10
+P7                 -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_16_0 * x_3_160 * x_6_21 * x_9_6
+
+Product   Coefficient   Weight   Contribution
+P1                 -1     1/10          -1/10
+P3                  1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_16_6 * x_3_160 * x_6_21 * x_9_6
+
+Product   Coefficient   Weight   Contribution
+P1                  1     1/10           1/10
+P3                 -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_3_6 * x_6_21 * x_9_6
+
+Product   Coefficient   Weight   Contribution
+P2                 -1     1/10          -1/10
+P3                  1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_16_0 * x_3_6 * x_6_21 * x_9_6
+
+Product   Coefficient   Weight   Contribution
+P3                 -1     1/10          -1/10
+P5                  1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_10_0 * x_16_21 * x_3_6 * x_6_21 * x_9_6
+
+Product   Coefficient   Weight   Contribution
+P5                 -1     1/10          -1/10
+P7                  1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_6_6 * x_9_6
+
+Product   Coefficient   Weight   Contribution
+P2                  1     1/10           1/10
+P3                 -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_16_0 * x_6_6 * x_9_6
+
+Product   Coefficient   Weight   Contribution
+P3                  1     1/10           1/10
+P5                 -1     1/10          -1/10
+
+Sum: 1/10 - 1/10 = 0
+
+Monomial: x_10_0 * x_16_21 * x_6_6 * x_9_6
+
+Product   Coefficient   Weight   Contribution
+P1                 -1     1/10          -1/10
+P5                  1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0
+
+Monomial: x_16_21 * x_3_160 * x_6_6 * x_9_6
+
+Product   Coefficient   Weight   Contribution
+P1                 -1     1/10          -1/10
+P3                  1     1/10           1/10
+
+Sum: -1/10 + 1/10 = 0

@@ -437,8 +437,11 @@ B168 = 3 9 11 15 20
 B169 = 3 8 13 15 20
 B170 = 3 9 13 15 20
 
-[Reduced rank pivots]
-In order, remove each pivot row/column; its remaining row has one nonzero.
+[Why R has rank 6]
+Select the six listed rows and columns of R, ordering both by the pairs below.
+Each pair identifies a diagonal entry of this selected 6-by-6 submatrix.
+Check that its diagonal entries are nonzero and all entries above the diagonal are zero.
+This lower-triangular submatrix has nonzero determinant, so R has rank 6.
 v7, F1
 v1, F137
 v0, F2
@@ -446,9 +449,14 @@ v2, F56
 v3, F5
 v8, F0
 
-[Facet basis rank pivots]
-For each basis, rows are facets and columns are its vertices. Use the
-nonincidence pattern (entry 1 iff vertex is not in facet), removing pivots in order.
+[Why the chosen facet vertices are affinely independent]
+For Fj, each listed pair (Fk, vi) selects facet row Fk and vertex column vi from Bj.
+Order the five selected rows and columns by these pairs to form a 5-by-5 submatrix.
+Mark 0 when the vertex belongs to the facet, and * otherwise.
+A * stands for an unknown positive slack entry in a hypothetical realization.
+Check that every diagonal entry is * and all entries above the diagonal are zero.
+This lower-triangular submatrix has nonzero determinant, proving that the five
+chosen vertices are affinely independent under a hypothetical realization.
 F0: F3, v3; F2, v0; F4, v1; F5, v4; F1, v2
 F1: F72, v8; F58, v13; F6, v16; F2, v10; F0, v9
 F2: F0, v9; F3, v7; F4, v1; F5, v4; F1, v2

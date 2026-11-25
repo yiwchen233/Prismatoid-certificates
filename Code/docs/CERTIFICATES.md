@@ -73,7 +73,7 @@ are removed before imposing the generator degree bound. For an unsimplified
 certificate the source divisors are 1; the normalization line records that
 choice. Orientation checks still use normalized determinants in either case.
 
-## Orientation and scaling checks
+## Orientation checks (orientations.txt)
 
 In `orientations.txt`, put
 
@@ -82,31 +82,41 @@ T(i,j)=s_jD(i,j)/(a_{ij}m_{ij}),
 $$
 
 where `a_ij` is the gcd of the absolute nonzero determinant coefficients and
-`m_ij` is their common monomial factor. Both are positive. The file supplies
-`s_j` and a row i for each justified column.
+`m_ij` is their common monomial factor. Both are positive. For each listed
+facet, the file supplies `s_j` and a **test vertex vi**: row i of R
+used to establish the column's sign. It can differ from a generator's row.
 
-- `positive monomial` means this T(i,j) has a single monomial with positive
-  coefficient, fixing the column sign.
-- `equal T(r,k)` means the exact polynomial equality T(i,j)=T(r,k). Check
-  this equality, then follow the parent column k to its anchor. File order
-  need not follow dependency order. No cycle is permitted.
+- `T(i,j) is a positive monomial` means it has one monomial with positive
+  coefficient, establishing the column sign directly.
+- `T(i,j) = T(r,k)` establishes the sign by exact equality with an entry in
+  column F_k, whose sign appears earlier in the file. Vertex v_r need not be
+  F_k's own test vertex.
 
-This gives the sign of an entire facet column under the hypothetical
-realization. A generator's positive divisor preserves its sign. All determinant
-incidences i in F_j must vanish; their verification includes the extra vertices
-of the nonsimplicial bases, not just the selected five basis vertices.
+Under a hypothetical realization, the sign at one nonincident vertex fixes
+the entire facet column's sign. Positive divisors preserve that sign.
 
-For the scaling normalization, form the bipartite graph with reduced row and
-column vertices and edges at unit entries of R. It must be a forest; positive
-row/column scalings can set precisely those edges to 1. Compare every zero in R
-with the listed facet incidences.
+## Geometry checks (geometry.txt)
 
-The reduced-rank pivots are pairs `(v_i,F_j)` using full facet labels. At each
-step the pivot row has only that nonzero entry among remaining columns. Remove
-the row and column and continue; the six pivots certify a nonzero triangular
-minor. The facet-basis pivots use the analogous nonincidence matrix with facets
-as rows and that facet's five basis vertices as columns. The printed labels
-identify the corresponding facets and vertices.
+Compare R's zeros with `[Facets]`. Also check D(i,j)=0 whenever i belongs to
+F_j, including vertices outside the chosen five-element basis of a nonsimplicial
+base. Use the matrix and ordered bases in `geometry.txt` for these determinants.
+
+For scaling, form the bipartite graph with R's rows and columns as nodes and
+an edge at each entry set to 1. It must have no cycles; then positive row/column
+scalings can set these entries to 1 without additional constraints.
+
+`[Why R has rank 6]` lists six `(v_i, F_j)` pairs. Select these rows and
+columns of R, ordering both by the listed pairs. Each pair identifies a
+diagonal entry. Check that the diagonal entries are nonzero and all entries
+above the diagonal are zero. This lower-triangular 6-by-6 submatrix has
+nonzero determinant, proving rank 6.
+
+`[Why the chosen facet vertices are affinely independent]` lists five
+`(F_k, v_i)` pairs for each B_j. Select those facet rows and vertex columns,
+ordering both by the pairs. Mark 0 for an incidence and `*` for an unknown
+positive slack entry. Check for `*` on the diagonal and zeros above it. The
+selected lower-triangular 5-by-5 submatrix has nonzero determinant, proving
+affine independence under a hypothetical realization.
 
 ## Products, weights, and the coefficient matrix
 
@@ -116,13 +126,15 @@ these generators, with repetitions allowed. Its `c_k` is a positive rational
 number. The normalization is sum(c_k)=1; multiplying the entire identity by a
 common positive denominator yields an equivalent integral-weight certificate.
 
-`coefficient-check.txt` is the **certificate-support coefficient matrix**.
-Its columns are the displayed products P_k; its rows are ordinary monomials.
-If A[m,k] is the printed entry, it is the integer coefficient of monomial m in
-the expansion of P_k. The final column prints sum_k A[m,k]*c_k. Thus checking
-the table is checking A*c=0, the coefficient equations from (3) restricted to
-the nonzero certificate weights. Together with the source polynomials, this
-table gives every coefficient needed to verify the displayed identity.
+`coefficient-check.txt` presents the coefficient matrix as **one block per
+monomial**, with product definitions and weights at the top. Each block lists
+the nonzero coefficients, their weights, and weighted contributions; omitted
+products have coefficient zero. Its `Sum` line must equal zero.
+
+If A[m,k] is the coefficient of monomial m in P_k, each block checks
+sum_k A[m,k]*c_k=0. These are the coefficient equations A*c=0 from (3),
+restricted to the displayed products. All coefficients needed to verify the
+identity are supplied.
 
 ## Example: 1039
 
@@ -135,11 +147,11 @@ $$
 \tfrac13 g_1g_6+\tfrac13 g_2g_4+\tfrac13 g_3g_5=0.
 $$
 
-In its coefficient table, the monomial `x_0_90^2*x_6_65` has coefficients
-`-1, 0, 1` in P1, P2, P3. The weighted sum is
-`(-1)/3 + 0/3 + 1/3 = 0`. Every remaining row is checked in the same way.
-To check the displayed coefficients rather than trust the table, expand each
-pair of generator polynomials from `generators.txt` and collect like monomials.
+For the monomial `x_0_90^2*x_6_65`, the cancellation block lists coefficients
+-1 in P1 and 1 in P3; P2 is omitted because its coefficient is zero. The
+weighted sum is `-1/3 + 1/3 = 0`. Check every block in the same way.
+To verify the coefficients, expand the products of generator polynomials from
+`generators.txt` and collect like monomials.
 
 For g1, the line `B3 = 0 1 4 5 8` specifies $B_3$. Take rows
 `v0, v1, v4, v5, v8, v3` of R, in that order, with all six displayed columns
@@ -151,12 +163,12 @@ sign of column F3 using `orientations.txt`. Repeat for the other five generators
 
 1. Compare the complete facets and vertex-label mapping with the raw input.
 2. Check R's zero pattern, positive variable placement, and forest of ones.
-3. Check the six reduced-rank pivots and each ordered facet-basis witness.
+3. Check rank 6 and affine independence using the row/column pairs in `geometry.txt`.
 4. Reconstruct D(i,j) with the stated row/column orders; check all true
-   incidences, then the orientation anchors and propagation equalities.
+   incidences, then the sign checks in `orientations.txt`, in their listed order.
 5. Compute the positive divisors and verify the printed generator polynomials.
-6. Expand the listed products; compare each coefficient with the support matrix.
-7. Check that every c_k is positive, their sum is 1, and every weighted row is zero.
+6. Expand the products; check each monomial block, including zeros for omitted products.
+7. Check that every c_k is positive, their sum is 1, and every block sums to zero.
 
 These files preserve all geometric information checked by the independent
 verifier. For larger candidates hand expansion can be lengthy, but it involves

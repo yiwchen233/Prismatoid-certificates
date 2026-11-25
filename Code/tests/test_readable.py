@@ -1,7 +1,8 @@
 from pathlib import Path
 import subprocess,sys,shutil
 import pytest
-from human_certificate import read_certificate,verify_bundle,monomial,parse_poly,polynomial
+from human_certificate import (read_certificate,verify_bundle,monomial,parse_poly,polynomial,
+                               cancellation_text,orientation_text,_coefficient_table_text)
 import re
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -36,7 +37,7 @@ def test_resume_and_settings_lock(example):
     ('intermediate/0213/generators.txt','g1 = ','g1 = 3 + '),
     ('intermediate/0213/geometry.txt','v0 = ','v0 = 1 | '),
     ('intermediate/0213/orientations.txt','sign 1;','sign -1;'),
-    ('intermediate/0213/coefficient-check.txt',' | 0\n',' | 1\n'),
+    ('intermediate/0213/coefficient-check.txt',' = 0\n',' = 1\n'),
 ])
 def test_corruption_rejected(example,tmp_path,file,old,new):
     output,_=example;copy=tmp_path/'changed';shutil.copytree(output,copy)
@@ -88,6 +89,101 @@ def test_previous_geometry_labels_remain_readable(example, tmp_path):
     assert re.search(r'^B0 = ', text, re.M)
     text = text.replace('[Reduced slack matrix R]', '[Reduced slack matrix]')
     text = text.replace('[Ordered facet bases B_j]', '[Ordered facet bases]')
+    text = text.replace('[Why R has rank 6]', '[Reduced rank pivots]')
+    text = text.replace('[Why the chosen facet vertices are affinely independent]', '[Facet basis rank pivots]')
     text = re.sub(r'^B(\d+) = ', r'F\1 = ', text, flags=re.M)
     path.write_text(text)
     assert read_certificate(copy / 'certificates/0213.txt') == read_certificate(output / 'certificates/0213.txt')
+
+
+def test_sparse_coefficient_blocks():
+    bundle = {
+        'metadata': {'variable_names': ['x', 'y']},
+        'generators': [{'polynomial': [(1, -1)]},
+                       {'polynomial': [(1, 1), (256, 1)]},
+                       {'polynomial': [(256, -1)]}],
+        'terms': [{'weight': '1/3', 'factors': [i]} for i in range(3)],
+    }
+    text = cancellation_text(bundle)
+    assert 'every omitted product has coefficient zero' in text
+    assert 'P2 = g2; c2 = 1/3' in text
+    blocks = text.split('Monomial: ')[1:]
+    rows = [[line.split() for line in block.splitlines() if re.match(r'^P\d+\s', line)] for block in blocks]
+    assert rows == [[['P1', '-1', '1/3', '-1/3'], ['P2', '1', '1/3', '1/3']],
+                    [['P2', '1', '1/3', '1/3'], ['P3', '-1', '1/3', '-1/3']]]
+    assert 'Sum: -1/3 + 1/3 = 0' in blocks[0]
+    assert 'Sum: 1/3 - 1/3 = 0' in blocks[1]
+
+
+def test_orientation_dependencies_precede_uses(example):
+    output, _ = example
+    bundle = read_certificate(output / 'certificates/0213.txt')
+    text = (output / 'intermediate/0213/orientations.txt').read_text()
+    done = set()
+    propagated = False
+    for line in text.splitlines():
+        match = re.match(r'F(\d+): sign (-?1); test vertex v(\d+); T\((\d+),(\d+)\)(.+)', line)
+        if not match:
+            continue
+        j, _, i, left_i, left_j, why = match.groups()
+        assert (i, j) == (left_i, left_j)
+        if why == ' is a positive monomial':
+            assert not propagated
+        else:
+            propagated = True
+            parent = re.fullmatch(r' = T\((\d+),(\d+)\)', why)
+            assert int(parent[2]) in done
+        assert int(j) not in done
+        done.add(int(j))
+    assert done == {int(j) for j in bundle['metadata']['orientation_proofs']}
+
+
+@pytest.mark.parametrize('field', ['coefficient', 'weight', 'contribution', 'product_weight', 'test_vertex'])
+def test_displayed_arithmetic_and_vertex_corruption_rejected(example, tmp_path, field):
+    output, _ = example
+    copy = tmp_path / 'changed'
+    shutil.copytree(output, copy)
+    folder = copy / 'intermediate/0213'
+    if field == 'test_vertex':
+        path = folder / 'orientations.txt'
+        text = re.sub(r'test vertex v\d+;', 'test vertex v999;', path.read_text(), count=1)
+    else:
+        path = folder / 'coefficient-check.txt'
+        text = path.read_text()
+        if field == 'product_weight':
+            text = text.replace('c1 = ', 'c1 = 9', 1)
+        else:
+            index = {'coefficient': 1, 'weight': 2, 'contribution': 3}[field]
+            match = re.search(r'^P\d+\s+-?\d+\s+[\d/]+\s+-?[\d/]+$', text, re.M)
+            cells = match[0].split()
+            cells[index] = '999'
+            text = text[:match.start()] + '   '.join(cells) + text[match.end():]
+    path.write_text(text)
+    with pytest.raises(ValueError):
+        verify_bundle(read_certificate(copy / 'certificates/0213.txt'))
+
+
+def test_orientation_writer_rejects_cycle():
+    meta = {'column_signs': {'0': 1, '1': 1}, 'orientation_proofs': {
+        '0': {'kind': 'propagation', 'row': 2, 'parent': [3, 1]},
+        '1': {'kind': 'propagation', 'row': 3, 'parent': [2, 0]},
+    }}
+    with pytest.raises(ValueError, match='cyclic'):
+        orientation_text(meta)
+
+
+def test_saved_table_and_orientation_format_remain_readable(example, tmp_path):
+    output, _ = example
+    bundle = read_certificate(output / 'certificates/0213.txt')
+    copy = tmp_path / 'saved-format'
+    shutil.copytree(output, copy)
+    folder = copy / 'intermediate/0213'
+    (folder / 'coefficient-check.txt').write_text(_coefficient_table_text(bundle))
+    lines = ['COLUMN ORIENTATIONS']
+    meta = bundle['metadata']
+    for j, proof in meta['orientation_proofs'].items():
+        why = ('positive monomial' if proof['kind'] == 'monomial'
+               else f'equal T({proof["parent"][0]},{proof["parent"][1]})')
+        lines.append(f'F{j}: sign {meta["column_signs"][j]}; row {proof["row"]}; {why}')
+    (folder / 'orientations.txt').write_text('\n'.join(lines) + '\n')
+    assert read_certificate(copy / 'certificates/0213.txt') == bundle

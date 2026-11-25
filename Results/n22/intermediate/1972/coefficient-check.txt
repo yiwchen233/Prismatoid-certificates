@@ -1,11 +1,56 @@
 COEFFICIENT CHECK
-Columns are coefficients in the products P1, P2, ... (before weighting).
-Multiply each column by its coefficient c_k from the certificate.
-The last column is the exact weighted sum; every entry must be zero.
+Each block checks the coefficient of one monomial in the identity.
+Contribution = coefficient in Pk * weight ck.
+Only nonzero coefficients are listed; every omitted product has coefficient zero.
+All arithmetic is exact. Every displayed sum must be zero.
 
-Monomial | P1 | P2 | P3 | P4 | P5 | weighted sum
-x_15_60*x_5_26 | -1 | 1 | 0 | 0 | 0 | 0
-x_15_26*x_19_60*x_5_26 | 1 | 0 | 0 | -1 | 0 | 0
-x_15_26*x_5_60 | 0 | 0 | -1 | 1 | 0 | 0
-x_15_60*x_5_60 | 1 | -1 | 1 | 0 | -1 | 0
-x_15_26*x_19_60*x_5_60 | -1 | 0 | 0 | 0 | 1 | 0
+PRODUCTS AND WEIGHTS
+P1 = g1*g4; c1 = 1/5
+P2 = g1*g6; c2 = 1/5
+P3 = g2*g7; c3 = 1/5
+P4 = g3*g5; c4 = 1/5
+P5 = g4*g7; c5 = 1/5
+
+Monomials checked: 5
+
+Monomial: x_15_60 * x_5_26
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/5           -1/5
+P2                  1      1/5            1/5
+
+Sum: -1/5 + 1/5 = 0
+
+Monomial: x_15_26 * x_19_60 * x_5_26
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/5            1/5
+P4                 -1      1/5           -1/5
+
+Sum: 1/5 - 1/5 = 0
+
+Monomial: x_15_26 * x_5_60
+
+Product   Coefficient   Weight   Contribution
+P3                 -1      1/5           -1/5
+P4                  1      1/5            1/5
+
+Sum: -1/5 + 1/5 = 0
+
+Monomial: x_15_60 * x_5_60
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/5            1/5
+P2                 -1      1/5           -1/5
+P3                  1      1/5            1/5
+P5                 -1      1/5           -1/5
+
+Sum: 1/5 - 1/5 + 1/5 - 1/5 = 0
+
+Monomial: x_15_26 * x_19_60 * x_5_60
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/5           -1/5
+P5                  1      1/5            1/5
+
+Sum: -1/5 + 1/5 = 0

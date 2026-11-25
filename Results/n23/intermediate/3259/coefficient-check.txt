@@ -1,24 +1,158 @@
 COEFFICIENT CHECK
-Columns are coefficients in the products P1, P2, ... (before weighting).
-Multiply each column by its coefficient c_k from the certificate.
-The last column is the exact weighted sum; every entry must be zero.
+Each block checks the coefficient of one monomial in the identity.
+Contribution = coefficient in Pk * weight ck.
+Only nonzero coefficients are listed; every omitted product has coefficient zero.
+All arithmetic is exact. Every displayed sum must be zero.
 
-Monomial | P1 | P2 | P3 | P4 | P5 | weighted sum
-x_3_118 | 1 | 0 | -1 | 0 | 0 | 0
-x_0_124*x_18_118*x_3_118 | 0 | 0 | 1 | -1 | 0 | 0
-x_10_124*x_18_187*x_3_118 | -1 | 1 | 0 | 0 | 0 | 0
-x_0_124*x_19_118*x_3_118 | 0 | 0 | -1 | 1 | 0 | 0
-x_19_124*x_3_118 | -1 | 0 | 1 | 0 | 0 | 0
-x_10_124*x_19_187*x_3_118 | 1 | -1 | 0 | 0 | 0 | 0
-x_10_118*x_3_187 | -1 | 0 | 0 | 0 | 1 | 0
-x_10_124*x_18_118*x_3_187 | 1 | 0 | 0 | 0 | -1 | 0
-x_10_124*x_19_118*x_3_187 | -1 | 0 | 0 | 0 | 1 | 0
-x_10_118*x_19_124*x_3_187 | 1 | 0 | 0 | 0 | -1 | 0
-x_0_187*x_18_118*x_3_118*x_4_124 | 0 | 0 | -1 | 1 | 0 | 0
-x_18_187*x_3_118*x_4_124 | 0 | -1 | 1 | 0 | 0 | 0
-x_0_187*x_19_118*x_3_118*x_4_124 | 0 | 0 | 1 | -1 | 0 | 0
-x_19_187*x_3_118*x_4_124 | 0 | 1 | -1 | 0 | 0 | 0
-x_18_118*x_3_187*x_4_124 | 0 | 0 | 0 | -1 | 1 | 0
-x_10_118*x_18_187*x_3_187*x_4_124 | 0 | 1 | 0 | 0 | -1 | 0
-x_19_118*x_3_187*x_4_124 | 0 | 0 | 0 | 1 | -1 | 0
-x_10_118*x_19_187*x_3_187*x_4_124 | 0 | -1 | 0 | 0 | 1 | 0
+PRODUCTS AND WEIGHTS
+P1 = g5; c1 = 1/5
+P2 = g1*g4; c2 = 1/5
+P3 = g2*g8; c3 = 1/5
+P4 = g3*g7; c4 = 1/5
+P5 = g6*g9; c5 = 1/5
+
+Monomials checked: 18
+
+Monomial: x_3_118
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/5            1/5
+P3                 -1      1/5           -1/5
+
+Sum: 1/5 - 1/5 = 0
+
+Monomial: x_0_124 * x_18_118 * x_3_118
+
+Product   Coefficient   Weight   Contribution
+P3                  1      1/5            1/5
+P4                 -1      1/5           -1/5
+
+Sum: 1/5 - 1/5 = 0
+
+Monomial: x_10_124 * x_18_187 * x_3_118
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/5           -1/5
+P2                  1      1/5            1/5
+
+Sum: -1/5 + 1/5 = 0
+
+Monomial: x_0_124 * x_19_118 * x_3_118
+
+Product   Coefficient   Weight   Contribution
+P3                 -1      1/5           -1/5
+P4                  1      1/5            1/5
+
+Sum: -1/5 + 1/5 = 0
+
+Monomial: x_19_124 * x_3_118
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/5           -1/5
+P3                  1      1/5            1/5
+
+Sum: -1/5 + 1/5 = 0
+
+Monomial: x_10_124 * x_19_187 * x_3_118
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/5            1/5
+P2                 -1      1/5           -1/5
+
+Sum: 1/5 - 1/5 = 0
+
+Monomial: x_10_118 * x_3_187
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/5           -1/5
+P5                  1      1/5            1/5
+
+Sum: -1/5 + 1/5 = 0
+
+Monomial: x_10_124 * x_18_118 * x_3_187
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/5            1/5
+P5                 -1      1/5           -1/5
+
+Sum: 1/5 - 1/5 = 0
+
+Monomial: x_10_124 * x_19_118 * x_3_187
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/5           -1/5
+P5                  1      1/5            1/5
+
+Sum: -1/5 + 1/5 = 0
+
+Monomial: x_10_118 * x_19_124 * x_3_187
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/5            1/5
+P5                 -1      1/5           -1/5
+
+Sum: 1/5 - 1/5 = 0
+
+Monomial: x_0_187 * x_18_118 * x_3_118 * x_4_124
+
+Product   Coefficient   Weight   Contribution
+P3                 -1      1/5           -1/5
+P4                  1      1/5            1/5
+
+Sum: -1/5 + 1/5 = 0
+
+Monomial: x_18_187 * x_3_118 * x_4_124
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/5           -1/5
+P3                  1      1/5            1/5
+
+Sum: -1/5 + 1/5 = 0
+
+Monomial: x_0_187 * x_19_118 * x_3_118 * x_4_124
+
+Product   Coefficient   Weight   Contribution
+P3                  1      1/5            1/5
+P4                 -1      1/5           -1/5
+
+Sum: 1/5 - 1/5 = 0
+
+Monomial: x_19_187 * x_3_118 * x_4_124
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/5            1/5
+P3                 -1      1/5           -1/5
+
+Sum: 1/5 - 1/5 = 0
+
+Monomial: x_18_118 * x_3_187 * x_4_124
+
+Product   Coefficient   Weight   Contribution
+P4                 -1      1/5           -1/5
+P5                  1      1/5            1/5
+
+Sum: -1/5 + 1/5 = 0
+
+Monomial: x_10_118 * x_18_187 * x_3_187 * x_4_124
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/5            1/5
+P5                 -1      1/5           -1/5
+
+Sum: 1/5 - 1/5 = 0
+
+Monomial: x_19_118 * x_3_187 * x_4_124
+
+Product   Coefficient   Weight   Contribution
+P4                  1      1/5            1/5
+P5                 -1      1/5           -1/5
+
+Sum: 1/5 - 1/5 = 0
+
+Monomial: x_10_118 * x_19_187 * x_3_187 * x_4_124
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/5           -1/5
+P5                  1      1/5            1/5
+
+Sum: -1/5 + 1/5 = 0

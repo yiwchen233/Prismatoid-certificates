@@ -1,15 +1,84 @@
 COEFFICIENT CHECK
-Columns are coefficients in the products P1, P2, ... (before weighting).
-Multiply each column by its coefficient c_k from the certificate.
-The last column is the exact weighted sum; every entry must be zero.
+Each block checks the coefficient of one monomial in the identity.
+Contribution = coefficient in Pk * weight ck.
+Only nonzero coefficients are listed; every omitted product has coefficient zero.
+All arithmetic is exact. Every displayed sum must be zero.
 
-Monomial | P1 | P2 | P3 | weighted sum
-x_15_163*x_4_172 | 1 | -1 | 0 | 0
-x_15_55*x_4_172 | -1 | 1 | 0 | 0
-x_13_172*x_15_55*x_17_163*x_4_172 | 0 | -1 | 1 | 0
-x_13_172*x_15_163*x_17_55*x_4_172 | 0 | 1 | -1 | 0
-x_13_172*x_15_163*x_4_55 | -1 | 0 | 1 | 0
-x_15_163*x_8_172 | -1 | 1 | 0 | 0
-x_15_55*x_8_172 | 1 | -1 | 0 | 0
-x_13_172*x_15_55*x_17_163*x_8_172 | 0 | 1 | -1 | 0
-x_13_172*x_15_163*x_17_55*x_8_172 | 0 | -1 | 1 | 0
+PRODUCTS AND WEIGHTS
+P1 = g2; c1 = 1/3
+P2 = g1*g4; c2 = 1/3
+P3 = g3*g5; c3 = 1/3
+
+Monomials checked: 9
+
+Monomial: x_15_163 * x_4_172
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/3            1/3
+P2                 -1      1/3           -1/3
+
+Sum: 1/3 - 1/3 = 0
+
+Monomial: x_15_55 * x_4_172
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/3           -1/3
+P2                  1      1/3            1/3
+
+Sum: -1/3 + 1/3 = 0
+
+Monomial: x_13_172 * x_15_55 * x_17_163 * x_4_172
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/3           -1/3
+P3                  1      1/3            1/3
+
+Sum: -1/3 + 1/3 = 0
+
+Monomial: x_13_172 * x_15_163 * x_17_55 * x_4_172
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/3            1/3
+P3                 -1      1/3           -1/3
+
+Sum: 1/3 - 1/3 = 0
+
+Monomial: x_13_172 * x_15_163 * x_4_55
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/3           -1/3
+P3                  1      1/3            1/3
+
+Sum: -1/3 + 1/3 = 0
+
+Monomial: x_15_163 * x_8_172
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/3           -1/3
+P2                  1      1/3            1/3
+
+Sum: -1/3 + 1/3 = 0
+
+Monomial: x_15_55 * x_8_172
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/3            1/3
+P2                 -1      1/3           -1/3
+
+Sum: 1/3 - 1/3 = 0
+
+Monomial: x_13_172 * x_15_55 * x_17_163 * x_8_172
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/3            1/3
+P3                 -1      1/3           -1/3
+
+Sum: 1/3 - 1/3 = 0
+
+Monomial: x_13_172 * x_15_163 * x_17_55 * x_8_172
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/3           -1/3
+P3                  1      1/3            1/3
+
+Sum: -1/3 + 1/3 = 0

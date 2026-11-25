@@ -1,150 +1,1255 @@
 COEFFICIENT CHECK
-Columns are coefficients in the products P1, P2, ... (before weighting).
-Multiply each column by its coefficient c_k from the certificate.
-The last column is the exact weighted sum; every entry must be zero.
+Each block checks the coefficient of one monomial in the identity.
+Contribution = coefficient in Pk * weight ck.
+Only nonzero coefficients are listed; every omitted product has coefficient zero.
+All arithmetic is exact. Every displayed sum must be zero.
 
-Monomial | P1 | P2 | P3 | P4 | P5 | P6 | weighted sum
-x_11_63*x_11_73*x_12_63*x_2_49*x_4_49 | 0 | 1 | 0 | -1 | 0 | 0 | 0
-x_11_73*x_12_63^2*x_2_49*x_4_49 | -1 | -1 | 0 | 1 | 1 | 0 | 0
-x_11_63^2*x_12_73*x_2_49*x_4_49 | 0 | -1 | 0 | 1 | 0 | 0 | 0
-x_11_63*x_12_63*x_12_73*x_2_49*x_4_49 | 1 | 1 | 0 | -1 | -1 | 0 | 0
-x_11_49*x_11_73*x_12_63*x_2_63*x_4_49 | 0 | -1 | 0 | 1 | 0 | 0 | 0
-x_11_73*x_12_49*x_12_63*x_2_63*x_4_49 | 1 | 1 | 0 | -1 | -1 | 0 | 0
-x_11_49*x_11_63*x_12_73*x_2_63*x_4_49 | 0 | 1 | 0 | -1 | 0 | 0 | 0
-x_11_63*x_12_49*x_12_73*x_2_63*x_4_49 | -1 | -1 | 0 | 1 | 1 | 0 | 0
-x_11_63*x_11_73*x_12_49*x_2_49*x_4_63 | 0 | -1 | 0 | 1 | 0 | 0 | 0
-x_11_73*x_12_49*x_12_63*x_2_49*x_4_63 | 1 | 1 | 0 | -1 | -1 | 0 | 0
-x_11_49*x_11_63*x_12_73*x_2_49*x_4_63 | 0 | 1 | 0 | -1 | 0 | 0 | 0
-x_11_49*x_12_63*x_12_73*x_2_49*x_4_63 | -1 | -1 | 0 | 1 | 1 | 0 | 0
-x_11_49*x_11_73*x_12_49*x_2_63*x_4_63 | 0 | 1 | 0 | -1 | 0 | 0 | 0
-x_11_73*x_12_49^2*x_2_63*x_4_63 | -1 | -1 | 0 | 1 | 1 | 0 | 0
-x_11_49^2*x_12_73*x_2_63*x_4_63 | 0 | -1 | 0 | 1 | 0 | 0 | 0
-x_11_49*x_12_49*x_12_73*x_2_63*x_4_63 | 1 | 1 | 0 | -1 | -1 | 0 | 0
-x_11_63*x_11_73*x_12_63*x_4_49*x_6_49 | 0 | -1 | 0 | 1 | 0 | 0 | 0
-x_11_73*x_12_63^2*x_4_49*x_6_49 | 1 | 1 | 0 | -1 | -1 | 0 | 0
-x_11_63^2*x_12_73*x_4_49*x_6_49 | 0 | 1 | 0 | -1 | 0 | 0 | 0
-x_11_63*x_12_63*x_12_73*x_4_49*x_6_49 | -1 | -1 | 0 | 1 | 1 | 0 | 0
-x_11_73^2*x_12_63*x_2_63*x_4_49*x_6_49 | 0 | 1 | 0 | -1 | 0 | 0 | 0
-x_11_63*x_11_73*x_12_73*x_2_63*x_4_49*x_6_49 | 0 | -1 | 0 | 1 | 0 | 0 | 0
-x_11_73*x_12_63*x_12_73*x_2_63*x_4_49*x_6_49 | -1 | -1 | 0 | 1 | 1 | 0 | 0
-x_11_63*x_12_73^2*x_2_63*x_4_49*x_6_49 | 1 | 1 | 0 | -1 | -1 | 0 | 0
-x_11_63*x_11_73*x_12_49*x_4_63*x_6_49 | 0 | 1 | 0 | -1 | 0 | 0 | 0
-x_11_73*x_12_49*x_12_63*x_4_63*x_6_49 | -1 | -1 | 0 | 1 | 1 | 0 | 0
-x_11_49*x_11_63*x_12_73*x_4_63*x_6_49 | 0 | -1 | 0 | 1 | 0 | 0 | 0
-x_11_49*x_12_63*x_12_73*x_4_63*x_6_49 | 1 | 1 | 0 | -1 | -1 | 0 | 0
-x_11_73^2*x_12_49*x_2_63*x_4_63*x_6_49 | 0 | -1 | 0 | 1 | 0 | 0 | 0
-x_11_49*x_11_73*x_12_73*x_2_63*x_4_63*x_6_49 | 0 | 1 | 0 | -1 | 0 | 0 | 0
-x_11_73*x_12_49*x_12_73*x_2_63*x_4_63*x_6_49 | 1 | 1 | 0 | -1 | -1 | 0 | 0
-x_11_49*x_12_73^2*x_2_63*x_4_63*x_6_49 | -1 | -1 | 0 | 1 | 1 | 0 | 0
-x_11_49*x_11_73*x_12_63*x_4_49*x_6_63 | 0 | 1 | 0 | -1 | 0 | 0 | 0
-x_11_73*x_12_49*x_12_63*x_4_49*x_6_63 | -1 | -1 | 0 | 1 | 1 | 0 | 0
-x_11_49*x_11_63*x_12_73*x_4_49*x_6_63 | 0 | -1 | 0 | 1 | 0 | 0 | 0
-x_11_63*x_12_49*x_12_73*x_4_49*x_6_63 | 1 | 1 | 0 | -1 | -1 | 0 | 0
-x_11_73^2*x_12_63*x_2_49*x_4_49*x_6_63 | 0 | -1 | 0 | 1 | 0 | 0 | 0
-x_11_63*x_11_73*x_12_73*x_2_49*x_4_49*x_6_63 | 0 | 1 | 0 | -1 | 0 | 0 | 0
-x_11_73*x_12_63*x_12_73*x_2_49*x_4_49*x_6_63 | 1 | 1 | 0 | -1 | -1 | 0 | 0
-x_11_63*x_12_73^2*x_2_49*x_4_49*x_6_63 | -1 | -1 | 0 | 1 | 1 | 0 | 0
-x_11_49*x_11_73*x_12_49*x_4_63*x_6_63 | 0 | -1 | 0 | 1 | 0 | 0 | 0
-x_11_73*x_12_49^2*x_4_63*x_6_63 | 1 | 1 | 0 | -1 | -1 | 0 | 0
-x_11_49^2*x_12_73*x_4_63*x_6_63 | 0 | 1 | 0 | -1 | 0 | 0 | 0
-x_11_49*x_12_49*x_12_73*x_4_63*x_6_63 | -1 | -1 | 0 | 1 | 1 | 0 | 0
-x_11_73^2*x_12_49*x_2_49*x_4_63*x_6_63 | 0 | 1 | 0 | -1 | 0 | 0 | 0
-x_11_49*x_11_73*x_12_73*x_2_49*x_4_63*x_6_63 | 0 | -1 | 0 | 1 | 0 | 0 | 0
-x_11_73*x_12_49*x_12_73*x_2_49*x_4_63*x_6_63 | -1 | -1 | 0 | 1 | 1 | 0 | 0
-x_11_49*x_12_73^2*x_2_49*x_4_63*x_6_63 | 1 | 1 | 0 | -1 | -1 | 0 | 0
-x_11_73*x_12_63*x_2_63*x_4_49*x_8_49 | -1 | 0 | 0 | 0 | 0 | 1 | 0
-x_11_63*x_12_73*x_2_63*x_4_49*x_8_49 | 1 | 0 | 0 | 0 | 0 | -1 | 0
-x_11_63*x_11_73*x_2_49*x_4_63*x_8_49 | 0 | 1 | -1 | 0 | 0 | 0 | 0
-x_11_73*x_12_63*x_2_49*x_4_63*x_8_49 | 0 | -1 | 1 | 0 | 1 | -1 | 0
-x_11_63*x_12_73*x_2_49*x_4_63*x_8_49 | 0 | -1 | 0 | 0 | 0 | 1 | 0
-x_12_63*x_12_73*x_2_49*x_4_63*x_8_49 | 0 | 1 | 0 | 0 | -1 | 0 | 0
-x_11_49*x_11_73*x_2_63*x_4_63*x_8_49 | 0 | -1 | 1 | 0 | 0 | 0 | 0
-x_11_73*x_12_49*x_2_63*x_4_63*x_8_49 | 1 | 1 | -1 | 0 | -1 | 0 | 0
-x_11_49*x_12_73*x_2_63*x_4_63*x_8_49 | -1 | 1 | 0 | 0 | 0 | 0 | 0
-x_12_49*x_12_73*x_2_63*x_4_63*x_8_49 | 0 | -1 | 0 | 0 | 1 | 0 | 0
-x_11_63*x_11_73*x_4_63*x_6_49*x_8_49 | 0 | -1 | 1 | 0 | 0 | 0 | 0
-x_11_73*x_12_63*x_4_63*x_6_49*x_8_49 | 0 | 1 | -1 | 0 | -1 | 1 | 0
-x_11_63*x_12_73*x_4_63*x_6_49*x_8_49 | 0 | 1 | 0 | 0 | 0 | -1 | 0
-x_12_63*x_12_73*x_4_63*x_6_49*x_8_49 | 0 | -1 | 0 | 0 | 1 | 0 | 0
-x_11_73^2*x_2_63*x_4_63*x_6_49*x_8_49 | 0 | 1 | -1 | 0 | 0 | 0 | 0
-x_11_73*x_12_73*x_2_63*x_4_63*x_6_49*x_8_49 | 0 | -2 | 1 | 0 | 1 | 0 | 0
-x_12_73^2*x_2_63*x_4_63*x_6_49*x_8_49 | 0 | 1 | 0 | 0 | -1 | 0 | 0
-x_11_73*x_12_63*x_4_49*x_6_63*x_8_49 | 1 | 0 | 0 | 0 | 0 | -1 | 0
-x_11_63*x_12_73*x_4_49*x_6_63*x_8_49 | -1 | 0 | 0 | 0 | 0 | 1 | 0
-x_11_49*x_11_73*x_4_63*x_6_63*x_8_49 | 0 | 1 | -1 | 0 | 0 | 0 | 0
-x_11_73*x_12_49*x_4_63*x_6_63*x_8_49 | -1 | -1 | 1 | 0 | 1 | 0 | 0
-x_11_49*x_12_73*x_4_63*x_6_63*x_8_49 | 1 | -1 | 0 | 0 | 0 | 0 | 0
-x_12_49*x_12_73*x_4_63*x_6_63*x_8_49 | 0 | 1 | 0 | 0 | -1 | 0 | 0
-x_11_73^2*x_2_49*x_4_63*x_6_63*x_8_49 | 0 | -1 | 1 | 0 | 0 | 0 | 0
-x_11_73*x_12_73*x_2_49*x_4_63*x_6_63*x_8_49 | 0 | 2 | -1 | 0 | -1 | 0 | 0
-x_12_73^2*x_2_49*x_4_63*x_6_63*x_8_49 | 0 | -1 | 0 | 0 | 1 | 0 | 0
-x_11_63*x_11_73*x_2_49*x_4_49*x_8_63 | 0 | -1 | 1 | 0 | 0 | 0 | 0
-x_11_73*x_12_63*x_2_49*x_4_49*x_8_63 | 1 | 1 | -1 | 0 | -1 | 0 | 0
-x_11_63*x_12_73*x_2_49*x_4_49*x_8_63 | -1 | 1 | 0 | 0 | 0 | 0 | 0
-x_12_63*x_12_73*x_2_49*x_4_49*x_8_63 | 0 | -1 | 0 | 0 | 1 | 0 | 0
-x_11_49*x_11_73*x_2_63*x_4_49*x_8_63 | 0 | 1 | -1 | 0 | 0 | 0 | 0
-x_11_73*x_12_49*x_2_63*x_4_49*x_8_63 | 0 | -1 | 1 | 0 | 1 | -1 | 0
-x_11_49*x_12_73*x_2_63*x_4_49*x_8_63 | 0 | -1 | 0 | 0 | 0 | 1 | 0
-x_12_49*x_12_73*x_2_63*x_4_49*x_8_63 | 0 | 1 | 0 | 0 | -1 | 0 | 0
-x_11_73*x_12_49*x_2_49*x_4_63*x_8_63 | -1 | 0 | 0 | 0 | 0 | 1 | 0
-x_11_49*x_12_73*x_2_49*x_4_63*x_8_63 | 1 | 0 | 0 | 0 | 0 | -1 | 0
-x_11_63*x_11_73*x_4_49*x_6_49*x_8_63 | 0 | 1 | -1 | 0 | 0 | 0 | 0
-x_11_73*x_12_63*x_4_49*x_6_49*x_8_63 | -1 | -1 | 1 | 0 | 1 | 0 | 0
-x_11_63*x_12_73*x_4_49*x_6_49*x_8_63 | 1 | -1 | 0 | 0 | 0 | 0 | 0
-x_12_63*x_12_73*x_4_49*x_6_49*x_8_63 | 0 | 1 | 0 | 0 | -1 | 0 | 0
-x_11_73^2*x_2_63*x_4_49*x_6_49*x_8_63 | 0 | -1 | 1 | 0 | 0 | 0 | 0
-x_11_73*x_12_73*x_2_63*x_4_49*x_6_49*x_8_63 | 0 | 2 | -1 | 0 | -1 | 0 | 0
-x_12_73^2*x_2_63*x_4_49*x_6_49*x_8_63 | 0 | -1 | 0 | 0 | 1 | 0 | 0
-x_11_73*x_12_49*x_4_63*x_6_49*x_8_63 | 1 | 0 | 0 | 0 | 0 | -1 | 0
-x_11_49*x_12_73*x_4_63*x_6_49*x_8_63 | -1 | 0 | 0 | 0 | 0 | 1 | 0
-x_11_49*x_11_73*x_4_49*x_6_63*x_8_63 | 0 | -1 | 1 | 0 | 0 | 0 | 0
-x_11_73*x_12_49*x_4_49*x_6_63*x_8_63 | 0 | 1 | -1 | 0 | -1 | 1 | 0
-x_11_49*x_12_73*x_4_49*x_6_63*x_8_63 | 0 | 1 | 0 | 0 | 0 | -1 | 0
-x_12_49*x_12_73*x_4_49*x_6_63*x_8_63 | 0 | -1 | 0 | 0 | 1 | 0 | 0
-x_11_73^2*x_2_49*x_4_49*x_6_63*x_8_63 | 0 | 1 | -1 | 0 | 0 | 0 | 0
-x_11_73*x_12_73*x_2_49*x_4_49*x_6_63*x_8_63 | 0 | -2 | 1 | 0 | 1 | 0 | 0
-x_12_73^2*x_2_49*x_4_49*x_6_63*x_8_63 | 0 | 1 | 0 | 0 | -1 | 0 | 0
-x_11_63^2*x_2_49*x_4_49*x_8_73 | 0 | 1 | -1 | 0 | 0 | 0 | 0
-x_11_63*x_12_63*x_2_49*x_4_49*x_8_73 | 0 | -2 | 1 | 0 | 1 | 0 | 0
-x_12_63^2*x_2_49*x_4_49*x_8_73 | 0 | 1 | 0 | 0 | -1 | 0 | 0
-x_11_49*x_11_63*x_2_63*x_4_49*x_8_73 | 0 | -1 | 1 | 0 | 0 | 0 | 0
-x_11_63*x_12_49*x_2_63*x_4_49*x_8_73 | 0 | 1 | -1 | 0 | -1 | 1 | 0
-x_11_49*x_12_63*x_2_63*x_4_49*x_8_73 | 0 | 1 | 0 | 0 | 0 | -1 | 0
-x_12_49*x_12_63*x_2_63*x_4_49*x_8_73 | 0 | -1 | 0 | 0 | 1 | 0 | 0
-x_11_49*x_11_63*x_2_49*x_4_63*x_8_73 | 0 | -1 | 1 | 0 | 0 | 0 | 0
-x_11_63*x_12_49*x_2_49*x_4_63*x_8_73 | 0 | 1 | 0 | 0 | 0 | -1 | 0
-x_11_49*x_12_63*x_2_49*x_4_63*x_8_73 | 0 | 1 | -1 | 0 | -1 | 1 | 0
-x_12_49*x_12_63*x_2_49*x_4_63*x_8_73 | 0 | -1 | 0 | 0 | 1 | 0 | 0
-x_11_49^2*x_2_63*x_4_63*x_8_73 | 0 | 1 | -1 | 0 | 0 | 0 | 0
-x_11_49*x_12_49*x_2_63*x_4_63*x_8_73 | 0 | -2 | 1 | 0 | 1 | 0 | 0
-x_12_49^2*x_2_63*x_4_63*x_8_73 | 0 | 1 | 0 | 0 | -1 | 0 | 0
-x_11_63^2*x_4_49*x_6_49*x_8_73 | 0 | -1 | 1 | 0 | 0 | 0 | 0
-x_11_63*x_12_63*x_4_49*x_6_49*x_8_73 | 0 | 2 | -1 | 0 | -1 | 0 | 0
-x_12_63^2*x_4_49*x_6_49*x_8_73 | 0 | -1 | 0 | 0 | 1 | 0 | 0
-x_11_63*x_11_73*x_2_63*x_4_49*x_6_49*x_8_73 | 0 | 1 | -1 | 0 | 0 | 0 | 0
-x_11_73*x_12_63*x_2_63*x_4_49*x_6_49*x_8_73 | 1 | -1 | 0 | 0 | 0 | 0 | 0
-x_11_63*x_12_73*x_2_63*x_4_49*x_6_49*x_8_73 | -1 | -1 | 1 | 0 | 1 | 0 | 0
-x_12_63*x_12_73*x_2_63*x_4_49*x_6_49*x_8_73 | 0 | 1 | 0 | 0 | -1 | 0 | 0
-x_11_49*x_11_63*x_4_63*x_6_49*x_8_73 | 0 | 1 | -1 | 0 | 0 | 0 | 0
-x_11_63*x_12_49*x_4_63*x_6_49*x_8_73 | 0 | -1 | 0 | 0 | 0 | 1 | 0
-x_11_49*x_12_63*x_4_63*x_6_49*x_8_73 | 0 | -1 | 1 | 0 | 1 | -1 | 0
-x_12_49*x_12_63*x_4_63*x_6_49*x_8_73 | 0 | 1 | 0 | 0 | -1 | 0 | 0
-x_11_49*x_11_73*x_2_63*x_4_63*x_6_49*x_8_73 | 0 | -1 | 1 | 0 | 0 | 0 | 0
-x_11_73*x_12_49*x_2_63*x_4_63*x_6_49*x_8_73 | -1 | 1 | 0 | 0 | 0 | 0 | 0
-x_11_49*x_12_73*x_2_63*x_4_63*x_6_49*x_8_73 | 1 | 1 | -1 | 0 | -1 | 0 | 0
-x_12_49*x_12_73*x_2_63*x_4_63*x_6_49*x_8_73 | 0 | -1 | 0 | 0 | 1 | 0 | 0
-x_11_49*x_11_63*x_4_49*x_6_63*x_8_73 | 0 | 1 | -1 | 0 | 0 | 0 | 0
-x_11_63*x_12_49*x_4_49*x_6_63*x_8_73 | 0 | -1 | 1 | 0 | 1 | -1 | 0
-x_11_49*x_12_63*x_4_49*x_6_63*x_8_73 | 0 | -1 | 0 | 0 | 0 | 1 | 0
-x_12_49*x_12_63*x_4_49*x_6_63*x_8_73 | 0 | 1 | 0 | 0 | -1 | 0 | 0
-x_11_63*x_11_73*x_2_49*x_4_49*x_6_63*x_8_73 | 0 | -1 | 1 | 0 | 0 | 0 | 0
-x_11_73*x_12_63*x_2_49*x_4_49*x_6_63*x_8_73 | -1 | 1 | 0 | 0 | 0 | 0 | 0
-x_11_63*x_12_73*x_2_49*x_4_49*x_6_63*x_8_73 | 1 | 1 | -1 | 0 | -1 | 0 | 0
-x_12_63*x_12_73*x_2_49*x_4_49*x_6_63*x_8_73 | 0 | -1 | 0 | 0 | 1 | 0 | 0
-x_11_49^2*x_4_63*x_6_63*x_8_73 | 0 | -1 | 1 | 0 | 0 | 0 | 0
-x_11_49*x_12_49*x_4_63*x_6_63*x_8_73 | 0 | 2 | -1 | 0 | -1 | 0 | 0
-x_12_49^2*x_4_63*x_6_63*x_8_73 | 0 | -1 | 0 | 0 | 1 | 0 | 0
-x_11_49*x_11_73*x_2_49*x_4_63*x_6_63*x_8_73 | 0 | 1 | -1 | 0 | 0 | 0 | 0
-x_11_73*x_12_49*x_2_49*x_4_63*x_6_63*x_8_73 | 1 | -1 | 0 | 0 | 0 | 0 | 0
-x_11_49*x_12_73*x_2_49*x_4_63*x_6_63*x_8_73 | -1 | -1 | 1 | 0 | 1 | 0 | 0
-x_12_49*x_12_73*x_2_49*x_4_63*x_6_63*x_8_73 | 0 | 1 | 0 | 0 | -1 | 0 | 0
+PRODUCTS AND WEIGHTS
+P1 = g1*g7; c1 = 1/6
+P2 = g2*g3; c2 = 1/6
+P3 = g2*g5; c3 = 1/6
+P4 = g2*g7; c4 = 1/6
+P5 = g3*g6; c5 = 1/6
+P6 = g4*g8; c6 = 1/6
+
+Monomials checked: 144
+
+Monomial: x_11_63 * x_11_73 * x_12_63 * x_2_49 * x_4_49
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/6            1/6
+P4                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_11_73 * x_12_63^2 * x_2_49 * x_4_49
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/6           -1/6
+P2                 -1      1/6           -1/6
+P4                  1      1/6            1/6
+P5                  1      1/6            1/6
+
+Sum: -1/6 - 1/6 + 1/6 + 1/6 = 0
+
+Monomial: x_11_63^2 * x_12_73 * x_2_49 * x_4_49
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P4                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_11_63 * x_12_63 * x_12_73 * x_2_49 * x_4_49
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/6            1/6
+P2                  1      1/6            1/6
+P4                 -1      1/6           -1/6
+P5                 -1      1/6           -1/6
+
+Sum: 1/6 + 1/6 - 1/6 - 1/6 = 0
+
+Monomial: x_11_49 * x_11_73 * x_12_63 * x_2_63 * x_4_49
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P4                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_11_73 * x_12_49 * x_12_63 * x_2_63 * x_4_49
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/6            1/6
+P2                  1      1/6            1/6
+P4                 -1      1/6           -1/6
+P5                 -1      1/6           -1/6
+
+Sum: 1/6 + 1/6 - 1/6 - 1/6 = 0
+
+Monomial: x_11_49 * x_11_63 * x_12_73 * x_2_63 * x_4_49
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/6            1/6
+P4                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_11_63 * x_12_49 * x_12_73 * x_2_63 * x_4_49
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/6           -1/6
+P2                 -1      1/6           -1/6
+P4                  1      1/6            1/6
+P5                  1      1/6            1/6
+
+Sum: -1/6 - 1/6 + 1/6 + 1/6 = 0
+
+Monomial: x_11_63 * x_11_73 * x_12_49 * x_2_49 * x_4_63
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P4                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_11_73 * x_12_49 * x_12_63 * x_2_49 * x_4_63
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/6            1/6
+P2                  1      1/6            1/6
+P4                 -1      1/6           -1/6
+P5                 -1      1/6           -1/6
+
+Sum: 1/6 + 1/6 - 1/6 - 1/6 = 0
+
+Monomial: x_11_49 * x_11_63 * x_12_73 * x_2_49 * x_4_63
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/6            1/6
+P4                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_11_49 * x_12_63 * x_12_73 * x_2_49 * x_4_63
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/6           -1/6
+P2                 -1      1/6           -1/6
+P4                  1      1/6            1/6
+P5                  1      1/6            1/6
+
+Sum: -1/6 - 1/6 + 1/6 + 1/6 = 0
+
+Monomial: x_11_49 * x_11_73 * x_12_49 * x_2_63 * x_4_63
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/6            1/6
+P4                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_11_73 * x_12_49^2 * x_2_63 * x_4_63
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/6           -1/6
+P2                 -1      1/6           -1/6
+P4                  1      1/6            1/6
+P5                  1      1/6            1/6
+
+Sum: -1/6 - 1/6 + 1/6 + 1/6 = 0
+
+Monomial: x_11_49^2 * x_12_73 * x_2_63 * x_4_63
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P4                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_11_49 * x_12_49 * x_12_73 * x_2_63 * x_4_63
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/6            1/6
+P2                  1      1/6            1/6
+P4                 -1      1/6           -1/6
+P5                 -1      1/6           -1/6
+
+Sum: 1/6 + 1/6 - 1/6 - 1/6 = 0
+
+Monomial: x_11_63 * x_11_73 * x_12_63 * x_4_49 * x_6_49
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P4                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_11_73 * x_12_63^2 * x_4_49 * x_6_49
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/6            1/6
+P2                  1      1/6            1/6
+P4                 -1      1/6           -1/6
+P5                 -1      1/6           -1/6
+
+Sum: 1/6 + 1/6 - 1/6 - 1/6 = 0
+
+Monomial: x_11_63^2 * x_12_73 * x_4_49 * x_6_49
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/6            1/6
+P4                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_11_63 * x_12_63 * x_12_73 * x_4_49 * x_6_49
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/6           -1/6
+P2                 -1      1/6           -1/6
+P4                  1      1/6            1/6
+P5                  1      1/6            1/6
+
+Sum: -1/6 - 1/6 + 1/6 + 1/6 = 0
+
+Monomial: x_11_73^2 * x_12_63 * x_2_63 * x_4_49 * x_6_49
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/6            1/6
+P4                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_11_63 * x_11_73 * x_12_73 * x_2_63 * x_4_49 * x_6_49
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P4                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_11_73 * x_12_63 * x_12_73 * x_2_63 * x_4_49 * x_6_49
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/6           -1/6
+P2                 -1      1/6           -1/6
+P4                  1      1/6            1/6
+P5                  1      1/6            1/6
+
+Sum: -1/6 - 1/6 + 1/6 + 1/6 = 0
+
+Monomial: x_11_63 * x_12_73^2 * x_2_63 * x_4_49 * x_6_49
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/6            1/6
+P2                  1      1/6            1/6
+P4                 -1      1/6           -1/6
+P5                 -1      1/6           -1/6
+
+Sum: 1/6 + 1/6 - 1/6 - 1/6 = 0
+
+Monomial: x_11_63 * x_11_73 * x_12_49 * x_4_63 * x_6_49
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/6            1/6
+P4                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_11_73 * x_12_49 * x_12_63 * x_4_63 * x_6_49
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/6           -1/6
+P2                 -1      1/6           -1/6
+P4                  1      1/6            1/6
+P5                  1      1/6            1/6
+
+Sum: -1/6 - 1/6 + 1/6 + 1/6 = 0
+
+Monomial: x_11_49 * x_11_63 * x_12_73 * x_4_63 * x_6_49
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P4                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_11_49 * x_12_63 * x_12_73 * x_4_63 * x_6_49
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/6            1/6
+P2                  1      1/6            1/6
+P4                 -1      1/6           -1/6
+P5                 -1      1/6           -1/6
+
+Sum: 1/6 + 1/6 - 1/6 - 1/6 = 0
+
+Monomial: x_11_73^2 * x_12_49 * x_2_63 * x_4_63 * x_6_49
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P4                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_11_49 * x_11_73 * x_12_73 * x_2_63 * x_4_63 * x_6_49
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/6            1/6
+P4                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_11_73 * x_12_49 * x_12_73 * x_2_63 * x_4_63 * x_6_49
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/6            1/6
+P2                  1      1/6            1/6
+P4                 -1      1/6           -1/6
+P5                 -1      1/6           -1/6
+
+Sum: 1/6 + 1/6 - 1/6 - 1/6 = 0
+
+Monomial: x_11_49 * x_12_73^2 * x_2_63 * x_4_63 * x_6_49
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/6           -1/6
+P2                 -1      1/6           -1/6
+P4                  1      1/6            1/6
+P5                  1      1/6            1/6
+
+Sum: -1/6 - 1/6 + 1/6 + 1/6 = 0
+
+Monomial: x_11_49 * x_11_73 * x_12_63 * x_4_49 * x_6_63
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/6            1/6
+P4                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_11_73 * x_12_49 * x_12_63 * x_4_49 * x_6_63
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/6           -1/6
+P2                 -1      1/6           -1/6
+P4                  1      1/6            1/6
+P5                  1      1/6            1/6
+
+Sum: -1/6 - 1/6 + 1/6 + 1/6 = 0
+
+Monomial: x_11_49 * x_11_63 * x_12_73 * x_4_49 * x_6_63
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P4                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_11_63 * x_12_49 * x_12_73 * x_4_49 * x_6_63
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/6            1/6
+P2                  1      1/6            1/6
+P4                 -1      1/6           -1/6
+P5                 -1      1/6           -1/6
+
+Sum: 1/6 + 1/6 - 1/6 - 1/6 = 0
+
+Monomial: x_11_73^2 * x_12_63 * x_2_49 * x_4_49 * x_6_63
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P4                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_11_63 * x_11_73 * x_12_73 * x_2_49 * x_4_49 * x_6_63
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/6            1/6
+P4                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_11_73 * x_12_63 * x_12_73 * x_2_49 * x_4_49 * x_6_63
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/6            1/6
+P2                  1      1/6            1/6
+P4                 -1      1/6           -1/6
+P5                 -1      1/6           -1/6
+
+Sum: 1/6 + 1/6 - 1/6 - 1/6 = 0
+
+Monomial: x_11_63 * x_12_73^2 * x_2_49 * x_4_49 * x_6_63
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/6           -1/6
+P2                 -1      1/6           -1/6
+P4                  1      1/6            1/6
+P5                  1      1/6            1/6
+
+Sum: -1/6 - 1/6 + 1/6 + 1/6 = 0
+
+Monomial: x_11_49 * x_11_73 * x_12_49 * x_4_63 * x_6_63
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P4                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_11_73 * x_12_49^2 * x_4_63 * x_6_63
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/6            1/6
+P2                  1      1/6            1/6
+P4                 -1      1/6           -1/6
+P5                 -1      1/6           -1/6
+
+Sum: 1/6 + 1/6 - 1/6 - 1/6 = 0
+
+Monomial: x_11_49^2 * x_12_73 * x_4_63 * x_6_63
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/6            1/6
+P4                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_11_49 * x_12_49 * x_12_73 * x_4_63 * x_6_63
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/6           -1/6
+P2                 -1      1/6           -1/6
+P4                  1      1/6            1/6
+P5                  1      1/6            1/6
+
+Sum: -1/6 - 1/6 + 1/6 + 1/6 = 0
+
+Monomial: x_11_73^2 * x_12_49 * x_2_49 * x_4_63 * x_6_63
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/6            1/6
+P4                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_11_49 * x_11_73 * x_12_73 * x_2_49 * x_4_63 * x_6_63
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P4                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_11_73 * x_12_49 * x_12_73 * x_2_49 * x_4_63 * x_6_63
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/6           -1/6
+P2                 -1      1/6           -1/6
+P4                  1      1/6            1/6
+P5                  1      1/6            1/6
+
+Sum: -1/6 - 1/6 + 1/6 + 1/6 = 0
+
+Monomial: x_11_49 * x_12_73^2 * x_2_49 * x_4_63 * x_6_63
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/6            1/6
+P2                  1      1/6            1/6
+P4                 -1      1/6           -1/6
+P5                 -1      1/6           -1/6
+
+Sum: 1/6 + 1/6 - 1/6 - 1/6 = 0
+
+Monomial: x_11_73 * x_12_63 * x_2_63 * x_4_49 * x_8_49
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/6           -1/6
+P6                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_11_63 * x_12_73 * x_2_63 * x_4_49 * x_8_49
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/6            1/6
+P6                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_11_63 * x_11_73 * x_2_49 * x_4_63 * x_8_49
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/6            1/6
+P3                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_11_73 * x_12_63 * x_2_49 * x_4_63 * x_8_49
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P3                  1      1/6            1/6
+P5                  1      1/6            1/6
+P6                 -1      1/6           -1/6
+
+Sum: -1/6 + 1/6 + 1/6 - 1/6 = 0
+
+Monomial: x_11_63 * x_12_73 * x_2_49 * x_4_63 * x_8_49
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P6                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_12_63 * x_12_73 * x_2_49 * x_4_63 * x_8_49
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/6            1/6
+P5                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_11_49 * x_11_73 * x_2_63 * x_4_63 * x_8_49
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P3                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_11_73 * x_12_49 * x_2_63 * x_4_63 * x_8_49
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/6            1/6
+P2                  1      1/6            1/6
+P3                 -1      1/6           -1/6
+P5                 -1      1/6           -1/6
+
+Sum: 1/6 + 1/6 - 1/6 - 1/6 = 0
+
+Monomial: x_11_49 * x_12_73 * x_2_63 * x_4_63 * x_8_49
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/6           -1/6
+P2                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_12_49 * x_12_73 * x_2_63 * x_4_63 * x_8_49
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P5                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_11_63 * x_11_73 * x_4_63 * x_6_49 * x_8_49
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P3                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_11_73 * x_12_63 * x_4_63 * x_6_49 * x_8_49
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/6            1/6
+P3                 -1      1/6           -1/6
+P5                 -1      1/6           -1/6
+P6                  1      1/6            1/6
+
+Sum: 1/6 - 1/6 - 1/6 + 1/6 = 0
+
+Monomial: x_11_63 * x_12_73 * x_4_63 * x_6_49 * x_8_49
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/6            1/6
+P6                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_12_63 * x_12_73 * x_4_63 * x_6_49 * x_8_49
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P5                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_11_73^2 * x_2_63 * x_4_63 * x_6_49 * x_8_49
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/6            1/6
+P3                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_11_73 * x_12_73 * x_2_63 * x_4_63 * x_6_49 * x_8_49
+
+Product   Coefficient   Weight   Contribution
+P2                 -2      1/6           -1/3
+P3                  1      1/6            1/6
+P5                  1      1/6            1/6
+
+Sum: -1/3 + 1/6 + 1/6 = 0
+
+Monomial: x_12_73^2 * x_2_63 * x_4_63 * x_6_49 * x_8_49
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/6            1/6
+P5                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_11_73 * x_12_63 * x_4_49 * x_6_63 * x_8_49
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/6            1/6
+P6                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_11_63 * x_12_73 * x_4_49 * x_6_63 * x_8_49
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/6           -1/6
+P6                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_11_49 * x_11_73 * x_4_63 * x_6_63 * x_8_49
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/6            1/6
+P3                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_11_73 * x_12_49 * x_4_63 * x_6_63 * x_8_49
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/6           -1/6
+P2                 -1      1/6           -1/6
+P3                  1      1/6            1/6
+P5                  1      1/6            1/6
+
+Sum: -1/6 - 1/6 + 1/6 + 1/6 = 0
+
+Monomial: x_11_49 * x_12_73 * x_4_63 * x_6_63 * x_8_49
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/6            1/6
+P2                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_12_49 * x_12_73 * x_4_63 * x_6_63 * x_8_49
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/6            1/6
+P5                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_11_73^2 * x_2_49 * x_4_63 * x_6_63 * x_8_49
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P3                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_11_73 * x_12_73 * x_2_49 * x_4_63 * x_6_63 * x_8_49
+
+Product   Coefficient   Weight   Contribution
+P2                  2      1/6            1/3
+P3                 -1      1/6           -1/6
+P5                 -1      1/6           -1/6
+
+Sum: 1/3 - 1/6 - 1/6 = 0
+
+Monomial: x_12_73^2 * x_2_49 * x_4_63 * x_6_63 * x_8_49
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P5                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_11_63 * x_11_73 * x_2_49 * x_4_49 * x_8_63
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P3                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_11_73 * x_12_63 * x_2_49 * x_4_49 * x_8_63
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/6            1/6
+P2                  1      1/6            1/6
+P3                 -1      1/6           -1/6
+P5                 -1      1/6           -1/6
+
+Sum: 1/6 + 1/6 - 1/6 - 1/6 = 0
+
+Monomial: x_11_63 * x_12_73 * x_2_49 * x_4_49 * x_8_63
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/6           -1/6
+P2                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_12_63 * x_12_73 * x_2_49 * x_4_49 * x_8_63
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P5                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_11_49 * x_11_73 * x_2_63 * x_4_49 * x_8_63
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/6            1/6
+P3                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_11_73 * x_12_49 * x_2_63 * x_4_49 * x_8_63
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P3                  1      1/6            1/6
+P5                  1      1/6            1/6
+P6                 -1      1/6           -1/6
+
+Sum: -1/6 + 1/6 + 1/6 - 1/6 = 0
+
+Monomial: x_11_49 * x_12_73 * x_2_63 * x_4_49 * x_8_63
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P6                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_12_49 * x_12_73 * x_2_63 * x_4_49 * x_8_63
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/6            1/6
+P5                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_11_73 * x_12_49 * x_2_49 * x_4_63 * x_8_63
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/6           -1/6
+P6                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_11_49 * x_12_73 * x_2_49 * x_4_63 * x_8_63
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/6            1/6
+P6                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_11_63 * x_11_73 * x_4_49 * x_6_49 * x_8_63
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/6            1/6
+P3                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_11_73 * x_12_63 * x_4_49 * x_6_49 * x_8_63
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/6           -1/6
+P2                 -1      1/6           -1/6
+P3                  1      1/6            1/6
+P5                  1      1/6            1/6
+
+Sum: -1/6 - 1/6 + 1/6 + 1/6 = 0
+
+Monomial: x_11_63 * x_12_73 * x_4_49 * x_6_49 * x_8_63
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/6            1/6
+P2                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_12_63 * x_12_73 * x_4_49 * x_6_49 * x_8_63
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/6            1/6
+P5                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_11_73^2 * x_2_63 * x_4_49 * x_6_49 * x_8_63
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P3                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_11_73 * x_12_73 * x_2_63 * x_4_49 * x_6_49 * x_8_63
+
+Product   Coefficient   Weight   Contribution
+P2                  2      1/6            1/3
+P3                 -1      1/6           -1/6
+P5                 -1      1/6           -1/6
+
+Sum: 1/3 - 1/6 - 1/6 = 0
+
+Monomial: x_12_73^2 * x_2_63 * x_4_49 * x_6_49 * x_8_63
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P5                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_11_73 * x_12_49 * x_4_63 * x_6_49 * x_8_63
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/6            1/6
+P6                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_11_49 * x_12_73 * x_4_63 * x_6_49 * x_8_63
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/6           -1/6
+P6                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_11_49 * x_11_73 * x_4_49 * x_6_63 * x_8_63
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P3                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_11_73 * x_12_49 * x_4_49 * x_6_63 * x_8_63
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/6            1/6
+P3                 -1      1/6           -1/6
+P5                 -1      1/6           -1/6
+P6                  1      1/6            1/6
+
+Sum: 1/6 - 1/6 - 1/6 + 1/6 = 0
+
+Monomial: x_11_49 * x_12_73 * x_4_49 * x_6_63 * x_8_63
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/6            1/6
+P6                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_12_49 * x_12_73 * x_4_49 * x_6_63 * x_8_63
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P5                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_11_73^2 * x_2_49 * x_4_49 * x_6_63 * x_8_63
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/6            1/6
+P3                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_11_73 * x_12_73 * x_2_49 * x_4_49 * x_6_63 * x_8_63
+
+Product   Coefficient   Weight   Contribution
+P2                 -2      1/6           -1/3
+P3                  1      1/6            1/6
+P5                  1      1/6            1/6
+
+Sum: -1/3 + 1/6 + 1/6 = 0
+
+Monomial: x_12_73^2 * x_2_49 * x_4_49 * x_6_63 * x_8_63
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/6            1/6
+P5                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_11_63^2 * x_2_49 * x_4_49 * x_8_73
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/6            1/6
+P3                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_11_63 * x_12_63 * x_2_49 * x_4_49 * x_8_73
+
+Product   Coefficient   Weight   Contribution
+P2                 -2      1/6           -1/3
+P3                  1      1/6            1/6
+P5                  1      1/6            1/6
+
+Sum: -1/3 + 1/6 + 1/6 = 0
+
+Monomial: x_12_63^2 * x_2_49 * x_4_49 * x_8_73
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/6            1/6
+P5                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_11_49 * x_11_63 * x_2_63 * x_4_49 * x_8_73
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P3                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_11_63 * x_12_49 * x_2_63 * x_4_49 * x_8_73
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/6            1/6
+P3                 -1      1/6           -1/6
+P5                 -1      1/6           -1/6
+P6                  1      1/6            1/6
+
+Sum: 1/6 - 1/6 - 1/6 + 1/6 = 0
+
+Monomial: x_11_49 * x_12_63 * x_2_63 * x_4_49 * x_8_73
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/6            1/6
+P6                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_12_49 * x_12_63 * x_2_63 * x_4_49 * x_8_73
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P5                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_11_49 * x_11_63 * x_2_49 * x_4_63 * x_8_73
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P3                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_11_63 * x_12_49 * x_2_49 * x_4_63 * x_8_73
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/6            1/6
+P6                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_11_49 * x_12_63 * x_2_49 * x_4_63 * x_8_73
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/6            1/6
+P3                 -1      1/6           -1/6
+P5                 -1      1/6           -1/6
+P6                  1      1/6            1/6
+
+Sum: 1/6 - 1/6 - 1/6 + 1/6 = 0
+
+Monomial: x_12_49 * x_12_63 * x_2_49 * x_4_63 * x_8_73
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P5                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_11_49^2 * x_2_63 * x_4_63 * x_8_73
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/6            1/6
+P3                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_11_49 * x_12_49 * x_2_63 * x_4_63 * x_8_73
+
+Product   Coefficient   Weight   Contribution
+P2                 -2      1/6           -1/3
+P3                  1      1/6            1/6
+P5                  1      1/6            1/6
+
+Sum: -1/3 + 1/6 + 1/6 = 0
+
+Monomial: x_12_49^2 * x_2_63 * x_4_63 * x_8_73
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/6            1/6
+P5                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_11_63^2 * x_4_49 * x_6_49 * x_8_73
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P3                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_11_63 * x_12_63 * x_4_49 * x_6_49 * x_8_73
+
+Product   Coefficient   Weight   Contribution
+P2                  2      1/6            1/3
+P3                 -1      1/6           -1/6
+P5                 -1      1/6           -1/6
+
+Sum: 1/3 - 1/6 - 1/6 = 0
+
+Monomial: x_12_63^2 * x_4_49 * x_6_49 * x_8_73
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P5                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_11_63 * x_11_73 * x_2_63 * x_4_49 * x_6_49 * x_8_73
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/6            1/6
+P3                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_11_73 * x_12_63 * x_2_63 * x_4_49 * x_6_49 * x_8_73
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/6            1/6
+P2                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_11_63 * x_12_73 * x_2_63 * x_4_49 * x_6_49 * x_8_73
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/6           -1/6
+P2                 -1      1/6           -1/6
+P3                  1      1/6            1/6
+P5                  1      1/6            1/6
+
+Sum: -1/6 - 1/6 + 1/6 + 1/6 = 0
+
+Monomial: x_12_63 * x_12_73 * x_2_63 * x_4_49 * x_6_49 * x_8_73
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/6            1/6
+P5                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_11_49 * x_11_63 * x_4_63 * x_6_49 * x_8_73
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/6            1/6
+P3                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_11_63 * x_12_49 * x_4_63 * x_6_49 * x_8_73
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P6                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_11_49 * x_12_63 * x_4_63 * x_6_49 * x_8_73
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P3                  1      1/6            1/6
+P5                  1      1/6            1/6
+P6                 -1      1/6           -1/6
+
+Sum: -1/6 + 1/6 + 1/6 - 1/6 = 0
+
+Monomial: x_12_49 * x_12_63 * x_4_63 * x_6_49 * x_8_73
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/6            1/6
+P5                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_11_49 * x_11_73 * x_2_63 * x_4_63 * x_6_49 * x_8_73
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P3                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_11_73 * x_12_49 * x_2_63 * x_4_63 * x_6_49 * x_8_73
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/6           -1/6
+P2                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_11_49 * x_12_73 * x_2_63 * x_4_63 * x_6_49 * x_8_73
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/6            1/6
+P2                  1      1/6            1/6
+P3                 -1      1/6           -1/6
+P5                 -1      1/6           -1/6
+
+Sum: 1/6 + 1/6 - 1/6 - 1/6 = 0
+
+Monomial: x_12_49 * x_12_73 * x_2_63 * x_4_63 * x_6_49 * x_8_73
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P5                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_11_49 * x_11_63 * x_4_49 * x_6_63 * x_8_73
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/6            1/6
+P3                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_11_63 * x_12_49 * x_4_49 * x_6_63 * x_8_73
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P3                  1      1/6            1/6
+P5                  1      1/6            1/6
+P6                 -1      1/6           -1/6
+
+Sum: -1/6 + 1/6 + 1/6 - 1/6 = 0
+
+Monomial: x_11_49 * x_12_63 * x_4_49 * x_6_63 * x_8_73
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P6                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_12_49 * x_12_63 * x_4_49 * x_6_63 * x_8_73
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/6            1/6
+P5                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_11_63 * x_11_73 * x_2_49 * x_4_49 * x_6_63 * x_8_73
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P3                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_11_73 * x_12_63 * x_2_49 * x_4_49 * x_6_63 * x_8_73
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/6           -1/6
+P2                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_11_63 * x_12_73 * x_2_49 * x_4_49 * x_6_63 * x_8_73
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/6            1/6
+P2                  1      1/6            1/6
+P3                 -1      1/6           -1/6
+P5                 -1      1/6           -1/6
+
+Sum: 1/6 + 1/6 - 1/6 - 1/6 = 0
+
+Monomial: x_12_63 * x_12_73 * x_2_49 * x_4_49 * x_6_63 * x_8_73
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P5                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_11_49^2 * x_4_63 * x_6_63 * x_8_73
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P3                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_11_49 * x_12_49 * x_4_63 * x_6_63 * x_8_73
+
+Product   Coefficient   Weight   Contribution
+P2                  2      1/6            1/3
+P3                 -1      1/6           -1/6
+P5                 -1      1/6           -1/6
+
+Sum: 1/3 - 1/6 - 1/6 = 0
+
+Monomial: x_12_49^2 * x_4_63 * x_6_63 * x_8_73
+
+Product   Coefficient   Weight   Contribution
+P2                 -1      1/6           -1/6
+P5                  1      1/6            1/6
+
+Sum: -1/6 + 1/6 = 0
+
+Monomial: x_11_49 * x_11_73 * x_2_49 * x_4_63 * x_6_63 * x_8_73
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/6            1/6
+P3                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_11_73 * x_12_49 * x_2_49 * x_4_63 * x_6_63 * x_8_73
+
+Product   Coefficient   Weight   Contribution
+P1                  1      1/6            1/6
+P2                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
+
+Monomial: x_11_49 * x_12_73 * x_2_49 * x_4_63 * x_6_63 * x_8_73
+
+Product   Coefficient   Weight   Contribution
+P1                 -1      1/6           -1/6
+P2                 -1      1/6           -1/6
+P3                  1      1/6            1/6
+P5                  1      1/6            1/6
+
+Sum: -1/6 - 1/6 + 1/6 + 1/6 = 0
+
+Monomial: x_12_49 * x_12_73 * x_2_49 * x_4_63 * x_6_63 * x_8_73
+
+Product   Coefficient   Weight   Contribution
+P2                  1      1/6            1/6
+P5                 -1      1/6           -1/6
+
+Sum: 1/6 - 1/6 = 0
